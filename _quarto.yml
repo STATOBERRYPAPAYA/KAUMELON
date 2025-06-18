@@ -8,15 +8,15 @@ project:
     - "*.svg"
 
 website:
-  title: "KAUMELON"
+  title: "KAU Me-LON"
   site-url: https://library.statoberry.com
   favicon: images/logo.png
 
   navbar:
     logo: images/logo.png
-    title: false
-    background: "#ffffff"
-    foreground: "#943b00"
+    title: "Me-LON"
+    background: "#751000"
+    foreground: "#ffffff"
     right:
       - href: index.qmd
         text: Home
@@ -31,9 +31,24 @@ website:
   search: true
   reader-mode: true
 
+  page-footer:
+    border: true
+    left: |
+      © 2025 KAUMELON · Developed by [Dr. Pratheesh P. Gopinath](https://in.linkedin.com/in/dr-pratheesh-gopinath-aa5136212)  
+      📧 [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in) | 📞 +91 70119 04862
+    center: |
+      <a href="https://www.statoberry.com/papaya">![](/images/footer.png){style='height: 90px;'}</a>
+    right:
+      - text: RAISINS
+        href: https://www.raisins.live/
+      - text: KAU Grapes
+        href: https://www.kaugrapes.com/
+      - text: Facebook
+        href: https://www.facebook.com/share/16ZrLuyTmA/?mibextid=wwXIfr
+
   open-graph:
     image: images/library-banner.jpg
-    image-alt: "KAUMELON"
+    image-alt: "KAU Me-LON"
 
   twitter-card:
     image: images/library-banner.jpg
@@ -50,10 +65,11 @@ format:
     number-sections: true
     smooth-scroll: true
     code-copy: true
-    monobackgroundcolor: "#f5f5f5"
     highlight-style: github
+    monobackgroundcolor: "#b4b58a"
     math: mathjax
 
 editor: visual
+
 execute:
   freeze: auto

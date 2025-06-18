@@ -45,3 +45,25 @@
   text-align: center;
   margin-top: 0.25rem;
 }
+
+/* Increase logo size in the navbar */
+.navbar-brand img {
+  height: 50px; /* or any size you prefer */
+  width: auto;  /* maintain aspect ratio */
+}
+
+/* Style for active navbar tab */
+.navbar-nav .nav-link.active {
+  /*background-color: #ffffff;*/   /* Background color of the selected tab */
+  color: #02ba02!important;   /* Text color of the selected tab */
+  font-weight: bold;           /* Optional: make it bold */
+  border-radius: 5px;          /* Optional: rounded corners */
+}  
+
+/* Hover color for navbar links */
+.navbar-nav .nav-link:hover {
+  /*background-color: #ffffff;*/     /* Background on hover */
+  color: #fbff00 !important;     /* Text color on hover */
+  border-radius: 5px;            /* Optional: rounded corners */
+  transition: all 0.3s ease;     /* Smooth transition effect */
+}  
