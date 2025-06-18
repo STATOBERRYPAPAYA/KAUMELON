@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - "*.pdf"
+    - "*.jpg"
+    - "*.png"
+    - "*.svg"
+
+website:
+  title: "KAUMELON"
+  site-url: https://library.statoberry.com
+  favicon: images/logo.png
+
+  navbar:
+    logo: images/logo.png
+    title: false
+    background: "#ffffff"
+    foreground: "#943b00"
+    right:
+      - href: index.qmd
+        text: Home
+      - href: bookshelfug.qmd
+        text: Under Graduate
+      - icon: github
+        href: https://github.com/STATOBERRYPAPAYA/KAUMELON
+        aria-label: GitHub
+
+  page-navigation: true
+  back-to-top-navigation: true
+  search: true
+  reader-mode: true
+
+  open-graph:
+    image: images/library-banner.jpg
+    image-alt: "KAUMELON"
+
+  twitter-card:
+    image: images/library-banner.jpg
+    card-style: summary_large_image
+
+format:
+  html:
+    theme:
+      light: [sketchy]
+      dark: [darkly]
+    css: style.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    smooth-scroll: true
+    code-copy: true
+    monobackgroundcolor: "#f5f5f5"
+    highlight-style: github
+    math: mathjax
+
+editor: visual
+execute:
+  freeze: auto
