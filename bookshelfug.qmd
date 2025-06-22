@@ -12,10 +12,14 @@ format:
 <div class="book-grid">
 
 <div class="book-item">
-  <a href="https://statoberrypapaya.github.io/TextbookofAgstat/" target="_blank">
+  <a href="ugbooks/agstatTextbook.html">
     <img src="images/UG/statcover.jpg" alt="Textbook of Agricultural Statistics">
   </a>
   <div class="book-title">Textbook of Agricultural Statistics</div>
   <div class="book-subtitle">Suitable for STAT 3202</div>
 </div>
+
+
 </div>
+
+

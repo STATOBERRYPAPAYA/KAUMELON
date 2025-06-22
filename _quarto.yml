@@ -9,7 +9,7 @@ project:
 
 website:
   title: "KAU Me-LON"
-  site-url: https://library.statoberry.com
+  site-url: https://www.agrinoteskau.com
   favicon: images/logo.png
 
   navbar:
@@ -23,7 +23,7 @@ website:
       - href: bookshelfug.qmd
         text: Under Graduate
       - icon: github
-        href: https://github.com/STATOBERRYPAPAYA/KAUMELON
+        href: https://github.com/STATOBERRYPAPAYA/KAUMELON/issues/new
         aria-label: GitHub
 
   page-navigation: true

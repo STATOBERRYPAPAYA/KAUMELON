@@ -1,0 +1,35 @@
+---
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: styles.css
+---
+```{=html}
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  iframe.full-iframe {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    display: block;
+  }
+
+  main.content {
+    padding: 0 !important;
+  }
+</style>
+
+<iframe
+  class="full-iframe"
+  src="https://statoberrypapaya.github.io/TextbookofAgstat/"
+  title="Textbook of Agricultural Statistics">
+</iframe>
+```
+
+
