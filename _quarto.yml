@@ -6,6 +6,7 @@ project:
     - "*.jpg"
     - "*.png"
     - "*.svg"
+    - CNAME
 
 website:
   title: "KAU Me-LON"
