@@ -1,0 +1,55 @@
+---
+title: ""
+format:
+  html:
+    theme: none
+    toc: false
+    page-layout: full
+---
+
+```{=html}
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  #loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+    z-index: 10;
+  }
+
+  #loader img {
+    width: 60vw;
+    max-width: 600px;
+    height: auto;
+  }
+
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>
+
+<div id="loader">
+  <img src="images/coloader.gif" alt="Loading..."/>
+</div>
+
+<iframe src="https://statoberrypapaya.github.io/TextbookofAgstat/" onload="document.getElementById('loader').style.display='none';">
+</iframe>
+```

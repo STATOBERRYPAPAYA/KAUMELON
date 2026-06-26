@@ -1,4 +1,4 @@
-![](images/banner.png){width=100%}  
+![](images/banner.png){width="100%"}
 
 # Welcome {.unnumbered}
 

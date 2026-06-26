@@ -11,15 +11,10 @@ format:
 
 <div class="book-grid">
 
-<div class="book-item">
-  <a href="ugbooks/agstatTextbook.html">
-    <img src="images/UG/statcover.jpg" alt="Textbook of Agricultural Statistics">
-  </a>
+<a class="book-item" href="agstat-textbook.html" target="_blank" rel="noopener noreferrer">
+  <img src="images/UG/statcover.jpg" alt="Textbook of Agricultural Statistics">
   <div class="book-title">Textbook of Agricultural Statistics</div>
   <div class="book-subtitle">Suitable for STAT 3202</div>
+</a>
+
 </div>
-
-
-</div>
-
-
