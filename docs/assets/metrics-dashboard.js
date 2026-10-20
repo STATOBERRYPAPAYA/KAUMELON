@@ -27,3 +27,4 @@ $('#metrics-export').onclick=()=>{if(!report)return;const rows=[['Date (IST)','R
 
 
 
+$('#metrics-reset').onclick=async()=>{try{const [email]=credentials();await sendPasswordResetEmail(auth,email,{url:'https://www.agrinoteskau.com/usage.html'});status.textContent='If this account exists, a password-reset email has been requested.';}catch(e){error(e);}};
