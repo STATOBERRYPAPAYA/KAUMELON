@@ -40,7 +40,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: style.css
+    css: assets/melon-465cbe564d9f.css
     toc: false
     number-sections: false
     lang: en
@@ -50,4 +50,5 @@ format:
 editor: source
 execute:
   freeze: auto
+
 
