@@ -1,9 +1,22 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - bookshelfug.qmd
+    - agstat-textbook.qmd
+    - r-textbook.qmd
+    - stat-maash.qmd
+    - student-guide.qmd
+    - about.qmd
+    - privacy.qmd
+    - usage.qmd
+    - ugbooks/agstatTextbook.qmd
   resources:
     - images/
+    - assets/
     - CNAME
+    - '!analytics/**'
 website:
   title: "KAU Me-LON"
   description: "A growing library of online textbooks, lecture notes and practical resources across subjects for students of Kerala Agricultural University."
@@ -33,6 +46,10 @@ website:
       Developed by **Dr. Pratheesh P. Gopinath** · Contact: [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in)  
       © 2026 Department of Agricultural Statistics · College of Agriculture, Vellayani, KAU
     right:
+      - text: Usage dashboard
+        href: usage.qmd
+      - text: Privacy
+        href: privacy.qmd
       - text: Contact
         href: about.qmd
       - text: PAPAYA
@@ -42,7 +59,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: assets/melon-465cbe564d9f.css
+    css: assets/melon-f64caf7b9a24.css
     toc: false
     number-sections: false
     lang: en
@@ -52,6 +69,11 @@ format:
 editor: source
 execute:
   freeze: auto
+
+
+
+
+
 
 
 

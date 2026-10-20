@@ -9,3 +9,14 @@
 
 /.render-cache/
 /.quarto-cache/
+
+/analytics/functions/node_modules/
+/analytics/*audit.json
+/analytics/firebase-debug.log
+/analytics/existing-firestore-rules.json
+/analytics/integrations/
+/qa-*.cjs
+/qa/
+/firebase-debug.log
+
+/analytics/.firebase/

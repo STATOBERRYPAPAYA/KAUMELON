@@ -1,0 +1,29 @@
+---
+title: "Privacy and usage measurement"
+---
+
+Me-LON measures how its library is used to help improve learning resources. Collection starts when this analytics system is published; earlier reading activity is not available.
+
+## What we measure
+
+We collect book opens, page or chapter changes, broad device categories and estimated engaged reading time. A random browser identifier helps estimate daily readers and avoid counting reloads as new sessions. It does not identify a verified student. Returning visitors can be counted again on another day, device or browser.
+
+Reading time counts only while a page is visible, focused and recently active. It pauses after 90 seconds without activity and is capped at six hours per book session per day. These figures estimate engagement; they do not establish attendance, completion or examination performance.
+
+## Storage and access
+
+Usage data are stored in Google Firebase / Firestore in the DRONA project, in Mumbai. The reporting dashboard is restricted to verified administrator accounts. We do not include names, email addresses, passwords or raw IP addresses in the analytics records. Google Cloud may process request metadata in its infrastructure logs. Short-lived deduplication and rate-limit records expire after approximately 45 days; aggregated daily counts are retained for reporting.
+
+## Your choice
+
+Me-LON respects your browser's Do Not Track and Global Privacy Control settings. You can also disable measurement for this browser below. Your choice is saved locally and does not affect access to books.
+
+```{=html}
+<button type="button" id="analytics-choice" class="button secondary">Disable usage measurement</button>
+<p id="analytics-choice-status" role="status"></p>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('#analytics-choice'),s=document.querySelector('#analytics-choice-status');const draw=()=>{try{const off=localStorage.getItem('melon-analytics-optout')==='1';b.textContent=off?'Enable usage measurement':'Disable usage measurement';s.textContent=off?'Usage measurement is disabled in this browser.':'Usage measurement is enabled, unless your browser privacy settings disable it.';}catch{s.textContent='Browser storage is unavailable; tracking is disabled.';b.disabled=true;}};b.addEventListener('click',()=>{try{localStorage.setItem('melon-analytics-optout',localStorage.getItem('melon-analytics-optout')==='1'?'0':'1');draw();}catch{}});draw();});
+</script>
+```
+
+Questions about this service can be sent to [Dr. Pratheesh P. Gopinath](mailto:pratheesh.pg@kau.in).

@@ -1,59 +1,31 @@
 [
   {
-    "objectID": "stat-maash.html",
-    "href": "stat-maash.html",
-    "title": "STAT MAASH",
+    "objectID": "privacy.html",
+    "href": "privacy.html",
+    "title": "Privacy and usage measurement",
     "section": "",
-    "text": "A MOOC ON Me-LONYour companion for learning, practice and progress.Coming Soon\nSTAT MAASH stands for Mentor AI for Academic Success and Help. It is being introduced on Me-LON as a MOOC, bringing guided online learning and practical activities into one place.\nThe planned learning experience combines step-by-step lessons, interactive R practice, self-assessment and AI-assisted guidance. Students will be able to work through topics at their own pace, try examples and check their understanding as they progress.\nDetails about courses, access and enrolment will be shared here when STAT MAASH is ready to launch on Me-LON.\nBack to Me-LON\n\n\n\n Back to top"
+    "text": "Me-LON measures how its library is used to help improve learning resources. Collection starts when this analytics system is published; earlier reading activity is not available."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Learn a little. Grow a lot.",
-    "section": "",
-    "text": "KERALA AGRICULTURAL UNIVERSITY · Me-LON\nYour subjects.Your learning space.\nMe-LON brings lecture notes, textbooks and practical resources together for students of Kerala Agricultural University. Learn across subjects, wherever you are.\nExplore the library ↗New here? Start here\nFor UG, PG and PhD students · Phone, tablet or laptop\nROOM FOR EVERY SUBJECTRead. Explore. Grow.Me-LON / KAU\n\n\nEXPLORE THE COLLECTIONOn the shelves nowView all books →\nStart with our current books in statistics and R. Resources from other subjects will join the library as teachers contribute new material.\n\n\n\nSTATISTICS · STAT 3202Textbook of Agricultural StatisticsTap to read →\n\n\n\nNEW · R PROGRAMMINGR Programming for Agricultural Data AnalysisTap to read →\n\n\n\nMORE WAYS TO LEARNYour online classroom\nMOOCSTAT MAASHMentor AI for Academic Success and Help. A guided learning space with interactive lessons, R practice and self-assessment.Explore STAT MAASH →\n\nFOR STUDENTSYour course material, wherever you study.Read online books, revisit lecture notes and use practical resources shared by your teachers. For passcode-protected course notes, use the link and passcode your teacher provides.Student guide →\nFOR TEACHERS · ALL SUBJECTSHelp the Me-LON library grow.Share your lecture notes or educational content with the department. We can help turn your Word documents into online reading resources for students.Contribute material →\n\nMade for curious minds at Kerala Agricultural University. Developed by Dr. Pratheesh P. Gopinath. Contact: pratheesh.pg@kau.in. Maintained by the Department of Agricultural Statistics, College of Agriculture, Vellayani. Meet Me-LON.\n\n\n\n\n Back to top"
+    "objectID": "privacy.html#what-we-measure",
+    "href": "privacy.html#what-we-measure",
+    "title": "Privacy and usage measurement",
+    "section": "What we measure",
+    "text": "What we measure\nWe collect book opens, page or chapter changes, broad device categories and estimated engaged reading time. A random browser identifier helps estimate daily readers and avoid counting reloads as new sessions. It does not identify a verified student. Returning visitors can be counted again on another day, device or browser.\nReading time counts only while a page is visible, focused and recently active. It pauses after 90 seconds without activity and is capped at six hours per book session per day. These figures estimate engagement; they do not establish attendance, completion or examination performance."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Learning, shared freely",
-    "section": "",
-    "text": "Me-LON is an online learning initiative for students of Kerala Agricultural University, developed by Dr. Pratheesh P. Gopinath and maintained by the Department of Agricultural Statistics, College of Agriculture, Vellayani.\nMe-LON is designed for learning across subjects and departments. The library currently includes statistics and R books, and will grow to include textbooks, lecture notes and practical resources in other subjects as they are contributed.\nOur aim is simple: make educational resources easy to find and comfortable to read across phones, tablets and computers."
+    "objectID": "privacy.html#storage-and-access",
+    "href": "privacy.html#storage-and-access",
+    "title": "Privacy and usage measurement",
+    "section": "Storage and access",
+    "text": "Storage and access\nUsage data are stored in Google Firebase / Firestore in the DRONA project, in Mumbai. The reporting dashboard is restricted to verified administrator accounts. We do not include names, email addresses, passwords or raw IP addresses in the analytics records. Google Cloud may process request metadata in its infrastructure logs. Short-lived deduplication and rate-limit records expire after approximately 45 days; aggregated daily counts are retained for reporting."
   },
   {
-    "objectID": "about.html#for-teachers",
-    "href": "about.html#for-teachers",
-    "title": "Learning, shared freely",
-    "section": "For teachers",
-    "text": "For teachers\nTeachers from all subjects and departments are welcome to contribute. To share lecture notes or other educational content, contact the maintainer with your course name and material. Word documents can be converted into online reading resources; practical materials can include downloadable files where appropriate. Access arrangements depend on the resource and should be agreed with the department."
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "Learning, shared freely",
-    "section": "Developer and contact person",
-    "text": "Developer and contact person\nDr. Pratheesh P. Gopinath\nDepartment of Agricultural Statistics, College of Agriculture, Vellayani, Kerala Agricultural University\nEmail pratheesh.pg@kau.in · Call +91 70119 04862"
-  },
-  {
-    "objectID": "about.html#related-resources",
-    "href": "about.html#related-resources",
-    "title": "Learning, shared freely",
-    "section": "Related resources",
-    "text": "Related resources\n\nPAPAYA publishing\nRAISINS\nKAU Grapes"
-  },
-  {
-    "objectID": "about.html#copyright-and-reuse",
-    "href": "about.html#copyright-and-reuse",
-    "title": "Learning, shared freely",
-    "section": "Copyright and reuse",
-    "text": "Copyright and reuse\nMe-LON website content is licensed under Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International. Give appropriate credit; commercial use and distribution of modified material require permission. Individual textbooks retain their own copyright and licensing notices. Contact the department about commercial use or print distribution of website content."
-  },
-  {
-    "objectID": "bookshelfug.html",
-    "href": "bookshelfug.html",
-    "title": "Your learning library",
-    "section": "",
-    "text": "Free online reading, wherever you study. Choose a book to open its full chapter list. The collection currently includes statistics and R; other subjects will be added as new resources are contributed.\n\nFind a book\n\n2 books available\n\n\n\n\nFOUNDATIONS · STAT 3202Textbook of Agricultural StatisticsLearn the ideas behind agricultural research through worked examples, statistical methods and experimental design.Undergraduate · Online textbookStart reading →\n\n\n\nNEW · R PROGRAMMINGR Programming for Agricultural Data AnalysisFrom your first R commands to cleaning, visualization, statistical analysis and reproducible reports.14 browser R laboratories · Practical companionStart reading →\n\n\nNo matching books. Try “R” or “statistics”, or clear your search.\n\nReading on your phone? Open a book, use its chapter menu and bookmark the chapter you are studying. More reading tips.\n\n\n\n\n Back to top"
+    "objectID": "privacy.html#your-choice",
+    "href": "privacy.html#your-choice",
+    "title": "Privacy and usage measurement",
+    "section": "Your choice",
+    "text": "Your choice\nMe-LON respects your browser’s Do Not Track and Global Privacy Control settings. You can also disable measurement for this browser below. Your choice is saved locally and does not affect access to books.\nDisable usage measurement\n\n\nQuestions about this service can be sent to Dr. Pratheesh P. Gopinath."
   },
   {
     "objectID": "student-guide.html",
@@ -96,5 +68,61 @@
     "title": "A little help to get started",
     "section": "Something not working?",
     "text": "Something not working?\nContact the department with the book name, chapter and a short description of the problem. Include your browser and phone model if possible."
+  },
+  {
+    "objectID": "bookshelfug.html",
+    "href": "bookshelfug.html",
+    "title": "Your learning library",
+    "section": "",
+    "text": "Free online reading, wherever you study. Choose a book to open its full chapter list. The collection currently includes statistics and R; other subjects will be added as new resources are contributed.\n\nFind a book\n\n2 books available\n\n\n\n\nFOUNDATIONS · STAT 3202Textbook of Agricultural StatisticsLearn the ideas behind agricultural research through worked examples, statistical methods and experimental design.Undergraduate · Online textbookStart reading →\n\n\n\nNEW · R PROGRAMMINGR Programming for Agricultural Data AnalysisFrom your first R commands to cleaning, visualization, statistical analysis and reproducible reports.14 browser R laboratories · Practical companionStart reading →\n\n\nNo matching books. Try “R” or “statistics”, or clear your search.\n\nReading on your phone? Open a book, use its chapter menu and bookmark the chapter you are studying. More reading tips.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Learn a little. Grow a lot.",
+    "section": "",
+    "text": "KERALA AGRICULTURAL UNIVERSITY · Me-LON\nYour subjects.Your learning space.\nMe-LON brings lecture notes, textbooks and practical resources together for students of Kerala Agricultural University. Learn across subjects, wherever you are.\nExplore the library ↗New here? Start here\nFor UG, PG and PhD students · Phone, tablet or laptop\nROOM FOR EVERY SUBJECTRead. Explore. Grow.Me-LON / KAU\n\n\nEXPLORE THE COLLECTIONOn the shelves nowView all books →\nStart with our current books in statistics and R. Resources from other subjects will join the library as teachers contribute new material.\n\n\n\nSTATISTICS · STAT 3202Textbook of Agricultural StatisticsTap to read →\n\n\n\nNEW · R PROGRAMMINGR Programming for Agricultural Data AnalysisTap to read →\n\n\n\nMORE WAYS TO LEARNYour online classroom\nMOOCSTAT MAASHMentor AI for Academic Success and Help. A guided learning space with interactive lessons, R practice and self-assessment.Explore STAT MAASH →\n\nFOR STUDENTSYour course material, wherever you study.Read online books, revisit lecture notes and use practical resources shared by your teachers. For passcode-protected course notes, use the link and passcode your teacher provides.Student guide →\nFOR TEACHERS · ALL SUBJECTSHelp the Me-LON library grow.Share your lecture notes or educational content with the department. We can help turn your Word documents into online reading resources for students.Contribute material →\n\nMade for curious minds at Kerala Agricultural University. Developed by Dr. Pratheesh P. Gopinath. Contact: pratheesh.pg@kau.in. Maintained by the Department of Agricultural Statistics, College of Agriculture, Vellayani. Meet Me-LON.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "stat-maash.html",
+    "href": "stat-maash.html",
+    "title": "STAT MAASH",
+    "section": "",
+    "text": "A MOOC ON Me-LONYour companion for learning, practice and progress.Coming Soon\nSTAT MAASH stands for Mentor AI for Academic Success and Help. It is being introduced on Me-LON as a MOOC, bringing guided online learning and practical activities into one place.\nThe planned learning experience combines step-by-step lessons, interactive R practice, self-assessment and AI-assisted guidance. Students will be able to work through topics at their own pace, try examples and check their understanding as they progress.\nDetails about courses, access and enrolment will be shared here when STAT MAASH is ready to launch on Me-LON.\nBack to Me-LON\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Learning, shared freely",
+    "section": "",
+    "text": "Me-LON is an online learning initiative for students of Kerala Agricultural University, developed by Dr. Pratheesh P. Gopinath and maintained by the Department of Agricultural Statistics, College of Agriculture, Vellayani.\nMe-LON is designed for learning across subjects and departments. The library currently includes statistics and R books, and will grow to include textbooks, lecture notes and practical resources in other subjects as they are contributed.\nOur aim is simple: make educational resources easy to find and comfortable to read across phones, tablets and computers."
+  },
+  {
+    "objectID": "about.html#for-teachers",
+    "href": "about.html#for-teachers",
+    "title": "Learning, shared freely",
+    "section": "For teachers",
+    "text": "For teachers\nTeachers from all subjects and departments are welcome to contribute. To share lecture notes or other educational content, contact the maintainer with your course name and material. Word documents can be converted into online reading resources; practical materials can include downloadable files where appropriate. Access arrangements depend on the resource and should be agreed with the department."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "Learning, shared freely",
+    "section": "Developer and contact person",
+    "text": "Developer and contact person\nDr. Pratheesh P. Gopinath\nDepartment of Agricultural Statistics, College of Agriculture, Vellayani, Kerala Agricultural University\nEmail pratheesh.pg@kau.in · Call +91 70119 04862"
+  },
+  {
+    "objectID": "about.html#related-resources",
+    "href": "about.html#related-resources",
+    "title": "Learning, shared freely",
+    "section": "Related resources",
+    "text": "Related resources\n\nPAPAYA publishing\nRAISINS\nKAU Grapes"
+  },
+  {
+    "objectID": "about.html#copyright-and-reuse",
+    "href": "about.html#copyright-and-reuse",
+    "title": "Learning, shared freely",
+    "section": "Copyright and reuse",
+    "text": "Copyright and reuse\nMe-LON website content is licensed under Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International. Give appropriate credit; commercial use and distribution of modified material require permission. Individual textbooks retain their own copyright and licensing notices. Contact the department about commercial use or print distribution of website content."
   }
 ]

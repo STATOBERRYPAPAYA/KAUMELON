@@ -1,0 +1,7 @@
+const test=require('node:test'),assert=require('node:assert/strict');const {validate,advance,dayAt}=require('./metrics');
+const event={book:'r-agricultural-data',visitor:'bace7883-16e7-43f4-9f1c-7d46c2443401',session:'e188b9f3-bd93-48fc-b467-df995e16bb19',seconds:0,seq:0,page:'/index.html',device:'mobile',source:'book'};
+test('validates book allowlist, counters and page paths',()=>{assert.ok(validate(event));for(const patch of [{book:'private'},{seconds:-1},{seconds:21601},{page:'/index.html?email=a'},{visitor:'email@example.com'},{seq:1.5}])assert.equal(validate({...event,...patch}),false);});
+test('time uses IST day boundaries',()=>{assert.equal(dayAt(Date.parse('2026-10-20T19:00:00Z')),'2026-10-21');});
+test('first open cannot claim reading time',()=>{let a=advance(null,{...event,seconds:1000},100000);assert.equal(a.seconds,0);assert.equal(a.newSession,true);assert.equal(a.newEngaged,false);});
+test('duplicate/out of order heartbeats cannot add time',()=>{let p=advance(null,event,100000).state;assert.equal(advance(p,event,160000),null);let a=advance(p,{...event,seq:1,seconds:60},160000);assert.equal(a.seconds,60);assert.equal(a.newEngaged,true);assert.equal(a.newSession,false);assert.equal(advance(a.state,{...event,seq:2,seconds:120},220000).newEngaged,false);});
+test('client cannot submit unbounded reading time',()=>{let p=advance(null,event,100000).state;assert.equal(advance(p,{...event,seq:1,seconds:10000},160000).seconds,63);assert.equal(advance(p,{...event,seq:1,seconds:10000},360000).seconds,90);});
