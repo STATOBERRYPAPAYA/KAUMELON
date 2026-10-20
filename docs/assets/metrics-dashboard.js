@@ -1,16 +1,13 @@
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
-import {getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
+import {getAuth,signInWithEmailAndPassword,sendPasswordResetEmail,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
 const config={"authDomain":"statoberrydrona.firebaseapp.com","projectId":"statoberrydrona","apiKey":"AIzaSyB48GKM2TI8Ckg4pWKe4x8LMdug8tzEjtA","appId":"1:158855671548:web:83bae670e9507333d1b179"};
 const auth=getAuth(initializeApp(config)),endpoint='https://asia-south1-statoberrydrona.cloudfunctions.net/melonMetrics';
-const $=s=>document.querySelector(s),status=$('#metrics-status'),allowed=new Set(['pratheesh.pg@kau.in','statoberry@gmail.com']);
+const $=s=>document.querySelector(s),status=$('#metrics-status'),allowed=new Set(['pratheesh.pg@kau.in']);
 let report;
 const names={platform:'Me-LON website','agricultural-statistics':'Agricultural Statistics','r-agricultural-data':'R Programming'};
 const error=e=>{status.textContent=({'auth/invalid-credential':'Email or password is incorrect.','auth/email-already-in-use':'This account already exists. Please sign in.','auth/weak-password':'Choose a password with at least 6 characters.','auth/too-many-requests':'Too many attempts. Please wait and try again.','auth/operation-not-allowed':'Account creation is not available. Contact the maintainer.'})[e.code]||e.message||'Unable to complete this request.';};
 const credentials=()=>{const email=$('#metrics-email').value.trim().toLowerCase();if(!allowed.has(email))throw Error('This dashboard is restricted to approved administrator emails.');return[email,$('#metrics-password').value];};
-$('#metrics-signin').onclick=async()=>{try{const [e,p]=credentials();await signInWithEmailAndPassword(auth,e,p);$('#metrics-password').value='';}catch(e){error(e);}};
-$('#metrics-register').onclick=async()=>{try{const [e,p]=credentials();await createUserWithEmailAndPassword(auth,e,p);$('#metrics-password').value='';status.textContent='Account created. Use “Send verification email” to verify your address.';}catch(e){error(e);}};
-$('#metrics-verify').onclick=async()=>{try{await sendEmailVerification(auth.currentUser,{url:'https://www.agrinoteskau.com/usage.html'});status.textContent='Verification email sent. Follow the link, then return and select “I have verified my email”.';}catch(e){error(e);}};
-$('#metrics-recheck').onclick=async()=>{try{await auth.currentUser.reload();await update(auth.currentUser);}catch(e){error(e);}};
+$('#metrics-login').addEventListener('submit',async event=>{event.preventDefault();try{const [e,p]=credentials();await signInWithEmailAndPassword(auth,e,p);$('#metrics-password').value='';}catch(e){error(e);}});
 $('#metrics-signout').onclick=()=>signOut(auth);
 function cell(row,value){const td=document.createElement('td');td.textContent=String(value);row.append(td);}
 const duration=s=>s<60?`${Math.round(s)} sec`:`${(s/60).toFixed(1)} min`;
@@ -21,10 +18,10 @@ function draw(d){report=d;const summary=$('#metrics-summary'),daily=$('#metrics-
  $('#metrics-updated').textContent='Updated '+new Date(d.generatedAt).toLocaleString('en-IN',{timeZone:'Asia/Kolkata'})+' IST. Reporting days use Asia/Kolkata.';
 }
 async function refresh(){try{status.textContent='Loading usage…';const token=await auth.currentUser.getIdToken(true),r=await fetch(endpoint+'?days='+$('#metrics-days').value,{headers:{Authorization:'Bearer '+token},cache:'no-store'}),d=await r.json();if(!r.ok)throw Error(d.error||'Reports are unavailable.');draw(d);$('#metrics-report').hidden=false;status.textContent=d.daily.some(x=>Object.keys(x.books||{}).length)?'Usage report loaded.':'No usage recorded in this period yet.';}catch(e){$('#metrics-report').hidden=true;error(e);}}
-async function update(user){$('#metrics-login').hidden=!!user;$('#metrics-account').hidden=!user;$('#metrics-report').hidden=true;if(!user){status.textContent='Sign in with your approved administrator account.';return;}if(!allowed.has((user.email||'').toLowerCase())){status.textContent='This account does not have dashboard access.';return;}$('#metrics-verify').hidden=user.emailVerified;$('#metrics-recheck').hidden=user.emailVerified;if(!user.emailVerified){status.textContent='Verify your email address to view the dashboard.';return;}$('#metrics-report').hidden=false;await refresh();}
+async function update(user){$('#metrics-login').hidden=!!user;$('#metrics-account').hidden=!user;$('#metrics-report').hidden=true;if(!user){report=null;for(const id of ['#metrics-summary','#metrics-daily','#metrics-pages'])$(id).replaceChildren();status.textContent='';return;}const claims=(await user.getIdTokenResult(true)).claims;if(!allowed.has((user.email||'').toLowerCase())||!(claims.melonMetricsAdmin===true||user.emailVerified)){status.textContent='This account does not have administrator access.';return;}$('#metrics-report').hidden=false;await refresh();}
 onAuthStateChanged(auth,user=>update(user));$('#metrics-refresh').onclick=refresh;$('#metrics-days').onchange=refresh;
 $('#metrics-export').onclick=()=>{if(!report)return;const rows=[['Date (IST)','Resource','Opens','Daily readers','Engaged sessions','Active seconds','Page views']];for(const d of report.daily)for(const [id,v]of Object.entries(d.books||{}))rows.push([d.day,names[id]||id,v.opens||0,v.readers||0,v.engagedReads||0,v.activeSeconds||0,v.pageViews||0]);const csv=rows.map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='melon-usage-'+new Date().toISOString().slice(0,10)+'.csv';a.click();URL.revokeObjectURL(url);};
 
 
 
-$('#metrics-reset').onclick=async()=>{try{const [email]=credentials();await sendPasswordResetEmail(auth,email,{url:'https://www.agrinoteskau.com/usage.html'});status.textContent='If this account exists, a password-reset email has been requested.';}catch(e){error(e);}};
+$('#metrics-reset').onclick=async()=>{try{const [email]=credentials();await sendPasswordResetEmail(auth,email,{url:'https://www.agrinoteskau.com/admin.html'});status.textContent='If this account exists, a password-reset email has been requested.';}catch(e){error(e);}};

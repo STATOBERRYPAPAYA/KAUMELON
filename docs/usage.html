@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Me-LON usage dashboard – KAU Me-LON</title>
+<title>Me-LON metrics – KAU Me-LON</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="assets/melon-a73bf82abea5.css">
+<link rel="stylesheet" href="assets/melon-3afdf225b3c0.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Me-LON usage dashboard</h1>
+<h1 class="title">Me-LON metrics</h1>
 </div>
 
 
@@ -154,82 +154,9 @@ ul.task-list li input[type="checkbox"] {
 <p class="usage-note" data-usage-status="" role="status">Loading usage totals…</p><p class="usage-note">An engaged read means at least 30 estimated active seconds. These figures measure browser activity, not student attendance. Tracking began on 20 October 2026.</p>
 </section>
 
-<section id="administrator-reports" class="level2">
-<h2 class="anchored" data-anchor-id="administrator-reports">Administrator reports</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Private reporting for Me-LON administrators. These are estimated browser usage figures, not student attendance records.</p>
-</div>
-</div>
-<section id="metrics-login">
-<label for="metrics-email">Administrator email</label><input id="metrics-email" type="email" autocomplete="username" placeholder="pratheesh.pg@kau.in">
-<label for="metrics-password">Password</label><input id="metrics-password" type="password" autocomplete="current-password">
-<div class="actions"><button class="button primary" id="metrics-signin">Sign in</button><button class="button secondary" id="metrics-register">Create administrator account</button></div>
-<button class="button secondary" id="metrics-reset">Reset password</button><p>Use your DRONA account, or create an account with an approved administrator email. Verify your email before viewing reports.</p>
-</section>
-<p id="metrics-status" role="status" aria-live="polite">Loading secure sign-in…</p>
-<div class="actions" id="metrics-account" hidden=""><button class="button secondary" id="metrics-verify">Send verification email</button><button class="button secondary" id="metrics-recheck">I have verified my email</button><button class="button secondary" id="metrics-signout">Sign out</button></div>
-<section id="metrics-report" hidden="">
-<div class="actions"><label for="metrics-days">Reporting period</label><select id="metrics-days"><option value="7">Last 7 days</option><option value="30" selected="">Last 30 days</option><option value="90">Last 90 days</option></select><button class="button secondary" id="metrics-refresh">Refresh</button><button class="button secondary" id="metrics-export">Download CSV</button></div>
-<p id="metrics-updated"></p>
-<div class="metrics-table">
-<table class="caption-top" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Resource</th>
-<th data-quarto-table-cell-role="th">Opens / sessions</th>
-<th data-quarto-table-cell-role="th">Daily readers (sum)</th>
-<th data-quarto-table-cell-role="th">Engaged sessions</th>
-<th data-quarto-table-cell-role="th">Total active time</th>
-<th data-quarto-table-cell-role="th">Avg time / session</th>
-<th data-quarto-table-cell-role="th">Page views</th>
-</tr>
-</thead>
-<tbody id="metrics-summary">
-</tbody>
-</table>
-</div>
-<h2 class="anchored">Daily activity</h2><div class="metrics-table">
-<table class="caption-top" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Date (IST)</th>
-<th data-quarto-table-cell-role="th">Website sessions</th>
-<th data-quarto-table-cell-role="th">Book opens</th>
-<th data-quarto-table-cell-role="th">Book active minutes</th>
-</tr>
-</thead>
-<tbody id="metrics-daily">
-</tbody>
-</table>
-</div>
-<h2 class="anchored">Most viewed pages and chapters</h2><div class="metrics-table">
-<table class="caption-top" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Book</th>
-<th data-quarto-table-cell-role="th">Page</th>
-<th data-quarto-table-cell-role="th">Views</th>
-</tr>
-</thead>
-<tbody id="metrics-pages">
-</tbody>
-</table>
-</div>
-<p>“Daily readers (sum)” adds daily unique browsers; it is not a count of unique students across the whole period. Opens are deduplicated within the same tab and book each day. An engaged session has at least 30 active seconds. Active time pauses for hidden, unfocused or idle pages. Counts can be affected by privacy settings and automated traffic; no historic activity is backfilled.</p>
-</section>
-<script type="module" src="assets/metrics-dashboard.js?v=9745abfab09b"></script>
+<p><a href="./bookshelfug.html" class="button secondary">Back to the library</a></p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script>
@@ -257,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="./assets/melon-tracker.js" defer=""></script>
 
-<script src="./assets/public-usage.js?v=20261020-1" defer=""></script>
+<script src="./assets/public-usage.js?v=20261020-2" defer=""></script>
 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -690,7 +617,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link active" href="./usage.html" aria-current="page">
-<p>Usage dashboard</p>
+<p>Metrics</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./admin.html">
+<p>Admin login</p>
 </a>
   </li>  
     <li class="nav-item">

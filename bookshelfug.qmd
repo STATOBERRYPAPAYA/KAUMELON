@@ -22,6 +22,7 @@ Free online reading, wherever you study. Choose a book to open its full chapter 
 </article>
 </div>
 <p class="usage-note">Usage shown for the last 30 days. An engaged read means at least 30 estimated active seconds.</p>
+<p class="library-meta"><a class="metrics-button" href="usage.html#usage-heading"><i class="bi bi-speedometer2" aria-hidden="true"></i><span>Metrics</span><span aria-hidden="true">↗</span></a></p>
 <p id="no-books" hidden>No matching books. Try “R” or “statistics”, or clear your search.</p>
 ```
 

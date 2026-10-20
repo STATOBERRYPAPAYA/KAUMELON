@@ -11,6 +11,7 @@ project:
     - about.qmd
     - privacy.qmd
     - usage.qmd
+    - admin.qmd
     - ugbooks/agstatTextbook.qmd
   resources:
     - images/
@@ -46,8 +47,10 @@ website:
       Developed by **Dr. Pratheesh P. Gopinath** · Contact: [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in)  
       © 2026 Department of Agricultural Statistics · College of Agriculture, Vellayani, KAU
     right:
-      - text: Usage dashboard
+      - text: Metrics
         href: usage.qmd
+      - text: Admin login
+        href: admin.qmd
       - text: Privacy
         href: privacy.qmd
       - text: Contact
@@ -59,7 +62,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: assets/melon-a73bf82abea5.css
+    css: assets/melon-3afdf225b3c0.css
     toc: false
     number-sections: false
     lang: en
@@ -69,6 +72,7 @@ format:
 editor: source
 execute:
   freeze: auto
+
 
 
 

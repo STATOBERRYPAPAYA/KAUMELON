@@ -1,6 +1,6 @@
 const {createHash}=require('node:crypto');
 const ORIGINS=new Set(['https://www.agrinoteskau.com','https://agrinoteskau.com','https://kaumelon.github.io','https://statoberrypapaya.github.io']);
-const ADMINS=new Set(['pratheesh.pg@kau.in','statoberry@gmail.com']);
+const ADMINS=new Set(['pratheesh.pg@kau.in']);
 const BOOKS=new Set(['platform','agricultural-statistics','r-agricultural-data']);
 const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i;
 const digest=s=>createHash('sha256').update(s).digest('hex');
@@ -31,7 +31,7 @@ function createHandler(db,auth,Timestamp,clock=Date.now){let summaryCache=null,s
   }
   const bearer=req.get('authorization')||'';if(!bearer.startsWith('Bearer '))return res.status(401).json({error:'Sign in to view metrics.'});
   let user;try{user=await auth.verifyIdToken(bearer.slice(7),true);}catch{return res.status(401).json({error:'Sign in again.'});}
-  if(!user.email_verified||!ADMINS.has((user.email||'').toLowerCase()))return res.status(403).json({error:'A verified administrator account is required.'});
+  if(!(user.email_verified||user.melonMetricsAdmin===true)||!ADMINS.has((user.email||'').toLowerCase()))return res.status(403).json({error:'Administrator access is required.'});
   const days=Number(req.query.days||30);if(![7,30,90].includes(days))return res.status(400).json({error:'Choose 7, 30 or 90 days.'});
   const end=clock(),records=[];for(let i=days-1;i>=0;i--){const day=dayAt(end-i*86400000);records.push({day,ref:db.collection('melonMetricsDays').doc(day)});}
   const snapshots=await db.getAll(...records.map(x=>x.ref));

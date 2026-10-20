@@ -30,3 +30,7 @@
 /analytics/test-collection.cjs
 /analytics/verify-cloud.cjs
 /analytics/check-live-counts.cjs
+
+/analytics/refine-interface.cjs
+/analytics/finalize-interface.cjs
+/analytics/provision-admin.cjs

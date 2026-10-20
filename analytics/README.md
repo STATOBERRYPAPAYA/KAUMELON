@@ -2,7 +2,8 @@
 
 Firebase project: `statoberrydrona` (existing Blaze plan). Firestore: default database in `asia-south1`.
 Endpoint: `https://asia-south1-statoberrydrona.cloudfunctions.net/melonMetrics`.
-Dashboard: `https://www.agrinoteskau.com/usage.html`.
+Public metrics: `https://www.agrinoteskau.com/usage.html`.
+Private administration: `https://www.agrinoteskau.com/admin.html`.
 
 ## Public summary
 
@@ -10,7 +11,7 @@ The homepage, library book cards and usage page display 30-day aggregate totals.
 
 ## Access
 
-Only verified Firebase accounts for `pratheesh.pg@kau.in` and `statoberry@gmail.com` may request reports. Use the dashboard to sign in, create the Pratheesh account if needed, verify the email, or request a password reset. Passwords go directly to Firebase Authentication; they are not stored by the website. The function checks the verified email on every report request. Existing Firestore rules deny all direct client access and are unchanged.
+Only the designated `pratheesh.pg@kau.in` Firebase account may request reports. The account is administratively provisioned with a server-side `melonMetricsAdmin` claim. Credentials are supplied only through a temporary process environment; no passwords are present in sources or deployment files. The separate admin page provides sign-in and password reset, with no public registration form. The endpoint checks the allowlisted email and a verified-email or explicit administrator claim on every request. Existing Firestore rules deny all direct client access and are unchanged.
 
 ## What the numbers mean
 
