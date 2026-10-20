@@ -16,7 +16,7 @@ Usage data are stored in Google Firebase / Firestore in the DRONA project, in Mu
 
 ## Your choice
 
-Me-LON respects your browser's Do Not Track and Global Privacy Control settings. You can also disable measurement for this browser below. Your choice is saved locally and does not affect access to books.
+Me-LON respects your browser's Do Not Track and Global Privacy Control settings. You can also disable measurement for this browser below. Your choice is saved locally and does not affect access to books. Reload any already open book readers after changing this setting.
 
 ```{=html}
 <button type="button" id="analytics-choice" class="button secondary">Disable usage measurement</button>
@@ -27,3 +27,4 @@ document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector
 ```
 
 Questions about this service can be sent to [Dr. Pratheesh P. Gopinath](mailto:pratheesh.pg@kau.in).
+

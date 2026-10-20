@@ -20,3 +20,13 @@
 /firebase-debug.log
 
 /analytics/.firebase/
+
+/analytics/audit-*.cjs
+/analytics/check-candidate.cjs
+/analytics/cleanup-test.cjs
+/analytics/firebase-web-config.json
+/analytics/inspect-setup.cjs
+/analytics/read-rules.cjs
+/analytics/test-collection.cjs
+/analytics/verify-cloud.cjs
+/analytics/check-live-counts.cjs
