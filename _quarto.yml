@@ -29,7 +29,9 @@ website:
     type: overlay
   back-to-top-navigation: true
   page-footer:
-    left: "© 2026 Department of Agricultural Statistics · College of Agriculture, Vellayani, KAU"
+    left: |
+      Developed by **Dr. Pratheesh P. Gopinath** · Contact: [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in)  
+      © 2026 Department of Agricultural Statistics · College of Agriculture, Vellayani, KAU
     right:
       - text: Contact
         href: about.qmd
@@ -50,5 +52,6 @@ format:
 editor: source
 execute:
   freeze: auto
+
 
 

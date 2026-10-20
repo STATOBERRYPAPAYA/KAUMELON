@@ -35,8 +35,9 @@ title-block-banner: false
 ```
 
 ::: {.department-note}
-Made for curious minds at **Kerala Agricultural University**. Maintained by Dr. Pratheesh P. Gopinath and the Department of Agricultural Statistics, College of Agriculture, Vellayani. [Meet Me-LON](about.qmd).
+Made for curious minds at **Kerala Agricultural University**. Developed by **Dr. Pratheesh P. Gopinath**. Contact: [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in). Maintained by the Department of Agricultural Statistics, College of Agriculture, Vellayani. [Meet Me-LON](about.qmd).
 :::
+
 
 
 
