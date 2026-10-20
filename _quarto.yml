@@ -2,75 +2,52 @@ project:
   type: website
   output-dir: docs
   resources:
-    - "*.pdf"
-    - "*.jpg"
-    - "*.png"
-    - "*.svg"
+    - images/
     - CNAME
-
 website:
   title: "KAU Me-LON"
+  description: "A growing library of online textbooks, lecture notes and practical resources across subjects for students of Kerala Agricultural University."
   site-url: https://www.agrinoteskau.com
   favicon: images/logo.png
-
   navbar:
     logo: images/logo.png
     title: "Me-LON"
-    background: "#751000"
-    foreground: "#ffffff"
-    right:
+    background: light
+    collapse-below: lg
+    left:
       - href: index.qmd
         text: Home
       - href: bookshelfug.qmd
-        text: Under Graduate
-      - icon: github
-        href: https://github.com/STATOBERRYPAPAYA/KAUMELON/issues/new
-        aria-label: GitHub
-
-  page-navigation: true
-  back-to-top-navigation: true
-  search: true
-  reader-mode: true
-
-  page-footer:
-    border: true
-    left: |
-      © 2025 KAUMELON · Developed by [Dr. Pratheesh P. Gopinath](https://in.linkedin.com/in/dr-pratheesh-gopinath-aa5136212)  
-      📧 [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in) | 📞 +91 70119 04862
-    center: |
-      <a href="https://www.statoberry.com/papaya">![](/images/footer.png){style='height: 90px;'}</a>
+        text: Library
+      - href: student-guide.qmd
+        text: Student guide
     right:
+      - href: about.qmd
+        text: About & contact
+  search:
+    location: navbar
+    type: overlay
+  back-to-top-navigation: true
+  page-footer:
+    left: "© 2026 Department of Agricultural Statistics · College of Agriculture, Vellayani, KAU"
+    right:
+      - text: Contact
+        href: about.qmd
+      - text: PAPAYA
+        href: https://www.statoberry.com/papaya
       - text: RAISINS
         href: https://www.raisins.live/
-      - text: KAU Grapes
-        href: https://www.kaugrapes.com/
-      - text: Facebook
-        href: https://www.facebook.com/share/16ZrLuyTmA/?mibextid=wwXIfr
-
-  open-graph:
-    image: images/library-banner.jpg
-    image-alt: "KAU Me-LON"
-
-  twitter-card:
-    image: images/library-banner.jpg
-    card-style: summary_large_image
-
 format:
   html:
-    theme:
-      light: [sketchy]
-      dark: [darkly]
+    theme: cosmo
     css: style.css
-    toc: true
-    toc-depth: 3
-    number-sections: true
-    smooth-scroll: true
+    toc: false
+    number-sections: false
+    lang: en
     code-copy: true
-    highlight-style: github
-    monobackgroundcolor: "#b4b58a"
-    math: mathjax
-
-editor: visual
-
+    respect-user-color-scheme: false
+    include-after-body: assets/library.js
+editor: source
 execute:
   freeze: auto
+

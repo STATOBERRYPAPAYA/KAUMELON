@@ -1,44 +1,100 @@
 [
   {
-    "objectID": "ugbooks/agstatTextbook.html",
-    "href": "ugbooks/agstatTextbook.html",
-    "title": "KAU Me-LON",
+    "objectID": "stat-maash.html",
+    "href": "stat-maash.html",
+    "title": "STAT MAASH",
     "section": "",
-    "text": "Back to top"
+    "text": "A MOOC ON Me-LONYour companion for learning, practice and progress.Coming Soon\nSTAT MAASH stands for Mentor AI for Academic Success and Help. It is being introduced on Me-LON as a MOOC, bringing guided online learning and practical activities into one place.\nThe planned learning experience combines step-by-step lessons, interactive R practice, self-assessment and AI-assisted guidance. Students will be able to work through topics at their own pace, try examples and check their understanding as they progress.\nDetails about courses, access and enrolment will be shared here when STAT MAASH is ready to launch on Me-LON.\nBack to Me-LON\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Learn a little. Grow a lot.",
+    "section": "",
+    "text": "KERALA AGRICULTURAL UNIVERSITY · Me-LON\nYour subjects.Your learning space.\nMe-LON brings lecture notes, textbooks and practical resources together for students of Kerala Agricultural University. Learn across subjects, wherever you are.\nExplore the library ↗New here? Start here\nFor UG, PG and PhD students · Phone, tablet or laptop\nROOM FOR EVERY SUBJECTRead. Explore. Grow.Me-LON / KAU\n\n\nEXPLORE THE COLLECTIONOn the shelves nowView all books →\nStart with our current books in statistics and R. Resources from other subjects will join the library as teachers contribute new material.\n\n\n\nSTATISTICS · STAT 3202Textbook of Agricultural StatisticsTap to read →\n\n\n\nNEW · R PROGRAMMINGR Programming for Agricultural Data AnalysisTap to read →\n\n\n\nMORE WAYS TO LEARNYour online classroom\nMOOCSTAT MAASHMentor AI for Academic Success and Help. A guided learning space with interactive lessons, R practice and self-assessment.Explore STAT MAASH →\n\nFOR STUDENTSYour course material, wherever you study.Read online books, revisit lecture notes and use practical resources shared by your teachers. For passcode-protected course notes, use the link and passcode your teacher provides.Student guide →\nFOR TEACHERS · ALL SUBJECTSHelp the Me-LON library grow.Share your lecture notes or educational content with the department. We can help turn your Word documents into online reading resources for students.Contribute material →\n\nMade for curious minds at Kerala Agricultural University. Maintained by Dr. Pratheesh P. Gopinath and the Department of Agricultural Statistics, College of Agriculture, Vellayani. Meet Me-LON.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Learning, shared freely",
+    "section": "",
+    "text": "Me-LON is an online learning initiative for students of Kerala Agricultural University, developed and maintained by the Department of Agricultural Statistics, College of Agriculture, Vellayani.\nMe-LON is designed for learning across subjects and departments. The library currently includes statistics and R books, and will grow to include textbooks, lecture notes and practical resources in other subjects as they are contributed.\nOur aim is simple: make educational resources easy to find and comfortable to read across phones, tablets and computers."
+  },
+  {
+    "objectID": "about.html#for-teachers",
+    "href": "about.html#for-teachers",
+    "title": "Learning, shared freely",
+    "section": "For teachers",
+    "text": "For teachers\nTeachers from all subjects and departments are welcome to contribute. To share lecture notes or other educational content, contact the maintainer with your course name and material. Word documents can be converted into online reading resources; practical materials can include downloadable files where appropriate. Access arrangements depend on the resource and should be agreed with the department."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "Learning, shared freely",
+    "section": "Contact",
+    "text": "Contact\nDr. Pratheesh P. Gopinath\nDepartment of Agricultural Statistics, College of Agriculture, Vellayani, Kerala Agricultural University\nEmail pratheesh.pg@kau.in · Call +91 70119 04862"
+  },
+  {
+    "objectID": "about.html#related-resources",
+    "href": "about.html#related-resources",
+    "title": "Learning, shared freely",
+    "section": "Related resources",
+    "text": "Related resources\n\nPAPAYA publishing\nRAISINS\nKAU Grapes"
+  },
+  {
+    "objectID": "about.html#copyright-and-reuse",
+    "href": "about.html#copyright-and-reuse",
+    "title": "Learning, shared freely",
+    "section": "Copyright and reuse",
+    "text": "Copyright and reuse\nMe-LON website content is licensed under Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International. Give appropriate credit; commercial use and distribution of modified material require permission. Individual textbooks retain their own copyright and licensing notices. Contact the department about commercial use or print distribution of website content."
   },
   {
     "objectID": "bookshelfug.html",
     "href": "bookshelfug.html",
-    "title": "UG Library",
+    "title": "Your learning library",
     "section": "",
-    "text": "Textbook of Agricultural Statistics\n\n\nSuitable for STAT 3202"
+    "text": "Free online reading, wherever you study. Choose a book to open its full chapter list. The collection currently includes statistics and R; other subjects will be added as new resources are contributed.\n\nFind a book\n\n2 books available\n\n\n\n\nFOUNDATIONS · STAT 3202Textbook of Agricultural StatisticsLearn the ideas behind agricultural research through worked examples, statistical methods and experimental design.Undergraduate · Online textbookStart reading →\n\n\n\nNEW · R PROGRAMMINGR Programming for Agricultural Data AnalysisFrom your first R commands to cleaning, visualization, statistical analysis and reproducible reports.14 browser R laboratories · Practical companionStart reading →\n\n\nNo matching books. Try “R” or “statistics”, or clear your search.\n\nReading on your phone? Open a book, use its chapter menu and bookmark the chapter you are studying. More reading tips.\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "bookshelfug.html#published-books",
-    "href": "bookshelfug.html#published-books",
-    "title": "UG Library",
+    "objectID": "student-guide.html",
+    "href": "student-guide.html",
+    "title": "A little help to get started",
     "section": "",
-    "text": "Textbook of Agricultural Statistics\n\n\nSuitable for STAT 3202"
+    "text": "Choose a book. Visit the library and tap Start reading.\nFind your topic. Use the book’s chapter menu. On a phone, look for the menu button near the top of the page.\nKeep your place. Bookmark the chapter in your browser so you can return to it.\nPractise as you read. Work through an example before moving to the next topic."
   },
   {
-    "objectID": "index.html#for-students",
-    "href": "index.html#for-students",
-    "title": "Welcome",
-    "section": "For Students",
-    "text": "For Students\nMe-LON will host e-lecture notes which can be accessed by students of Kerala Agricultural University from anywhere independent of platform. Notes can be accessed using the passcode given by the course teacher. Students can use mobiles, tablets or computer for reading the lecture notes. Notes for UG, PG and PhD will be made available. All notes are in readable format only. Practical notes can be downloaded as PDF. Make use of it to the maximum."
-  },
-  {
-    "objectID": "index.html#to-teachers",
-    "href": "index.html#to-teachers",
-    "title": "Welcome",
-    "section": "To Teachers",
-    "text": "To Teachers\nAll we have done is the sowing of seeds in a very fertile land. Our teachers will decide the pace of growth of Me-LON. Inputs from our teachers will be the only thing that will help the Me-LON to grow. Lecture notes are made available in readable html format made using Quarto in R, which is in a read only format. Teachers can submit their entire lecture notes as word files in prescribed format to MeLON, we will convert it in to readable html format. see here for the format. Not only lecture notes, any e-content for educational purpose that you want to host can be shared as a word file in the specified format. Don’t worry about the rest, everything will be managed by us and your content will be here in Me-LON free to use, secure and handy. Say goodbye to all those complicated platforms and sharing methods. Only students with the passcode given by you can see the notes. Notes will be available only as interactive readable format and not as pdf, there is no worry of unnecessary sharing. Practical notes can be downloaded as pdf by the students.\nCheers!\nDr. Pratheesh P Gopinath\nHappy e-Learning with Me-LON!\n\nNote from the maintainer\nMe-LON is maintained by Dr Pratheesh P Gopinath, Head, Department of Agricultural Statistics. The Me-LON is online and available for free, in line with our dedication to open access and knowledge sharing.\n\n\nCopyright Information\n© 2025 Department of Agricultural Statistics, College of Agriculture, Vellayani. All rights reserved.\nThis website is licensed under a\n\nCreative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.\nUnder this license:\n- Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made.\n- Non Commercial: You may not use the material for commercial purposes.\n- No Derivatives: If you remix, transform, or build upon the material, you may not distribute the modified material.\nFor commercial use or distribution of print copies, prior written permission from Department of Agricultural Statistics, College of Agriculture, Vellayani is required."
-  },
-  {
-    "objectID": "agstat-textbook.html",
-    "href": "agstat-textbook.html",
-    "title": "Textbook of Agricultural Statistics",
+    "objectID": "student-guide.html#your-library-in-your-pocket",
+    "href": "student-guide.html#your-library-in-your-pocket",
+    "title": "A little help to get started",
     "section": "",
-    "text": "Redirecting to the textbook... Click here if not redirected.\n\n\n\n\n Back to top"
+    "text": "Choose a book. Visit the library and tap Start reading.\nFind your topic. Use the book’s chapter menu. On a phone, look for the menu button near the top of the page.\nKeep your place. Bookmark the chapter in your browser so you can return to it.\nPractise as you read. Work through an example before moving to the next topic."
+  },
+  {
+    "objectID": "student-guide.html#studying-r",
+    "href": "student-guide.html#studying-r",
+    "title": "A little help to get started",
+    "section": "Studying R",
+    "text": "Studying R\nStart with the foundations in R Programming for Agricultural Data Analysis. Read the explanation, inspect the example and try changing one thing at a time. Browser laboratories need an internet connection and may take a moment to load. A laptop is useful for longer coding sessions; your phone is useful for reading and revision."
+  },
+  {
+    "objectID": "student-guide.html#make-reading-comfortable",
+    "href": "student-guide.html#make-reading-comfortable",
+    "title": "A little help to get started",
+    "section": "Make reading comfortable",
+    "text": "Make reading comfortable\n\nTurn your phone sideways when a wide table or code example needs more room.\nUse your browser’s text-size or zoom settings to make the text comfortable.\nSave chapter bookmarks rather than relying on an open tab.\nOnline books need a connection. Download a practical only when the book provides a download link."
+  },
+  {
+    "objectID": "student-guide.html#course-notes-and-passcodes",
+    "href": "student-guide.html#course-notes-and-passcodes",
+    "title": "A little help to get started",
+    "section": "Course notes and passcodes",
+    "text": "Course notes and passcodes\nThe books linked in this library are open to read. If your teacher shares a separate course resource with a passcode, use the link and code supplied by that teacher."
+  },
+  {
+    "objectID": "student-guide.html#something-not-working",
+    "href": "student-guide.html#something-not-working",
+    "title": "A little help to get started",
+    "section": "Something not working?",
+    "text": "Something not working?\nContact the department with the book name, chapter and a short description of the problem. Include your browser and phone model if possible."
   }
 ]

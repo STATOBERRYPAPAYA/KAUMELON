@@ -6,3 +6,6 @@
 /.quarto/
 
 **/*.quarto_ipynb
+
+/.render-cache/
+/.quarto-cache/

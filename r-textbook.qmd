@@ -1,0 +1,13 @@
+---
+title: "R Programming for Agricultural Data Analysis"
+page-layout: full
+navbar: false
+page-footer: false
+search: false
+back-to-top-navigation: false
+---
+
+```{=html}
+<iframe class="book-reader" src="https://kaumelon.github.io/stat-531/" title="R Programming for Agricultural Data Analysis" allow="fullscreen" allowfullscreen></iframe>
+```
+

@@ -1,0 +1,30 @@
+---
+title: "A little help to get started"
+---
+
+## Your library, in your pocket
+
+1. **Choose a book.** Visit the [library](bookshelfug.qmd) and tap **Start reading**.
+2. **Find your topic.** Use the book’s chapter menu. On a phone, look for the menu button near the top of the page.
+3. **Keep your place.** Bookmark the chapter in your browser so you can return to it.
+4. **Practise as you read.** Work through an example before moving to the next topic.
+
+## Studying R
+
+Start with the foundations in [R Programming for Agricultural Data Analysis](r-textbook.html). Read the explanation, inspect the example and try changing one thing at a time. Browser laboratories need an internet connection and may take a moment to load. A laptop is useful for longer coding sessions; your phone is useful for reading and revision.
+
+## Make reading comfortable
+
+- Turn your phone sideways when a wide table or code example needs more room.
+- Use your browser’s text-size or zoom settings to make the text comfortable.
+- Save chapter bookmarks rather than relying on an open tab.
+- Online books need a connection. Download a practical only when the book provides a download link.
+
+## Course notes and passcodes
+
+The books linked in this library are open to read. If your teacher shares a separate course resource with a passcode, use the link and code supplied by that teacher.
+
+## Something not working?
+
+[Contact the department](about.qmd#contact) with the book name, chapter and a short description of the problem. Include your browser and phone model if possible.
+

@@ -1,0 +1,16 @@
+---
+title: "STAT MAASH"
+description: "An upcoming MOOC on Me-LON with guided lessons, practical learning and self-assessment."
+---
+
+```{=html}
+<div class="mooc-intro"><img src="images/stat-maash.svg" alt="STAT MAASH icon" width="88" height="88"><p class="eyebrow">A MOOC ON Me-LON</p><h2>Your companion for learning, practice and progress.</h2><p class="mooc-status">Coming Soon</p></div>
+```
+
+**STAT MAASH** stands for **Mentor AI for Academic Success and Help**. It is being introduced on Me-LON as a MOOC, bringing guided online learning and practical activities into one place.
+
+The planned learning experience combines step-by-step lessons, interactive R practice, self-assessment and AI-assisted guidance. Students will be able to work through topics at their own pace, try examples and check their understanding as they progress.
+
+Details about courses, access and enrolment will be shared here when STAT MAASH is ready to launch on Me-LON.
+
+[Back to Me-LON](index.qmd){.button .secondary}
