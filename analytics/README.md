@@ -4,6 +4,10 @@ Firebase project: `statoberrydrona` (existing Blaze plan). Firestore: default da
 Endpoint: `https://asia-south1-statoberrydrona.cloudfunctions.net/melonMetrics`.
 Dashboard: `https://www.agrinoteskau.com/usage.html`.
 
+## Public summary
+
+The homepage, library book cards and usage page display 30-day aggregate totals. GET with ?summary=public returns only fixed-period totals for the allowlisted resources, with a one-minute server cache. It excludes daily records, page breakdowns, visitor records and identifiers.
+
 ## Access
 
 Only verified Firebase accounts for `pratheesh.pg@kau.in` and `statoberry@gmail.com` may request reports. Use the dashboard to sign in, create the Pratheesh account if needed, verify the email, or request a password reset. Passwords go directly to Firebase Authentication; they are not stored by the website. The function checks the verified email on every report request. Existing Firestore rules deny all direct client access and are unchanged.
@@ -32,3 +36,4 @@ All documents use `melonMetrics*` namespaces. Raw IP, name and email are not inc
 5. Push rendered Me-LON `docs/` and the book tracker changes, then check each Pages deployment.
 
 No audit inventories, service-account keys, credentials, or cloned book repositories are part of the published Me-LON website.
+

@@ -12,7 +12,7 @@ Reading time counts only while a page is visible, focused and recently active. I
 
 ## Storage and access
 
-Usage data are stored in Google Firebase / Firestore in the DRONA project, in Mumbai. The reporting dashboard is restricted to verified administrator accounts. We do not include names, email addresses, passwords or raw IP addresses in the analytics records. Google Cloud may process request metadata in its infrastructure logs. Short-lived deduplication and rate-limit records expire after approximately 45 days; aggregated daily counts are retained for reporting.
+Usage data are stored in Google Firebase / Firestore in the DRONA project, in Mumbai. Summary usage totals are displayed publicly on Me-LON. Detailed reporting is restricted to verified administrator accounts. We do not include names, email addresses, passwords or raw IP addresses in the analytics records. Google Cloud may process request metadata in its infrastructure logs. Short-lived deduplication and rate-limit records expire after approximately 45 days; aggregated daily counts are retained for reporting.
 
 ## Your choice
 
@@ -27,4 +27,5 @@ document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector
 ```
 
 Questions about this service can be sent to [Dr. Pratheesh P. Gopinath](mailto:pratheesh.pg@kau.in).
+
 

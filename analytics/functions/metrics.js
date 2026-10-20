@@ -8,13 +8,27 @@ const dayAt=t=>new Date(t+19800000).toISOString().slice(0,10);
 function validate(body){return body&&BOOKS.has(body.book)&&UUID.test(body.visitor||'')&&UUID.test(body.session||'')&&Number.isInteger(body.seconds)&&body.seconds>=0&&body.seconds<=21600&&Number.isInteger(body.seq)&&body.seq>=0&&body.seq<=10000&&typeof body.page==='string'&&/^\/[a-zA-Z0-9/_\-.]{0,180}$/.test(body.page)&&['mobile','tablet','desktop'].includes(body.device)&&['book','site'].includes(body.source);}
 function increment(old={},delta={}){const next={...old};for(const [key,val]of Object.entries(delta))next[key]=(old[key]||0)+val;return next;}
 function advance(previous,body,now){if(previous&&body.seq<=previous.seq)return null;const elapsed=previous?Math.max(0,(now-previous.updatedAt)/1000):0;const seconds=previous?Math.min(Math.max(0,body.seconds-previous.reportedSeconds),Math.floor(elapsed+3),90,Math.max(0,21600-(previous.activeSeconds||0))):0;const total=(previous?.activeSeconds||0)+seconds;return{seconds,total,newSession:!previous,newEngaged:total>=30&&!previous?.engaged,newPage:!previous||body.page!==previous.page,state:{seq:body.seq,reportedSeconds:body.seconds,activeSeconds:total,engaged:total>=30,page:body.page,createdAt:previous?.createdAt||now,updatedAt:now}};}
-function createHandler(db,auth,Timestamp,clock=Date.now){return async(req,res)=>{
+function createHandler(db,auth,Timestamp,clock=Date.now){let summaryCache=null,summaryPending=null;return async(req,res)=>{
  const origin=req.get('origin');res.set('Vary','Origin');res.set('Cache-Control','no-store');
  if(origin&&ORIGINS.has(origin))res.set('Access-Control-Allow-Origin',origin);
  res.set('Access-Control-Allow-Methods','GET, POST, OPTIONS');res.set('Access-Control-Allow-Headers','Content-Type, Authorization');
  if(req.method==='OPTIONS')return res.status(origin&&ORIGINS.has(origin)?204:403).send('');
  try{
  if(req.method==='GET'){
+  if(req.query.summary==='public'){
+   const now=clock();
+   if(!summaryCache||now-summaryCache.at>=60000){
+    if(!summaryPending)summaryPending=(async()=>{
+     const refs=[];for(let i=29;i>=0;i--)refs.push(db.collection('melonMetricsDays').doc(dayAt(now-i*86400000)));
+     const snapshots=await db.getAll(...refs),books={};
+     for(const id of BOOKS)books[id]={opens:0,readers:0,engagedReads:0,activeSeconds:0,pageViews:0};
+     for(const snap of snapshots)for(const [id,data]of Object.entries(snap.data()?.books||{}))if(BOOKS.has(id))for(const key of Object.keys(books[id]))books[id][key]+=Number.isSafeInteger(data[key])&&data[key]>=0?data[key]:0;
+     summaryCache={at:now,data:{days:30,from:dayAt(now-29*86400000),through:dayAt(now),timezone:'Asia/Kolkata',updatedAt:new Date(now).toISOString(),books}};
+    })().finally(()=>{summaryPending=null;});
+    await summaryPending;
+   }
+   res.set('Cache-Control','public, max-age=60');return res.json(summaryCache.data);
+  }
   const bearer=req.get('authorization')||'';if(!bearer.startsWith('Bearer '))return res.status(401).json({error:'Sign in to view metrics.'});
   let user;try{user=await auth.verifyIdToken(bearer.slice(7),true);}catch{return res.status(401).json({error:'Sign in again.'});}
   if(!user.email_verified||!ADMINS.has((user.email||'').toLowerCase()))return res.status(403).json({error:'A verified administrator account is required.'});
@@ -51,5 +65,6 @@ function createHandler(db,auth,Timestamp,clock=Date.now){return async(req,res)=>
  }catch(e){console.error('Me-LON metrics request failed',e.code||'request');return res.status(503).json({error:'Metrics temporarily unavailable.'});}
 };}
 module.exports={createHandler,validate,advance,dayAt,increment};
+
 
 

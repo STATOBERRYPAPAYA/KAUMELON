@@ -19,3 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <script src="/assets/melon-tracker.js" defer></script>
+<script src="/assets/public-usage.js?v=20261020-1" defer></script>
