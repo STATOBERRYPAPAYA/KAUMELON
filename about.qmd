@@ -2,7 +2,7 @@
 title: "Learning, shared freely"
 ---
 
-**Me-LON** is an online learning initiative for students of Kerala Agricultural University, developed by **Dr. Pratheesh P. Gopinath** and maintained by the **Department of Agricultural Statistics, College of Agriculture, Vellayani**.
+**Me-LON** is an online learning initiative for students of Kerala Agricultural University, developed by **[Dr. Pratheesh P. Gopinath](https://agstatistics.com/faculty.html#sub-lt-dr-pratheesh-p-gopinath)** and maintained by the **[Department of Agricultural Statistics](https://agstatistics.com), College of Agriculture, Vellayani**.
 
 Me-LON is designed for learning across subjects and departments. The library currently includes statistics and R books, and will grow to include textbooks, lecture notes and practical resources in other subjects as they are contributed.
 
@@ -14,8 +14,8 @@ Teachers from all subjects and departments are welcome to contribute. To share l
 
 ## Developer and contact person {#contact}
 
-**Dr. Pratheesh P. Gopinath**  
-Department of Agricultural Statistics, College of Agriculture, Vellayani, Kerala Agricultural University
+**[Dr. Pratheesh P. Gopinath](https://agstatistics.com/faculty.html#sub-lt-dr-pratheesh-p-gopinath)**  
+[Department of Agricultural Statistics](https://agstatistics.com), College of Agriculture, Vellayani, Kerala Agricultural University
 
 [Email pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in) · [Call +91 70119 04862](tel:+917011904862)
 
@@ -28,5 +28,6 @@ Department of Agricultural Statistics, College of Agriculture, Vellayani, Kerala
 ## Copyright and reuse
 
 Me-LON website content is licensed under [Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/). Give appropriate credit; commercial use and distribution of modified material require permission. Individual textbooks retain their own copyright and licensing notices. Contact the department about commercial use or print distribution of website content.
+
 
 

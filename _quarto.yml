@@ -44,8 +44,8 @@ website:
   back-to-top-navigation: true
   page-footer:
     left: |
-      Developed by **Dr. Pratheesh P. Gopinath** · Contact: [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in)  
-      © 2026 Department of Agricultural Statistics · College of Agriculture, Vellayani, KAU
+      Developed by **[Dr. Pratheesh P. Gopinath](https://agstatistics.com/faculty.html#sub-lt-dr-pratheesh-p-gopinath)** · Contact: [pratheesh.pg@kau.in](mailto:pratheesh.pg@kau.in)  
+      © 2026 [Department of Agricultural Statistics](https://agstatistics.com) · College of Agriculture, Vellayani, KAU
     right:
       - text: Metrics
         href: usage.qmd
@@ -72,6 +72,7 @@ format:
 editor: source
 execute:
   freeze: auto
+
 
 
 
