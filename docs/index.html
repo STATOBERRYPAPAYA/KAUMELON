@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="assets/melon-3afdf225b3c0.css">
+<link rel="stylesheet" href="assets/melon-96977c0b3fdf.css">
 </head>
 
 <body class="nav-fixed">
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section class="section-block" aria-labelledby="choose-heading">
 <div class="section-heading"><div><p class="eyebrow">EXPLORE THE COLLECTION</p><h2 id="choose-heading" class="anchored">On the shelves now</h2></div><a href="bookshelfug.html">View all books →</a></div>
-<p>Start with our current books in statistics and R. Resources from other subjects will join the library as teachers contribute new material.</p>
+<p>Explore statistics, R programming, and professional and personal skill development. Discover more subjects as teachers share new resources.</p>
 <div class="cover-shelf">
 <a class="shelf-book" href="agstat-textbook.html">
 <img src="images/UG/agstat-cover-cb9efbe.webp" alt="Textbook of Agricultural Statistics book cover" width="640" height="1021" loading="lazy">
@@ -163,6 +163,7 @@ ul.task-list li input[type="checkbox"] {
 <img src="images/UG/r-cover.png" alt="Data Analysis in Agricultural Research book cover" width="406" height="647" loading="lazy">
 <span class="tag">NEW · R PROGRAMMING</span><h3 class="anchored">R Programming for Agricultural Data Analysis</h3><p class="book-usage" data-book-usage="r-agricultural-data">Loading usage…</p><span class="card-link">Tap to read →</span>
 </a>
+<a class="shelf-book" href="extn4101-textbook.html"><img src="images/UG/extn4101-cover.webp" alt="Professional and Personal Skill Development book cover" width="640" height="1020" loading="lazy"><span class="tag">NEW · EXTN 4101</span><h3 class="anchored">Professional and Personal Skill Development</h3><p class="book-usage" data-book-usage="professional-personal-skills">Loading usage…</p><span class="card-link">Tap to read →</span></a>
 </div><p class="library-meta" id="usage-heading"><a class="metrics-button" href="usage.html#usage-heading" data-public-usage=""><i class="bi bi-speedometer2" aria-hidden="true"></i><span>Metrics</span><span class="metrics-mini"><b data-usage="opens">…</b> opens <span aria-hidden="true">·</span> <b data-usage="engaged">…</b> reads</span><span aria-hidden="true">↗</span></a></p></section>
 <section class="section-block" aria-labelledby="learning-heading">
 <p class="eyebrow">MORE WAYS TO LEARN</p><h2 id="learning-heading" class="anchored">Your online classroom</h2>
@@ -183,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!input) return;
   document.querySelector('.library-tools').hidden = false;
   const books = [...document.querySelectorAll('[data-search]')];
+  document.querySelector('#book-count').textContent = `${books.length} books available`;
   input.addEventListener('input', () => {
     const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
     let count = 0;
@@ -202,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="./assets/melon-tracker.js" defer=""></script>
 
-<script src="./assets/public-usage.js?v=20261020-2" defer=""></script>
+<script src="./assets/public-usage.js?v=20261021-1" defer=""></script>
 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

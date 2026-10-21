@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="assets/melon-3afdf225b3c0.css">
+<link rel="stylesheet" href="assets/melon-96977c0b3fdf.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!input) return;
   document.querySelector('.library-tools').hidden = false;
   const books = [...document.querySelectorAll('[data-search]')];
+  document.querySelector('#book-count').textContent = `${books.length} books available`;
   input.addEventListener('input', () => {
     const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
     let count = 0;
@@ -183,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="./assets/melon-tracker.js" defer=""></script>
 
-<script src="./assets/public-usage.js?v=20261020-2" defer=""></script>
+<script src="./assets/public-usage.js?v=20261021-1" defer=""></script>
 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

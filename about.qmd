@@ -4,7 +4,7 @@ title: "Learning, shared freely"
 
 **Me-LON** is an online learning initiative for students of Kerala Agricultural University, developed by **[Dr. Pratheesh P. Gopinath](https://agstatistics.com/faculty.html#sub-lt-dr-pratheesh-p-gopinath)** and maintained by the **[Department of Agricultural Statistics](https://agstatistics.com), College of Agriculture, Vellayani**.
 
-Me-LON is designed for learning across subjects and departments. The library currently includes statistics and R books, and will grow to include textbooks, lecture notes and practical resources in other subjects as they are contributed.
+Me-LON is designed for learning across subjects and departments. The library currently includes statistics, R programming, and professional and personal skill development books, and will grow to include textbooks, lecture notes and practical resources in other subjects as they are contributed.
 
 Our aim is simple: make educational resources easy to find and comfortable to read across phones, tablets and computers.
 

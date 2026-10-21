@@ -6,6 +6,7 @@ project:
     - bookshelfug.qmd
     - agstat-textbook.qmd
     - r-textbook.qmd
+    - extn4101-textbook.qmd
     - stat-maash.qmd
     - student-guide.qmd
     - about.qmd
@@ -62,7 +63,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: assets/melon-3afdf225b3c0.css
+    css: assets/melon-96977c0b3fdf.css
     toc: false
     number-sections: false
     lang: en
@@ -72,6 +73,7 @@ format:
 editor: source
 execute:
   freeze: auto
+
 
 
 

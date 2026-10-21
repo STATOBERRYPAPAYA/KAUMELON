@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!input) return;
   document.querySelector('.library-tools').hidden = false;
   const books = [...document.querySelectorAll('[data-search]')];
+  document.querySelector('#book-count').textContent = `${books.length} books available`;
   input.addEventListener('input', () => {
     const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
     let count = 0;
@@ -19,4 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <script src="/assets/melon-tracker.js" defer></script>
-<script src="/assets/public-usage.js?v=20261020-2" defer></script>
+<script src="/assets/public-usage.js?v=20261021-1" defer></script>

@@ -34,3 +34,7 @@
 /analytics/refine-interface.cjs
 /analytics/finalize-interface.cjs
 /analytics/provision-admin.cjs
+
+/analytics/extn4101-index.html
+/analytics/add-extn4101.cjs
+/analytics/prepare-extn-cover.py

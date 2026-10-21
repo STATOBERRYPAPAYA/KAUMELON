@@ -18,5 +18,5 @@ include-in-header:
 <h2>Most viewed pages and chapters</h2><div class="metrics-table"><table><thead><tr><th>Book</th><th>Page</th><th>Views</th></tr></thead><tbody id="metrics-pages"></tbody></table></div>
 <p>“Daily readers (sum)” adds daily unique browsers; it is not a count of unique students across the whole period. Opens are deduplicated within the same tab and book each day. An engaged session has at least 30 active seconds. Active time pauses for hidden, unfocused or idle pages. Counts can be affected by privacy settings and automated traffic; no historic activity is backfilled.</p>
 </section>
-<script type="module" src="assets/metrics-dashboard.js?v=261bbc1ed84a"></script>
+<script type="module" src="assets/metrics-dashboard.js?v=a815a4c4575c"></script>
 ```

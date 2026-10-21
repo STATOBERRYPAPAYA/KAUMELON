@@ -1,7 +1,7 @@
 const {createHash}=require('node:crypto');
 const ORIGINS=new Set(['https://www.agrinoteskau.com','https://agrinoteskau.com','https://kaumelon.github.io','https://statoberrypapaya.github.io']);
 const ADMINS=new Set(['pratheesh.pg@kau.in']);
-const BOOKS=new Set(['platform','agricultural-statistics','r-agricultural-data']);
+const BOOKS=new Set(['platform','agricultural-statistics','r-agricultural-data','professional-personal-skills']);
 const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i;
 const digest=s=>createHash('sha256').update(s).digest('hex');
 const dayAt=t=>new Date(t+19800000).toISOString().slice(0,10);

@@ -4,7 +4,7 @@ const config={"authDomain":"statoberrydrona.firebaseapp.com","projectId":"statob
 const auth=getAuth(initializeApp(config)),endpoint='https://asia-south1-statoberrydrona.cloudfunctions.net/melonMetrics';
 const $=s=>document.querySelector(s),status=$('#metrics-status'),allowed=new Set(['pratheesh.pg@kau.in']);
 let report;
-const names={platform:'Me-LON website','agricultural-statistics':'Agricultural Statistics','r-agricultural-data':'R Programming'};
+const names={platform:'Me-LON website','agricultural-statistics':'Agricultural Statistics','r-agricultural-data':'R Programming','professional-personal-skills':'Professional & Personal Skills'};
 const error=e=>{status.textContent=({'auth/invalid-credential':'Email or password is incorrect.','auth/email-already-in-use':'This account already exists. Please sign in.','auth/weak-password':'Choose a password with at least 6 characters.','auth/too-many-requests':'Too many attempts. Please wait and try again.','auth/operation-not-allowed':'Account creation is not available. Contact the maintainer.'})[e.code]||e.message||'Unable to complete this request.';};
 const credentials=()=>{const email=$('#metrics-email').value.trim().toLowerCase();if(!allowed.has(email))throw Error('This dashboard is restricted to approved administrator emails.');return[email,$('#metrics-password').value];};
 $('#metrics-login').addEventListener('submit',async event=>{event.preventDefault();try{const [e,p]=credentials();await signInWithEmailAndPassword(auth,e,p);$('#metrics-password').value='';}catch(e){error(e);}});

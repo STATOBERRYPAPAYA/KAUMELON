@@ -3,13 +3,13 @@ title: "Your learning library"
 description: "Explore a growing collection of textbooks and learning resources across subjects."
 ---
 
-Free online reading, wherever you study. Choose a book to open its full chapter list. The collection currently includes statistics and R; other subjects will be added as new resources are contributed.
+Free online reading, wherever you study. Choose a book to open its full chapter list. Explore textbooks and course notes in statistics, R programming, and professional and personal skill development.
 
 ```{=html}
 <div class="library-tools" hidden>
 <label for="book-search">Find a book</label>
-<input id="book-search" type="search" placeholder="Try R, statistics or STAT 3202" autocomplete="off" aria-controls="book-list">
-<p id="book-count" role="status" aria-live="polite">2 books available</p>
+<input id="book-search" type="search" placeholder="Try R, statistics or EXTN 4101" autocomplete="off" aria-controls="book-list">
+<p id="book-count" role="status" aria-live="polite">3 books available</p>
 </div>
 <div class="book-grid" id="book-list">
 <article class="book-card" data-search="agricultural statistics stat 3202 undergraduate experiments probability regression">
@@ -20,6 +20,7 @@ Free online reading, wherever you study. Choose a book to open its full chapter 
 <a class="cover-link" href="r-textbook.html" aria-label="Read R Programming for Agricultural Data Analysis"><img class="book-cover" src="images/UG/r-cover.png" alt="Cover of the R book: Data Analysis in Agricultural Research, by Dr. Pratheesh P Gopinath" loading="lazy" width="406" height="647"></a>
 <div class="book-body"><span class="tag">NEW · R PROGRAMMING</span><h2><a href="r-textbook.html">R Programming for Agricultural Data Analysis</a></h2><p>From your first R commands to cleaning, visualization, statistical analysis and reproducible reports.</p><p class="book-meta">14 browser R laboratories · Practical companion</p><p class="book-usage" data-book-usage="r-agricultural-data">Loading usage…</p><a class="button primary" href="r-textbook.html">Start reading <span aria-hidden="true">→</span></a></div>
 </article>
+<article class="book-card" data-search="extn 4101 professional personal skill development communication group discussion presentations debate quiz event time management leadership motivation biotechnology esakkimuthu extension"><a class="cover-link" href="extn4101-textbook.html" aria-label="Read Professional and Personal Skill Development"><img class="book-cover" src="images/UG/extn4101-cover.webp" alt="Professional and Personal Skill Development cover" loading="lazy" width="640" height="1020"></a><div class="book-body"><span class="tag">NEW · EXTN 4101 (1+2)</span><h2><a href="extn4101-textbook.html">Professional and Personal Skill Development</a></h2><p>Build communication, presentation, leadership and time-management skills through practical activities.</p><p class="book-meta">Dr. Esakkimuthu M. · Integrated Biotechnology</p><p class="book-usage" data-book-usage="professional-personal-skills">Loading usage…</p><a class="button primary" href="extn4101-textbook.html">Start reading <span aria-hidden="true">→</span></a></div></article>
 </div>
 <p class="usage-note">Usage shown for the last 30 days. An engaged read means at least 30 estimated active seconds.</p>
 <p class="library-meta"><a class="metrics-button" href="usage.html#usage-heading"><i class="bi bi-speedometer2" aria-hidden="true"></i><span>Metrics</span><span aria-hidden="true">↗</span></a></p>
