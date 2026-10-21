@@ -14,9 +14,9 @@ include-in-header:
 <div class="actions"><label for="metrics-days">Reporting period</label><select id="metrics-days"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select><button class="button secondary" id="metrics-refresh">Refresh</button><button class="button secondary" id="metrics-export">Download CSV</button></div>
 <p id="metrics-updated"></p>
 <div class="metrics-table"><table><thead><tr><th>Resource</th><th>Opens / sessions</th><th>Daily readers (sum)</th><th>Engaged sessions</th><th>Total active time</th><th>Avg time / session</th><th>Page views</th></tr></thead><tbody id="metrics-summary"></tbody></table></div>
-<h2>Daily activity</h2><div class="metrics-table"><table><thead><tr><th>Date (IST)</th><th>Website sessions</th><th>Book opens</th><th>Book active minutes</th></tr></thead><tbody id="metrics-daily"></tbody></table></div>
+<h2>Daily activity</h2><div class="metrics-table"><table><thead><tr><th>Date (IST)</th><th>Website sessions</th><th>Book opens</th><th>Book active time</th></tr></thead><tbody id="metrics-daily"></tbody></table></div>
 <h2>Most viewed pages and chapters</h2><div class="metrics-table"><table><thead><tr><th>Book</th><th>Page</th><th>Views</th></tr></thead><tbody id="metrics-pages"></tbody></table></div>
 <p>“Daily readers (sum)” adds daily unique browsers; it is not a count of unique students across the whole period. Opens are deduplicated within the same tab and book each day. An engaged session has at least 30 active seconds. Active time pauses for hidden, unfocused or idle pages. Counts can be affected by privacy settings and automated traffic; no historic activity is backfilled.</p>
 </section>
-<script type="module" src="assets/metrics-dashboard.js?v=a815a4c4575c"></script>
+<script type="module" src="assets/metrics-dashboard.js?v=753da5c6dbad"></script>
 ```

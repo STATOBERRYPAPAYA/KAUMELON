@@ -1,3 +1,4 @@
+import {formatReadingTime} from './reading-time.js?v=20261021-1';
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import {getAuth,signInWithEmailAndPassword,sendPasswordResetEmail,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
 const config={"authDomain":"statoberrydrona.firebaseapp.com","projectId":"statoberrydrona","apiKey":"AIzaSyB48GKM2TI8Ckg4pWKe4x8LMdug8tzEjtA","appId":"1:158855671548:web:83bae670e9507333d1b179"};
@@ -10,9 +11,9 @@ const credentials=()=>{const email=$('#metrics-email').value.trim().toLowerCase(
 $('#metrics-login').addEventListener('submit',async event=>{event.preventDefault();try{const [e,p]=credentials();await signInWithEmailAndPassword(auth,e,p);$('#metrics-password').value='';}catch(e){error(e);}});
 $('#metrics-signout').onclick=()=>signOut(auth);
 function cell(row,value){const td=document.createElement('td');td.textContent=String(value);row.append(td);}
-const duration=s=>s<60?`${Math.round(s)} sec`:`${(s/60).toFixed(1)} min`;
+const duration=s=>formatReadingTime(s,{includeSeconds:true});
 function draw(d){report=d;const summary=$('#metrics-summary'),daily=$('#metrics-daily'),pages=$('#metrics-pages');summary.replaceChildren();daily.replaceChildren();pages.replaceChildren();const totals={},chapter=[];
- for(const day of d.daily){let opens=0,seconds=0;for(const [book,data]of Object.entries(day.books||{})){totals[book]??={opens:0,readers:0,engagedReads:0,activeSeconds:0,pageViews:0};for(const k of Object.keys(totals[book]))totals[book][k]+=data[k]||0;if(book!=='platform'){opens+=data.opens||0;seconds+=data.activeSeconds||0;}for(const [page,views]of Object.entries(data.pages||{})){let item=chapter.find(x=>x.book===book&&x.page===page);if(item)item.views+=views;else chapter.push({book,page,views});}}const row=document.createElement('tr');for(const v of [day.day,day.books?.platform?.opens||0,opens,(seconds/60).toFixed(1)])cell(row,v);daily.prepend(row);}
+ for(const day of d.daily){let opens=0,seconds=0;for(const [book,data]of Object.entries(day.books||{})){totals[book]??={opens:0,readers:0,engagedReads:0,activeSeconds:0,pageViews:0};for(const k of Object.keys(totals[book]))totals[book][k]+=data[k]||0;if(book!=='platform'){opens+=data.opens||0;seconds+=data.activeSeconds||0;}for(const [page,views]of Object.entries(data.pages||{})){let item=chapter.find(x=>x.book===book&&x.page===page);if(item)item.views+=views;else chapter.push({book,page,views});}}const row=document.createElement('tr');for(const v of [day.day,day.books?.platform?.opens||0,opens,duration(seconds)])cell(row,v);daily.prepend(row);}
  for(const book of Object.keys(names)){const data=totals[book]||{};const row=document.createElement('tr');for(const v of [names[book],data.opens||0,data.readers||0,data.engagedReads||0,duration(data.activeSeconds||0),duration(data.opens?(data.activeSeconds||0)/data.opens:0),data.pageViews||0])cell(row,v);summary.append(row);}
  for(const item of chapter.sort((a,b)=>b.views-a.views).slice(0,50)){const row=document.createElement('tr');for(const v of [names[item.book]||item.book,item.page,item.views])cell(row,v);pages.append(row);}
  $('#metrics-updated').textContent='Updated '+new Date(d.generatedAt).toLocaleString('en-IN',{timeZone:'Asia/Kolkata'})+' IST. Reporting days use Asia/Kolkata.';
