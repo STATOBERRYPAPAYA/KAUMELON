@@ -7,6 +7,7 @@ project:
     - agstat-textbook.qmd
     - r-textbook.qmd
     - extn4101-textbook.qmd
+    - pgdaem-textbook.qmd
     - stat-maash.qmd
     - student-guide.qmd
     - about.qmd
@@ -63,7 +64,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: assets/melon-03252f03a020.css
+    css: assets/melon-987f62359633.css
     toc: false
     number-sections: false
     lang: en
@@ -73,6 +74,8 @@ format:
 editor: source
 execute:
   freeze: auto
+
+
 
 
 

@@ -1,0 +1,12 @@
+---
+title: "Decision Making and Problem Solving in Extension Organisations"
+page-layout: full
+navbar: false
+page-footer: false
+search: false
+back-to-top-navigation: false
+---
+
+```{=html}
+<iframe class="book-reader" src="https://kaumelon.github.io/PGDAEM-spk1/" title="Decision Making and Problem Solving in Extension Organisations" allow="fullscreen" allowfullscreen></iframe>
+```
