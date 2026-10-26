@@ -9,110 +9,37 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=a4baed506963">
+<link rel="stylesheet" href="../assets/revision.css?v=c90ec7763377">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js?v=a4baed506963"></script>
+<script defer src="../assets/revision.js?v=c90ec7763377"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
 
 <nav class="rv-bar" aria-label="Revision">
-  <a class="back" href="../../revision.html?v=968a1d968c74">← All revision sheets</a>
+  <a class="back" href="../../revision.html?v=de0efcfea6a4">← All revision sheets</a>
   <span class="spacer"></span>
-  <a class="rv-btn ghost nav-step" href="02-official-agricultural-statistics.html?v=968a1d968c74" aria-label="Next chapter">›</a><a class="rv-btn" href="01-basics-of-statistics.pdf?v=968a1d968c74" download="MeLON-Agstat-Ch01-Basics-of-Statistics-5min.pdf">
+  <a class="rv-btn ghost nav-step" href="02-official-agricultural-statistics.html?v=de0efcfea6a4" aria-label="Next chapter">›</a><a class="rv-btn" href="01-basics-of-statistics.pdf?v=de0efcfea6a4" download="MeLON-Agstat-Ch01-Basics-of-Statistics-5min.pdf">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
 </nav>
 
 <main class="sheet">
   <header class="mast">
+    <img class="poster-logo" src="../assets/logo-128.png" alt="KAU Me-LON" width="64" height="64">
     <div class="num" aria-hidden="true">01</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 1</div>
     <h1>Basics of Statistics</h1>
     <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
     <p class="edition-label">BOOK-ONLY EDITION · Verified against the textbook</p>
-    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/intro.html#chapter-summary">Chapter 1 · Chapter Summary</a> in the textbook.</p>
+    <p class="source-note">Source: <a href="https://statoberrypapaya.github.io/TextbookofAgstat/intro.html">Chapter 1 of the textbook</a>.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
   <div class="grid">
-<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
-<li>A population is the complete group of interest; a sample is a part
-selected for study.</li>
-<li>A parameter describes a population, while a statistic is calculated
-from sample observations.</li>
-<li>The measurement scale determines which numerical comparisons are
-meaningful.</li>
-<li>Class intervals must cover the data without overlap; boundaries
-depend on the recording precision.</li>
-<li>Frequencies sum to the number of observations, and relative
-frequencies sum to one.</li>
-</ul></div></section>
-
-<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
-<li>The source, selection method and reference period must be checked
-before interpreting data.</li>
-</ul></div></section>
-
-<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Number of classes using Sturges’ formula:</p>
-<p><span class="math display">\[
-k = 1 + 3.322\log_{10}N
-\]</span></p>
-<p>Approximate class width:</p>
-<p><span class="math display">\[
-C = \frac{|\max-\min|}{k}
-\]</span></p>
-<p>A possible centring rule for a preliminary lower endpoint:</p>
-<p><span class="math display">\[
-L = \min - \frac{C&#39;k&#39;-(\max-\min)}{2}
-\]</span></p>
-<p>This is an optional starting value, not a necessary rule. Final
-limits and boundaries must respect the measurement precision, cover the
-data and avoid overlapping classes.</p></div></section>
-
-<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Lower class boundary of the <span class="math inline">\(i\)</span>th
-class:</p>
-<p><span class="math display">\[
-L_i = \frac{\text{Lower class limit of }i+\text{Upper class limit of
-}(i-1)}{2},\quad i=2,3,4,\ldots
-\]</span></p>
-<p>Upper class boundary of the <span class="math inline">\(i\)</span>th
-class:</p>
-<p><span class="math display">\[
-U_i = \frac{\text{Upper class limit of }i+\text{Lower class limit of
-}(i+1)}{2},\quad i=1,2,3,\ldots
-\]</span></p>
-<p>Class mark:</p>
-<p><span class="math display">\[
-\text{Class mark} = \frac{\text{Lower class limit}+\text{Upper class
-limit}}{2}
-\]</span></p></div></section>
-
-<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Class width:</p>
-<p><span class="math display">\[
-C = \text{Upper class boundary}-\text{Lower class boundary}
-\]</span></p>
-<p>Relative frequency:</p>
-<p><span class="math display">\[
-\text{Relative frequency} = \frac{f}{N}
-\]</span></p>
-<p>Sum of frequencies:</p>
-<p><span class="math display">\[
-\sum f = N
-\]</span></p></div></section>
-
-<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Sum of relative frequencies:</p>
-<p><span class="math display">\[
-\sum\frac{f}{N}=1
-\]</span></p></div></section>
-
-<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The branch of statistics concerned with summarizing data is called
-__________ statistics.</p><span class="ans">Descriptive</span></li><li><p>The branch of statistics concerned with drawing conclusions about a
-population from a sample is called __________ statistics.</p><span class="ans">Inferential</span></li><li><p>A numerical constant describing a population is termed a
-__________.</p><span class="ans">Parameter</span></li><li><p>A subset of a population selected for study is called a
-__________.</p><span class="ans">Sample</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
+<section class="card  c-rose"><h2><span class="n">1.</span>Definition</h2><div class="body"><p>Statistics is the science which deals with the</p><ol class="steps"><li>Collection of data</li><li>Organization of data or classification of data</li><li>Presentation of data</li><li>Analysis of data</li><li>Interpretation of data</li></ol></div></section><section class="card  c-blue"><h2><span class="n">2.</span>Scope and importance</h2><div class="body"><p>Functions of statistics: Statistics plays a crucial role in simplifying complex data, transforming it into clear and meaningful information.</p><p>It supports decision-making by presenting facts in an organized manner, aids in the formulation of effective policies, facilitates comparisons, and assists in making forecasts.</p><p>By applying appropriate statistical methods, researchers can draw valid conclusions from experiments.</p></div></section><section class="card  c-ochre"><h2><span class="n">3.</span>Branches of statistics</h2><div class="body"><div class="tree"><span class="root">Statistics</span><span class="stem"></span><div class="branches"><div class="leaf">Descriptive statistics, which deals with summarizing data from a sample or a population using indexes or measures such as the mean or standard deviation etc.</div><div class="leaf">Inferential statistics, use a random sample of data taken from a population to describe and make inferences about the population parameters.</div></div></div></div></section><section class="card  c-green"><h2><span class="n">4.</span>Population and sample</h2><div class="body"><div class="pair"><div><h3>Population</h3>A population is the complete group of interest</div><div><h3>Sample</h3>a sample is a part selected for study.</div></div><p>A parameter describes a population, while a statistic is calculated from sample observations.</p></div></section><section class="card  c-teal"><h2><span class="n">5.</span>Types of variables</h2><div class="body"><table><thead><tr><th>Type</th><th>From the textbook</th></tr></thead><tbody><tr><td><b>Quantitative</b></td><td>A quantitative variable is one that can be expressed in numerical terms and takes values that are measurable.</td></tr><tr><td><b>Discrete</b></td><td>Discrete variables are variables that can only take a finite or countable number of distinct values.</td></tr><tr><td><b>Continuous</b></td><td>Continuous variables, on the other hand, are variables that can take any value within a given range or interval and can be measured.</td></tr><tr><td><b>Categorical</b></td><td>Categorical variables classify observations into groups.</td></tr></tbody></table></div></section><section class="card  c-plum"><h2><span class="n">6.</span>Collection of data</h2><div class="body"><div class="pair"><div><h3>Primary data</h3>Primary data are first-hand, original data collected directly from a single source by the researcher for a specific purpose.</div><div><h3>Secondary data</h3>In contrast, secondary data are obtained from existing sources or agencies and have been previously collected and processed for different purposes.</div></div></div></section><section class="card  c-olive"><h2><span class="n">7.</span>Measurement scales</h2><div class="body"><table><tbody><tr><td><b>Nominal</b></td><td>Data measured on the nominal scale consist of categories that are distinct but have no inherent order or ranking.</td></tr><tr><td><b>Ordinal</b></td><td>This means that the categories have a specific rank or order, but the differences between the categories are not necessarily uniform or meaningful.</td></tr><tr><td><b>Interval</b></td><td>On the interval scale, the data points are ordered, and the differences between them are meaningful and measurable.</td></tr><tr><td><b>Ratio</b></td><td>The ratio scale is the highest level of measurement and applies to quantitative data.</td></tr></tbody></table></div></section><section class="card  c-clay"><h2><span class="n">8.</span>Constructing a grouped distribution</h2><div class="body"><ol class="steps"><li>Decide the number of classes you wish to construct</li><li>Determine the class width</li><li>Set up the individual class limits</li><li>Tally the items into the classes</li><li>Count the number of items in each class</li></ol></div></section><section class="card  c-blue"><h2><span class="n">9.</span>Worked table from the book</h2><div class="body"><p>an agricultural student measured the lengths of leaves on an oak tree (to the nearest cm).</p><table><thead><tr><th>Class</th><th>Frequency</th></tr></thead><tbody><tr><td>1-3</td><td>3</td></tr><tr><td>4-6</td><td>6</td></tr><tr><td>7-9</td><td>10</td></tr><tr><td>10-12</td><td>5</td></tr><tr><td>13-15</td><td>5</td></tr><tr><td>16-18</td><td>9</td></tr></tbody></table><p class="source-note-inline">Source: Chapter 1, frequency distribution table.</p></div></section><section class="card book-formulas c-forest"><h2><span class="n">10.</span>Important formulae</h2><div class="body"><div class="fxgrid"><div class="fx"><span class="lbl">Number of classes using Sturges&#x27; formula</span>$$k = 1 + 3.322\log_{10}N$$</div><div class="fx"><span class="lbl">Approximate class width</span>$$C = \frac{|\max-\min|}{k}$$</div><div class="fx"><span class="lbl">Class mark</span>$$\text{Class mark} = \frac{\text{Lower class limit}+\text{Upper class limit}}{2}$$</div><div class="fx"><span class="lbl">Class width</span>$$C = \text{Upper class boundary}-\text{Lower class boundary}$$</div><div class="fx"><span class="lbl">Relative frequency</span>$$\text{Relative frequency} = \frac{f}{N}$$</div><div class="fx"><span class="lbl">Sum of frequencies</span>$$\sum f = N$$</div></div></div></section><section class="card poster-key c-ochre"><h2><span class="n">11.</span>Key points and limits</h2><div class="body"><p>Common limitations of statistics: Statistical conclusions depend on the quality of the data, the design of the study and the assumptions of the method.</p><p>A large dataset cannot by itself correct biased selection or poor measurement.</p><p>Sample results are subject to uncertainty, and an association alone does not establish cause and effect.</p></div></section>
   </div>
 
   <footer class="sheet-foot">

@@ -63,3 +63,6 @@ for file in sorted((ROOT/'revision/_src/agstat').glob('*.html')):
  file.write_text(header+'\n\n'.join(cards)+'\n',encoding='utf-8')
  print(meta['num'],source.name,len(cards),'cards selected from textbook')
 (ROOT/'revision/_src/agstat/book-sources.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+import runpy
+runpy.run_path(str(ROOT / "scripts/compose-basics-poster.py"), run_name="__main__", init_globals={"BOOK_PATH": book})

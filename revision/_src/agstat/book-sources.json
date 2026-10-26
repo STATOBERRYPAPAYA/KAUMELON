@@ -32,7 +32,46 @@
           "start_line": 574,
           "end_line": 580
         }
-      ]
+      ],
+      "poster_excerpts": [
+        "Statistics is the science which deals with the",
+        "Collection of data",
+        "Organization of data or classification of data",
+        "Presentation of data",
+        "Analysis of data",
+        "Interpretation of data",
+        "**Functions of statistics**: Statistics plays a crucial role in simplifying complex data, transforming it into clear and meaningful information.",
+        "It supports decision-making by presenting facts in an organized manner, aids in the formulation of effective policies, facilitates comparisons, and assists in making forecasts.",
+        "By applying appropriate statistical methods, researchers can draw valid conclusions from experiments.",
+        "**Descriptive statistics**, which deals with summarizing data from a sample or a population using indexes or measures such as the mean or standard deviation etc.",
+        "**Inferential statistics**, use a random sample of data taken from a population to describe and make inferences about the population parameters.",
+        "A population is the complete group of interest",
+        "a sample is a part selected for study.",
+        "A parameter describes a population, while a statistic is calculated from sample observations.",
+        "A *quantitative variable* is one that can be expressed in numerical terms and takes values that are measurable.",
+        "*Discrete variables* are variables that can only take a finite or countable number of distinct values.",
+        "*Continuous variables*, on the other hand, are variables that can take any value within a given range or interval and can be measured.",
+        "Categorical variables classify observations into groups.",
+        "Primary data are first-hand, original data collected directly from a single source by the researcher for a specific purpose.",
+        "In contrast, secondary data are obtained from existing sources or agencies and have been previously collected and processed for different purposes.",
+        "Data measured on the nominal scale consist of categories that are distinct but have no inherent order or ranking.",
+        "This means that the categories have a specific rank or order, but the differences between the categories are not necessarily uniform or meaningful.",
+        "On the interval scale, the data points are ordered, and the differences between them are meaningful and measurable.",
+        "The **ratio scale** is the highest level of measurement and applies to quantitative data.",
+        "Decide the number of classes you wish to construct",
+        "Determine the class width",
+        "Set up the individual class limits",
+        "Tally the items into the classes",
+        "Count the number of items in each class",
+        "an agricultural student measured the lengths of leaves on an oak tree (to the nearest cm).",
+        "**Common limitations of statistics**: Statistical conclusions depend on the quality of the data, the design of the study and the assumptions of the method.",
+        "A large dataset cannot by itself correct biased selection or poor measurement.",
+        "Sample results are subject to uncertainty, and an association alone does not establish cause and effect."
+      ],
+      "poster_data": {
+        "file": "csv/c1e1.csv",
+        "sha256": "7e6ec62e75e3422d4ba08f1d7b87b1a3c53679c2e4845e19847db553ba39fc30"
+      }
     },
     {
       "num": 2,

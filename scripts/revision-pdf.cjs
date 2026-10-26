@@ -17,7 +17,7 @@ const sheets = fs.readdirSync(root, { withFileTypes: true })
 (async () => {
   const browser = await chromium.launch(process.env.REVISION_BROWSER_CHANNEL ? {channel:process.env.REVISION_BROWSER_CHANNEL} : {});
   const page = await browser.newPage();
-  for (const file of sheets) {
+  for (const file of sheets.filter(file => !process.env.REVISION_ONLY || file.includes(process.env.REVISION_ONLY))) {
     await page.goto(pathToFileURL(file).href, { waitUntil: 'load' });
     await page.waitForFunction(() => document.documentElement.classList.contains('math-ready'));
     await page.evaluate(() => document.fonts.ready);

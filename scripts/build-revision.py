@@ -72,12 +72,13 @@ TEMPLATE = """<!doctype html>
 
 <main class="sheet">
   <header class="mast">
+    <img class="poster-logo" src="../assets/logo-128.png" alt="KAU Me-LON" width="64" height="64">
     <div class="num" aria-hidden="true">{num}</div>
     <div class="kicker">{book} · Chapter {n}</div>
     <h1>{title}</h1>
     <div class="sub">{sub}</div>
     <p class="edition-label">BOOK-ONLY EDITION · Verified against the textbook</p>
-    <p class="source-note">Selected from <a href="{chapterUrl}#chapter-summary">Chapter {n} · Chapter Summary</a> in the textbook.</p>
+    <p class="source-note">Source: <a href="{chapterUrl}">Chapter {n} of the textbook</a>.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>{authorsFull}</b></div>
     <div class="meta"><span class="chip">{course}</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
@@ -179,6 +180,10 @@ def build():
             n = int(meta["num"])
             section_number = iter(range(1, 100))
             body = re.sub(r'(<span class="n">)\d+(</span>)', lambda match: match.group(1) + str(next(section_number)) + match.group(2), body)
+            palette = iter(["rose", "blue", "ochre", "green", "teal", "plum", "olive", "clay", "blue", "forest", "ochre"] * 10)
+            panel = iter(range(1, 100))
+            body = re.sub(r'<section class="card[^"]*"', lambda m: re.sub(r'\bc-(?:green|blue|ochre|teal|plum|rose|olive|clay|forest)\b', '', m.group(0))[:-1] + ' c-' + next(palette) + '"', body)
+            body = re.sub(r'<h2>(.*?)</h2>', lambda m: '<h2><span class="n">' + str(next(panel)) + '.</span>' + m.group(1) + '</h2>', body)
             prev = (f'<a class="rv-btn ghost nav-step" href="{parsed[i-1][0]}.html" aria-label="Previous chapter">‹</a>'
                     if i > 0 else "")
             nxt = (f'<a class="rv-btn ghost nav-step" href="{parsed[i+1][0]}.html" aria-label="Next chapter">›</a>'
