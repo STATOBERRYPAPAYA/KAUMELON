@@ -242,3 +242,4 @@ td.c,th.c{text-align:center}
 .book-formulas .katex-display{margin:.3rem 0;overflow-x:auto;overflow-y:hidden}.book-formulas .body>p:has(.math.display){margin:4px 0}.book-formulas .body>p:has(+p .math.display){font-size:.77rem;font-weight:600;color:#345c65}.book-formulas .math.display{margin:2px 0}
 @media print{.book-formulas .katex-display{margin:1mm 0;overflow:visible}.book-formulas .body>p:has(.math.display){margin:.5mm 0}.book-formulas .body>p:has(+p .math.display){font-size:7.2pt}.book-formulas .math.display{margin:.5mm 0}.book-formulas .body{padding:1.5mm 2mm}.book-formulas .katex{font-size:1.05em}}
 @media print{body{width:190mm}.sheet{width:190mm}}
+.edition-label{display:inline-block;margin:10px 0 0;padding:6px 10px;border:1px solid #b4cb8b;border-radius:5px;background:#e5efc9;color:#234a2c;font-size:.64rem;font-weight:700;letter-spacing:.05em}.reader-kicker{color:#275039}@media print{.edition-label{font-size:6pt;padding:1mm 2mm;margin-top:1.5mm}}

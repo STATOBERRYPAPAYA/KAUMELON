@@ -33,7 +33,7 @@ page-layout: full
 
 <div class="cover-shelf">
 
-<div class="shelf-book has-revision"><div class="book-badges"><span class="category-tag">Ag. Statistics</span></div><a class="revision-pill" href="revision/agstat/all-chapters.html" target="_blank" rel="noopener" aria-label="5-minute revision: all chapters of Textbook of Agricultural Statistics (opens in a new window)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-min revision</a><a class="shelf-link" href="agstat-textbook.html">
+<div class="shelf-book has-revision"><div class="book-badges"><span class="category-tag">Ag. Statistics</span></div><a class="revision-pill" href="revision/agstat/all-chapters.html?v=968a1d968c74" target="_blank" rel="noopener" aria-label="5-minute revision: all chapters of Textbook of Agricultural Statistics (opens in a new window)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-min revision</a><a class="shelf-link" href="agstat-textbook.html">
 
 <img src="images/UG/agstat-cover-cb9efbe.webp" alt="Textbook of Agricultural Statistics book cover" width="640" height="1021" loading="lazy">
 

@@ -76,6 +76,7 @@ TEMPLATE = """<!doctype html>
     <div class="kicker">{book} · Chapter {n}</div>
     <h1>{title}</h1>
     <div class="sub">{sub}</div>
+    <p class="edition-label">BOOK-ONLY EDITION · Verified against the textbook</p>
     <p class="source-note">Selected from <a href="{chapterUrl}#chapter-summary">Chapter {n} · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>{authorsFull}</b></div>
@@ -161,6 +162,11 @@ def parse(path):
 
 def build():
     hub_lists = {}
+    version_files = [ROOT / "revision/assets/revision.css", ROOT / "revision/assets/revision.js", *sorted((SRC / "agstat").glob("*.html"))]
+    edition = hashlib.sha256((TEMPLATE + COMBINED).encode() + b"".join(p.read_bytes() for p in version_files)).hexdigest()[:12]
+    def version_local_links(text):
+        return re.sub(r'(href=")([^":]+\.(?:html|pdf))(?:\?v=[^"#]*)?("|#[^"]*")', lambda m: m.group(1) + m.group(2) + "?v=" + edition + m.group(3), text)
+
     for book_id, book in BOOKS.items():
         src_dir = SRC / book_id
         out_dir = ROOT / "revision" / book_id
@@ -185,12 +191,13 @@ def build():
                 book=book["name"], authorsFull=book["authors_full"], short=book["short"], course=book["course"], authors=book["authors"],
                 chapterUrl=book["url"] + meta["chapter"],
             )
+            page = version_local_links(page)
             (out_dir / f"{slug}.html").write_text(page, encoding="utf-8")
             ready[n] = slug
             main = page[page.index('<main class="sheet">'):page.index("</main>") + 7]
             mains.append((n, meta["title"], main.replace('<main class="sheet">', f'<main class="sheet" id="ch-{n:02d}">', 1)))
         if mains:
-            (out_dir / "all-chapters.html").write_text(combined(book, mains), encoding="utf-8")
+            (out_dir / "all-chapters.html").write_text(version_local_links(combined(book, mains)), encoding="utf-8")
         items = []
         for n, title in enumerate(book["chapters"], 1):
             if n in ready:
@@ -212,7 +219,15 @@ def build():
                       lambda m: m.group(1) + (f"All {total} chapters ready" if done == total
                                               else f"{done} of {total} chapters ready · more added through the semester")
                       + m.group(2), text)
+    text = version_local_links(text)
     hub.write_text(text, encoding="utf-8")
+    for name in ["index.qmd", "bookshelfug.qmd"]:
+        path = ROOT / name
+        content = path.read_text(encoding="utf-8")
+        content = re.sub(r'(href="revision/[^"?]+\.html)(?:\?v=[^"]+)?"', lambda m: m.group(1) + "?v=" + edition + '"', content)
+        path.write_text(content, encoding="utf-8")
+    print("Revision edition:", edition)
+
 
 
 if __name__ == "__main__":
