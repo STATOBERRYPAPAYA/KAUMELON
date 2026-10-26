@@ -8,6 +8,7 @@ project:
     - r-textbook.qmd
     - extn4101-textbook.qmd
     - pgdaem-textbook.qmd
+    - mds1202-textbook.qmd
     - stat-maash.qmd
     - student-guide.qmd
     - about.qmd
@@ -74,6 +75,7 @@ format:
 editor: source
 execute:
   freeze: auto
+
 
 
 

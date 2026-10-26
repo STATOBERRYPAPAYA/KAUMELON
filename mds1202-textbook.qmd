@@ -1,0 +1,12 @@
+---
+title: "Forest Enterprise Management"
+page-layout: full
+navbar: false
+page-footer: false
+search: false
+back-to-top-navigation: false
+---
+
+```{=html}
+<iframe class="book-reader" src="https://kaumelon.github.io/MDS1202-spk-shamna/" title="Forest Enterprise Management" allow="fullscreen" allowfullscreen></iframe>
+```
