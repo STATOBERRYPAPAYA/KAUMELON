@@ -1,0 +1,19 @@
+@font-face{font-family:"Fraunces";font-weight:900;font-display:swap;src:url(fonts/fraunces-latin-900-normal.woff2) format("woff2")}
+.rv-book{margin:1.5rem 0 2rem;padding:1.2rem;border:1px solid #d6dfd4;border-radius:18px;background:#fffef8}
+.rv-book-head{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+.rv-book-head img{width:64px;height:auto;border-radius:6px;box-shadow:0 6px 16px -8px rgba(23,60,53,.6)}
+.rv-book-head h2{margin:.15rem 0 .2rem;font-size:clamp(1.25rem,3vw,1.7rem)}
+.rv-count{margin:0;font-size:.85rem;color:#536b64}
+.rv-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.6rem}
+.rv-ch>a,.rv-ch.soon{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:.8rem;align-items:center;padding:.7rem .85rem;border-radius:12px;min-height:64px;text-decoration:none}
+.rv-ch.ready>a{background:linear-gradient(135deg,#123129,#185a43);color:#fff}
+.rv-ch.ready>a:hover{background:linear-gradient(135deg,#0e2822,#123f30)}
+.rv-ch.soon{border:1px dashed #c7d2c6;color:#7b8f88}
+.rv-n{grid-row:span 2;font:900 1.9rem/1 Fraunces,Georgia,serif;color:transparent;-webkit-text-stroke:1.2px currentColor;letter-spacing:-.03em}
+.rv-ch.ready .rv-n{-webkit-text-stroke-color:#dbeaac}
+.rv-t{font-weight:650;line-height:1.25}
+.rv-go{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.rv-ch.ready .rv-go{color:#dbeaac}
+.rv-note{border-left:4px solid #185a43;background:#eef3e6;padding:.8rem 1rem;border-radius:0 10px 10px 0;font-size:.95rem}
+.rv-ch.soon .rv-n{color:#c9d3cc;-webkit-text-stroke:0}
+.rv-ch.ready>a{height:100%}

@@ -1,0 +1,125 @@
+<!--
+num: 11
+title: Probability Distributions
+sub: Expected value, and the Bernoulli, binomial, Poisson and normal distributions with their fitting.
+chapter: probabilitydist.html
+motto: Binomial counts successes, Poisson counts rare events, and the normal curve shapes them all at scale.
+-->
+    <section class="card c-green s3">
+      <h2><span class="n">1</span>Distributions &amp; expectation</h2>
+      <div class="body">
+        <div class="pair">
+          <div><h3>Discrete</h3><b>p.m.f.</b> $p(x) = P(X = x)$; $p(x) \ge 0$, $\sum p(x) = 1$</div>
+          <div><h3>Continuous</h3><b>p.d.f.</b> $f(x)$; probability = <b>area</b> under the curve; total area = 1</div>
+        </div>
+        <div class="fxgrid" style="margin-top:.35rem">
+          <div class="fx"><span class="lbl">Expected value (discrete)</span>$$E(X) = \sum x\,p(x)$$</div>
+          <div class="fx"><span class="lbl">Expected value (continuous)</span>$$E(X) = \int x f(x)\,dx$$</div>
+        </div>
+        <p class="where">Expected value = the long-run average of the random variable.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Bernoulli</h2>
+      <div class="body">
+        <p class="small">A single trial with two outcomes: success (1), failure (0). Parameter $p$.</p>
+        <div class="fx"><span class="lbl">p.m.f.</span>$$p(x) = p^x (1-p)^{1-x},\quad x = 0, 1$$</div>
+        <div class="tbl"><table><tbody><tr><td><b>Mean</b></td><td>$p$</td><td><b>Variance</b></td><td>$p(1-p)$</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">3</span>Binomial $B(n, p)$</h2>
+      <div class="body">
+        <p class="small">Number of successes in <b>$n$ fixed, independent</b> Bernoulli trials with <b>constant</b> success probability $p$; $q = 1 - p$.</p>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">p.m.f.</span>$$p(x) = \binom{n}{x} p^x q^{n-x}$$</div>
+          <div class="fx"><span class="lbl">Mean · Variance</span>$$E(X) = np,\quad Var(X) = npq$$</div>
+          <div class="fx"><span class="lbl">Fitting: estimate $p$</span>$$\hat{p} = \frac{\bar{x}}{n}$$</div>
+        </div>
+        <p class="where">Variance &lt; mean. Expected frequency = $N \times p(x)$, $x = 0, 1, \ldots, n$.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">4</span>Poisson $P(\lambda)$</h2>
+      <div class="body">
+        <p class="small">Counts of events (0, 1, 2, …) at a rate; approximates rare binomial successes.</p>
+        <div class="fx"><span class="lbl">p.m.f.</span>$$p(x) = \frac{e^{-\lambda}\lambda^x}{x!}$$</div>
+        <p class="small"><b>Mean = Variance = $\lambda$</b>. Fit with $\hat\lambda = \bar{x}$.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">5</span>Normal $N(\mu, \sigma^2)$</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">p.d.f.</span>$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\, e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$</div>
+        <ul class="ticks">
+          <li>Continuous, bell-shaped, symmetric about $\mu$; mean = median = mode</li>
+          <li>Skewness 0, kurtosis $\beta_2 = 3$; odd central moments are zero</li>
+          <li>Tails approach the x-axis but never touch it</li>
+          <li>Q.D. ≈ 0.6745σ; M.D. ≈ 0.7979σ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Standard normal &amp; areas</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Standardise</span>$$z = \frac{X - \mu}{\sigma} \sim N(0, 1)$$</div>
+        <div class="tbl"><table>
+          <thead><tr><th>Interval</th><th class="c">Area</th></tr></thead>
+          <tbody>
+            <tr><td>$\mu \pm \sigma$</td><td class="c">68.26%</td></tr>
+            <tr><td>$\mu \pm 1.96\sigma$</td><td class="c">95%</td></tr>
+            <tr><td>$\mu \pm 2\sigma$</td><td class="c">95.44%</td></tr>
+            <tr><td>$\mu \pm 2.58\sigma$</td><td class="c">99%</td></tr>
+            <tr><td>$\mu \pm 3\sigma$</td><td class="c">99.73%</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Compare the distributions</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th></th><th>Binomial</th><th>Poisson</th><th>Normal</th></tr></thead>
+          <tbody>
+            <tr><td><b>Type</b></td><td>Discrete</td><td>Discrete</td><td>Continuous</td></tr>
+            <tr><td><b>Parameters</b></td><td>$n, p$</td><td>$\lambda$</td><td>$\mu, \sigma$</td></tr>
+            <tr><td><b>Mean</b></td><td>$np$</td><td>$\lambda$</td><td>$\mu$</td></tr>
+            <tr><td><b>Variance</b></td><td>$npq$</td><td>$\lambda$</td><td>$\sigma^2$</td></tr>
+            <tr><td><b>Agri example</b></td><td>Germinated seeds out of 10</td><td>Insects per leaf</td><td>Plant height</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">Z-table: area to the left of $z$. Above $z$: $1 -$ table value. Between two $z$'s: subtract.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Binomial needs a <b>fixed</b> $n$ and <b>constant</b> $p$.</li>
+          <li>$P(X = x) = 0$ for continuous variables: use intervals.</li>
+          <li>Forgetting $1 -$ table value for upper-tail areas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>A binomial variable with n = 10 and p = 0.3 has mean <span class="blank"></span> and variance <span class="blank"></span>.<span class="ans">3; 2.1</span></li>
+          <li>If 80% of seeds germinate, the expected number germinating out of 20 is <span class="blank"></span>.<span class="ans">16</span></li>
+          <li>A Poisson variable with variance 4 has mean <span class="blank"></span>.<span class="ans">4</span></li>
+          <li>Plant height ~ N(100, 10²): a plant of 120 cm has z = <span class="blank"></span>.<span class="ans">2</span></li>
+          <li>About <span class="blank"></span>% of a normal population lies between μ − 2σ and μ + 2σ.<span class="ans">95.44</span></li>
+          <li>In a binomial distribution the variance is always <span class="blank"></span> than the mean.<span class="ans">less</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>

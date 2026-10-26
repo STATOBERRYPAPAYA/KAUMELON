@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Single Factor Experiments · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 20, Single Factor Experiments, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="19-multiple-comparison-tests.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="21-factorial-experiments.html" aria-label="Next chapter">›</a><a class="rv-btn" href="20-single-factor-experiments.pdf" download="MeLON-Agstat-Ch20-Single-Factor-Experiments-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">20</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 20</div>
+    <h1>Single Factor Experiments</h1>
+    <div class="sub">Completely Randomized Design, Randomized Complete Block Design and Latin Square Design: layout, ANOVA and CD.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s2">
+      <h2><span class="n">1</span>Single factor</h2>
+      <div class="body">
+        <p class="small">Only <b>one factor</b> (the treatments) is varied; all other conditions are kept uniform.</p>
+        <p class="small">CRD ↔ one-way ANOVA · RCBD ↔ two-way · Latin square ↔ three-way (rows, columns, treatments).</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">2</span>The three designs at a glance</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th></th><th>CRD</th><th>RCBD</th><th>Latin square (LSD)</th></tr></thead>
+          <tbody>
+            <tr><td><b>Principles</b></td><td>Randomization, replication</td><td>+ local control (1 direction)</td><td>+ local control (2 directions)</td></tr>
+            <tr><td><b>Best for</b></td><td>Homogeneous units: lab, greenhouse</td><td>One known gradient, e.g. fertility</td><td>Two perpendicular gradients</td></tr>
+            <tr><td><b>Layout</b></td><td>Fully random</td><td>Blocks = replications; every treatment once per block</td><td>Each treatment once per row and column; $v^2$ plots</td></tr>
+            <tr><td><b>Error df</b></td><td>$v(r-1)$ = $n - v$</td><td>$(v-1)(r-1)$</td><td>$(v-1)(v-2)$</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">For the same $v$ and $r$, CRD has the <b>largest</b> error df, because nothing is set aside for blocking.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s3">
+      <h2><span class="n">3</span>CRD</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Model</span>$$y_{ij} = \mu + \tau_i + e_{ij}$$</div>
+        <div class="tbl"><table>
+          <thead><tr><th>Source</th><th class="c">df</th></tr></thead>
+          <tbody><tr><td>Treatments</td><td class="c">$v-1$</td></tr><tr><td>Error</td><td class="c">$n-v$</td></tr><tr><td>Total</td><td class="c">$n-1$, with $n = rv$</td></tr></tbody>
+        </table></div>
+        <p class="small">Allows unequal replication. Rarely used in the field, where plots are seldom homogeneous.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">4</span>RCBD</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Model</span>$$y_{ij} = \mu + \tau_i + \beta_j + e_{ij}$$</div>
+        <div class="tbl"><table>
+          <thead><tr><th>Source</th><th class="c">df</th></tr></thead>
+          <tbody><tr><td>Blocks</td><td class="c">$r-1$</td></tr><tr><td>Treatments</td><td class="c">$v-1$</td></tr><tr><td>Error</td><td class="c">$(v-1)(r-1)$</td></tr></tbody>
+        </table></div>
+        <p class="small">Blocks run <b>across</b> the gradient so that each block is uniform. Randomize independently within each block.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">5</span>Latin Square Design</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Model</span>$$y_{ijk} = \mu + \rho_i + \gamma_j + \tau_k + e_{ijk}$$</div>
+        <div class="tbl"><table>
+          <thead><tr><th>Source</th><th class="c">df</th></tr></thead>
+          <tbody><tr><td>Rows / Columns / Treatments</td><td class="c">$v-1$ each</td></tr><tr><td>Error</td><td class="c">$(v-1)(v-2)$</td></tr><tr><td>Total</td><td class="c">$v^2-1$</td></tr></tbody>
+        </table></div>
+        <p class="small">CF $= G^2/v^2$. Suited to a modest number of treatments: too few leave little error df, too many need many homogeneous plots.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s3">
+      <h2><span class="n">6</span>Critical difference (CD)</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">CRD (equal) &amp; RCBD</span>$$t_{\alpha/2,\,edf}\sqrt{\frac{2\,MSE}{r}}$$</div>
+          <div class="fx"><span class="lbl">Latin square</span>$$t_{\alpha/2,\,edf}\sqrt{\frac{2\,MSE}{v}}$$</div>
+        </div>
+        <div class="fx"><span class="lbl">CRD (unequal $r_i$, $r_j$)</span>$$t_{\alpha/2,\,edf}\sqrt{MSE\left(\frac{1}{r_i} + \frac{1}{r_j}\right)}$$</div>
+        <p class="where">Used only after a significant treatment $F$. Means sharing a letter are not significantly different.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s4">
+      <h2><span class="n">7</span>How many replications?</h2>
+      <div class="body">
+        <p class="small">A target of about <b>12 error df</b> is a practical planning guide, not a rule. Replication should also reflect the power and precision wanted, the expected variability and the available resources.</p>
+        <p class="small"><b>Correction factor</b> = (grand total)² ÷ total number of observations. Treatment comparisons always use the <b>error mean square</b>.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Blocks laid <b>along</b> the gradient instead of across it.</li>
+          <li>Using RCBD error df for a CRD.</li>
+          <li>Applying CD when $F$ is not significant.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>A Latin square for 5 treatments needs <span class="blank"></span> plots.<span class="ans">25</span></li>
+          <li>A 5 × 5 Latin square has <span class="blank"></span> error df.<span class="ans">12</span></li>
+          <li>In an RCBD with 6 treatments and 4 blocks, each block has <span class="blank"></span> plots.<span class="ans">6</span></li>
+          <li>A pot trial in a uniform greenhouse is best laid out as a <span class="blank"></span>.<span class="ans">CRD</span></li>
+          <li>If fertility falls from north to south, blocks should run <span class="blank"></span>.<span class="ans">east–west (across the gradient)</span></li>
+          <li>For the same treatments and replications, <span class="blank"></span> has the largest error df.<span class="ans">CRD</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Match the design to the field: no gradient, one gradient, or two.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 20 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/singleFactor.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

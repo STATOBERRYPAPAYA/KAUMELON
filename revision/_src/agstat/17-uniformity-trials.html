@@ -1,0 +1,102 @@
+<!--
+num: 17
+title: Uniformity Trials
+sub: Studying soil heterogeneity: fertility maps, serial correlation, strip mean squares, Smith's law and optimum plot size.
+chapter: uniformityTrials.html
+motto: Know your field's variability before you lay out the experiment.
+-->
+    <section class="card c-green s3">
+      <h2><span class="n">1</span>What is a uniformity trial?</h2>
+      <div class="body">
+        <p class="small">A trial to study the <b>nature and extent of fertility variation</b> in a field.</p>
+        <ul>
+          <li>One crop variety over the whole field; all inputs applied <b>uniformly</b>.</li>
+          <li>Remove a border, then harvest separately by <b>basic units</b> (smallest recorded unit).</li>
+          <li>Yield differences among basic units measure <b>soil heterogeneity</b>.</li>
+        </ul>
+        <p class="small"><b>Helps decide:</b> plot size, plot shape, block size and blocking direction.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Fertility contour map</h2>
+      <div class="body">
+        <p class="small">A map of yields over the field. <b>Moving averages</b> smooth random variation; areas of similar fertility are joined by contour lines.</p>
+        <p class="small muted">Rice example: 12 m × 17 m field, 1 m border removed → 10 m × 15 m → 150 basic units of 1 m × 1 m.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s3">
+      <h2><span class="n">3</span>Serial correlation</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Neighbouring units</span>$$r_s = \frac{\sum X_i X_{i+1} - \frac{(\sum X_i)^2}{n}}{\sum X_i^2 - \frac{(\sum X_i)^2}{n}}$$</div>
+        <p class="small">Computed horizontally and vertically. High $r_s$: neighbouring yields are similar. Low $r_s$: little linear association at that lag (not proof of patches).</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s3">
+      <h2><span class="n">4</span>Mean square between strips</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Vertical strips</span>$$MS_V = \frac{\frac{\sum V_i^2}{r} - \frac{G^2}{n}}{c - 1}$$</div>
+          <div class="fx"><span class="lbl">Horizontal strips</span>$$MS_H = \frac{\frac{\sum H_i^2}{c} - \frac{G^2}{n}}{r - 1}$$</div>
+        </div>
+        <p class="where">A simpler method with the same aim as serial correlation. The larger mean square shows the direction of greater variation. $n = r \times c$.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s4">
+      <h2><span class="n">5</span>Fairfield Smith's variance law</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Variance law</span>$$V_x = \frac{V_1}{x^b}$$</div>
+          <div class="fx"><span class="lbl">Log form (linear)</span>$$\log V_x = \log V_1 - b\log x$$</div>
+          <div class="fx"><span class="lbl">Regression through origin</span>$$Y = cX,\quad c = -b$$</div>
+        </div>
+        <p class="where">$V_x$ = variance of yield per basic unit for plots of $x$ units; $b$ = <b>Smith's index of soil heterogeneity</b>, idealised range 0 to 1. $Y = \log V_x - \log V_1$, $X = \log x$. Example: $b = 0.3607$, adjusted ≈ 0.4116.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s2">
+      <h2><span class="n">6</span>Simulated plots</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Variance per unit area</span>$$V_x = \frac{Q_x}{rc - x}$$</div>
+        <p class="small">Combine basic units into plots of $x$ units ($w = rc/x$ plots, fitting the field exactly). A plot's yield is the <b>sum</b> of its units.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Maximum curvature method</h2>
+      <div class="body">
+        <p class="small">Plot <b>plot size</b> (X-axis) against <b>coefficient of variation</b> (Y-axis). CV generally falls as plot size rises; the point of <b>maximum curvature</b> (the bend) is taken as the optimum plot size.</p>
+        <div class="pair">
+          <div><h3>Larger plots</h3>Lower CV, but fewer plots fit a fixed area.</div>
+          <div><h3>Caution</h3>The bend depends on axis scales and the available arrangements: treat it as a guide.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Different shapes partition the same field, so their variances are <b>dependent</b>: no ordinary F test.</li>
+          <li>High $b$ alone doesn't prove a patch pattern.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>If Smith&#x27;s index b = 0, a larger plot <span class="blank"></span> the variance per unit area.<span class="ans">does not reduce</span></li>
+          <li>If b = 1, doubling the plot size <span class="blank"></span> the variance per unit area.<span class="ans">halves</span></li>
+          <li>The slope of log Vₓ plotted against log x equals <span class="blank"></span>.<span class="ans">−b</span></li>
+          <li>A 10 m × 15 m net area cut into 1 m² units gives <span class="blank"></span> basic units.<span class="ans">150</span></li>
+          <li>In the maximum curvature method, CV is plotted against <span class="blank"></span>.<span class="ans">plot size</span></li>
+          <li>In a uniformity trial every basic unit gets the <span class="blank"></span> variety and management.<span class="ans">same</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>

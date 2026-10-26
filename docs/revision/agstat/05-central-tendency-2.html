@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Central Tendency II · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 5, Central Tendency II, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="04-central-tendency-1.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="06-measures-of-dispersion.html" aria-label="Next chapter">›</a><a class="rv-btn" href="05-central-tendency-2.pdf" download="MeLON-Agstat-Ch05-Central-Tendency-II-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">05</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 5</div>
+    <h1>Central Tendency II</h1>
+    <div class="sub">Special averages (geometric and harmonic means) and positional averages (quartiles, deciles, percentiles).</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>Geometric mean (GM)</h2>
+      <div class="body">
+        <p>The $n$th root of the product of $n$ positive observations. Use it for <b>growth rates, ratios, percentages</b> and multiplicative change.</p>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Definition</span>$$GM = \sqrt[n]{\textstyle\prod x_i}$$</div>
+          <div class="fx"><span class="lbl">Using logs</span>$$GM = \text{Antilog}\!\left(\frac{\sum \log x_i}{n}\right)$$</div>
+        </div>
+        <div class="fx"><span class="lbl">Frequency distribution</span>$$GM = \text{Antilog}\!\left(\frac{\sum f_i \log x_i}{n}\right)$$</div>
+        <p class="where">Needs positive values: a zero makes the product GM zero, and it is unsuitable for negatives.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Harmonic mean (HM)</h2>
+      <div class="body">
+        <p>The <b>reciprocal of the arithmetic mean of the reciprocals</b>. Use it for <b>rates</b>, such as average speed over equal distances.</p>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Raw data</span>$$HM = \frac{n}{\sum \frac{1}{x_i}}$$</div>
+          <div class="fx"><span class="lbl">Frequency distribution</span>$$HM = \frac{n}{\sum \frac{f_i}{x_i}}$$</div>
+        </div>
+        <p class="small">GM and HM both give <b>more weight to smaller values</b>.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">3</span>AM · GM · HM</h2>
+      <div class="body">
+        <p class="small">Together: the <b>Pythagorean means</b>.</p>
+        <div class="fx"><span class="lbl">Positive observations</span>$$AM \ge GM \ge HM$$</div>
+        <p class="small">Equal only when all observations are equal.</p>
+        <div class="fx"><span class="lbl">Two positive values</span>$$AM \times HM = GM^2$$</div>
+      </div>
+    </section>
+
+    <section class="card c-ochre s4">
+      <h2><span class="n">4</span>Which mean?</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Mean</th><th>Use for</th><th>Agri example</th></tr></thead>
+          <tbody>
+            <tr><td><b>AM</b></td><td>Additive quantities, general averages</td><td>Average yield, rainfall</td></tr>
+            <tr><td><b>GM</b></td><td>Growth factors, ratios, percentages</td><td>Compound growth of area or production</td></tr>
+            <tr><td><b>HM</b></td><td>Rates and reciprocal relationships</td><td>Average speed of a tractor over equal distances</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-blue s3">
+      <h2><span class="n">5</span>Positional averages</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Measure</th><th>Divides into</th><th>Key equalities</th></tr></thead>
+          <tbody>
+            <tr><td><b>Quartiles</b> $Q_1,Q_2,Q_3$</td><td class="c">4 parts</td><td>$Q_2$ = Median</td></tr>
+            <tr><td><b>Deciles</b> $D_1 \ldots D_9$</td><td class="c">10 parts</td><td>$D_5$ = Median</td></tr>
+            <tr><td><b>Percentiles</b> $P_1 \ldots P_{99}$</td><td class="c">100 parts</td><td>$P_{25}=Q_1,\ P_{50}=Q_2,\ P_{75}=Q_3$</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">Raw data: <b>sort first</b>. Discrete data: use cumulative frequencies. Grouped data: find the class, then interpolate.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Raw data positions</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">First quartile</span>$$Q_1 = \left(\tfrac{n+1}{4}\right)^{\text{th}}$$</div>
+          <div class="fx"><span class="lbl">Third quartile</span>$$Q_3 = \left(\tfrac{3(n+1)}{4}\right)^{\text{th}}$$</div>
+          <div class="fx"><span class="lbl">$d$th decile</span>$$D_d = \left(\tfrac{d(n+1)}{10}\right)^{\text{th}}$$</div>
+          <div class="fx"><span class="lbl">$p$th percentile</span>$$P_p = \left(\tfrac{p(n+1)}{100}\right)^{\text{th}}$$</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Grouped data (interpolation)</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Quartile $Q_1$</span>$$Q_1 = l_1 + \frac{\frac{n}{4} - m_1}{f_1}\, c_1$$</div>
+          <div class="fx"><span class="lbl">Quartile $Q_3$</span>$$Q_3 = l_3 + \frac{\frac{3n}{4} - m_3}{f_3}\, c_3$$</div>
+          <div class="fx"><span class="lbl">Decile</span>$$D_d = l + \frac{\frac{dn}{10} - cf}{f}\, c$$</div>
+          <div class="fx"><span class="lbl">Percentile</span>$$P_p = l + \frac{\frac{pn}{100} - cf}{f}\, c$$</div>
+        </div>
+        <p class="where">$l$ lower boundary of the class holding the position · $m$ or $cf$ cumulative frequency before it · $f$ its frequency · $c$ its width.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Forgetting the <b>antilog</b> at the end of a GM.</li>
+          <li>Using GM or HM with zero or negative values.</li>
+          <li>AM for average speed over equal distances (use HM).</li>
+          <li>Finding quartiles before sorting.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>A tractor ploughs two equal distances at 4 km/h and 6 km/h; its average speed is <span class="blank"></span> km/h.<span class="ans">4.8 (harmonic mean)</span></li>
+          <li>Area grew by factors 2 and 8 in two successive years; the average growth factor is <span class="blank"></span>.<span class="ans">4 (geometric mean)</span></li>
+          <li>Two positive numbers have AM = 10 and HM = 6.4, so their GM is <span class="blank"></span>.<span class="ans">8</span></li>
+          <li>The 50th percentile, the 5th decile and the 2nd quartile are all equal to the <span class="blank"></span>.<span class="ans">median</span></li>
+          <li>The 75th percentile is the same as the <span class="blank"></span> quartile.<span class="ans">third</span></li>
+          <li>The geometric mean cannot be used if any observation is <span class="blank"></span>.<span class="ans">zero or negative</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Growth multiplies, so use GM; rates divide, so use HM; positions split, so use quantiles.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 5 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/central2.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

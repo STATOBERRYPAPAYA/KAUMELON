@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skewness and Kurtosis · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 7, Skewness and Kurtosis, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="06-measures-of-dispersion.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="08-measures-of-association.html" aria-label="Next chapter">›</a><a class="rv-btn" href="07-skewness-and-kurtosis.pdf" download="MeLON-Agstat-Ch07-Skewness-and-Kurtosis-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">07</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 7</div>
+    <h1>Skewness and Kurtosis</h1>
+    <div class="sub">Measuring the asymmetry and tail behaviour of a distribution with quantiles and moments.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>Skewness: the idea</h2>
+      <div class="body">
+        <p class="lead"><span class="hl">Skewness is the degree of asymmetry</span> of a distribution.</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Shape</th><th>Tail</th><th>Typical order*</th></tr></thead>
+          <tbody>
+            <tr><td><b>Symmetric</b></td><td>Balanced</td><td>Mean = Median = Mode</td></tr>
+            <tr><td><b>Positive</b></td><td>Longer <b>right</b> tail</td><td>Mean &gt; Median &gt; Mode</td></tr>
+            <tr><td><b>Negative</b></td><td>Longer <b>left</b> tail</td><td>Mean &lt; Median &lt; Mode</td></tr>
+          </tbody>
+        </table></div>
+        <p class="where">*For many unimodal distributions; not a universal rule.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Karl Pearson's coefficient</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Using the mode</span>$$S_k = \frac{\text{Mean} - \text{Mode}}{\text{SD}}$$</div>
+          <div class="fx"><span class="lbl">Using the median</span>$$S_k = \frac{3(\text{Mean} - \text{Median})}{\text{SD}}$$</div>
+        </div>
+        <p class="small">Based on the mean, the mode (or median) and the standard deviation. Sign gives the direction: $+$ positive, $-$ negative, $0$ symmetric.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">3</span>Bowley's (quartile) measure</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Based on quartiles</span>$$S_Q = \frac{Q_3 - 2Q_2 + Q_1}{Q_3 - Q_1}$$</div>
+        <p class="small">Equivalent: $\dfrac{(Q_3-Q_2)-(Q_2-Q_1)}{(Q_3-Q_2)+(Q_2-Q_1)}$. Lies between −1 and +1; usable with open-end classes.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s3">
+      <h2><span class="n">4</span>Kelley's (percentile) measure</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Based on $P_{10}, P_{50}, P_{90}$</span>$$S_P = \frac{(P_{90} - P_{50}) - (P_{50} - P_{10})}{(P_{90} - P_{50}) + (P_{50} - P_{10})}$$</div>
+        <p class="small">Uses more of the distribution than Bowley's middle 50%.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s4">
+      <h2><span class="n">5</span>Central moments</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">$r$th central moment</span>$$\mu_r = \frac{\sum f_i (x_i - \bar{x})^r}{N}$$</div>
+        <div class="tbl"><table>
+          <thead><tr><th class="c">$\mu_0$</th><th class="c">$\mu_1$</th><th class="c">$\mu_2$</th><th class="c">$\mu_3$</th><th class="c">$\mu_4$</th></tr></thead>
+          <tbody><tr><td class="c">1</td><td class="c">0 (always)</td><td class="c">Variance $\sigma^2$</td><td class="c">Skewness</td><td class="c">Kurtosis</td></tr></tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-rose s2">
+      <h2><span class="n">6</span>Moment skewness</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Size only</span>$$\beta_1 = \frac{\mu_3^2}{\mu_2^3}$$</div>
+        <div class="fx"><span class="lbl">Size and direction</span>$$\gamma_1 = \frac{\mu_3}{\mu_2^{3/2}}$$</div>
+        <p class="small">$\gamma_1 = 0$ means zero third-moment skewness; it does not prove symmetry.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Kurtosis</h2>
+      <div class="body">
+        <p>Based on the <b>fourth</b> standardised central moment; describes tail behaviour and extreme observations.</p>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Kurtosis</span>$$\beta_2 = \frac{\mu_4}{\mu_2^2}$$</div>
+          <div class="fx"><span class="lbl">Excess kurtosis</span>$$\gamma_2 = \beta_2 - 3$$</div>
+        </div>
+        <div class="tbl"><table>
+          <thead><tr><th>Type</th><th class="c">$\beta_2$</th><th class="c">$\gamma_2$</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><b>Mesokurtic</b></td><td class="c">= 3</td><td class="c">= 0</td><td>Normal distribution</td></tr>
+            <tr><td><b>Leptokurtic</b></td><td class="c">&gt; 3</td><td class="c">&gt; 0</td><td>Heavier tails, sharper peak</td></tr>
+            <tr><td><b>Platykurtic</b></td><td class="c">&lt; 3</td><td class="c">&lt; 0</td><td>Lighter tails, flatter</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>$\beta_1$ has no sign; use $\gamma_1$ for direction.</li>
+          <li>The skewed mean–median–mode order is typical, not guaranteed.</li>
+          <li>"Positive skew" means the long tail is on the <b>right</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>Mean 52, mode 46 and SD 12 give Karl Pearson&#x27;s coefficient Sₖ = <span class="blank"></span>.<span class="ans">0.5</span></li>
+          <li>Mean 30, median 33 and SD 6 give Sₖ = <span class="blank"></span>, so the distribution is <span class="blank"></span> skewed.<span class="ans">−1.5; negatively</span></li>
+          <li>If Q₁ = 10, Q₂ = 15 and Q₃ = 20, Bowley&#x27;s coefficient of skewness is <span class="blank"></span>.<span class="ans">0</span></li>
+          <li>A distribution with β₂ = 4.2 is called <span class="blank"></span>.<span class="ans">leptokurtic</span></li>
+          <li>If μ₂ = 4 and μ₄ = 48, then β₂ = <span class="blank"></span>, so the curve is mesokurtic.<span class="ans">3</span></li>
+          <li>β₁ cannot show the direction of skewness because it is never <span class="blank"></span>.<span class="ans">negative</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Skewness asks which way the tail points; kurtosis asks how heavy the tails are.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 7 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/skewness.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Transformation · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 24, Data Transformation, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="23-missing-plot-analysis.html" aria-label="Previous chapter">‹</a><a class="rv-btn" href="24-data-transformation.pdf" download="MeLON-Agstat-Ch24-Data-Transformation-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">24</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 24</div>
+    <h1>Data Transformation</h1>
+    <div class="sub">When ANOVA assumptions fail: log, square root, angular and Box-Cox transformations, and back-transformation.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>Why transform?</h2>
+      <div class="body">
+        <p class="small">Used when ANOVA assumptions fail, typically <b>unequal error variances (heteroscedasticity)</b>, non-normal errors or non-additive (multiplicative) effects.</p>
+        <ol class="steps">
+          <li>Transform the data</li>
+          <li>Run ANOVA and mean separation on the <b>transformed</b> scale</li>
+          <li><b>Back-transform</b> means to the original units for reporting</li>
+        </ol>
+        <p class="small muted">Never pick a transformation just to get the conclusion you want.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s3">
+      <h2><span class="n">2</span>Which transformation?</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Data</th><th>Variance</th><th>Use</th></tr></thead>
+          <tbody>
+            <tr><td>Counts (Poisson)</td><td>$\sigma^2 = \mu$ or $c^2\mu$</td><td><b>Square root</b></td></tr>
+            <tr><td>Binomial percentages</td><td>$\sigma^2 = p(1-p)/n$</td><td><b>Angular</b> (arcsine)</td></tr>
+            <tr><td>SD ∝ mean; multiplicative effects</td><td>$\sigma^2 = c^2\mu^2$</td><td><b>Logarithmic</b></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-blue s3">
+      <h2><span class="n">3</span>Logarithmic</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Positive data</span>$$X = \log Y$$</div>
+          <div class="fx"><span class="lbl">With zeros</span>$$X = \log(Y + 1)$$</div>
+        </div>
+        <p class="small">Back-transform: $Y = \text{antilog}\,X$. Logs need positive inputs. Example in the book: weed counts.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">4</span>Square root</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Counts</span>$$X = \sqrt{Y}$$</div>
+          <div class="fx"><span class="lbl">Zeros present</span>$$X = \sqrt{Y + 1}$$</div>
+        </div>
+        <p class="small">Very small counts: $\sqrt{Y} + \sqrt{Y+1}$. Back-transform $\sqrt{Y+1}$ with $Y = X^2 - 1$. Insect, larval, defective and diseased-seed counts.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s4">
+      <h2><span class="n">5</span>Angular (arcsine) transformation</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Transform</span>$$X = \sin^{-1}\sqrt{p},\quad p = \frac{Y}{100}$$</div>
+          <div class="fx"><span class="lbl">0% and 100%</span>$$p = \frac{1}{4n},\quad p = 1 - \frac{1}{4n}$$</div>
+          <div class="fx"><span class="lbl">Back-transform</span>$$Y = 100 \sin^2 X$$</div>
+        </div>
+        <p class="where">For percentages from <b>binomial counts</b> (germination, mortality). The 30–70% guideline is approximate. Nutrient percentages (protein, carbohydrate) are not binomial and need not be transformed.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">6</span>Box-Cox</h2>
+      <div class="body">
+        <p class="small">A <b>family of power transformations</b> indexed by $\lambda$, for strictly positive data.</p>
+        <p class="small">$\lambda = \tfrac12$: square root · $\lambda = -1$: reciprocal · $\lambda \to 0$: log. The angular transformation is <b>not</b> in this family.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s4">
+      <h2><span class="n">7</span>After transforming</h2>
+      <div class="body">
+        <ul class="ticks">
+          <li>Check assumptions using the <b>residuals</b> of the fitted model.</li>
+          <li>Use one transformation consistently for the whole dataset.</li>
+          <li>CD on the transformed scale: $t_{\alpha/2,\,edf}\sqrt{2\,MSE/r}$ (RBD).</li>
+          <li>Back-transformed means are <b>not</b> arithmetic means (e.g. squared root means are ≤ the original mean).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Reporting transformed means as final results.</li>
+          <li>Taking log of zero.</li>
+          <li>Arcsine on non-binomial percentages.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>Counts of insects per plant are usually analysed after a <span class="blank"></span> transformation.<span class="ans">square root</span></li>
+          <li>Percent germination out of 100 seeds calls for the <span class="blank"></span> transformation.<span class="ans">angular (arcsine)</span></li>
+          <li>When the SD rises in proportion to the mean, use the <span class="blank"></span> transformation.<span class="ans">logarithmic</span></li>
+          <li>A transformed mean √(Y + 1) = 3 back-transforms to <span class="blank"></span>.<span class="ans">8</span></li>
+          <li>An angular value of 30° back-transforms to <span class="blank"></span>%.<span class="ans">25</span></li>
+          <li>Counts that include zeros are transformed as √(Y + <span class="blank"></span>).<span class="ans">1</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Analyse on the transformed scale; report on the original scale.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 24 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/transformation.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

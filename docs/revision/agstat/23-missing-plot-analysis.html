@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Missing Plot Analysis · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 23, Missing Plot Analysis, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="22-analysis-of-covariance.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="24-data-transformation.html" aria-label="Next chapter">›</a><a class="rv-btn" href="23-missing-plot-analysis.pdf" download="MeLON-Agstat-Ch23-Missing-Plot-Analysis-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">23</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 23</div>
+    <h1>Missing Plot Analysis</h1>
+    <div class="sub">Handling a lost observation in CRD, RCBD and Latin square: direct fitting, Bartlett's covariance method and substitution.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>Why plots go missing</h2>
+      <div class="body">
+        <p class="small">Animal or pest damage, flooding, theft, recording errors… Always <b>record why</b> an observation is missing.</p>
+        <p class="small">A poor result <b>caused by a treatment</b> is real data and must not be discarded.</p>
+        <p class="small">A missing plot <b>destroys the balance</b> of an RCBD or Latin square; a CRD copes directly.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>CRD: fit directly</h2>
+      <div class="body">
+        <p class="small">Analyse the observed responses with unequal treatment sample sizes (no substitution needed).</p>
+        <div class="fx"><span class="lbl">Error df</span>$$edf = n_{obs} - v$$</div>
+        <div class="fx"><span class="lbl">SE of a difference</span>$$SE = \sqrt{MSE\left(\frac{1}{n_i} + \frac{1}{n_j}\right)}$$</div>
+      </div>
+    </section>
+
+    <section class="card c-blue s3">
+      <h2><span class="n">3</span>RCBD: one missing value</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Substitution estimate</span>$$\hat{x} = \frac{rB + vT - G}{(r-1)(v-1)}$$</div>
+        <p class="where">$B$, $T$ = observed totals of the affected block and treatment; $G$ = observed grand total (all <b>excluding</b> the missing value).</p>
+        <div class="fx"><span class="lbl">Error df</span>$$(r-1)(v-1) - 1$$</div>
+      </div>
+    </section>
+
+    <section class="card c-plum s3">
+      <h2><span class="n">4</span>Latin square: one missing value</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">Substitution estimate</span>$$\hat{x} = \frac{v(R + C + T) - 2G}{(v-1)(v-2)}$$</div>
+        <p class="where">$R$, $C$, $T$ = observed totals of the affected row, column and treatment; $G$ = observed grand total.</p>
+        <div class="fx"><span class="lbl">Error df</span>$$(v-1)(v-2) - 1$$</div>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">5</span>Bartlett's covariance method</h2>
+      <div class="body">
+        <p class="small">Create an imaginary <b>covariate</b> $X$: 1 (or −1) for the missing plot, 0 elsewhere. Set $Y = 0$ for the missing plot. Then run <b>ANCOVA</b> for the design.</p>
+        <p class="small">The indicator accounts for the missing position: total and error df are each <b>one less</b> than in the complete design.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>After substituting</h2>
+      <div class="body">
+        <ul class="ticks">
+          <li>The estimate <b>minimises the error SS</b>.</li>
+          <li>Subtract <b>one</b> error df per estimated value.</li>
+          <li>The treatment SS can be <b>inflated</b>: apply the bias correction.</li>
+          <li>Comparisons involving the affected treatment need adjusted SEs.</li>
+          <li>Several missing values: estimate by <b>iteration</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Choosing an approach</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Design</th><th>Approach</th><th>Error df</th></tr></thead>
+          <tbody>
+            <tr><td><b>CRD</b></td><td>Fit observed data (unequal $n_i$)</td><td>$n_{obs} - v$</td></tr>
+            <tr><td><b>RCBD</b></td><td>Substitution $\hat x$, Bartlett's method, or fit the observed data</td><td>$(r-1)(v-1) - 1$</td></tr>
+            <tr><td><b>Latin square</b></td><td>Substitution $\hat x$ or Bartlett's method</td><td>$(v-1)(v-2) - 1$</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Counting $\hat x$ as a real observation.</li>
+          <li>Including the missing cell in $B$, $T$ or $G$.</li>
+          <li>Ignoring missingness linked to the response itself (bias).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>In an RBD with r = 4 and v = 5, B = 60, T = 50 and G = 400 give a missing value estimate x̂ = <span class="blank"></span>.<span class="ans">7.5</span></li>
+          <li>An RBD with 4 treatments in 5 blocks and one missing plot has <span class="blank"></span> error df.<span class="ans">11</span></li>
+          <li>A 4 × 4 Latin square with one missing plot has <span class="blank"></span> error df.<span class="ans">5</span></li>
+          <li>The substituted value is the one that makes the error sum of squares <span class="blank"></span>.<span class="ans">as small as possible</span></li>
+          <li>In a CRD, a lost plot is handled by analysing with <span class="blank"></span> replications.<span class="ans">unequal</span></li>
+          <li>In Bartlett&#x27;s method the dummy covariate is <span class="blank"></span> for the missing plot and 0 elsewhere.<span class="ans">1</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“An estimated value fills the gap; it is never a recovered observation.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 23 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/missingPlot.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

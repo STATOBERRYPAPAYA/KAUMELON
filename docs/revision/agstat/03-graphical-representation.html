@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Graphical Representation · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 3, Graphical Representation, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="02-official-agricultural-statistics.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="04-central-tendency-1.html" aria-label="Next chapter">›</a><a class="rv-btn" href="03-graphical-representation.pdf" download="MeLON-Agstat-Ch03-Graphical-Representation-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">03</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 3</div>
+    <h1>Graphical Representation</h1>
+    <div class="sub">Histograms, ogives, polygons, stem-and-leaf plots, bar and pie charts, and boxplots.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>Histogram</h2>
+      <div class="body">
+        <p>Adjoining rectangles for a <b>continuous</b> frequency distribution; class boundaries on the x-axis.</p>
+        <div class="pair">
+          <div><h3>Equal widths</h3>Bar height = <b>frequency</b></div>
+          <div><h3>Unequal widths</h3>Bar height = <b>frequency density</b></div>
+        </div>
+        <div class="fx"><span class="lbl">Frequency density</span>$$\text{FD} = \frac{\text{Class frequency}}{\text{Class width}}$$</div>
+        <p class="small muted">The mode can be estimated graphically from the histogram.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Ogives (cumulative frequency curves)</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Type</th><th>Plot</th><th>Shape</th></tr></thead>
+          <tbody>
+            <tr><td><b>Less-than</b></td><td>LCF against <b>upper</b> class boundaries</td><td>Rises</td></tr>
+            <tr><td><b>Greater-than</b></td><td>GCF against <b>lower</b> class boundaries</td><td>Falls</td></tr>
+          </tbody>
+        </table></div>
+        <p class="lead">The two ogives <span class="hl">intersect at the median</span>. The median can also be read from the less-than ogive at $N/2$.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s2">
+      <h2><span class="n">3</span>Frequency polygon</h2>
+      <div class="body">
+        <p>Plot frequencies at <b>class midpoints</b> and join them with straight lines. Useful for comparing two distributions on one graph.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s2">
+      <h2><span class="n">4</span>Stem-and-leaf plot</h2>
+      <div class="body">
+        <p>Each value split into a <b>stem</b> (leading digits) and a <b>leaf</b> (trailing digit). Shows the shape <b>and keeps every observation</b>.</p>
+        <p class="small muted">e.g. 107 → stem 10, leaf 7.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">5</span>Bar charts</h2>
+      <div class="body">
+        <ul>
+          <li><b>Simple</b>: one value per category</li>
+          <li><b>Component</b> (sub-divided): parts of each category</li>
+          <li><b>Grouped</b> (multiple): several values within each category</li>
+        </ul>
+        <p class="small">For categorical data, so bars are separated by gaps.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Histogram vs bar chart</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th></th><th>Histogram</th><th>Bar chart</th></tr></thead>
+          <tbody>
+            <tr><td><b>Data</b></td><td>Continuous quantitative</td><td>Categorical / discrete</td></tr>
+            <tr><td><b>Bars</b></td><td>Adjacent, no gaps</td><td>Separated by gaps</td></tr>
+            <tr><td><b>Area</b></td><td>Represents frequency</td><td>Only height matters</td></tr>
+            <tr><td><b>Order</b></td><td>Fixed by the scale</td><td>Categories can be reordered</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-olive s3">
+      <h2><span class="n">7</span>Pie chart</h2>
+      <div class="body">
+        <p>A circle split into sectors showing <b>parts of a whole</b>. The full circle is <b>360°</b>.</p>
+        <div class="fx"><span class="lbl">Sector angle</span>$$\frac{\text{Value of category}}{\text{Sum of all values}} \times 360^\circ$$</div>
+        <p class="small muted">Best with a few categories that add up to a meaningful total.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">8</span>Boxplot (box-and-whisker)</h2>
+      <div class="body">
+        <p>Shows the <b>five-number summary</b>: minimum, $Q_1$, <b>median</b> (line inside the box), $Q_3$, maximum, plus the spread and potential outliers.</p>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Interquartile range</span>$$IQR = Q_3 - Q_1$$</div>
+          <div class="fx"><span class="lbl">Lower fence</span>$$Q_1 - 1.5 \times IQR$$</div>
+          <div class="fx"><span class="lbl">Upper fence</span>$$Q_3 + 1.5 \times IQR$$</div>
+        </div>
+        <p class="where">Points beyond the fences are flagged as <b>potential outliers</b>.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Unequal class widths with raw frequencies as heights.</li>
+          <li>Plotting the less-than ogive at <b>lower</b> boundaries.</li>
+          <li>Leaving gaps between histogram bars.</li>
+          <li>Pie charts for data that are not parts of a whole.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>Classes 0–10 and 10–30 each have frequency 20; their histogram bar heights should be <span class="blank"></span> and <span class="blank"></span>.<span class="ans">2 and 1 (frequency densities)</span></li>
+          <li>A crop occupying 25% of the cropped area gets a pie-chart sector of <span class="blank"></span>°.<span class="ans">90</span></li>
+          <li>To read the median from a less-than ogive with N = 60, draw a horizontal line from cumulative frequency <span class="blank"></span>.<span class="ans">30</span></li>
+          <li>If Q₁ = 20 and Q₃ = 30, any observation above <span class="blank"></span> is flagged as a potential outlier.<span class="ans">45</span></li>
+          <li>Area under three crops in each district, stacked inside one bar per district, is shown by a <span class="blank"></span> bar chart.<span class="ans">component</span></li>
+          <li>A display that shows the shape of the data yet lets you recover every observation is the <span class="blank"></span> plot.<span class="ans">stem-and-leaf</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Choose the graph that matches the data: continuous gets touching bars, categories get gaps.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 3 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/3graph.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

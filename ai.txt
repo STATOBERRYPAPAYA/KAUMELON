@@ -1,0 +1,6 @@
+# ai.txt for www.agrinoteskau.com (KAU Me-LON)
+# Pages may be indexed and linked in search results.
+# Content may not be used to train AI models, or be summarised,
+# condensed or reproduced by AI tools.
+User-Agent: *
+Disallow: /

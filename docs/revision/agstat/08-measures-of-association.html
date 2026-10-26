@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Measures of Association · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 8, Measures of Association, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="07-skewness-and-kurtosis.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="09-regression-analysis.html" aria-label="Next chapter">›</a><a class="rv-btn" href="08-measures-of-association.pdf" download="MeLON-Agstat-Ch08-Measures-of-Association-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">08</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 8</div>
+    <h1>Measures of Association</h1>
+    <div class="sub">Scatter diagrams, covariance, Pearson's and Spearman's correlation, Kendall's concordance and correlation matrices.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>Relationships &amp; the scatter diagram</h2>
+      <div class="body">
+        <div class="pair">
+          <div><h3>Linear</h3>Can be represented by a straight line.</div>
+          <div><h3>Monotonic</h3>One variable consistently rises (or falls) as the other rises, not necessarily at a constant rate.</div>
+        </div>
+        <p class="small" style="margin-top:.4rem">A <b>scatter diagram</b> plots paired observations $(x_i, y_i)$: always look at it before computing a coefficient.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Types of correlation</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td><b>Positive</b></td><td>Move in the same direction</td></tr>
+            <tr><td><b>Negative</b></td><td>Move in opposite directions</td></tr>
+            <tr><td><b>Simple</b></td><td>Two variables</td></tr>
+            <tr><td><b>Multiple</b></td><td>One variable with a set of others</td></tr>
+            <tr><td><b>Partial</b></td><td>Two variables, controlling for others</td></tr>
+            <tr><td><b>Linear / non-linear</b></td><td>Straight-line / curved pattern</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">3</span>Karl Pearson's correlation coefficient $r$</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Covariance</span>$$cov(x,y) = \frac{1}{n}\sum (x_i - \bar{x})(y_i - \bar{y})$$</div>
+          <div class="fx"><span class="lbl">Correlation</span>$$r = \frac{cov(x,y)}{sd(x)\,sd(y)}$$</div>
+        </div>
+        <div class="fx"><span class="lbl">Deviation form</span>$$r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}$$</div>
+        <p class="where">Measures <b>linear</b> association. Covariance depends on units; $r$ is unit-free. $r$ is sensitive to outliers.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">4</span>Reading $r$</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td class="c"><b>+1</b></td><td>Perfect positive</td></tr>
+            <tr><td class="c"><b>near +1</b></td><td>Strong positive</td></tr>
+            <tr><td class="c"><b>0</b></td><td>No <b>linear</b> correlation</td></tr>
+            <tr><td class="c"><b>near −1</b></td><td>Strong negative</td></tr>
+            <tr><td class="c"><b>−1</b></td><td>Perfect negative</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">$-1 \le r \le +1$. Perfect: all points on a line.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">5</span>Spearman's rank correlation $\rho$</h2>
+      <div class="body">
+        <p class="small">Computed from <b>ranks</b>; measures <b>monotonic</b> association. Good for ordinal data and curved but monotonic patterns. Range −1 to +1.</p>
+        <div class="fx"><span class="lbl">No tied ranks</span>$$\rho = 1 - \frac{6\sum d_i^2}{n(n^2 - 1)}$$</div>
+        <p class="where">$d_i$ = difference between the ranks of the $i$th pair. Ties get their <b>average rank</b> and correction terms $T = \frac{1}{12}\sum m(m^2-1)$.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Kendall's coefficient of concordance $W$</h2>
+      <div class="body">
+        <p class="small">Measures <b>agreement among several judges' rankings</b> (e.g. $k$ judges ranking $n$ varieties).</p>
+        <div class="fx"><span class="lbl">Concordance</span>$$W = \frac{12\left[\sum R_i^2 - \frac{(\sum R_i)^2}{n}\right]}{k^2 n(n^2 - 1)}$$</div>
+        <p class="where">$R_i$ = sum of ranks for object $i$; $k$ = number of judges.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Correlation matrix &amp; correlogram</h2>
+      <div class="body">
+        <div class="pair">
+          <div><h3>Correlation matrix</h3>Table of pairwise correlations among several variables. Diagonal elements = <b>1</b>; symmetric about the diagonal.</div>
+          <div><h3>Correlogram</h3>A graphical display of the correlation matrix (colour or size shows strength and sign).</div>
+        </div>
+        <div class="tbl" style="margin-top:.4rem"><table>
+          <thead><tr><th></th><th>Pearson $r$</th><th>Spearman $\rho$</th></tr></thead>
+          <tbody>
+            <tr><td><b>Uses</b></td><td>Actual values</td><td>Ranks</td></tr>
+            <tr><td><b>Detects</b></td><td>Linear association</td><td>Monotonic association</td></tr>
+            <tr><td><b>Outliers</b></td><td class="no">Sensitive</td><td class="yes">Less sensitive</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Correlation is <b>not causation</b>.</li>
+          <li>$r = 0$ rules out only <b>linear</b> association; a curve can still exist.</li>
+          <li>Skipping the scatter plot.</li>
+          <li>Forgetting average ranks for ties.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>If cov(x, y) = 12, sd(x) = 3 and sd(y) = 5, then r = <span class="blank"></span>.<span class="ans">0.8</span></li>
+          <li>If all points lie exactly on a falling straight line, r = <span class="blank"></span>.<span class="ans">−1</span></li>
+          <li>For n = 10 pairs with Σd² = 33, Spearman&#x27;s ρ = <span class="blank"></span>.<span class="ans">0.8</span></li>
+          <li>Two judges who rank five varieties in exactly the same order give ρ = <span class="blank"></span>.<span class="ans">1</span></li>
+          <li>Changing yield from kg to quintals changes r by <span class="blank"></span>.<span class="ans">nothing (r is unit-free)</span></li>
+          <li>r = 0 rules out a straight-line relationship but not a <span class="blank"></span> one.<span class="ans">curved (non-linear)</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Correlation tells you that two things move together, never why.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 8 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/association.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

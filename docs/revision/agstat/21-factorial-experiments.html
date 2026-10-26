@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Factorial Experiments · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 21, Factorial Experiments, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="20-single-factor-experiments.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="22-analysis-of-covariance.html" aria-label="Next chapter">›</a><a class="rv-btn" href="21-factorial-experiments.pdf" download="MeLON-Agstat-Ch21-Factorial-Experiments-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">21</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 21</div>
+    <h1>Factorial Experiments</h1>
+    <div class="sub">Main effects, simple effects and interactions; 2ⁿ and 3ⁿ series, Yates' method and confounding.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>The idea</h2>
+      <div class="body">
+        <p class="small">A <b>factorial experiment</b> studies two or more factors <b>simultaneously</b>, using all combinations of their levels.</p>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Treatment combinations</span>$$N = \prod s_i$$</div>
+          <div class="fx"><span class="lbl">Series</span>$$2^n,\ 3^n$$</div>
+        </div>
+        <p class="where">$2^2 = 4$, $2^3 = 8$, $2^4 = 16$, $3^2 = 9$, $3^3 = 27$ combinations. Treatment df = $N - 1$.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Effects</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td><b>Main effect</b></td><td>Average change from one factor's level change, over the other factors</td></tr>
+            <tr><td><b>Simple effect</b></td><td>Effect of one factor at a <b>particular level</b> of another</td></tr>
+            <tr><td><b>Interaction</b></td><td>Effect of one factor <b>depends on</b> the level of another</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">Parallel mean profiles = no interaction; non-parallel = possible interaction (needs a test).</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">3</span>$2^2$ factorial ($r$ replications)</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Main effect of A</span>$$\frac{(A)_{i=1} - (A)_{i=0}}{2r}$$</div>
+          <div class="fx"><span class="lbl">SS due to A</span>$$SS_A = \frac{[(A)_{i=1} - (A)_{i=0}]^2}{4r}$$</div>
+          <div class="fx"><span class="lbl">A × B interaction</span>$$\frac{(AB)_{i+j=0} - (AB)_{i+j=1}}{2r}$$</div>
+        </div>
+        <p class="where">A, B and A×B each have <b>1 df</b>. In $2^3$: divisors become $4r$ (effects) and $8r$ (SS); A, B, C, AB, AC, BC, ABC each have 1 df. <b>Yates' method</b> is the tabular algorithm for $2^n$ effects; Fisher's algebraic method is the alternative.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">4</span>Degrees of freedom</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td>Factor with $a$ levels</td><td>$a - 1$</td></tr>
+            <tr><td>A × B</td><td>$(a-1)(b-1)$</td></tr>
+            <tr><td>$3^2$: A, B</td><td>2 each</td></tr>
+            <tr><td>$3^2$: A × B</td><td>4</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">A 3-level factor's 2 df split into <b>linear</b> $A_L = A_2 - A_0$ and <b>quadratic</b> $A_Q = A_2 + A_0 - 2A_1$.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">5</span>Types of factorials</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td><b>Symmetrical</b></td><td>All factors have the same number of levels ($2^n$, $3^n$)</td></tr>
+            <tr><td><b>Asymmetrical</b></td><td>Unequal levels, e.g. $2 \times 3$</td></tr>
+            <tr><td><b>Complete (full)</b></td><td>All combinations included</td></tr>
+            <tr><td><b>Fractional</b></td><td>Only a selected fraction of combinations</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Critical differences</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Interaction means ($2^2$; ABC in $2^3$)</span>$$t\sqrt{\frac{2\,MSE}{r}}$$</div>
+          <div class="fx"><span class="lbl">Two-factor means in $2^3$</span>$$t\sqrt{\frac{MSE}{r}}$$</div>
+          <div class="fx"><span class="lbl">Levels of A in $3^2$</span>$$t\sqrt{\frac{2\,MSE}{3r}}$$</div>
+          <div class="fx"><span class="lbl">Levels of B in $2 \times 3$</span>$$t\sqrt{\frac{2\,MSE}{2r}}$$</div>
+        </div>
+        <p class="where">$t = t_{\alpha/2,\,edf}$. If the interaction is significant, compare combination means, not main-effect means.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Confounding</h2>
+      <div class="body">
+        <p class="small">Deliberately making an interaction <b>inseparable from block effects</b> so that blocks can be smaller.</p>
+        <div class="pair">
+          <div><h3>Complete</h3>The <b>same</b> interaction is confounded in every replication.</div>
+          <div><h3>Partial</h3><b>Different</b> interactions confounded in different replications.</div>
+        </div>
+        <p class="small" style="margin-top:.35rem"><span class="tag">Gain</span>smaller, more homogeneous blocks and better precision · <span class="tag">Cost</span>lost information on the confounded effect. Higher-order interactions are usually the ones confounded.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Interpreting main effects when the interaction is significant.</li>
+          <li>Mixing up $2r$ (effect) and $4r$ (SS) divisors in $2^2$.</li>
+          <li>Confounding a main effect.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>Three nitrogen levels × two phosphorus levels give <span class="blank"></span> treatment combinations.<span class="ans">6</span></li>
+          <li>A 2⁴ factorial has <span class="blank"></span> treatment combinations.<span class="ans">16</span></li>
+          <li>In a 3 × 4 factorial, the A × B interaction has <span class="blank"></span> df.<span class="ans">6</span></li>
+          <li>If the response to nitrogen changes with the irrigation level, the two factors show <span class="blank"></span>.<span class="ans">interaction</span></li>
+          <li>In a 2³ factorial, each main effect and interaction has <span class="blank"></span> df.<span class="ans">1</span></li>
+          <li>Confounding ABC in every replication is <span class="blank"></span> confounding.<span class="ans">complete</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Study factors together, because in the field they never act alone.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 21 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/factorial.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

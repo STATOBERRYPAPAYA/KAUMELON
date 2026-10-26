@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regression Analysis · 5-minute revision · KAU Me-LON</title>
+<meta name="description" content="Official 5-minute revision of Chapter 9, Regression Analysis, from the Textbook of Agricultural Statistics (KAU Me-LON).">
+<meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, noai, noimageai">
+<meta name="theme-color" content="#173c35">
+<link rel="icon" href="../../images/logo.png">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/revision.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/revision.js"></script>
+<script src="/assets/melon-tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="rv-bar" aria-label="Revision">
+  <a class="back" href="../../revision.html">← All revision sheets</a>
+  <span class="spacer"></span>
+  <a class="rv-btn ghost nav-step" href="08-measures-of-association.html" aria-label="Previous chapter">‹</a><a class="rv-btn ghost nav-step" href="10-probability.html" aria-label="Next chapter">›</a><a class="rv-btn" href="09-regression-analysis.pdf" download="MeLON-Agstat-Ch09-Regression-Analysis-5min.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>PDF</a>
+</nav>
+
+<main class="sheet">
+  <header class="mast">
+    <div class="num" aria-hidden="true">09</div>
+    <div class="kicker">Textbook of Agricultural Statistics · Chapter 9</div>
+    <h1>Regression Analysis</h1>
+    <div class="sub">Fitting the least-squares line, regression coefficients, the two regression lines and model assumptions.</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
+    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+  </header>
+
+  <div class="grid">
+<section class="card c-green s3">
+      <h2><span class="n">1</span>The model</h2>
+      <div class="body">
+        <p class="small">Regression models how a <b>dependent</b> (response) variable depends on one or more <b>independent</b> (predictor) variables.</p>
+        <div class="fx"><span class="lbl">Simple linear regression</span>$$y_i = \alpha + \beta x_i + e_i$$</div>
+        <div class="pair">
+          <div><h3>Error $e_i$</h3>Theoretical deviation from the true line</div>
+          <div><h3>Residual $\hat{e}_i$</h3>Observed − fitted: $y_i - (\hat\alpha + \hat\beta x_i)$</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Slope &amp; intercept</h2>
+      <div class="body">
+        <ul>
+          <li><b>Slope $\beta$</b>: expected change in $y$ for a one-unit increase in $x$. Range $-\infty$ to $+\infty$; $+$ direct, $-$ inverse.</li>
+          <li><b>Intercept $\alpha$</b>: value of $y$ when $x = 0$.</li>
+        </ul>
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td><b>Simple</b></td><td>1 predictor</td></tr>
+            <tr><td><b>Multiple</b></td><td>2 or more: $y = \alpha + \beta_1 x_1 + \cdots + \beta_k x_k + e$</td></tr>
+            <tr><td><b>Logistic</b></td><td>Categorical response</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">3</span>Least squares</h2>
+      <div class="body">
+        <p class="small">Choose $\alpha, \beta$ to <b>minimise</b> $E = \sum [y_i - (\alpha + \beta x_i)]^2$. This gives the <b>normal equations</b>:</p>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">First</span>$$\textstyle\sum y = n\alpha + \beta \sum x$$</div>
+          <div class="fx"><span class="lbl">Second</span>$$\textstyle\sum xy = \alpha \sum x + \beta \sum x^2$$</div>
+          <div class="fx"><span class="lbl">Slope</span>$$\hat\beta_{yx} = \frac{\sum xy - \frac{\sum x \sum y}{n}}{\sum x^2 - \frac{(\sum x)^2}{n}}$$</div>
+          <div class="fx"><span class="lbl">Intercept</span>$$\hat\alpha = \bar{y} - \hat\beta \bar{x}$$</div>
+        </div>
+        <p class="where">Equivalently $\hat\beta_{yx} = cov(x,y)/var(x)$. The fitted line passes through $(\bar{x}, \bar{y})$.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">4</span>Two regression lines</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">$y$ on $x$ (predict $y$)</span>$$\beta_{yx} = r\frac{\sigma_y}{\sigma_x}$$</div>
+        <div class="fx"><span class="lbl">$x$ on $y$ (predict $x$)</span>$$\beta_{xy} = r\frac{\sigma_x}{\sigma_y}$$</div>
+        <div class="fx"><span class="lbl">Link to correlation</span>$$\beta_{yx}\,\beta_{xy} = r^2$$</div>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">5</span>Properties of regression coefficients</h2>
+      <div class="body">
+        <ul class="ticks">
+          <li>Both have the <b>same sign</b>, and $r$ takes that sign: $r = \pm\sqrt{\beta_{yx}\beta_{xy}}$.</li>
+          <li>If one exceeds 1, the other must be less than 1.</li>
+          <li>$r = 0$: both coefficients are zero.</li>
+          <li>$r = \pm 1$: the two lines <b>coincide</b>.</li>
+          <li>Independent of change of <b>origin</b>, not of <b>scale</b>: with $X=\frac{x-a}{h}$, $Y=\frac{y-b}{k}$, $\beta_{YX} = \frac{h}{k}\beta_{yx}$.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Assumptions</h2>
+      <div class="body">
+        <ul>
+          <li><b>Linearity</b> of the mean relationship</li>
+          <li><b>Independence</b> of errors (no <b>autocorrelation</b>)</li>
+          <li>Constant error variance: <b>homoscedasticity</b></li>
+          <li><b>Normality</b> of errors, for exact inference</li>
+          <li>No exact <b>multicollinearity</b> among predictors</li>
+          <li>Correct model specification</li>
+        </ul>
+        <p class="small muted">Check the fitted model with residual plots.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Correlation vs regression</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th></th><th>Correlation</th><th>Regression</th></tr></thead>
+          <tbody>
+            <tr><td><b>Purpose</b></td><td>Measures association</td><td>Models the relationship and predicts</td></tr>
+            <tr><td><b>Symmetry</b></td><td>Symmetric: $r_{xy} = r_{yx}$</td><td>Asymmetric: $y$ on $x$ ≠ $x$ on $y$</td></tr>
+            <tr><td><b>Units</b></td><td>Unit-free</td><td>Coefficients carry units</td></tr>
+            <tr><td><b>Range</b></td><td>−1 to +1</td><td>Unbounded</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Using the $y$-on-$x$ line to predict $x$.</li>
+          <li>Coefficients of opposite signs (impossible).</li>
+          <li>Treating a regression fit as proof of cause.</li>
+          <li>Predicting far outside the data range.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>With ŷ = 5 + 2x, the predicted y at x = 10 is <span class="blank"></span>.<span class="ans">25</span></li>
+          <li>If x̄ = 4, ȳ = 13 and the slope is 2, the intercept is <span class="blank"></span>.<span class="ans">5</span></li>
+          <li>If b_yx = 0.8 and b_xy = 0.45, then r = <span class="blank"></span>.<span class="ans">0.6</span></li>
+          <li>If b_yx = 1.6, then b_xy cannot be more than <span class="blank"></span>.<span class="ans">0.625</span></li>
+          <li>If b_yx is negative, b_xy must also be <span class="blank"></span>.<span class="ans">negative</span></li>
+          <li>When r = 0, the two regression lines are <span class="blank"></span> to each other.<span class="ans">perpendicular</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="motto">“Correlation measures togetherness; regression draws the line and predicts.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Source: <i>Textbook of Agricultural Statistics</i>, Ch. 9 · Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul · KAU Me-LON</span>
+    <a class="read-full no-print" href="https://statoberrypapaya.github.io/TextbookofAgstat/regression.html">Read the full chapter →</a>
+    <span class="rights">© 2026 Department of Agricultural Statistics, College of Agriculture, Vellayani, KAU · www.agrinoteskau.com · Personal study only; no redistribution or AI use.</span>
+  </footer>
+</main>
+</body>
+</html>

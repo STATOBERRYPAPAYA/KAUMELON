@@ -1,0 +1,113 @@
+<!--
+num: 15
+title: Small Sample Tests
+sub: Student's t tests, the correlation test, chi-square tests and the F test for variances.
+chapter: smallsampleTest.html
+motto: t compares means, chi-square compares counts, F compares variances.
+-->
+    <section class="card c-green s2">
+      <h2><span class="n">1</span>Small samples</h2>
+      <div class="body">
+        <p class="small">Often $n &lt; 30$ (not a strict boundary). Uses the exact $t$, $\chi^2$ and $F$ distributions.</p>
+        <p class="small"><b>W.S. Gosset</b> published the $t$ distribution as "<b>Student</b>". It has heavier tails than the normal.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">2</span>Student's $t$ tests for means</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Test</th><th>Statistic</th><th class="c">df</th></tr></thead>
+          <tbody>
+            <tr><td><b>One sample</b>, $H_0: \mu = \mu_0$</td><td>$t = \dfrac{\bar{x} - \mu_0}{s/\sqrt{n}}$</td><td class="c">$n - 1$</td></tr>
+            <tr><td><b>Two samples, equal variances</b></td><td>$t = \dfrac{\bar{x}_1 - \bar{x}_2}{s\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$, pooled $s^2 = \dfrac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}$</td><td class="c">$n_1 + n_2 - 2$</td></tr>
+            <tr><td><b>Welch</b> (unequal variances)</td><td>$t = \dfrac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}$</td><td class="c">Welch–Satterthwaite (not an integer)</td></tr>
+            <tr><td><b>Paired</b>: before/after on the same unit</td><td>$t = \dfrac{\bar{d}}{s_d/\sqrt{n}}$, $d_i = x_i - y_i$</td><td class="c">$n - 1$</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">3</span>Testing a correlation</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">$H_0: \rho = 0$, df $= n - 2$</span>$$t = \frac{r\sqrt{n - 2}}{\sqrt{1 - r^2}}$$</div>
+        <p class="small">Assumes a bivariate normal model.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s3">
+      <h2><span class="n">4</span>$F$ test: two variances</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">$H_0: \sigma_1^2 = \sigma_2^2$</span>$$F = \frac{s_1^2}{s_2^2},\quad df = (n_1 - 1,\ n_2 - 1)$$</div>
+        <p class="small">Put the larger variance on top ($F \ge 1$) and use the upper $\alpha/2$ cut-off for a two-sided test.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s4">
+      <h2><span class="n">5</span>Chi-square tests</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Test</th><th>Statistic</th><th class="c">df</th></tr></thead>
+          <tbody>
+            <tr><td><b>Goodness of fit</b></td><td>$\chi^2 = \sum \dfrac{(O_i - E_i)^2}{E_i}$</td><td class="c">$n - 1 - m$</td></tr>
+            <tr><td><b>Independence</b> ($r \times s$ table)</td><td>$\chi^2 = \sum\sum \dfrac{(O_{ij} - E_{ij})^2}{E_{ij}}$, $E_{ij} = \dfrac{A_i B_j}{N}$</td><td class="c">$(r-1)(s-1)$</td></tr>
+            <tr><td><b>2 × 2 table</b></td><td>$\chi^2 = \dfrac{n(ad - bc)^2}{C_1 C_2 R_1 R_2}$</td><td class="c">1</td></tr>
+            <tr><td><b>Population variance</b></td><td>$\chi^2 = \dfrac{(n-1)s^2}{\sigma_0^2}$</td><td class="c">$n - 1$</td></tr>
+          </tbody>
+        </table></div>
+        <p class="where">$n$ categories, $m$ parameters estimated from the data. Expected = row total × column total ÷ grand total. Goodness-of-fit and independence use the <b>upper</b> tail.</p>
+      </div>
+    </section>
+
+    <section class="card c-rose s2">
+      <h2><span class="n">6</span>Yates' correction</h2>
+      <div class="body">
+        <p class="small">Optional continuity adjustment for 2 × 2 tables:</p>
+        <div class="fx"><span class="lbl">Corrected</span>$$\frac{n[\max(0, \lvert ad - bc\rvert - \frac{n}{2})]^2}{C_1C_2R_1R_2}$$</div>
+        <p class="small">With small expected counts, consider an exact test.</p>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Which test?</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Question</th><th>Test</th></tr></thead>
+          <tbody>
+            <tr><td>Does mean plant height equal 90 cm?</td><td>One-sample $t$</td></tr>
+            <tr><td>Do two independent varieties differ in yield?</td><td>Two-sample $t$ (pooled or Welch)</td></tr>
+            <tr><td>Did yield change on the same plots before and after a treatment?</td><td>Paired $t$</td></tr>
+            <tr><td>Do segregation counts fit a 9:3:3:1 ratio?</td><td>$\chi^2$ goodness of fit</td></tr>
+            <tr><td>Is adoption independent of education level?</td><td>$\chi^2$ independence</td></tr>
+            <tr><td>Are two varieties equally variable?</td><td>$F$ test</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Two-sample $t$ on paired data.</li>
+          <li>Wrong df: $n-1$ vs $n_1+n_2-2$ vs $(r-1)(s-1)$.</li>
+          <li>Running $\chi^2$ on percentages instead of counts.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>A one-sample t test on 12 plots has <span class="blank"></span> degrees of freedom.<span class="ans">11</span></li>
+          <li>Two independent groups of 8 and 10 plots (equal variances) give <span class="blank"></span> degrees of freedom.<span class="ans">16</span></li>
+          <li>Yields of the same 15 plots before and after mulching are compared with the <span class="blank"></span> t test.<span class="ans">paired</span></li>
+          <li>A 3 × 4 contingency table has <span class="blank"></span> degrees of freedom.<span class="ans">6</span></li>
+          <li>Row total 40, column total 30 and grand total 100 give an expected frequency of <span class="blank"></span>.<span class="ans">12</span></li>
+          <li>Sample variances 18 and 6 give F = <span class="blank"></span>.<span class="ans">3</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>

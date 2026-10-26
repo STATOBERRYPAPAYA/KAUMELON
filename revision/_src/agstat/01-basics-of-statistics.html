@@ -1,0 +1,193 @@
+<!--
+num: 01
+title: Basics of Statistics
+sub: The building blocks: data, variables, scales and frequency distributions.
+chapter: intro.html
+motto: Data are the raw material; statistics turns them into decisions under uncertainty.
+-->
+
+    <section class="card c-green s3">
+      <h2><span class="n">1</span>What is statistics?</h2>
+      <div class="body">
+        <p class="lead">Statistics is the science which deals with the <span class="hl">collection, organisation (classification), presentation, analysis and interpretation of data</span>.</p>
+        <ul>
+          <li><b>Origin:</b> Italian <i>statista</i> (statesman), German <i>Statistik</i>, used by <b>Gottfried Achenwall</b> (1749).</li>
+          <li><b>Sir John Sinclair</b> brought the word into English through the <i>Statistical Account of Scotland</i> (1791–99, 21 volumes).</li>
+          <li><b>Sir R.A. Fisher</b> (1890–1962): <b>Father of Modern Statistics</b>. Gave us ANOVA, experimental design and maximum likelihood, and the principles of <b>randomisation, replication and local control</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Two branches</h2>
+      <div class="body">
+        <div class="tree">
+          <span class="root">Statistics</span><span class="stem"></span>
+          <div class="branches">
+            <div class="leaf"><b>Descriptive</b>Summarises a sample or population with measures such as the mean or standard deviation.</div>
+            <div class="leaf"><b>Inferential</b>Uses a random sample to describe and draw inferences about population parameters.</div>
+          </div>
+        </div>
+        <p class="small muted" style="margin-top:.5rem"><b>Data</b> are individual pieces of factual information: the raw material of statistics (e.g. rainfall over a period, area under paddy in a state).</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">3</span>Statistics vs maths</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th></th><th>Mathematics</th><th>Statistics</th></tr></thead>
+          <tbody>
+            <tr><td><b>Reasoning</b></td><td>Deductive</td><td>Inductive</td></tr>
+            <tr><td><b>Results</b></td><td>Exact, unchanging</td><td>Under uncertainty</td></tr>
+            <tr><td><b>Handles</b></td><td>Axioms, proofs</td><td>Variable real-world data</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">The <b>error term</b> captures the variability we cannot control: observation − true model mean.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">4</span>Population, sample, parameter</h2>
+      <div class="body">
+        <div class="pair">
+          <div><h3>Population</h3>The entire collection of units with the characteristic under study.<br><span class="muted small">e.g. heights of <b>all</b> students in a college</span></div>
+          <div><h3>Sample</h3>A subset selected for study; should be <b>representative</b> of the population.<br><span class="muted small">e.g. heights of 20 selected students</span></div>
+          <div><h3>Parameter</h3>A numerical characteristic of a population. It is <b>fixed</b> but usually <b>unknown</b>.<br><span class="muted small">$\mu,\ \sigma^2,\ P$</span></div>
+          <div><h3>Statistic</h3>A value calculated from sample observations; used to <b>estimate</b> the parameter.<br><span class="muted small">$\bar{x},\ s^2,\ \hat{p}$</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card c-ochre s3">
+      <h2><span class="n">5</span>Variables &amp; constants</h2>
+      <div class="body">
+        <p><b>Variable:</b> takes different values for different individuals, times or places. <b>Constant:</b> stays fixed (e.g. $\pi = 3.14159\ldots$, $e = 2.71828\ldots$).</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Type</th><th>Meaning</th><th>Agri examples</th></tr></thead>
+          <tbody>
+            <tr><td><b>Discrete</b><br><span class="small muted">quantitative</span></td><td>Countable, separate values (0, 1, 2 …)</td><td>Fruits per branch, plots in a field</td></tr>
+            <tr><td><b>Continuous</b><br><span class="small muted">quantitative</span></td><td>Any value in a range</td><td>Plant height, yield, panicle length</td></tr>
+            <tr><td><b>Categorical</b><br><span class="small muted">qualitative</span></td><td>Categories, not measurements; can be counted</td><td>Variety, colour, disease present/absent</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Measurement scales</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Scale</th><th class="c">Order</th><th class="c">Equal<br>gaps</th><th class="c">True<br>zero</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><b>Nominal</b></td><td class="c no">✗</td><td class="c no">✗</td><td class="c no">✗</td><td>Blood group, gender</td></tr>
+            <tr><td><b>Ordinal</b></td><td class="c yes">✓</td><td class="c no">✗</td><td class="c no">✗</td><td>Grades (excellent, good …)</td></tr>
+            <tr><td><b>Interval</b></td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c no">✗</td><td>Temperature in °C</td></tr>
+            <tr><td><b>Ratio</b></td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td><td>Weight, Kelvin</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">40 °C is <b>not</b> "twice as hot" as 20 °C (no true zero), but 60 kg <b>is</b> twice 30 kg.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s3">
+      <h2><span class="n">7</span>Collection of data</h2>
+      <div class="body">
+        <div class="pair">
+          <div><h3>Primary data</h3>First-hand, collected for the study's own purpose; no prior statistical treatment.<br><span class="small muted">e.g. population census by the government</span></div>
+          <div><h3>Secondary data</h3>Already collected and processed by others for another purpose.<br><span class="small muted">e.g. Economic Survey, Ministry reports</span></div>
+        </div>
+        <p class="small" style="margin-top:.45rem"><span class="tag">Primary methods</span>personal investigation · trained enumerators · correspondents · phone or mailed questionnaire · online forms · mobile apps and social media polls</p>
+        <p class="small"><span class="tag">Secondary sources</span>official (RBI, ministries, NSO) · institutional (universities, research institutes). <b>Enumerator</b> collects; <b>respondent</b> provides.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">8</span>Frequency distribution terms</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td><b>Class limits</b></td><td>End points of a class, e.g. 110–119</td></tr>
+            <tr><td><b>Class boundaries</b></td><td>Close the gaps: 109.5–119.5 for data recorded to the nearest cm</td></tr>
+            <tr><td><b>Continuous classes</b></td><td>No gaps (10–20, 20–30): limits = boundaries; use $10 \le x &lt; 20$</td></tr>
+            <tr><td><b>Class mark</b></td><td>Mid-point of the class interval</td></tr>
+            <tr><td><b>Class width</b></td><td>Upper boundary − lower boundary</td></tr>
+            <tr><td><b>LCF / GCF</b></td><td>Less-than (at upper boundaries) / greater-than (at lower boundaries) running totals</td></tr>
+            <tr><td><b>Relative freq.</b></td><td>$f/N$; all of them add up to 1</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-olive s2">
+      <h2><span class="n">9</span>Building a grouped table</h2>
+      <div class="body">
+        <ol class="steps">
+          <li>Decide the number of classes $k$</li>
+          <li>Determine the class width</li>
+          <li>Set up the class limits</li>
+          <li>Tally items into classes (every 5th stroke crosses the first four)</li>
+          <li>Count the frequency in each class</li>
+        </ol>
+        <p class="small muted">Raw data → <b>ungrouped</b> table (each value) or <b>grouped</b> table (classes). Grouping gives a clear picture but loses individual values.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">10</span>Worked example · leaf length (cm), N = 38</h2>
+      <div class="body">
+        <p class="small">Sturges: $k = 1 + 3.322\log_{10}38 \approx 6.25 \Rightarrow$ 6 classes; width $(18-1)/6 \approx 2.83 \Rightarrow 3$ cm.</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Class</th><th>Boundaries</th><th class="c">Mark</th><th class="c">$f$</th><th class="c">LCF</th><th class="c">GCF</th><th class="c">RF</th></tr></thead>
+          <tbody>
+            <tr><td>1–3</td><td>0.5–3.5</td><td class="c">2</td><td class="c">3</td><td class="c">3</td><td class="c">38</td><td class="c">0.079</td></tr>
+            <tr><td>4–6</td><td>3.5–6.5</td><td class="c">5</td><td class="c">6</td><td class="c">9</td><td class="c">35</td><td class="c">0.158</td></tr>
+            <tr><td>7–9</td><td>6.5–9.5</td><td class="c">8</td><td class="c">10</td><td class="c">19</td><td class="c">29</td><td class="c">0.263</td></tr>
+            <tr><td>10–12</td><td>9.5–12.5</td><td class="c">11</td><td class="c">5</td><td class="c">24</td><td class="c">19</td><td class="c">0.132</td></tr>
+            <tr><td>13–15</td><td>12.5–15.5</td><td class="c">14</td><td class="c">5</td><td class="c">29</td><td class="c">14</td><td class="c">0.132</td></tr>
+            <tr><td>16–18</td><td>15.5–18.5</td><td class="c">17</td><td class="c">9</td><td class="c">38</td><td class="c">9</td><td class="c">0.237</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">11</span>Formulae to remember</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Number of classes (Sturges)</span>$$k = 1 + 3.322\log_{10}N$$</div>
+          <div class="fx"><span class="lbl">Approximate class width</span>$$C = \frac{\lvert \max - \min \rvert}{k}$$</div>
+          <div class="fx"><span class="lbl">Lower boundary of class $i$</span>$$L_i = \frac{\text{LCL}_i + \text{UCL}_{i-1}}{2}$$</div>
+          <div class="fx"><span class="lbl">Class mark</span>$$\frac{\text{Lower limit} + \text{Upper limit}}{2}$$</div>
+          <div class="fx"><span class="lbl">Relative frequency</span>$$\text{RF} = \frac{f}{N}, \qquad \sum \frac{f}{N} = 1$$</div>
+          <div class="fx"><span class="lbl">Sum of frequencies</span>$$\sum f = N$$</div>
+        </div>
+        <p class="where">LCL / UCL = lower / upper class limit. Sturges' $k$ is a guide, not a compulsory number.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>A large dataset cannot correct biased selection or poor measurement.</li>
+          <li>Association alone does not prove cause and effect.</li>
+          <li>Online forms and social media polls collect voluntary responses, so they are not automatically representative.</li>
+          <li>Classes must cover the data <b>without overlap</b>. Boundaries depend on the recording precision.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>Weight of a harvested mango recorded as 152.4 g is a <span class="blank"></span> variable.<span class="ans">continuous</span></li>
+          <li>The average yield of 100 sampled paddy farms is a <span class="blank"></span>; the true average of every farm in the district is a <span class="blank"></span>.<span class="ans">statistic; parameter</span></li>
+          <li>Temperature in °C is on an <span class="blank"></span> scale, so a 40 °C day is not “twice as hot” as a 20 °C day.<span class="ans">interval</span></li>
+          <li>Rating farmers&#x27; satisfaction as low, medium or high uses the <span class="blank"></span> scale.<span class="ans">ordinal</span></li>
+          <li>A researcher using rainfall figures copied from an IMD report is working with <span class="blank"></span> data.<span class="ans">secondary</span></li>
+          <li>Plant height recorded to the nearest cm in the class 110–119 has class boundaries <span class="blank"></span> and <span class="blank"></span>.<span class="ans">109.5 and 119.5</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>

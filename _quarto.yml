@@ -19,7 +19,11 @@ project:
   resources:
     - images/
     - assets/
+    - revision/assets/
+    - revision/agstat/
     - CNAME
+    - robots.txt
+    - ai.txt
     - '!analytics/**'
 website:
   title: "KAU Me-LON"
@@ -65,13 +69,14 @@ website:
 format:
   html:
     theme: cosmo
-    css: assets/melon-987f62359633.css
+    css: assets/melon-e3ad2ba56a1a.css
     toc: false
     number-sections: false
     lang: en
     code-copy: true
     respect-user-color-scheme: false
     include-after-body: assets/library.js
+    include-in-header: assets/ai-policy.html
 editor: source
 execute:
   freeze: auto

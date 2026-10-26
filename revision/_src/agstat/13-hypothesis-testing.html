@@ -1,0 +1,112 @@
+<!--
+num: 13
+title: Hypothesis Testing
+sub: Null and alternative hypotheses, Type I and II errors, significance and power, critical regions, tails and p-values.
+chapter: hypothesisTest.html
+motto: We never accept the null hypothesis; we only fail to reject it.
+-->
+    <section class="card c-green s3">
+      <h2><span class="n">1</span>Hypotheses</h2>
+      <div class="body">
+        <p class="small">A <b>statistical hypothesis</b> is a testable statement about a population parameter or distribution.</p>
+        <div class="pair">
+          <div><h3>$H_0$: null</h3>No effect, no difference, no relationship. The one tested for possible rejection.</div>
+          <div><h3>$H_1$ / $H_a$: alternative</h3>An effect, difference or relationship. Decides one- or two-tailed.</div>
+        </div>
+        <p class="small muted" style="margin-top:.35rem">Karl Popper's <b>falsification principle</b>: a scientific hypothesis must be testable and potentially falsifiable.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Errors in decisions</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Decision</th><th>$H_0$ true</th><th>$H_0$ false</th></tr></thead>
+          <tbody>
+            <tr><td><b>Reject $H_0$</b></td><td class="no">Type I error ($\alpha$)</td><td class="yes">Correct: power $1-\beta$</td></tr>
+            <tr><td><b>Fail to reject</b></td><td class="yes">Correct ($1-\alpha$)</td><td class="no">Type II error ($\beta$)</td></tr>
+          </tbody>
+        </table></div>
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Level of significance</span>$$P(\text{reject } H_0 \mid H_0 \text{ true}) \le \alpha$$</div>
+          <div class="fx"><span class="lbl">Power</span>$$1 - \beta$$</div>
+        </div>
+        <p class="where">Larger samples generally increase power. $\alpha$ is fixed <b>before</b> the test (usually 0.05 or 0.01).</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">3</span>Regions &amp; tails</h2>
+      <div class="body">
+        <p class="small"><b>Test statistic</b> ($Z$, $t$, $\chi^2$, $F$) → compared with its <b>sampling distribution</b> under $H_0$. The <b>critical value</b> separates the <b>rejection (critical) region</b> from the <b>acceptance region</b>.</p>
+        <div class="tbl"><table>
+          <thead><tr><th>$H_1$</th><th>Test</th><th>Reject $H_0$ when</th><th class="c">$\alpha$ in tail</th></tr></thead>
+          <tbody>
+            <tr><td>$\mu \ne \mu_0$</td><td><b>Two-tailed</b></td><td>Statistic below the lower or above the upper critical value</td><td class="c">$\alpha/2$ each</td></tr>
+            <tr><td>$\mu &gt; \mu_0$</td><td><b>Right-tailed</b></td><td>Statistic &gt; critical value</td><td class="c">$\alpha$</td></tr>
+            <tr><td>$\mu &lt; \mu_0$</td><td><b>Left-tailed</b></td><td>Statistic &lt; critical value</td><td class="c">$\alpha$</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-plum s2">
+      <h2><span class="n">4</span>The p-value</h2>
+      <div class="body">
+        <p class="small">Probability, assuming $H_0$ true, of a statistic <b>as extreme or more extreme</b> than observed.</p>
+        <div class="tbl"><table>
+          <tbody>
+            <tr><td><b>p ≤ α</b></td><td>Reject $H_0$</td></tr>
+            <tr><td><b>p &gt; α</b></td><td>Fail to reject $H_0$</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">Small p = strong evidence against $H_0$.</p>
+      </div>
+    </section>
+
+    <section class="card c-ochre s4">
+      <h2><span class="n">5</span>The eight steps of a test</h2>
+      <div class="body">
+        <ol class="steps" style="grid-template-columns:1fr 1fr;column-gap:14px">
+          <li>State $H_0$</li>
+          <li>State $H_1$</li>
+          <li>Set the significance level $\alpha$</li>
+          <li>Collect the data</li>
+          <li>Calculate the test statistic</li>
+          <li>Find the critical value or region</li>
+          <li>Compare the statistic with it</li>
+          <li>Make and state the decision</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card c-rose s2">
+      <h2><span class="n">6</span>History</h2>
+      <div class="body">
+        <p class="small"><b>Fisher's tea-tasting experiment</b>: a lady claimed she could tell whether milk or tea was poured first. It's the classic illustration of significance testing.</p>
+      </div>
+    </section>
+
+    <section class="card c-clay s6">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Saying "accept $H_0$": say <b>fail to reject</b> · Failing to reject does not prove $H_0$ true · Choosing $\alpha$ after seeing the data · Picking the tail from the result instead of from $H_1$.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>Declaring a new fertiliser effective when it actually has no effect is a Type <span class="blank"></span> error.<span class="ans">I</span></li>
+          <li>If β = 0.2, the power of the test is <span class="blank"></span>.<span class="ans">0.8</span></li>
+          <li>Testing whether a variety yields more than 40 q/ha needs a <span class="blank"></span>-tailed test.<span class="ans">right</span></li>
+          <li>With p-value 0.03 and α = 0.05, we <span class="blank"></span> H₀.<span class="ans">reject</span></li>
+          <li>With p-value 0.08 and α = 0.05, we <span class="blank"></span> H₀.<span class="ans">fail to reject</span></li>
+          <li>In a two-tailed test at α = 0.05, each tail has area <span class="blank"></span>.<span class="ans">0.025</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>

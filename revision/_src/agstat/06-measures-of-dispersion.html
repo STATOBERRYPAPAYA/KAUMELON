@@ -1,0 +1,123 @@
+<!--
+num: 06
+title: Measures of Dispersion
+sub: Range, interquartile range, mean absolute deviation, variance, standard deviation and the coefficient of variation.
+chapter: dispersion.html
+motto: An average tells you where the data sit; dispersion tells you how far you can trust it.
+-->
+    <section class="card c-green s3">
+      <h2><span class="n">1</span>What is dispersion?</h2>
+      <div class="body">
+        <p class="lead">The <span class="hl">extent to which observations deviate from a central value</span>: the spread of the data.</p>
+        <div class="pair">
+          <div><h3>Absolute measures</h3>In the data's units: range, IQR, MAD, SD</div>
+          <div><h3>Relative measures</h3>Unit-free: coefficient of variation (CV)</div>
+        </div>
+        <p class="small muted" style="margin-top:.4rem">A good measure is rigidly defined, easy to compute, based on all values, suitable for further algebra and not unduly affected by extremes.</p>
+      </div>
+    </section>
+
+    <section class="card c-teal s3">
+      <h2><span class="n">2</span>Range &amp; IQR</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Range</span>$$R = L - S$$</div>
+          <div class="fx"><span class="lbl">Interquartile range</span>$$IQR = Q_3 - Q_1$$</div>
+        </div>
+        <ul>
+          <li><b>Range</b>: simplest; uses only the two extremes.</li>
+          <li><b>IQR</b>: spread of the <b>middle 50%</b>; less affected by extremes.</li>
+          <li><b>Quartile deviation</b> = IQR ÷ 2.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card c-ochre s2">
+      <h2><span class="n">3</span>Mean absolute deviation</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">MAD about the mean</span>$$MAD = \frac{\sum \lvert x_i - \bar{x} \rvert}{n}$$</div>
+        <p class="small">Uses all observations but ignores signs. MAD is <b>least about the median</b>.</p>
+      </div>
+    </section>
+
+    <section class="card c-blue s4">
+      <h2><span class="n">4</span>Variance &amp; standard deviation</h2>
+      <div class="body">
+        <div class="fxgrid">
+          <div class="fx"><span class="lbl">Sample variance</span>$$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$</div>
+          <div class="fx"><span class="lbl">Shortcut</span>$$s^2 = \frac{1}{n-1}\left\{\sum x_i^2 - \frac{(\sum x_i)^2}{n}\right\}$$</div>
+          <div class="fx"><span class="lbl">Discrete frequency</span>$$s^2 = \frac{1}{n-1}\left\{\sum f_i x_i^2 - \frac{(\sum f_i x_i)^2}{n}\right\}$$</div>
+          <div class="fx"><span class="lbl">Grouped, $d_i = (x_i - A)/c$</span>$$s = c\sqrt{\frac{1}{n-1}\left\{\sum f_i d_i^2 - \frac{(\sum f_i d_i)^2}{n}\right\}}$$</div>
+        </div>
+        <p class="where">SD $s$ = non-negative square root of $s^2$. Grouped data: $x_i$ = class mark, $A$ = class mark with the highest frequency, $c$ = class interval.</p>
+      </div>
+    </section>
+
+    <section class="card c-plum s3">
+      <h2><span class="n">5</span>Properties to remember</h2>
+      <div class="body">
+        <ul class="ticks">
+          <li>Variance is in <b>squared</b> units; SD is in the <b>original</b> units.</li>
+          <li>SD is always ≥ 0; SD = 0 means all observations are identical.</li>
+          <li>Sample variance uses divisor $n-1$ (unbiased).</li>
+          <li>Adding a constant to every value does <b>not</b> change SD.</li>
+          <li>Multiplying by $b$ multiplies SD by $\lvert b\rvert$.</li>
+          <li>Squaring gives extreme deviations more weight.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card c-rose s3">
+      <h2><span class="n">6</span>Coefficient of variation</h2>
+      <div class="body">
+        <div class="fx"><span class="lbl">CV (%)</span>$$CV = \frac{s}{\bar{x}} \times 100$$</div>
+        <p>A <b>relative</b> measure, used to compare variability of datasets in <b>different units or with different means</b>.</p>
+        <div class="pair">
+          <div><h3>Higher CV</h3>More relative variability: less consistent</div>
+          <div><h3>Lower CV</h3>Less relative variability: more consistent</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card c-forest s4">
+      <h2><span class="n">7</span>Comparing the measures</h2>
+      <div class="body">
+        <div class="tbl"><table>
+          <thead><tr><th>Measure</th><th>Uses</th><th>Extreme values</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><b>Range</b></td><td>2 extremes only</td><td class="no">Strongly affected</td><td>Quick, rough</td></tr>
+            <tr><td><b>IQR</b></td><td>Middle 50%</td><td class="yes">Resistant</td><td>Pairs with the median</td></tr>
+            <tr><td><b>MAD</b></td><td>All values</td><td>Moderate</td><td>Ignores signs</td></tr>
+            <tr><td><b>SD</b></td><td>All values</td><td class="no">Sensitive (squared)</td><td>Best for algebra</td></tr>
+            <tr><td><b>CV</b></td><td>SD and mean</td><td class="no">Sensitive</td><td>Unit-free; needs a positive mean</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="card c-clay s2">
+      <h2><span class="n">!</span>Common mistakes</h2>
+      <div class="body">
+        <ul class="cross">
+          <li>Dividing by $n$ for a sample variance.</li>
+          <li>Reporting variance in the original units.</li>
+          <li>Comparing SDs of data in different units (use CV).</li>
+          <li>Forgetting to multiply by $c$ in the grouped shortcut.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card fib s6">
+      <h2><span class="n">?</span>Fill in the blanks</h2>
+      <div class="body">
+        <ol class="fib-list">
+          <li>Variety A has SD 4 q and mean 40 q; variety B has SD 3 q and mean 20 q. The more consistent variety has CV = <span class="blank"></span>%.<span class="ans">10 (variety A)</span></li>
+          <li>If every observation is doubled, the SD is multiplied by <span class="blank"></span> and the variance by <span class="blank"></span>.<span class="ans">2; 4</span></li>
+          <li>If yield is recorded in kg, its variance is expressed in <span class="blank"></span>.<span class="ans">kg²</span></li>
+          <li>The observations 5, 5, 5, 5 have a standard deviation of <span class="blank"></span>.<span class="ans">0</span></li>
+          <li>With Q₁ = 18 and Q₃ = 30, the quartile deviation is <span class="blank"></span>.<span class="ans">6</span></li>
+          <li>Adding 10 kg to every observation changes the SD by <span class="blank"></span>.<span class="ans">nothing (0)</span></li>
+        </ol>
+        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
+      </div>
+    </section>
