@@ -1,114 +1,136 @@
 <!--
 num: 07
 title: Skewness and Kurtosis
-sub: Measuring the asymmetry and tail behaviour of a distribution with quantiles and moments.
+sub: From the chapter’s own revision points, formulae and questions.
 chapter: skewness.html
-motto: Skewness asks which way the tail points; kurtosis asks how heavy the tails are.
+motto:
+source_revision: f5faa19097fc
 -->
-    <section class="card c-green s3">
-      <h2><span class="n">1</span>Skewness: the idea</h2>
-      <div class="body">
-        <p class="lead"><span class="hl">Skewness is the degree of asymmetry</span> of a distribution.</p>
-        <div class="tbl"><table>
-          <thead><tr><th>Shape</th><th>Tail</th><th>Typical order*</th></tr></thead>
-          <tbody>
-            <tr><td><b>Symmetric</b></td><td>Balanced</td><td>Mean = Median = Mode</td></tr>
-            <tr><td><b>Positive</b></td><td>Longer <b>right</b> tail</td><td>Mean &gt; Median &gt; Mode</td></tr>
-            <tr><td><b>Negative</b></td><td>Longer <b>left</b> tail</td><td>Mean &lt; Median &lt; Mode</td></tr>
-          </tbody>
-        </table></div>
-        <p class="where">*For many unimodal distributions; not a universal rule.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Skewness → degree of asymmetry of a distribution.</li>
+<li>Kurtosis → fourth standardised central moment, associated with tail
+behaviour and extreme observations.</li>
+<li>For a symmetric unimodal distribution with an existing mean and a
+unique central mode, mean = median = mode.</li>
+<li>Symmetric distribution → skewness = 0.</li>
+<li>Negatively skewed → longer left tail.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Karl Pearson's coefficient</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Using the mode</span>$$S_k = \frac{\text{Mean} - \text{Mode}}{\text{SD}}$$</div>
-          <div class="fx"><span class="lbl">Using the median</span>$$S_k = \frac{3(\text{Mean} - \text{Median})}{\text{SD}}$$</div>
-        </div>
-        <p class="small">Based on the mean, the mode (or median) and the standard deviation. Sign gives the direction: $+$ positive, $-$ negative, $0$ symmetric.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Many unimodal left-skewed distributions have mean &lt; median &lt;
+mode; this is not universal.</li>
+<li>Positively skewed → longer right tail.</li>
+<li>Many unimodal right-skewed distributions have mean &gt; median &gt;
+mode; this is not universal.</li>
+<li>Karl Pearson’s measure → based on mean, mode or median, and standard
+deviation.</li>
+<li>Bowley’s measure → based on quartiles.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">3</span>Bowley's (quartile) measure</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Based on quartiles</span>$$S_Q = \frac{Q_3 - 2Q_2 + Q_1}{Q_3 - Q_1}$$</div>
-        <p class="small">Equivalent: $\dfrac{(Q_3-Q_2)-(Q_2-Q_1)}{(Q_3-Q_2)+(Q_2-Q_1)}$. Lies between −1 and +1; usable with open-end classes.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Kelley’s measure → based on percentiles, particularly <span
+class="math inline">\(P_{10}\)</span>, <span
+class="math inline">\(P_{50}\)</span>, and <span
+class="math inline">\(P_{90}\)</span>.</li>
+<li>Moment-based skewness → based on the third central moment.</li>
+<li><span class="math inline">\(\beta_1\)</span> → indicates the extent
+of skewness but not its direction.</li>
+<li><span class="math inline">\(\gamma_1\)</span> → indicates both
+magnitude and direction of skewness.</li>
+<li><span class="math inline">\(\gamma_1=0\)</span> → zero third-moment
+skewness; symmetry is not established.</li>
+</ul></div></section>
 
-    <section class="card c-blue s3">
-      <h2><span class="n">4</span>Kelley's (percentile) measure</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Based on $P_{10}, P_{50}, P_{90}$</span>$$S_P = \frac{(P_{90} - P_{50}) - (P_{50} - P_{10})}{(P_{90} - P_{50}) + (P_{50} - P_{10})}$$</div>
-        <p class="small">Uses more of the distribution than Bowley's middle 50%.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li><span class="math inline">\(\gamma_1&gt;0\)</span> → positively
+skewed.</li>
+<li><span class="math inline">\(\gamma_1&lt;0\)</span> → negatively
+skewed.</li>
+<li><span class="math inline">\(\beta_2=3\)</span> → mesokurtic.</li>
+<li><span class="math inline">\(\beta_2&gt;3\)</span> →
+leptokurtic.</li>
+<li><span class="math inline">\(\beta_2&lt;3\)</span> →
+platykurtic.</li>
+</ul></div></section>
 
-    <section class="card c-plum s4">
-      <h2><span class="n">5</span>Central moments</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">$r$th central moment</span>$$\mu_r = \frac{\sum f_i (x_i - \bar{x})^r}{N}$$</div>
-        <div class="tbl"><table>
-          <thead><tr><th class="c">$\mu_0$</th><th class="c">$\mu_1$</th><th class="c">$\mu_2$</th><th class="c">$\mu_3$</th><th class="c">$\mu_4$</th></tr></thead>
-          <tbody><tr><td class="c">1</td><td class="c">0 (always)</td><td class="c">Variance $\sigma^2$</td><td class="c">Skewness</td><td class="c">Kurtosis</td></tr></tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li><span class="math inline">\(\gamma_2=0\)</span> → mesokurtic.</li>
+<li><span class="math inline">\(\gamma_2&gt;0\)</span> →
+leptokurtic.</li>
+<li><span class="math inline">\(\gamma_2&lt;0\)</span> →
+platykurtic.</li>
+<li><span class="math inline">\(\mu_1=0\)</span> for every
+distribution.</li>
+<li><span class="math inline">\(\mu_2\)</span> is the population
+variance.</li>
+</ul></div></section>
 
-    <section class="card c-rose s2">
-      <h2><span class="n">6</span>Moment skewness</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Size only</span>$$\beta_1 = \frac{\mu_3^2}{\mu_2^3}$$</div>
-        <div class="fx"><span class="lbl">Size and direction</span>$$\gamma_1 = \frac{\mu_3}{\mu_2^{3/2}}$$</div>
-        <p class="small">$\gamma_1 = 0$ means zero third-moment skewness; it does not prove symmetry.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li><span class="math inline">\(\mu_3\)</span> is used for measuring
+skewness.</li>
+<li><span class="math inline">\(\mu_4\)</span> is used for measuring
+kurtosis.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Kurtosis</h2>
-      <div class="body">
-        <p>Based on the <b>fourth</b> standardised central moment; describes tail behaviour and extreme observations.</p>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Kurtosis</span>$$\beta_2 = \frac{\mu_4}{\mu_2^2}$$</div>
-          <div class="fx"><span class="lbl">Excess kurtosis</span>$$\gamma_2 = \beta_2 - 3$$</div>
-        </div>
-        <div class="tbl"><table>
-          <thead><tr><th>Type</th><th class="c">$\beta_2$</th><th class="c">$\gamma_2$</th><th>Example</th></tr></thead>
-          <tbody>
-            <tr><td><b>Mesokurtic</b></td><td class="c">= 3</td><td class="c">= 0</td><td>Normal distribution</td></tr>
-            <tr><td><b>Leptokurtic</b></td><td class="c">&gt; 3</td><td class="c">&gt; 0</td><td>Heavier tails, sharper peak</td></tr>
-            <tr><td><b>Platykurtic</b></td><td class="c">&lt; 3</td><td class="c">&lt; 0</td><td>Lighter tails, flatter</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Karl Pearson’s coefficient of skewness:</p>
+<p><span class="math display">\[
+S_k=\frac{\text{Mean}-\text{Mode}}{\text{Standard deviation}}
+\]</span></p>
+<p>Alternative Karl Pearson’s coefficient of skewness:</p>
+<p><span class="math display">\[
+S_k=\frac{3(\text{Mean}-\text{Median})}{\text{Standard deviation}}
+\]</span></p>
+<p>Bowley’s coefficient of skewness:</p>
+<p><span class="math display">\[
+S_Q=\frac{(Q_3-Q_2)-(Q_2-Q_1)}{(Q_3-Q_2)+(Q_2-Q_1)}
+\]</span></p></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>$\beta_1$ has no sign; use $\gamma_1$ for direction.</li>
-          <li>The skewed mean–median–mode order is typical, not guaranteed.</li>
-          <li>"Positive skew" means the long tail is on the <b>right</b>.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Alternative form of Bowley’s coefficient:</p>
+<p><span class="math display">\[
+S_Q=\frac{Q_3-2Q_2+Q_1}{Q_3-Q_1}
+\]</span></p>
+<p>Kelley’s coefficient of skewness:</p>
+<p><span class="math display">\[
+S_P=\frac{(P_{90}-P_{50})-(P_{50}-P_{10})}{(P_{90}-P_{50})+(P_{50}-P_{10})}
+\]</span></p>
+<p><span class="math inline">\(r\)</span>th central moment:</p>
+<p><span class="math display">\[
+\mu_r=\frac{\sum_{i=1}^{k}f_i(x_i-\bar{x})^r}{N}
+\]</span></p></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>Mean 52, mode 46 and SD 12 give Karl Pearson&#x27;s coefficient Sₖ = <span class="blank"></span>.<span class="ans">0.5</span></li>
-          <li>Mean 30, median 33 and SD 6 give Sₖ = <span class="blank"></span>, so the distribution is <span class="blank"></span> skewed.<span class="ans">−1.5; negatively</span></li>
-          <li>If Q₁ = 10, Q₂ = 15 and Q₃ = 20, Bowley&#x27;s coefficient of skewness is <span class="blank"></span>.<span class="ans">0</span></li>
-          <li>A distribution with β₂ = 4.2 is called <span class="blank"></span>.<span class="ans">leptokurtic</span></li>
-          <li>If μ₂ = 4 and μ₄ = 48, then β₂ = <span class="blank"></span>, so the curve is mesokurtic.<span class="ans">3</span></li>
-          <li>β₁ cannot show the direction of skewness because it is never <span class="blank"></span>.<span class="ans">negative</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Zeroth central moment:</p>
+<p><span class="math display">\[
+\mu_0=1
+\]</span></p>
+<p>First central moment:</p>
+<p><span class="math display">\[
+\mu_1=0
+\]</span></p>
+<p>Second central moment:</p>
+<p><span class="math display">\[
+\mu_2=\sigma^2
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Third central moment:</p>
+<p><span class="math display">\[
+\mu_3=\frac{\sum_{i=1}^{k}f_i(x_i-\bar{x})^3}{N}
+\]</span></p>
+<p>Measure of skewness based on moments:</p>
+<p><span class="math display">\[
+\beta_1=\frac{\mu_3^2}{\mu_2^3}
+\]</span></p>
+<p>Karl Pearson’s <span class="math inline">\(\gamma_1\)</span>:</p>
+<p><span class="math display">\[
+\gamma_1=\frac{\mu_3}{\mu_2^{3/2}}=\operatorname{sgn}(\mu_3)\sqrt{\beta_1}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 5</h2><div class="body"><p>Measure of kurtosis:</p>
+<p><span class="math display">\[
+\beta_2=\frac{\mu_4}{\mu_2^2}
+\]</span></p>
+<p>Kurtosis of excess:</p>
+<p><span class="math display">\[
+\gamma_2=\beta_2-3
+\]</span></p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The asymmetry of a distribution is measured by __________.</p><span class="ans">Skewness</span></li><li><p>A distribution with a longer right tail is __________ skewed.</p><span class="ans">Positively</span></li><li><p>A distribution with a longer left tail is __________ skewed.</p><span class="ans">Negatively</span></li><li><p>Bowley’s coefficient of skewness is based on __________.</p><span class="ans">Quartiles</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>

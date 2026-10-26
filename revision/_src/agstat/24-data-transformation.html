@@ -1,113 +1,198 @@
 <!--
 num: 24
 title: Data Transformation
-sub: When ANOVA assumptions fail: log, square root, angular and Box-Cox transformations, and back-transformation.
+sub: From the chapter’s own revision points, formulae and questions.
 chapter: transformation.html
-motto: Analyse on the transformed scale; report on the original scale.
+motto:
+source_revision: f5faa19097fc
 -->
-    <section class="card c-green s3">
-      <h2><span class="n">1</span>Why transform?</h2>
-      <div class="body">
-        <p class="small">Used when ANOVA assumptions fail, typically <b>unequal error variances (heteroscedasticity)</b>, non-normal errors or non-additive (multiplicative) effects.</p>
-        <ol class="steps">
-          <li>Transform the data</li>
-          <li>Run ANOVA and mean separation on the <b>transformed</b> scale</li>
-          <li><b>Back-transform</b> means to the original units for reporting</li>
-        </ol>
-        <p class="small muted">Never pick a transformation just to get the conclusion you want.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Data transformation → used when the assumptions required for valid
+statistical analysis are not satisfied.</li>
+<li>Main purpose → improve validity, precision, and accuracy of
+statistical analysis.</li>
+<li>Transformation should not be chosen merely to obtain a desired
+conclusion.</li>
+<li>ANOVA and mean separation → performed on the transformed data.</li>
+<li>Final means → retransformed to the original scale for
+interpretation.</li>
+</ul></div></section>
 
-    <section class="card c-forest s3">
-      <h2><span class="n">2</span>Which transformation?</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Data</th><th>Variance</th><th>Use</th></tr></thead>
-          <tbody>
-            <tr><td>Counts (Poisson)</td><td>$\sigma^2 = \mu$ or $c^2\mu$</td><td><b>Square root</b></td></tr>
-            <tr><td>Binomial percentages</td><td>$\sigma^2 = p(1-p)/n$</td><td><b>Angular</b> (arcsine)</td></tr>
-            <tr><td>SD ∝ mean; multiplicative effects</td><td>$\sigma^2 = c^2\mu^2$</td><td><b>Logarithmic</b></td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Normality → assess model errors using residual diagnostics after
+transformation.</li>
+<li>Transformations covered → logarithmic, square root, angular, and the
+Box-Cox family.</li>
+<li>Logarithmic transformation → suitable when standard deviation is
+proportional to the mean.</li>
+<li>Log transformation → also useful for multiplicative rather than
+additive effects.</li>
+<li>Logarithms require positive inputs; shifts need justification, and
+an alternative model may be preferable.</li>
+</ul></div></section>
 
-    <section class="card c-blue s3">
-      <h2><span class="n">3</span>Logarithmic</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Positive data</span>$$X = \log Y$$</div>
-          <div class="fx"><span class="lbl">With zeros</span>$$X = \log(Y + 1)$$</div>
-        </div>
-        <p class="small">Back-transform: $Y = \text{antilog}\,X$. Logs need positive inputs. Example in the book: weed counts.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Common transformation for zero values → <span
+class="math inline">\(\log(Y+1)\)</span>.</li>
+<li>Positive observations below one can be logged directly; their
+logarithms are negative.</li>
+<li>Square root transformation → appropriate for Poisson-type count
+data.</li>
+<li>Examples → insect counts, number of defectives, and counts of seeds
+affected by disease.</li>
+<li>Poisson distribution → <span
+class="math inline">\(\sigma^2=\mu\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">4</span>Square root</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Counts</span>$$X = \sqrt{Y}$$</div>
-          <div class="fx"><span class="lbl">Zeros present</span>$$X = \sqrt{Y + 1}$$</div>
-        </div>
-        <p class="small">Very small counts: $\sqrt{Y} + \sqrt{Y+1}$. Back-transform $\sqrt{Y+1}$ with $Y = X^2 - 1$. Insect, larval, defective and diseased-seed counts.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Empirical square root case → <span
+class="math inline">\(\sigma^2=c^2\mu\)</span>.</li>
+<li>Zero counts → <span class="math inline">\(\sqrt Y\)</span> is
+defined; the worked example uses <span
+class="math inline">\(\sqrt{Y+1}\)</span> consistently.</li>
+<li>Retransformation of square root mean → square the value and subtract
+1.</li>
+<li>Retransformed square root mean → no greater than the original
+arithmetic mean; the difference may be substantial.</li>
+<li>Back-transformed means are not generally arithmetic means; any bias
+correction must match the fitted model.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s4">
-      <h2><span class="n">5</span>Angular (arcsine) transformation</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Transform</span>$$X = \sin^{-1}\sqrt{p},\quad p = \frac{Y}{100}$$</div>
-          <div class="fx"><span class="lbl">0% and 100%</span>$$p = \frac{1}{4n},\quad p = 1 - \frac{1}{4n}$$</div>
-          <div class="fx"><span class="lbl">Back-transform</span>$$Y = 100 \sin^2 X$$</div>
-        </div>
-        <p class="where">For percentages from <b>binomial counts</b> (germination, mortality). The 30–70% guideline is approximate. Nutrient percentages (protein, carbohydrate) are not binomial and need not be transformed.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Angular transformation → appropriate for percentage data derived
+from binomial counts.</li>
+<li>Binomial variance → <span
+class="math inline">\(\sigma^2=p(1-p)/n\)</span>.</li>
+<li>The 30%–70% guideline is approximate; use the binomial model and
+residual diagnostics to assess the analysis.</li>
+<li>A single proportion outside 30%–70% does not automatically require
+transformation. If used, apply one transformation consistently.</li>
+<li>Angular transformation → <span class="math inline">\(sin^{-1}\sqrt
+p\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">6</span>Box-Cox</h2>
-      <div class="body">
-        <p class="small">A <b>family of power transformations</b> indexed by $\lambda$, for strictly positive data.</p>
-        <p class="small">$\lambda = \tfrac12$: square root · $\lambda = -1$: reciprocal · $\lambda \to 0$: log. The angular transformation is <b>not</b> in this family.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li><p>For 0% → replace with <span
+class="math inline">\(1/(4n)\)</span>.</p></li>
+<li><p>For 100% → replace with <span
+class="math inline">\(1-1/(4n)\)</span>.</p></li>
+<li><p>Retransformation of angular mean → <span
+class="math inline">\(100\times sin^2X\)</span>, using the same angular
+unit as in the forward transformation.</p></li>
+<li><p>Percentage of protein, carbohydrate, etc. → need not necessarily
+be transformed because such percentages are not necessarily binomial
+proportions.</p></li>
+<li><p>Distribution and transformation:</p>
+<ul>
+<li>Poisson → <span class="math inline">\(\sqrt{x}\)</span>.</li>
+<li>Empirical <span class="math inline">\(\sigma^2=c^2\mu\)</span> →
+<span class="math inline">\(\sqrt{x}\)</span>.</li>
+<li>Binomial → <span class="math inline">\(sin^{-1}\sqrt
+p\)</span>.</li>
+<li>Empirical <span class="math inline">\(\sigma^2=c^2\mu^2\)</span> →
+<span class="math inline">\(\log(x)\)</span>.</li>
+</ul></li>
+</ul></div></section>
 
-    <section class="card c-rose s4">
-      <h2><span class="n">7</span>After transforming</h2>
-      <div class="body">
-        <ul class="ticks">
-          <li>Check assumptions using the <b>residuals</b> of the fitted model.</li>
-          <li>Use one transformation consistently for the whole dataset.</li>
-          <li>CD on the transformed scale: $t_{\alpha/2,\,edf}\sqrt{2\,MSE/r}$ (RBD).</li>
-          <li>Back-transformed means are <b>not</b> arithmetic means (e.g. squared root means are ≤ the original mean).</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Logarithmic example → weed counts were transformed using <span
+class="math inline">\(X=\log Y\)</span>.</li>
+<li>Square root example → larval counts containing zero values were
+transformed using <span
+class="math inline">\(X=\sqrt{Y+1}\)</span>.</li>
+<li>Angular example → insect mortality percentages were transformed
+using <span class="math inline">\(X=sin^{-1}\sqrt p\)</span>.</li>
+<li>In all three examples → ANOVA was performed on transformed
+values.</li>
+<li>Treatment means → compared using the appropriate critical difference
+after significant treatment F test.</li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Reporting transformed means as final results.</li>
-          <li>Taking log of zero.</li>
-          <li>Arcsine on non-binomial percentages.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 8</h2><div class="body"><ul>
+<li>Final interpretation → based on retransformed means expressed in the
+original units.</li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>Counts of insects per plant are usually analysed after a <span class="blank"></span> transformation.<span class="ans">square root</span></li>
-          <li>Percent germination out of 100 seeds calls for the <span class="blank"></span> transformation.<span class="ans">angular (arcsine)</span></li>
-          <li>When the SD rises in proportion to the mean, use the <span class="blank"></span> transformation.<span class="ans">logarithmic</span></li>
-          <li>A transformed mean √(Y + 1) = 3 back-transforms to <span class="blank"></span>.<span class="ans">8</span></li>
-          <li>An angular value of 30° back-transforms to <span class="blank"></span>%.<span class="ans">25</span></li>
-          <li>Counts that include zeros are transformed as √(Y + <span class="blank"></span>).<span class="ans">1</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Logarithmic transformation:</p>
+<p><span class="math display">\[
+X=\log Y
+\]</span></p>
+<p>Logarithmic transformation with a constant:</p>
+<p><span class="math display">\[
+X=\log(Y+k),\quad k&gt;0
+\]</span></p>
+<p>Square root transformation:</p>
+<p><span class="math display">\[
+X=\sqrt{Y}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Square root transformation when zero values occur:</p>
+<p><span class="math display">\[
+X=\sqrt{Y+1}
+\]</span></p>
+<p>Alternative transformation for very small counts:</p>
+<p><span class="math display">\[
+X=\sqrt{Y}+\sqrt{Y+1}
+\]</span></p>
+<p>Angular transformation:</p>
+<p><span class="math display">\[
+X=sin^{-1}\sqrt p
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+p=\frac{Y}{100}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Replacement for 0%:</p>
+<p><span class="math display">\[
+p=\frac{1}{4n}
+\]</span></p>
+<p>Replacement for 100%:</p>
+<p><span class="math display">\[
+p=1-\frac{1}{4n}
+\]</span></p>
+<p>Retransformation after logarithmic transformation:</p>
+<p><span class="math display">\[
+Y=antilogX
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Retransformation after <span
+class="math inline">\(X=\sqrt{Y+1}\)</span>:</p>
+<p><span class="math display">\[
+Y=X^2-1
+\]</span></p>
+<p>Retransformation after angular transformation:</p>
+<p><span class="math display">\[
+Y=100\times sin^2X
+\]</span></p>
+<p>Binomial variance:</p>
+<p><span class="math display">\[
+\sigma^2=\frac{p(1-p)}{n}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 5</h2><div class="body"><p>Poisson variance:</p>
+<p><span class="math display">\[
+\sigma^2=\mu
+\]</span></p>
+<p>Empirical variance relationship for square root transformation:</p>
+<p><span class="math display">\[
+\sigma^2=c^2\mu
+\]</span></p>
+<p>Empirical variance relationship for logarithmic transformation:</p>
+<p><span class="math display">\[
+\sigma^2=c^2\mu^2
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 6</h2><div class="body"><p>Coefficient of variation:</p>
+<p><span class="math display">\[
+CV=\frac{SD}{Mean}\times100
+\]</span></p>
+<p>Critical difference for transformed means in an RBD:</p>
+<p><span class="math display">\[
+CD=t_{\alpha/2,edf}\sqrt{\frac{2MSE}{r}}
+\]</span></p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>A change of measurement scale used before analysis is called a data
+__________.</p><span class="ans">Transformation</span></li><li><p>Unequal error variances are described as __________.</p><span class="ans">Heteroscedasticity</span></li><li><p>A transformation commonly used for positive data with multiplicative
+effects is the __________ transformation.</p><span class="ans">Logarithmic</span></li><li><p>A traditional variance-stabilising transformation for Poisson counts
+is the __________ root transformation.</p><span class="ans">Square</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>

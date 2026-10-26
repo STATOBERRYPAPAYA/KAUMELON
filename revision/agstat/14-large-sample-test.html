@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,129 +29,172 @@
     <div class="num" aria-hidden="true">14</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 14</div>
     <h1>Large Sample Tests</h1>
-    <div class="sub">The Central Limit Theorem and Z tests for proportions, means and standard deviations.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/largeSampletest.html#chapter-summary">Chapter 14 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Standardise the estimate using its standard error.</p>
-    <div class="focus-pair"><p><b>Remember</b>Check independence and the relevant large-sample approximation before applying a z test.</p><p><b>Apply it</b>For a population proportion test, check expected success and failure counts using the null proportion.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>Central Limit Theorem</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">As $n$ increases</span>$$\frac{\bar{X} - \mu}{\sigma/\sqrt{n}} \xrightarrow{d} N(0, 1)$$</div>
-        <ul>
-          <li>Large sample: generally $n \ge 30$.</li>
-          <li>Needs <b>independent</b> observations and <b>finite variance</b>.</li>
-          <li><b>Standard error</b> = SD of a sampling distribution; for $\bar{x}$ it is $\sigma/\sqrt{n}$, which shrinks as $n$ grows.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Large sample → generally <span
+class="math inline">\(n\geq30\)</span>.</li>
+<li>Large-sample tests are based on the Central Limit Theorem.</li>
+<li>Central Limit Theorem → sampling distribution of <span
+class="math inline">\(\bar{X}\)</span> approaches a normal distribution
+as <span class="math inline">\(n\)</span> increases.</li>
+<li>The observations should be independent.</li>
+<li>The population should have finite variance.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Z test decision rules</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Test</th><th>Reject $H_0$ if</th><th class="c">5%</th><th class="c">1%</th></tr></thead>
-          <tbody>
-            <tr><td><b>Two-tailed</b></td><td>$\lvert Z\rvert &gt; Z_{\alpha/2}$</td><td class="c">1.960</td><td class="c">2.576</td></tr>
-            <tr><td><b>Right-tailed</b></td><td>$Z &gt; Z_\alpha$</td><td class="c">1.645</td><td class="c">2.326</td></tr>
-            <tr><td><b>Left-tailed</b></td><td>$Z &lt; -Z_\alpha$</td><td class="c">−1.645</td><td class="c">−2.326</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">State $H_0$ about the <b>population parameter</b>; compute $Z$ from <b>sample statistics</b>.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Large-sample Z-test → based on <span
+class="math inline">\(N(0,1)\)</span>.</li>
+<li>Tests in this chapter → single proportion, equality of two
+proportions, single mean, equality of two means, and an approximate
+comparison of two standard deviations under the stated normal-population
+assumptions.</li>
+<li>Single proportion → compare <span class="math inline">\(P\)</span>
+with a specified value <span class="math inline">\(P_0\)</span>.</li>
+<li>For a single proportion, <span
+class="math inline">\(H_0:P=P_0\)</span>.</li>
+<li>For a single proportion, the alternative may be <span
+class="math inline">\(P&lt;P_0\)</span>, <span
+class="math inline">\(P&gt;P_0\)</span>, or <span
+class="math inline">\(P\neq P_0\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-blue s3">
-      <h2><span class="n">3</span>Proportions</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Single proportion, $H_0: P = P_0$</span>$$Z = \frac{p - P_0}{\sqrt{P_0 Q_0 / n}},\quad Q_0 = 1 - P_0$$</div>
-        <div class="fx"><span class="lbl">Two proportions, $H_0: P_1 = P_2$</span>$$Z = \frac{p_1 - p_2}{\sqrt{\hat{P}\hat{Q}\left(\frac{1}{n_1} + \frac{1}{n_2}\right)}}$$</div>
-        <p class="where">Pooled $\hat{P} = \dfrac{n_1 p_1 + n_2 p_2}{n_1 + n_2}$, $\hat{Q} = 1 - \hat{P}$. Needs enough expected successes <b>and failures</b>.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Single-proportion standard error uses <span
+class="math inline">\(P_0\)</span> and <span
+class="math inline">\(Q_0\)</span> under the null hypothesis.</li>
+<li>Two proportions → compare <span class="math inline">\(P_1\)</span>
+and <span class="math inline">\(P_2\)</span>.</li>
+<li>For two proportions, <span
+class="math inline">\(H_0:P_1=P_2\)</span>.</li>
+<li>The two-proportion test uses the pooled proportion <span
+class="math inline">\(\widehat{P}\)</span>.</li>
+<li>Single mean → compare <span class="math inline">\(\mu\)</span> with
+<span class="math inline">\(\mu_0\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-plum s3">
-      <h2><span class="n">4</span>Single mean, $H_0: \mu = \mu_0$</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">$\sigma$ known</span>$$Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$$</div>
-          <div class="fx"><span class="lbl">$\sigma$ unknown</span>$$Z = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$$</div>
-        </div>
-        <p class="small">With a large sample, $s$ is a good substitute for $\sigma$.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>When <span class="math inline">\(\sigma\)</span> is known, use <span
+class="math inline">\(\sigma/\sqrt{n}\)</span>.</li>
+<li>When <span class="math inline">\(\sigma\)</span> is unknown, use
+<span class="math inline">\(s/\sqrt{n}\)</span>.</li>
+<li>Equality of two means → compare <span
+class="math inline">\(\mu_1\)</span> and <span
+class="math inline">\(\mu_2\)</span>.</li>
+<li>Equal population standard deviations → use the common <span
+class="math inline">\(\sigma\)</span>.</li>
+<li>Equal but unknown standard deviations → use the pooled
+estimate.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s4">
-      <h2><span class="n">5</span>Two means, $H_0: \mu_1 = \mu_2$</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Equal SDs</span>$$Z = \frac{\bar{x}_1 - \bar{x}_2}{\sigma\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$</div>
-          <div class="fx"><span class="lbl">Pooled $\sigma$ if unknown</span>$$\sigma = \sqrt{\frac{n_1 s_1^2 + n_2 s_2^2}{n_1 + n_2}}$$</div>
-          <div class="fx"><span class="lbl">Unequal SDs</span>$$Z = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}}$$</div>
-        </div>
-        <p class="where">For independent samples, the variance of a difference is the <b>sum</b> of the variances.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Unequal population standard deviations → use separate variance
+terms.</li>
+<li>Two-tailed test → reject if <span
+class="math inline">\(|Z|&gt;Z_{\alpha/2}\)</span>.</li>
+<li>Right-tailed test → reject if <span
+class="math inline">\(Z&gt;Z_\alpha\)</span>.</li>
+<li>Left-tailed test → reject if <span
+class="math inline">\(Z&lt;-Z_\alpha\)</span>.</li>
+<li>At <span class="math inline">\(\alpha=0.05\)</span>, two-tailed
+critical value → <span class="math inline">\(1.960\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-rose s2">
-      <h2><span class="n">6</span>Two SDs</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Approximate test</span>$$Z = \frac{s_1 - s_2}{\sqrt{\frac{s_1^2}{2n_1} + \frac{s_2^2}{2n_2}}}$$</div>
-        <p class="small">Under normal-population assumptions.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>At <span class="math inline">\(\alpha=0.01\)</span>, two-tailed
+critical value → <span class="math inline">\(2.576\)</span>.</li>
+<li>At <span class="math inline">\(\alpha=0.05\)</span>, right-tailed
+critical value → <span class="math inline">\(1.645\)</span>.</li>
+<li>At <span class="math inline">\(\alpha=0.05\)</span>, left-tailed
+critical value → <span class="math inline">\(-1.645\)</span>.</li>
+<li>The null hypothesis is always stated in terms of the population
+parameter.</li>
+<li>The test statistic is calculated from sample statistics.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Choosing the Z test</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Question</th><th>$H_0$</th><th>Standard error uses</th></tr></thead>
-          <tbody>
-            <tr><td>Is the germination rate 80%?</td><td>$P = P_0$</td><td>$P_0$ (hypothesised)</td></tr>
-            <tr><td>Do two districts have the same adoption rate?</td><td>$P_1 = P_2$</td><td>Pooled $\hat{P}$</td></tr>
-            <tr><td>Is mean yield 40 q/ha?</td><td>$\mu = \mu_0$</td><td>$\sigma$ or $s$</td></tr>
-            <tr><td>Do two varieties yield the same?</td><td>$\mu_1 = \mu_2$</td><td>Common or separate variances</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>If the calculated statistic falls in the critical region, reject
+<span class="math inline">\(H_0\)</span>.</li>
+<li>Otherwise, do not reject <span
+class="math inline">\(H_0\)</span>.</li>
+<li>For a two-tailed test, <span class="math inline">\(\alpha\)</span>
+is divided equally between the two tails.</li>
+<li>The sign of <span class="math inline">\(Z\)</span> is important in
+one-tailed tests; <span class="math inline">\(|Z|\)</span> is used for
+the two-tailed decision.</li>
+<li>A large absolute value of <span class="math inline">\(Z\)</span>
+indicates greater departure from the null hypothesis.</li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Using $p$ instead of $P_0$ in the single-proportion SE.</li>
-          <li>Ignoring the sign of $Z$ in one-tailed tests.</li>
-          <li>Using 1.96 for a one-tailed 5% test (it's 1.645).</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Central Limit Theorem:</p>
+<p><span class="math display">\[
+\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}\xrightarrow{d}N(0,1)
+\]</span></p>
+<p>Single population proportion:</p>
+<p><span class="math display">\[
+Z=\frac{p-P_0}{\sqrt{P_0Q_0/n}}
+\]</span></p>
+<p>Complementary proportion:</p>
+<p><span class="math display">\[
+Q_0=1-P_0
+\]</span></p></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>With σ = 10 and n = 25, the standard error of the mean is <span class="blank"></span>.<span class="ans">2</span></li>
-          <li>x̄ = 52, μ₀ = 50 and SE = 1 give Z = <span class="blank"></span>, so a two-tailed test at 5% <span class="blank"></span> H₀.<span class="ans">2; rejects</span></li>
-          <li>With P₀ = 0.5, n = 100 and p = 0.6, the Z statistic is <span class="blank"></span>.<span class="ans">2</span></li>
-          <li>Making the sample four times larger makes the standard error <span class="blank"></span>.<span class="ans">half as large</span></li>
-          <li>Z = 1.8 in a right-tailed test at 5% means H₀ is <span class="blank"></span>.<span class="ans">rejected (1.8 &gt; 1.645)</span></li>
-          <li>Samples of 100 with p₁ = 0.4 and p₂ = 0.6 give a pooled proportion P̂ = <span class="blank"></span>.<span class="ans">0.5</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Pooled proportion for two proportions:</p>
+<p><span class="math display">\[
+\widehat{P}=\frac{n_1p_1+n_2p_2}{n_1+n_2}
+\]</span></p>
+<p>Pooled complementary proportion:</p>
+<p><span class="math display">\[
+\widehat{Q}=1-\widehat{P}
+\]</span></p>
+<p>Equality of two proportions:</p>
+<p><span class="math display">\[
+Z=\frac{p_1-p_2}{\sqrt{\widehat{P}\widehat{Q}\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}
+\]</span></p></div></section>
 
-  <div class="strip">
-    <div class="motto">“With a large enough sample, almost every mean walks towards the normal curve.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Single population mean when <span
+class="math inline">\(\sigma\)</span> is known:</p>
+<p><span class="math display">\[
+Z=\frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}
+\]</span></p>
+<p>Single population mean when <span
+class="math inline">\(\sigma\)</span> is unknown:</p>
+<p><span class="math display">\[
+Z=\frac{\bar{x}-\mu_0}{s/\sqrt{n}}
+\]</span></p>
+<p>Equality of two means when population standard deviations are
+equal:</p>
+<p><span class="math display">\[
+Z=\frac{\bar{x}_1-\bar{x}_2}{\sigma\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Pooled estimate of common standard deviation:</p>
+<p><span class="math display">\[
+\sigma=\sqrt{\frac{n_1s_1^2+n_2s_2^2}{n_1+n_2}}
+\]</span></p>
+<p>Equality of two means when population standard deviations are
+unequal:</p>
+<p><span class="math display">\[
+Z=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
+\]</span></p>
+<p>Difference of two standard deviations (population standard deviations
+unknown):</p>
+<p><span class="math display">\[
+Z=\frac{s_1-s_2}{\sqrt{\frac{s_1^2}{2n_1}+\frac{s_2^2}{2n_2}}}
+\]</span></p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The theorem supporting the normal approximation to the sample mean
+under suitable conditions is the __________ Limit Theorem.</p><span class="ans">Central</span></li><li><p>The standard deviation of a sampling distribution is called the
+standard __________.</p><span class="ans">Error</span></li><li><p>The reference distribution used in a Z-test is the standard
+__________ distribution.</p><span class="ans">Normal</span></li><li><p>For independent observations with population standard deviation <span
+class="math inline">\(\sigma\)</span>, the standard error of the sample
+mean is __________.</p><span class="ans"><span class="math inline">\(\sigma/\sqrt{n}\)</span></span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

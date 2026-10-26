@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,140 +29,251 @@
     <div class="num" aria-hidden="true">11</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 11</div>
     <h1>Probability Distributions</h1>
-    <div class="sub">Expected value, and the Bernoulli, binomial, Poisson and normal distributions with their fitting.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/probabilitydist.html#chapter-summary">Chapter 11 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Select the distribution from the experiment.</p>
-    <div class="focus-pair"><p><b>Remember</b>Binomial counts successes in a fixed number of independent trials with constant probability; Poisson models counts under its assumptions.</p><p><b>Apply it</b>For 10 independent seeds each with germination probability 0.8, the expected number germinating is np = 8.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>Distributions &amp; expectation</h2>
-      <div class="body">
-        <div class="pair">
-          <div><h3>Discrete</h3><b>p.m.f.</b> $p(x) = P(X = x)$; $p(x) \ge 0$, $\sum p(x) = 1$</div>
-          <div><h3>Continuous</h3><b>p.d.f.</b> $f(x)$; probability = <b>area</b> under the curve; total area = 1</div>
-        </div>
-        <div class="fxgrid" style="margin-top:.35rem">
-          <div class="fx"><span class="lbl">Expected value (discrete)</span>$$E(X) = \sum x\,p(x)$$</div>
-          <div class="fx"><span class="lbl">Expected value (continuous)</span>$$E(X) = \int x f(x)\,dx$$</div>
-        </div>
-        <p class="where">Expected value = the long-run average of the random variable.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Probability distribution → gives possible values of a random
+variable and their probabilities.</li>
+<li>Discrete probability distribution → random variable takes countable
+values.</li>
+<li>Continuous probability distribution → random variable takes
+continuous values.</li>
+<li>Expected value → long-run average value of a random variable.</li>
+<li>Probability mass function → used for discrete random variables.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Bernoulli</h2>
-      <div class="body">
-        <p class="small">A single trial with two outcomes: success (1), failure (0). Parameter $p$.</p>
-        <div class="fx"><span class="lbl">p.m.f.</span>$$p(x) = p^x (1-p)^{1-x},\quad x = 0, 1$$</div>
-        <div class="tbl"><table><tbody><tr><td><b>Mean</b></td><td>$p$</td><td><b>Variance</b></td><td>$p(1-p)$</td></tr></tbody></table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Probability density function → used for continuous random
+variables.</li>
+<li>For a p.m.f., <span class="math inline">\(p(x)\geq0\)</span>.</li>
+<li>For a p.m.f., <span class="math inline">\(\sum p(x)=1\)</span>.</li>
+<li>Bernoulli distribution → exactly two possible outcomes, success and
+failure.</li>
+<li>Bernoulli parameter → <span class="math inline">\(p\)</span>, the
+probability of success.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>Binomial $B(n, p)$</h2>
-      <div class="body">
-        <p class="small">Number of successes in <b>$n$ fixed, independent</b> Bernoulli trials with <b>constant</b> success probability $p$; $q = 1 - p$.</p>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">p.m.f.</span>$$p(x) = \binom{n}{x} p^x q^{n-x}$$</div>
-          <div class="fx"><span class="lbl">Mean · Variance</span>$$E(X) = np,\quad Var(X) = npq$$</div>
-          <div class="fx"><span class="lbl">Fitting: estimate $p$</span>$$\hat{p} = \frac{\bar{x}}{n}$$</div>
-        </div>
-        <p class="where">Variance &lt; mean. Expected frequency = $N \times p(x)$, $x = 0, 1, \ldots, n$.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Bernoulli mean → <span class="math inline">\(p\)</span>.</li>
+<li>Bernoulli variance → <span
+class="math inline">\(p(1-p)\)</span>.</li>
+<li>Binomial distribution → repeated Bernoulli trials.</li>
+<li>Binomial requirements → fixed number of trials, independent trials,
+and constant probability of success.</li>
+<li>Binomial parameters → <span class="math inline">\(n\)</span> and
+<span class="math inline">\(p\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>Poisson $P(\lambda)$</h2>
-      <div class="body">
-        <p class="small">Counts of events (0, 1, 2, …) at a rate; approximates rare binomial successes.</p>
-        <div class="fx"><span class="lbl">p.m.f.</span>$$p(x) = \frac{e^{-\lambda}\lambda^x}{x!}$$</div>
-        <p class="small"><b>Mean = Variance = $\lambda$</b>. Fit with $\hat\lambda = \bar{x}$.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Binomial failure probability → <span
+class="math inline">\(q=1-p\)</span>.</li>
+<li>Binomial mean → <span class="math inline">\(np\)</span>.</li>
+<li>Binomial variance → <span class="math inline">\(npq\)</span>.</li>
+<li>In fitting a binomial distribution, <span
+class="math inline">\(p=\frac{\bar{x}}{n}\)</span>.</li>
+<li>Expected frequency → <span class="math inline">\(N\times
+p(x)\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Normal $N(\mu, \sigma^2)$</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">p.d.f.</span>$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\, e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$</div>
-        <ul class="ticks">
-          <li>Continuous, bell-shaped, symmetric about $\mu$; mean = median = mode</li>
-          <li>Skewness 0, kurtosis $\beta_2 = 3$; odd central moments are zero</li>
-          <li>Tails approach the x-axis but never touch it</li>
-          <li>Q.D. ≈ 0.6745σ; M.D. ≈ 0.7979σ</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Poisson distribution → models counts under appropriate rate and
+independence assumptions; it also approximates rare binomial
+successes.</li>
+<li>Poisson parameter → <span
+class="math inline">\(\lambda\)</span>.</li>
+<li>Poisson mean → <span class="math inline">\(\lambda\)</span>.</li>
+<li>Poisson variance → <span
+class="math inline">\(\lambda\)</span>.</li>
+<li>In fitting a Poisson distribution, <span
+class="math inline">\(\lambda=\bar{x}\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Standard normal &amp; areas</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Standardise</span>$$z = \frac{X - \mu}{\sigma} \sim N(0, 1)$$</div>
-        <div class="tbl"><table>
-          <thead><tr><th>Interval</th><th class="c">Area</th></tr></thead>
-          <tbody>
-            <tr><td>$\mu \pm \sigma$</td><td class="c">68.26%</td></tr>
-            <tr><td>$\mu \pm 1.96\sigma$</td><td class="c">95%</td></tr>
-            <tr><td>$\mu \pm 2\sigma$</td><td class="c">95.44%</td></tr>
-            <tr><td>$\mu \pm 2.58\sigma$</td><td class="c">99%</td></tr>
-            <tr><td>$\mu \pm 3\sigma$</td><td class="c">99.73%</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>Normal distribution → continuous, bell-shaped and symmetric.</li>
+<li>Normal distribution parameters → <span
+class="math inline">\(\mu\)</span> and <span
+class="math inline">\(\sigma\)</span>.</li>
+<li>Mean = median = mode in a normal distribution.</li>
+<li>Normal distribution is symmetric about its mean.</li>
+<li>Total area under the normal curve → 1.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Compare the distributions</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th></th><th>Binomial</th><th>Poisson</th><th>Normal</th></tr></thead>
-          <tbody>
-            <tr><td><b>Type</b></td><td>Discrete</td><td>Discrete</td><td>Continuous</td></tr>
-            <tr><td><b>Parameters</b></td><td>$n, p$</td><td>$\lambda$</td><td>$\mu, \sigma$</td></tr>
-            <tr><td><b>Mean</b></td><td>$np$</td><td>$\lambda$</td><td>$\mu$</td></tr>
-            <tr><td><b>Variance</b></td><td>$npq$</td><td>$\lambda$</td><td>$\sigma^2$</td></tr>
-            <tr><td><b>Agri example</b></td><td>Germinated seeds out of 10</td><td>Insects per leaf</td><td>Plant height</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">Z-table: area to the left of $z$. Above $z$: $1 -$ table value. Between two $z$'s: subtract.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Standard normal distribution → mean 0 and standard deviation 1.</li>
+<li>Z-score → number of standard deviations an observation is from the
+mean.</li>
+<li>Standardization → subtract the mean and divide by the standard
+deviation.</li>
+<li>About 68.26% of observations lie within <span
+class="math inline">\(\mu\pm\sigma\)</span>.</li>
+<li>About 95% of observations lie within <span
+class="math inline">\(\mu\pm1.96\sigma\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Binomial needs a <b>fixed</b> $n$ and <b>constant</b> $p$.</li>
-          <li>$P(X = x) = 0$ for continuous variables: use intervals.</li>
-          <li>Forgetting $1 -$ table value for upper-tail areas.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 8</h2><div class="body"><ul>
+<li>About 95.44% of observations lie within <span
+class="math inline">\(\mu\pm2\sigma\)</span>.</li>
+<li>About 99% of observations lie within <span
+class="math inline">\(\mu\pm2.58\sigma\)</span>.</li>
+<li>About 99.73% of observations lie within <span
+class="math inline">\(\mu\pm3\sigma\)</span>.</li>
+<li>Normal distribution has skewness 0.</li>
+<li>Normal distribution has kurtosis 3.</li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>A binomial variable with n = 10 and p = 0.3 has mean <span class="blank"></span> and variance <span class="blank"></span>.<span class="ans">3; 2.1</span></li>
-          <li>If 80% of seeds germinate, the expected number germinating out of 20 is <span class="blank"></span>.<span class="ans">16</span></li>
-          <li>A Poisson variable with variance 4 has mean <span class="blank"></span>.<span class="ans">4</span></li>
-          <li>Plant height ~ N(100, 10²): a plant of 120 cm has z = <span class="blank"></span>.<span class="ans">2</span></li>
-          <li>About <span class="blank"></span>% of a normal population lies between μ − 2σ and μ + 2σ.<span class="ans">95.44</span></li>
-          <li>In a binomial distribution the variance is always <span class="blank"></span> than the mean.<span class="ans">less</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-green "><h2>Quick revision · 9</h2><div class="body"><ul>
+<li>All odd-order central moments are zero for the normal
+distribution.</li>
+<li>The total area under the normal curve represents total
+probability.</li>
+<li>The tails of the normal distribution are asymptotic to the
+horizontal axis.</li>
+<li>A linear combination of independent normal variables is also
+normally distributed.</li>
+<li>The Central Limit Theorem is closely associated with the normal
+distribution.</li>
+</ul></div></section>
 
-  <div class="strip">
-    <div class="motto">“Binomial counts successes, Poisson counts rare events, and the normal curve shapes them all at scale.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-green "><h2>Quick revision · 10</h2><div class="body"><ul>
+<li>Z-table gives cumulative probability to the left of a specified
+Z-score.</li>
+<li>Probability above a Z-score is obtained by subtracting the
+cumulative probability from 1.</li>
+<li>Probability between two Z-scores is obtained by subtracting the
+smaller cumulative probability from the larger one.</li>
+</ul></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Probability mass function for equally likely elementary outcomes:</p>
+<p><span class="math display">\[
+P(X=x)=\frac{\text{Number of outcomes giving }X=x}{\text{Total number of
+elementary outcomes}}
+\]</span></p>
+<p>Expected value of a discrete random variable:</p>
+<p><span class="math display">\[
+E(X)=\sum_x xp(x)
+\]</span></p>
+<p>Expected value of a continuous random variable:</p>
+<p><span class="math display">\[
+E(X)=\int_{-\infty}^{\infty}xf(x)\,dx
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Probability mass function:</p>
+<p><span class="math display">\[
+p(x)=P(X=x)
+\]</span></p>
+<p>Bernoulli probability mass function:</p>
+<p><span class="math display">\[
+p(x)=p^x(1-p)^{1-x},\quad x=0,1
+\]</span></p>
+<p>Bernoulli mean:</p>
+<p><span class="math display">\[
+E(X)=p
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Bernoulli variance:</p>
+<p><span class="math display">\[
+Var(X)=p(1-p)
+\]</span></p>
+<p>Binomial probability mass function:</p>
+<p><span class="math display">\[
+p(x)=\binom{n}{x}p^xq^{n-x},\quad x=0,1,2,\ldots,n
+\]</span></p>
+<p>Combination form of binomial probability:</p>
+<p><span class="math display">\[
+p(x)=\frac{n!}{x!(n-x)!}p^xq^{n-x}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Probability of failure in binomial distribution:</p>
+<p><span class="math display">\[
+q=1-p
+\]</span></p>
+<p>Binomial mean:</p>
+<p><span class="math display">\[
+E(X)=np
+\]</span></p>
+<p>Binomial variance:</p>
+<p><span class="math display">\[
+Var(X)=npq
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 5</h2><div class="body"><p>Estimation of binomial probability of success:</p>
+<p><span class="math display">\[
+p=\frac{\bar{x}}{n}
+\]</span></p>
+<p>Expected frequency in fitting a binomial distribution:</p>
+<p><span class="math display">\[
+\text{Expected frequency}=N\times p(x)
+\]</span></p>
+<p>Poisson probability mass function:</p>
+<p><span class="math display">\[
+p(x)=\frac{e^{-\lambda}\lambda^x}{x!},\quad x=0,1,2,\ldots
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 6</h2><div class="body"><p>Poisson mean:</p>
+<p><span class="math display">\[
+E(X)=\lambda
+\]</span></p>
+<p>Poisson variance:</p>
+<p><span class="math display">\[
+Var(X)=\lambda
+\]</span></p>
+<p>Estimation of Poisson parameter:</p>
+<p><span class="math display">\[
+\lambda=\bar{x}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 7</h2><div class="body"><p>Expected frequency in fitting a Poisson distribution:</p>
+<p><span class="math display">\[
+\text{Expected frequency}=N\times p(x)
+\]</span></p>
+<p>Normal probability density function:</p>
+<p><span class="math display">\[
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}},\quad
+-\infty&lt;x&lt;+\infty
+\]</span></p>
+<p>Standard normal transformation:</p>
+<p><span class="math display">\[
+z=\frac{X-\mu}{\sigma}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 8</h2><div class="body"><p>Normal distribution notation:</p>
+<p><span class="math display">\[
+X\sim N(\mu,\sigma^2)
+\]</span></p>
+<p>Standard normal distribution notation:</p>
+<p><span class="math display">\[
+X\sim N(0,1)
+\]</span></p>
+<p>Quartile deviation for a normal distribution:</p>
+<p><span class="math display">\[
+Q.D.\approx0.67449\sigma
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 9</h2><div class="body"><p>Mean deviation for a normal distribution:</p>
+<p><span class="math display">\[
+M.D.=\sigma\sqrt{2/\pi}\approx0.79788\sigma
+\]</span></p></div></section>
+
+<section class="card c-ochre "><h2>Worked example from the chapter</h2><div class="body"><p>What is the z-score of a value of 27, given a set mean of 24, and a
+standard deviation of 2?</p>
+<p><strong>Solution</strong></p>
+<p>To find the z-score we need to divide the difference between the
+value, 27, and the mean, 24, by the standard deviation of the set, 2.
+<span class="math inline">\(z = \frac{27 - 24}{2} = \frac{3}{2} =
+1.5\)</span>. This indicates that 27 is +1.5 standard deviations above
+the mean.</p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The probability function of a discrete random variable is called a
+probability __________ function.</p><span class="ans">Mass</span></li><li><p>The sum of all probabilities in a discrete distribution is
+__________.</p><span class="ans">One</span></li><li><p>The long-run average value of a random variable is its __________
+value.</p><span class="ans">Expected</span></li><li><p>A single trial with outcomes coded 0 and 1 follows a __________
+distribution.</p><span class="ans">Bernoulli</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,149 +29,173 @@
     <div class="num" aria-hidden="true">10</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 10</div>
     <h1>Probability</h1>
-    <div class="sub">Random experiments, events, the three approaches to probability, addition and multiplication laws, and Bayes' theorem.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/probability.html#chapter-summary">Chapter 10 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Decide whether events overlap and whether they are independent.</p>
-    <div class="focus-pair"><p><b>Remember</b>For a union, subtract the overlap. For an intersection, use a conditional probability unless independence is justified.</p><p><b>Apply it</b>If A and B are independent with probabilities 0.6 and 0.5, P(A and B) = 0.3 and P(A or B) = 0.8.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>Basic terms</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Random experiment</b></td><td>Outcome cannot be predicted with certainty</td></tr>
-            <tr><td><b>Sample space $S$</b></td><td>Set of all possible outcomes</td></tr>
-            <tr><td><b>Sample point</b></td><td>One possible outcome</td></tr>
-            <tr><td><b>Event</b></td><td>A subset of the sample space</td></tr>
-            <tr><td><b>Random variable</b></td><td>Real-valued function of outcomes: discrete or continuous</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Random experiment → experiment whose outcome cannot be predicted
+with certainty.</li>
+<li>Sample space → set of all possible outcomes.</li>
+<li>Sample point → one possible outcome.</li>
+<li>Random variable → numerical value assigned to outcomes.</li>
+<li>Discrete random variable → takes countable values.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Types of events</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Mutually exclusive</b></td><td>Cannot occur together</td></tr>
-            <tr><td><b>Exhaustive</b></td><td>Union is the whole sample space</td></tr>
-            <tr><td><b>Equally likely</b></td><td>Equal probability</td></tr>
-            <tr><td><b>Independent</b></td><td>$P(A\cap B) = P(A)P(B)$</td></tr>
-            <tr><td><b>Complement $A^c$</b></td><td>All outcomes outside $A$</td></tr>
-            <tr><td><b>Impossible / certain</b></td><td>$P = 0$ / $P = 1$</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Continuous random variable → takes values within a range.</li>
+<li>Probability → measure of the likelihood of an event.</li>
+<li>Probability always lies between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(1\)</span>.</li>
+<li>Impossible event → probability <span
+class="math inline">\(0\)</span>.</li>
+<li>Certain event → probability <span
+class="math inline">\(1\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>Three approaches</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Approach</th><th>Definition</th></tr></thead>
-          <tbody>
-            <tr><td><b>Classical</b> (mathematical)</td><td>$P(E) = \dfrac{m}{n}$: favourable ÷ total, for exhaustive, mutually exclusive, equally likely outcomes</td></tr>
-            <tr><td><b>Statistical</b> (relative frequency)</td><td>$P(E) = \lim\limits_{n\to\infty} \dfrac{m}{n}$ from repeated trials</td></tr>
-            <tr><td><b>Axiomatic</b> (Kolmogorov)</td><td>(1) $P(E) \ge 0$ · (2) $P(S) = 1$ · (3) additivity for mutually exclusive events</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">Always $0 \le P(E) \le 1$ and $P(A^c) = 1 - P(A)$.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Event → one or more outcomes of a random experiment.</li>
+<li>Independent events → occurrence of one does not influence the
+other.</li>
+<li>Dependent events → occurrence of one influences the other.</li>
+<li>Mutually exclusive events → cannot occur together.</li>
+<li>Exhaustive events → together cover the entire sample space.</li>
+</ul></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>Set notation</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td class="c"><b>$A\cup B$</b></td><td>$A$ or $B$ or both</td></tr>
-            <tr><td class="c"><b>$A\cap B$</b></td><td>Both $A$ and $B$</td></tr>
-            <tr><td class="c"><b>$A^c$</b></td><td>Not $A$</td></tr>
-            <tr><td class="c"><b>$A\mid B$</b></td><td>$A$ given $B$</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Equally likely events → have equal probability.</li>
+<li>Classical probability → based on exhaustive, mutually exclusive, and
+equally likely outcomes.</li>
+<li>Statistical probability → based on repeated observations.</li>
+<li>Axiomatic probability → based on the three axioms of
+probability.</li>
+<li>A.N. Kolmogorov → associated with the axiomatic approach.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Addition law</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Any two events</span>$$P(A\cup B) = P(A) + P(B) - P(A\cap B)$$</div>
-        <div class="fx"><span class="lbl">Mutually exclusive</span>$$P(A\cup B) = P(A) + P(B)$$</div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Complement → event not occurring.</li>
+<li><span class="math inline">\(A\cup B\)</span> → <span
+class="math inline">\(A\)</span> or <span
+class="math inline">\(B\)</span> or both.</li>
+<li><span class="math inline">\(A\cap B\)</span> → both <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span>.</li>
+<li><span class="math inline">\(A^c\)</span> → complement of <span
+class="math inline">\(A\)</span>.</li>
+<li>Conditional probability → probability of an event given that another
+event has occurred.</li>
+</ul></div></section>
 
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Conditional &amp; multiplication</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Conditional, $P(B) &gt; 0$</span>$$P(A\mid B) = \frac{P(A\cap B)}{P(B)}$$</div>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">General</span>$$P(A\cap B) = P(A)P(B\mid A)$$</div>
-          <div class="fx"><span class="lbl">Independent</span>$$P(A\cap B) = P(A)P(B)$$</div>
-        </div>
-        <p class="small">With replacement: draws independent. Without replacement: generally dependent.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>Multiplication law → used for probability of joint occurrence.</li>
+<li>With replacement and independent random selection → successive draws
+have the same probabilities and are independent.</li>
+<li>Without replacement → successive selections from a finite set are
+generally dependent.</li>
+<li>Combination → selection without considering order.</li>
+<li>Bayes’ theorem → obtains the probability of a cause or hypothesis
+given observed evidence.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Bayes' theorem</h2>
-      <div class="body">
-        <p class="small">Gives the probability of a <b>cause</b> given the observed <b>evidence</b>.</p>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Two events</span>$$P(A\mid B) = \frac{P(B\mid A)P(A)}{P(B)}$$</div>
-          <div class="fx"><span class="lbl">Partition $E_1,\ldots,E_n$</span>$$P(E_i\mid A) = \frac{P(E_i)P(A\mid E_i)}{\sum_k P(E_k)P(A\mid E_k)}$$</div>
-        </div>
-        <div class="pair">
-          <div><h3>Prior</h3>Probability before the evidence: $P(E_i)$</div>
-          <div><h3>Posterior</h3>Updated probability after the evidence: $P(E_i\mid A)$</div>
-        </div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Prior probability → probability before considering the
+evidence.</li>
+<li>Posterior probability → updated probability after considering the
+evidence.</li>
+<li>Gambler’s fallacy → belief that previous independent outcomes
+influence future outcomes.</li>
+<li>In independent trials, past outcomes do not change the probability
+of the next outcome.</li>
+</ul></div></section>
 
-    <section class="card c-olive s2">
-      <h2><span class="n">8</span>Counting</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Combinations (order ignored)</span>$${}^nC_r = \frac{n!}{r!\,(n-r)!}$$</div>
-        <p class="small"><b>Gambler's fallacy:</b> in independent trials, past outcomes do not change the next probability.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Probability of an event under equally likely outcomes:</p>
+<p><span class="math display">\[
+P(A)=\frac{\text{Number of favourable outcomes}}{\text{Total number of
+possible outcomes}}
+\]</span></p>
+<p>Classical probability:</p>
+<p><span class="math display">\[
+P(E)=\frac{m}{n}
+\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is the number of
+favourable outcomes and <span class="math inline">\(n\)</span> is the
+total number of exhaustive, mutually exclusive, and equally likely
+outcomes.</p>
+<p>Statistical probability:</p>
+<p><span class="math display">\[
+P(E)=\lim_{n\rightarrow\infty}\frac{m}{n}
+\]</span></p></div></section>
 
-    <section class="card c-clay s6">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Mutually exclusive ≠ independent: exclusive events with non-zero probabilities are always <b>dependent</b>.</li>
-          <li>Forgetting to subtract $P(A\cap B)$ for events that can occur together · Confusing $P(A\mid B)$ with $P(B\mid A)$.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Probability range:</p>
+<p><span class="math display">\[
+0\leq P(E)\leq1
+\]</span></p>
+<p>Probability of sample space:</p>
+<p><span class="math display">\[
+P(S)=1
+\]</span></p>
+<p>Complement rule:</p>
+<p><span class="math display">\[
+P(A^c)=1-P(A)
+\]</span></p></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>If P(A) = 0.3, P(B) = 0.5 and A and B are independent, P(A ∩ B) = <span class="blank"></span>.<span class="ans">0.15</span></li>
-          <li>If P(A) = 0.4, P(B) = 0.5 and P(A ∩ B) = 0.2, then P(A ∪ B) = <span class="blank"></span>.<span class="ans">0.7</span></li>
-          <li>If P(A ∩ B) = 0.12 and P(B) = 0.3, then P(A | B) = <span class="blank"></span>.<span class="ans">0.4</span></li>
-          <li>A seed lot has 90% germination; the probability that a seed fails to germinate is <span class="blank"></span>.<span class="ans">0.1</span></li>
-          <li>The number of ways to choose 2 varieties out of 5 is <span class="blank"></span>.<span class="ans">10</span></li>
-          <li>Two mutually exclusive events, each with positive probability, cannot be <span class="blank"></span>.<span class="ans">independent</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Probability of an event and its complement:</p>
+<p><span class="math display">\[
+P(A)+P(A^c)=1
+\]</span></p>
+<p>Additive law of probability:</p>
+<p><span class="math display">\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B)
+\]</span></p>
+<p>Additive law for mutually exclusive events:</p>
+<p><span class="math display">\[
+P(A\cup B)=P(A)+P(B)
+\]</span></p></div></section>
 
-  <div class="strip">
-    <div class="motto">“Probability is the language of uncertainty; every statistical test speaks it.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Conditional probability:</p>
+<p><span class="math display">\[
+P(A\mid B)=\frac{P(A\cap B)}{P(B)},\quad P(B)&gt;0
+\]</span></p>
+<p>Multiplication law:</p>
+<p><span class="math display">\[
+P(A\cap B)=P(A)P(B\mid A)
+\]</span></p>
+<p>Multiplication law for independent events:</p>
+<p><span class="math display">\[
+P(A\cap B)=P(A)P(B)
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 5</h2><div class="body"><p>Combination:</p>
+<p><span class="math display">\[
+{}^nC_r=\frac{n!}{r!(n-r)!}
+\]</span></p>
+<p>Bayes’ theorem for two events:</p>
+<p><span class="math display">\[
+P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)},\quad P(B)\neq0
+\]</span></p>
+<p>Bayes’ theorem for a partition of the sample space:</p>
+<p><span class="math display">\[
+P(E_i\mid A)=
+\frac{P(E_i)P(A\mid E_i)}
+{\sum_{k=1}^{n}P(E_k)P(A\mid E_k)}
+\]</span></p></div></section>
+
+<section class="card c-ochre "><h2>Worked example from the chapter</h2><div class="body"><p>A fair coin has been tossed 99 times, with heads on every toss.
+Assuming independent tosses, what is the probability of heads on the
+<span class="math inline">\(100^{th}\)</span> toss?</p>
+<p><strong>Solution</strong></p>
+<p>Answer is <span class="math inline">\(\frac{1}{2}\)</span> as each
+toss is independent of previous toss.</p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The set of all possible outcomes of a random experiment is called the
+__________ space.</p><span class="ans">Sample</span></li><li><p>A subset of the sample space is called an __________.</p><span class="ans">Event</span></li><li><p>A real-valued function of the outcomes of a random experiment is
+called a random __________.</p><span class="ans">Variable</span></li><li><p>Events that cannot occur together are called mutually __________
+events.</p><span class="ans">Exclusive</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

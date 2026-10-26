@@ -1,126 +1,38 @@
 <!--
 num: 02
 title: Official Agricultural Statistics
-sub: How India measures crop area, yield and production, and what the Agricultural Census records.
+sub: From the chapter’s own revision points, formulae and questions.
 chapter: agstatindia.html
-motto: Production = area × yield; every official number needs its reference year.
+motto:
+source_revision: f5faa19097fc
 -->
-    <section class="card c-green s3">
-      <h2><span class="n">1</span>Who collects what</h2>
-      <div class="body">
-        <ul>
-          <li>Agriculture is a <b>state subject</b>, but agricultural statistics are on the <b>concurrent list</b>, so the system is <b>decentralised</b>.</li>
-          <li><b>State Agricultural Statistics Authorities (SASAs)</b> collect and compile at state level.</li>
-          <li>Nationally, the <b>ES&amp;E Division</b> (Economics, Statistics and Evaluation) of the Dept. of Agriculture &amp; Farmers Welfare compiles crop production estimates.</li>
-        </ul>
-        <div class="fx"><span class="lbl">Crop production</span>$$\text{Production} = \text{Area} \times \text{Average yield}$$</div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Crop production combines an area estimate and a corresponding yield
+estimate.</li>
+<li>CCE plots must be selected by the prescribed sampling procedure, not
+by convenience.</li>
+<li>Plot yield requires the net produce weight and the actual harvested
+area.</li>
+<li>Villages, fields and experimental plots can form successive sampling
+stages.</li>
+<li>Official estimates should be quoted with their reference year and
+release status.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Area statistics: three systems</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>System</th><th>Where</th><th class="c">Share*</th></tr></thead>
-          <tbody>
-            <tr><td><b>Complete enumeration</b></td><td>Temporarily settled states with cadastral land records</td><td class="c">~86%</td></tr>
-            <tr><td><b>Sample surveys</b></td><td>Permanently settled states with no village revenue agency, e.g. <b>Kerala</b>, Odisha, West Bengal</td><td class="c">~9%</td></tr>
-            <tr><td><b>No developed system</b></td><td>Hill and north-eastern states, some UTs (personal assessment)</td><td class="c">~5%</td></tr>
-          </tbody>
-        </table></div>
-        <p class="where">*Share of the country's reporting area, ICS report 2018–19.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>The Agricultural Census describes operational holdings.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s4">
-      <h2><span class="n">3</span>Crop Cutting Experiment (CCE): steps</h2>
-      <div class="body">
-        <p class="small">A small, randomly located plot is harvested and weighed to estimate yield. Yield surveys for principal crops run under the <b>General Crop Estimation Survey (GCES)</b>.</p>
-        <ol class="steps">
-          <li><b>Select the field:</b> it must be larger than the CCE plot.</li>
-          <li><b>Locate the plot</b> from the <b>south-west corner</b> using random steps along the horizontal and vertical sides.</li>
-          <li><b>Mark and harvest</b> plants rooted inside the pegged, string-marked plot; apply the boundary rule consistently.</li>
-          <li><b>Thresh</b> on a clean mat and dry the grain.</li>
-          <li><b>Winnow and weigh</b>: subtract the empty bag to get the net grain weight.</li>
-        </ol>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae</h2><div class="body"><p>Diagonal of a square CCE plot:</p>
+<p><span class="math display">\[
+AC=BD=\sqrt{5^2+5^2}=7.07\text{ m}
+\]</span></p>
+<p>Diagonal of a square of side <span
+class="math inline">\(a\)</span>:</p>
+<p><span class="math display">\[
+d=a\sqrt{2}
+\]</span></p></div></section>
 
-    <section class="card c-blue s2">
-      <h2><span class="n">4</span>CCE numbers</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Check a square plot</span>$$d = a\sqrt{2};\ 5\text{ m plot} \Rightarrow 7.07\text{ m}$$</div>
-        <div class="fx"><span class="lbl">Plot yield (kg/ha)</span>$$\frac{10\,000\,w}{a}$$</div>
-        <p class="where">$w$ = net grain (kg), $a$ = plot area (m²). 12.5 kg from 25 m² = 5000 kg/ha.</p>
-        <p class="small">Plot shapes: 5×5 m, 10×10 m squares, 10×5 m rectangle; triangles (UP) and circles (WB) also documented.</p>
-      </div>
-    </section>
-
-    <section class="card c-plum s3">
-      <h2><span class="n">5</span>GCES sampling design</h2>
-      <div class="body">
-        <div class="tree">
-          <span class="root">Strata</span><span class="stem"></span>
-          <div class="branches" style="grid-template-columns:1fr 1fr 1fr">
-            <div class="leaf"><b>Stage 1</b>Villages</div>
-            <div class="leaf"><b>Stage 2</b>Fields</div>
-            <div class="leaf"><b>Stage 3</b>CCE plots</div>
-          </div>
-        </div>
-        <p class="small" style="margin-top:.4rem">A <b>multistage</b> design. Plots are chosen by the prescribed random procedure, never by convenience. One plot does not represent a whole region.</p>
-      </div>
-    </section>
-
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Production estimates released</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Release</th><th>Usually</th><th>Covers</th></tr></thead>
-          <tbody>
-            <tr><td><b>First Advance</b></td><td>September</td><td>Kharif</td></tr>
-            <tr><td><b>Second Advance</b></td><td>February</td><td>Kharif + Rabi</td></tr>
-            <tr><td><b>Third Advance</b></td><td>May</td><td>Updated area and yield</td></tr>
-            <tr><td><b>Final</b></td><td>Sept / Oct</td><td>Final estimates</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small muted">Advance estimates exist because final figures come only after harvest. Quote any estimate with its year and release status.</p>
-      </div>
-    </section>
-
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Agricultural Census</h2>
-      <div class="body">
-        <div class="pair">
-          <div><h3>What</h3>Structure of agriculture: number and area of <b>operational holdings</b>, land use, cropping pattern, inputs, down to village level.</div>
-          <div><h3>When</h3>Started <b>1970–71</b>; <b>quinquennial</b> (every 5 years). 11th census: reference year <b>2021–22</b>, launched 28 July 2022.</div>
-          <div><h3>How</h3>Land-record states: number and area by <b>complete enumeration</b>; characteristics on a <b>sample basis</b>.</div>
-          <div><h3>Reference period</h3>The agricultural year, <b>July to June</b>.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Kerala uses <b>sample surveys</b> for area, not complete enumeration.</li>
-          <li>Yield = production ÷ <b>area</b>, never ÷ number of farmers.</li>
-          <li>Don't mix up the current three advance estimates with older four-forecast schedules.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>A district with 20 000 ha under paddy and an average yield of 4 t/ha produces <span class="blank"></span> t.<span class="ans">80 000</span></li>
-          <li>12.5 kg of grain from a 25 m² CCE plot is a yield of <span class="blank"></span> kg/ha.<span class="ans">5000</span></li>
-          <li>Each diagonal of a 10 m × 10 m CCE plot should measure about <span class="blank"></span> m.<span class="ans">14.14</span></li>
-          <li>Kerala has no village revenue agency, so its crop area is estimated by <span class="blank"></span>.<span class="ans">sample surveys</span></li>
-          <li>Kharif production first appears in the <span class="blank"></span> Advance Estimates.<span class="ans">First</span></li>
-          <li>The Agricultural Census is quinquennial, so the census after reference year 2021–22 refers to <span class="blank"></span>.<span class="ans">2026–27</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>Crop production is estimated by multiplying crop area by average crop
+__________.</p><span class="ans">Yield</span></li><li><p>The field procedure used to estimate crop yield is called a crop
+__________ experiment.</p><span class="ans">Cutting</span></li><li><p>The full form of CCE is __________.</p><span class="ans">Crop Cutting Experiment</span></li><li><p>The full form of GCES is __________.</p><span class="ans">General Crop Estimation Survey</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>

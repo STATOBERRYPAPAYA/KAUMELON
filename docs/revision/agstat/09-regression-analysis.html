@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,143 +29,214 @@
     <div class="num" aria-hidden="true">09</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 9</div>
     <h1>Regression Analysis</h1>
-    <div class="sub">Fitting the least-squares line, regression coefficients, the two regression lines and model assumptions.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/regression.html#chapter-summary">Chapter 9 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Regression predicts a response from an explanatory variable.</p>
-    <div class="focus-pair"><p><b>Remember</b>The slope gives the change in predicted response for one unit of the predictor. A fitted line does not establish causation.</p><p><b>Apply it</b>If predicted yield = 2 + 0.04 × nitrogen, adding 10 units of nitrogen changes predicted yield by 0.4 units within the studied range.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>The model</h2>
-      <div class="body">
-        <p class="small">Regression models how a <b>dependent</b> (response) variable depends on one or more <b>independent</b> (predictor) variables.</p>
-        <div class="fx"><span class="lbl">Simple linear regression</span>$$y_i = \alpha + \beta x_i + e_i$$</div>
-        <div class="pair">
-          <div><h3>Error $e_i$</h3>Theoretical deviation from the true line</div>
-          <div><h3>Residual $\hat{e}_i$</h3>Observed − fitted: $y_i - (\hat\alpha + \hat\beta x_i)$</div>
-        </div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Regression → models the relationship between a dependent variable
+and one or more independent variables.</li>
+<li>Dependent variable → response or outcome to be predicted or
+explained.</li>
+<li>Independent variable → predictor or explanatory variable.</li>
+<li>Simple linear regression → one dependent variable and one
+independent variable.</li>
+<li>Multiple linear regression → one dependent variable and two or more
+independent variables.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Slope &amp; intercept</h2>
-      <div class="body">
-        <ul>
-          <li><b>Slope $\beta$</b>: expected change in $y$ for a one-unit increase in $x$. Range $-\infty$ to $+\infty$; $+$ direct, $-$ inverse.</li>
-          <li><b>Intercept $\alpha$</b>: value of $y$ when $x = 0$.</li>
-        </ul>
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Simple</b></td><td>1 predictor</td></tr>
-            <tr><td><b>Multiple</b></td><td>2 or more: $y = \alpha + \beta_1 x_1 + \cdots + \beta_k x_k + e$</td></tr>
-            <tr><td><b>Logistic</b></td><td>Categorical response</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Nonlinear regression → mean function nonlinear in its unknown
+parameters; polynomial regression can be linear in its
+coefficients.</li>
+<li>Logistic regression → categorical dependent variable.</li>
+<li>Line of best fit → fitted line obtained using least squares.</li>
+<li>Error → theoretical difference from the true regression
+relationship.</li>
+<li>Residual → observed value minus fitted value.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>Least squares</h2>
-      <div class="body">
-        <p class="small">Choose $\alpha, \beta$ to <b>minimise</b> $E = \sum [y_i - (\alpha + \beta x_i)]^2$. This gives the <b>normal equations</b>:</p>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">First</span>$$\textstyle\sum y = n\alpha + \beta \sum x$$</div>
-          <div class="fx"><span class="lbl">Second</span>$$\textstyle\sum xy = \alpha \sum x + \beta \sum x^2$$</div>
-          <div class="fx"><span class="lbl">Slope</span>$$\hat\beta_{yx} = \frac{\sum xy - \frac{\sum x \sum y}{n}}{\sum x^2 - \frac{(\sum x)^2}{n}}$$</div>
-          <div class="fx"><span class="lbl">Intercept</span>$$\hat\alpha = \bar{y} - \hat\beta \bar{x}$$</div>
-        </div>
-        <p class="where">Equivalently $\hat\beta_{yx} = cov(x,y)/var(x)$. The fitted line passes through $(\bar{x}, \bar{y})$.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Least squares → minimizes the sum of squared residuals.</li>
+<li>Slope <span class="math inline">\(\beta\)</span> → expected change
+in <span class="math inline">\(y\)</span> for a one-unit increase in
+<span class="math inline">\(x\)</span>.</li>
+<li>Intercept <span class="math inline">\(\alpha\)</span> → value of
+<span class="math inline">\(y\)</span> when <span
+class="math inline">\(x=0\)</span>.</li>
+<li>Regression coefficient can range from <span
+class="math inline">\(-\infty\)</span> to <span
+class="math inline">\(+\infty\)</span>.</li>
+<li>Positive regression coefficient → direct relationship.</li>
+</ul></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>Two regression lines</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">$y$ on $x$ (predict $y$)</span>$$\beta_{yx} = r\frac{\sigma_y}{\sigma_x}$$</div>
-        <div class="fx"><span class="lbl">$x$ on $y$ (predict $x$)</span>$$\beta_{xy} = r\frac{\sigma_x}{\sigma_y}$$</div>
-        <div class="fx"><span class="lbl">Link to correlation</span>$$\beta_{yx}\,\beta_{xy} = r^2$$</div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Negative regression coefficient → inverse relationship.</li>
+<li>Regression of <span class="math inline">\(y\)</span> on <span
+class="math inline">\(x\)</span> → predict <span
+class="math inline">\(y\)</span> from <span
+class="math inline">\(x\)</span>.</li>
+<li>Regression of <span class="math inline">\(x\)</span> on <span
+class="math inline">\(y\)</span> → predict <span
+class="math inline">\(x\)</span> from <span
+class="math inline">\(y\)</span>.</li>
+<li>The regression line passes through <span
+class="math inline">\((\bar{x},\bar{y})\)</span>.</li>
+<li>Both regression coefficients have the same sign.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Properties of regression coefficients</h2>
-      <div class="body">
-        <ul class="ticks">
-          <li>Both have the <b>same sign</b>, and $r$ takes that sign: $r = \pm\sqrt{\beta_{yx}\beta_{xy}}$.</li>
-          <li>If one exceeds 1, the other must be less than 1.</li>
-          <li>$r = 0$: both coefficients are zero.</li>
-          <li>$r = \pm 1$: the two lines <b>coincide</b>.</li>
-          <li>Independent of change of <b>origin</b>, not of <b>scale</b>: with $X=\frac{x-a}{h}$, $Y=\frac{y-b}{k}$, $\beta_{YX} = \frac{h}{k}\beta_{yx}$.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li><span class="math inline">\(\beta_{yx}\beta_{xy}=r^2\)</span>.</li>
+<li>If <span class="math inline">\(r=0\)</span>, both regression
+coefficients are zero.</li>
+<li>If <span class="math inline">\(r=\pm1\)</span>, the two regression
+lines coincide.</li>
+<li>If one regression coefficient exceeds 1, the other must be less than
+1.</li>
+<li>Both regression coefficients cannot exceed 1 simultaneously.</li>
+</ul></div></section>
 
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Assumptions</h2>
-      <div class="body">
-        <ul>
-          <li><b>Linearity</b> of the mean relationship</li>
-          <li><b>Independence</b> of errors (no <b>autocorrelation</b>)</li>
-          <li>Constant error variance: <b>homoscedasticity</b></li>
-          <li><b>Normality</b> of errors, for exact inference</li>
-          <li>No exact <b>multicollinearity</b> among predictors</li>
-          <li>Correct model specification</li>
-        </ul>
-        <p class="small muted">Check the fitted model with residual plots.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>Regression coefficients are independent of change of origin but not
+of change of scale.</li>
+<li>Regression coefficients depend on the correlation and the relative
+standard deviations of the variables.</li>
+<li>Linearity, independence, homoscedasticity, normality of errors for
+exact inference, absence of exact multicollinearity, absence of error
+autocorrelation, and correct model specification are important
+assumptions.</li>
+<li>Regression lines are unique for a given dataset.</li>
+<li>Correlation measures association; regression models the relationship
+and allows prediction.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Correlation vs regression</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th></th><th>Correlation</th><th>Regression</th></tr></thead>
-          <tbody>
-            <tr><td><b>Purpose</b></td><td>Measures association</td><td>Models the relationship and predicts</td></tr>
-            <tr><td><b>Symmetry</b></td><td>Symmetric: $r_{xy} = r_{yx}$</td><td>Asymmetric: $y$ on $x$ ≠ $x$ on $y$</td></tr>
-            <tr><td><b>Units</b></td><td>Unit-free</td><td>Coefficients carry units</td></tr>
-            <tr><td><b>Range</b></td><td>−1 to +1</td><td>Unbounded</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Correlation is symmetric; regression is asymmetric.</li>
+<li>Correlation coefficient is unit-free and lies between <span
+class="math inline">\(-1\)</span> and <span
+class="math inline">\(+1\)</span>.</li>
+<li>Regression coefficients have units and are not bounded.</li>
+<li>Regression does not establish causation by itself.</li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Using the $y$-on-$x$ line to predict $x$.</li>
-          <li>Coefficients of opposite signs (impossible).</li>
-          <li>Treating a regression fit as proof of cause.</li>
-          <li>Predicting far outside the data range.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Straight-line equation:</p>
+<p><span class="math display">\[
+Y=\alpha+\beta X
+\]</span></p>
+<p>Simple linear regression model:</p>
+<p><span class="math display">\[
+y_i=\alpha+\beta x_i+e_i
+\]</span></p>
+<p>Residual after fitting:</p>
+<p><span class="math display">\[
+\hat e_i=y_i-(\hat\alpha+\hat\beta x_i)
+\]</span></p></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>With ŷ = 5 + 2x, the predicted y at x = 10 is <span class="blank"></span>.<span class="ans">25</span></li>
-          <li>If x̄ = 4, ȳ = 13 and the slope is 2, the intercept is <span class="blank"></span>.<span class="ans">5</span></li>
-          <li>If b_yx = 0.8 and b_xy = 0.45, then r = <span class="blank"></span>.<span class="ans">0.6</span></li>
-          <li>If b_yx = 1.6, then b_xy cannot be more than <span class="blank"></span>.<span class="ans">0.625</span></li>
-          <li>If b_yx is negative, b_xy must also be <span class="blank"></span>.<span class="ans">negative</span></li>
-          <li>When r = 0, the two regression lines are <span class="blank"></span> to each other.<span class="ans">perpendicular</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Sum of squared errors:</p>
+<p><span class="math display">\[
+E=\sum_{i=1}^{n}e_i^2
+\]</span></p>
+<p>Sum of squared errors in terms of the regression model:</p>
+<p><span class="math display">\[
+E=\sum_{i=1}^{n}[y_i-(\alpha+\beta x_i)]^2
+\]</span></p>
+<p>First normal equation:</p>
+<p><span class="math display">\[
+\sum_{i=1}^{n}y_i=n\alpha+\beta\sum_{i=1}^{n}x_i
+\]</span></p></div></section>
 
-  <div class="strip">
-    <div class="motto">“Correlation measures togetherness; regression draws the line and predicts.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Second normal equation:</p>
+<p><span class="math display">\[
+\sum_{i=1}^{n}x_iy_i=\alpha\sum_{i=1}^{n}x_i+\beta\sum_{i=1}^{n}x_i^2
+\]</span></p>
+<p>Mean relationship:</p>
+<p><span class="math display">\[
+\bar{y}=\alpha+\beta\bar{x}
+\]</span></p>
+<p>Intercept:</p>
+<p><span class="math display">\[
+\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Regression coefficient of <span class="math inline">\(y\)</span> on
+<span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\hat{\beta}_{yx}=
+\frac{\sum x_iy_i-\frac{\sum x_i\sum y_i}{n}}
+{\sum x_i^2-\frac{(\sum x_i)^2}{n}}
+\]</span></p>
+<p>Regression coefficient using covariance and variance:</p>
+<p><span class="math display">\[
+\hat{\beta}_{yx}=\frac{cov(x,y)}{var(x)}
+\]</span></p>
+<p>Regression equation of <span class="math inline">\(y\)</span> on
+<span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\hat{y}=\hat{\alpha}+\hat{\beta}_{yx}x
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 5</h2><div class="body"><p>Regression coefficient of <span class="math inline">\(x\)</span> on
+<span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[
+\hat{\beta}_{xy}=\frac{cov(x,y)}{var(y)}
+\]</span></p>
+<p>Regression equation of <span class="math inline">\(x\)</span> on
+<span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[
+\hat{x}=\hat{\alpha}_1+\hat{\beta}_{xy}y
+\]</span></p>
+<p>Relationship between regression coefficients and correlation:</p>
+<p><span class="math display">\[
+\beta_{yx}\beta_{xy}=r_{xy}^2
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 6</h2><div class="body"><p>Correlation coefficient from regression coefficients:</p>
+<p><span class="math display">\[
+|r_{xy}|=\sqrt{\beta_{yx}\beta_{xy}}
+\]</span></p>
+<p>If both regression coefficients are positive:</p>
+<p><span class="math display">\[
+r_{xy}=\sqrt{\beta_{yx}\beta_{xy}}
+\]</span></p>
+<p>If both regression coefficients are negative:</p>
+<p><span class="math display">\[
+r_{xy}=-\sqrt{\beta_{yx}\beta_{xy}}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 7</h2><div class="body"><p>Regression coefficient in terms of correlation and standard
+deviations:</p>
+<p><span class="math display">\[
+\beta_{yx}=r\frac{\sigma_y}{\sigma_x}
+\]</span></p>
+<p><span class="math display">\[
+\beta_{xy}=r\frac{\sigma_x}{\sigma_y}
+\]</span></p>
+<p>Change of origin and scale:</p>
+<p><span class="math display">\[
+X=\frac{x-a}{h},\qquad Y=\frac{y-b}{k}
+\]</span></p>
+<p>Transformed regression coefficients:</p>
+<p><span class="math display">\[
+\beta_{YX}=\frac{h}{k}\beta_{yx}
+\]</span></p>
+<p><span class="math display">\[
+\beta_{XY}=\frac{k}{h}\beta_{xy}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 8</h2><div class="body"><p>Multiple linear regression model:</p>
+<p><span class="math display">\[
+y=\alpha+\beta_1x_1+\beta_2x_2+\cdots+\beta_kx_k+e
+\]</span></p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The variable predicted by a regression model is called the __________
+variable.</p><span class="ans">Dependent</span></li><li><p>A regression model with one predictor and a straight-line mean
+response is called __________ linear regression.</p><span class="ans">Simple</span></li><li><p>The coefficient representing change in mean response per unit
+increase in the predictor is the __________.</p><span class="ans">Slope</span></li><li><p>The predicted response when the predictor is zero is the
+__________.</p><span class="ans">Intercept</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

@@ -1,124 +1,146 @@
 <!--
 num: 08
 title: Measures of Association
-sub: Scatter diagrams, covariance, Pearson's and Spearman's correlation, Kendall's concordance and correlation matrices.
+sub: From the chapter’s own revision points, formulae and questions.
 chapter: association.html
-motto: Correlation tells you that two things move together, never why.
+motto:
+source_revision: f5faa19097fc
 -->
-    <section class="card c-green s3">
-      <h2><span class="n">1</span>Relationships &amp; the scatter diagram</h2>
-      <div class="body">
-        <div class="pair">
-          <div><h3>Linear</h3>Can be represented by a straight line.</div>
-          <div><h3>Monotonic</h3>One variable consistently rises (or falls) as the other rises, not necessarily at a constant rate.</div>
-        </div>
-        <p class="small" style="margin-top:.4rem">A <b>scatter diagram</b> plots paired observations $(x_i, y_i)$: always look at it before computing a coefficient.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Measures of association → describe relationships between
+variables.</li>
+<li>Linear relationship → relationship that can be represented by a
+straight line.</li>
+<li>Monotonic relationship → one variable consistently increases or
+consistently decreases as the other increases, but not necessarily at a
+constant rate.</li>
+<li>Scatter diagram → graphical method for examining association between
+two variables.</li>
+<li>Positive correlation → both variables tend to move in the same
+direction.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Types of correlation</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Positive</b></td><td>Move in the same direction</td></tr>
-            <tr><td><b>Negative</b></td><td>Move in opposite directions</td></tr>
-            <tr><td><b>Simple</b></td><td>Two variables</td></tr>
-            <tr><td><b>Multiple</b></td><td>One variable with a set of others</td></tr>
-            <tr><td><b>Partial</b></td><td>Two variables, controlling for others</td></tr>
-            <tr><td><b>Linear / non-linear</b></td><td>Straight-line / curved pattern</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Negative correlation → variables tend to move in opposite
+directions.</li>
+<li>No correlation → no systematic linear association.</li>
+<li>Simple correlation → relationship between two variables.</li>
+<li>Multiple correlation → relationship involving more than two
+variables.</li>
+<li>Linear correlation → relationship represented by a straight
+line.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>Karl Pearson's correlation coefficient $r$</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Covariance</span>$$cov(x,y) = \frac{1}{n}\sum (x_i - \bar{x})(y_i - \bar{y})$$</div>
-          <div class="fx"><span class="lbl">Correlation</span>$$r = \frac{cov(x,y)}{sd(x)\,sd(y)}$$</div>
-        </div>
-        <div class="fx"><span class="lbl">Deviation form</span>$$r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}$$</div>
-        <p class="where">Measures <b>linear</b> association. Covariance depends on units; $r$ is unit-free. $r$ is sensitive to outliers.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Non-linear correlation → relationship represented by a curved
+pattern.</li>
+<li>Partial correlation → relationship between two variables after
+controlling other variables.</li>
+<li>Perfect correlation → all points lie on a straight line.</li>
+<li>Pearson’s correlation → measures linear association.</li>
+<li>Pearson’s <span class="math inline">\(r\)</span> ranges from <span
+class="math inline">\(-1\)</span> to <span
+class="math inline">\(+1\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>Reading $r$</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td class="c"><b>+1</b></td><td>Perfect positive</td></tr>
-            <tr><td class="c"><b>near +1</b></td><td>Strong positive</td></tr>
-            <tr><td class="c"><b>0</b></td><td>No <b>linear</b> correlation</td></tr>
-            <tr><td class="c"><b>near −1</b></td><td>Strong negative</td></tr>
-            <tr><td class="c"><b>−1</b></td><td>Perfect negative</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">$-1 \le r \le +1$. Perfect: all points on a line.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li><span class="math inline">\(r=+1\)</span> → perfect positive
+correlation.</li>
+<li><span class="math inline">\(r=-1\)</span> → perfect negative
+correlation.</li>
+<li><span class="math inline">\(r=0\)</span> → no linear
+correlation.</li>
+<li>Covariance → measures joint linear variability.</li>
+<li>Covariance depends on the units of measurement.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Spearman's rank correlation $\rho$</h2>
-      <div class="body">
-        <p class="small">Computed from <b>ranks</b>; measures <b>monotonic</b> association. Good for ordinal data and curved but monotonic patterns. Range −1 to +1.</p>
-        <div class="fx"><span class="lbl">No tied ranks</span>$$\rho = 1 - \frac{6\sum d_i^2}{n(n^2 - 1)}$$</div>
-        <p class="where">$d_i$ = difference between the ranks of the $i$th pair. Ties get their <b>average rank</b> and correction terms $T = \frac{1}{12}\sum m(m^2-1)$.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Pearson’s correlation is unit-free.</li>
+<li>Pearson’s correlation is sensitive to outliers.</li>
+<li>Pearson’s correlation summarises linear association; a nonlinear
+pattern can make it misleading as a general measure of association.</li>
+<li>Spearman’s <span class="math inline">\(\rho\)</span> → rank-based
+measure of monotonic association.</li>
+<li>Spearman’s correlation is useful for ordinal data and non-linear
+monotonic relationships.</li>
+</ul></div></section>
 
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Kendall's coefficient of concordance $W$</h2>
-      <div class="body">
-        <p class="small">Measures <b>agreement among several judges' rankings</b> (e.g. $k$ judges ranking $n$ varieties).</p>
-        <div class="fx"><span class="lbl">Concordance</span>$$W = \frac{12\left[\sum R_i^2 - \frac{(\sum R_i)^2}{n}\right]}{k^2 n(n^2 - 1)}$$</div>
-        <p class="where">$R_i$ = sum of ranks for object $i$; $k$ = number of judges.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>Spearman’s correlation ranges from <span
+class="math inline">\(-1\)</span> to <span
+class="math inline">\(+1\)</span>.</li>
+<li>No tied ranks → use the basic Spearman formula.</li>
+<li>Tied ranks → use average ranks and correction terms.</li>
+<li>Kendall’s coefficient of concordance → measures agreement among
+multiple rankings.</li>
+<li>Correlation matrix → table of pairwise correlation
+coefficients.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Correlation matrix &amp; correlogram</h2>
-      <div class="body">
-        <div class="pair">
-          <div><h3>Correlation matrix</h3>Table of pairwise correlations among several variables. Diagonal elements = <b>1</b>; symmetric about the diagonal.</div>
-          <div><h3>Correlogram</h3>A graphical display of the correlation matrix (colour or size shows strength and sign).</div>
-        </div>
-        <div class="tbl" style="margin-top:.4rem"><table>
-          <thead><tr><th></th><th>Pearson $r$</th><th>Spearman $\rho$</th></tr></thead>
-          <tbody>
-            <tr><td><b>Uses</b></td><td>Actual values</td><td>Ranks</td></tr>
-            <tr><td><b>Detects</b></td><td>Linear association</td><td>Monotonic association</td></tr>
-            <tr><td><b>Outliers</b></td><td class="no">Sensitive</td><td class="yes">Less sensitive</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Diagonal elements of a correlation matrix → 1.</li>
+<li>Correlation matrix → symmetrical about the diagonal.</li>
+<li>Correlogram → graphical representation of a correlation matrix.</li>
+<li>Strong positive correlation → coefficient close to <span
+class="math inline">\(+1\)</span>.</li>
+<li>Strong negative correlation → coefficient close to <span
+class="math inline">\(-1\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Correlation is <b>not causation</b>.</li>
-          <li>$r = 0$ rules out only <b>linear</b> association; a curve can still exist.</li>
-          <li>Skipping the scatter plot.</li>
-          <li>Forgetting average ranks for ties.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 8</h2><div class="body"><ul>
+<li>Correlation measures association, not necessarily causation.</li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>If cov(x, y) = 12, sd(x) = 3 and sd(y) = 5, then r = <span class="blank"></span>.<span class="ans">0.8</span></li>
-          <li>If all points lie exactly on a falling straight line, r = <span class="blank"></span>.<span class="ans">−1</span></li>
-          <li>For n = 10 pairs with Σd² = 33, Spearman&#x27;s ρ = <span class="blank"></span>.<span class="ans">0.8</span></li>
-          <li>Two judges who rank five varieties in exactly the same order give ρ = <span class="blank"></span>.<span class="ans">1</span></li>
-          <li>Changing yield from kg to quintals changes r by <span class="blank"></span>.<span class="ans">nothing (r is unit-free)</span></li>
-          <li>r = 0 rules out a straight-line relationship but not a <span class="blank"></span> one.<span class="ans">curved (non-linear)</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Covariance:</p>
+<p><span class="math display">\[
+cov(x,y)=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
+\]</span></p>
+<p>Pearson’s correlation coefficient:</p>
+<p><span class="math display">\[
+r=\frac{cov(x,y)}{sd(x)sd(y)}
+\]</span></p>
+<p>Pearson’s correlation coefficient using deviations:</p>
+<p><span class="math display">\[
+r=
+\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}
+{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2\sum_{i=1}^{n}(y_i-\bar{y})^2}}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Spearman’s rank correlation coefficient without tied ranks:</p>
+<p><span class="math display">\[
+\rho=1-\frac{6\sum_{i=1}^{n}d_i^2}{n(n^2-1)}
+\]</span></p>
+<p>where <span class="math inline">\(d_i\)</span> is the difference
+between the ranks of the <span class="math inline">\(i\)</span>th pair
+of observations.</p>
+<p>Spearman’s rank correlation coefficient with tied ranks:</p>
+<p><span class="math display">\[
+\rho=\frac{2S_0-T_x-T_y-\sum d_i^2}{2\sqrt{(S_0-T_x)(S_0-T_y)}},\quad
+S_0=\frac{n(n^2-1)}{12}
+\]</span></p>
+<p>Correction for tied ranks in <span
+class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[
+T_x=\frac{1}{12}\sum_{i=1}^{s}m_i(m_i^2-1)
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Correction for tied ranks in <span
+class="math inline">\(Y\)</span>:</p>
+<p><span class="math display">\[
+T_y=\frac{1}{12}\sum_{i=1}^{s&#39;}w_i(w_i^2-1)
+\]</span></p>
+<p>Kendall’s coefficient of concordance:</p>
+<p><span class="math display">\[
+W=
+\frac{12\left[\sum_{i=1}^{n}R_i^2-\frac{\left(\sum_{i=1}^{n}R_i\right)^2}{n}\right]}
+{k^2n(n^2-1)}
+\]</span></p>
+<p>where <span class="math inline">\(R_i\)</span> is the sum of ranks
+obtained by the <span class="math inline">\(i\)</span>th object and
+<span class="math inline">\(k\)</span> is the number of judges.</p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The strength and direction of linear association are measured by
+Pearson’s __________ coefficient.</p><span class="ans">Correlation</span></li><li><p>A plot of paired observations used to examine association is called a
+__________ diagram.</p><span class="ans">Scatter</span></li><li><p>Variables that tend to increase together have __________
+correlation.</p><span class="ans">Positive</span></li><li><p>Variables that tend to move in opposite directions have __________
+correlation.</p><span class="ans">Negative</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>

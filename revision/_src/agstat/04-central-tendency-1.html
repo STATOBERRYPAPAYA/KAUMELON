@@ -1,159 +1,112 @@
 <!--
 num: 04
 title: Central Tendency I
-sub: Simple averages: the arithmetic mean, the median and the mode.
+sub: From the chapter’s own revision points, formulae and questions.
 chapter: central1.html
-motto: The mean listens to every value; the median stands in the middle; the mode follows the crowd.
+motto:
+source_revision: f5faa19097fc
 -->
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Mean → arithmetic average of observations.</li>
+<li>Median → middle value after arranging observations.</li>
+<li>Mode → most frequently occurring value.</li>
+<li>Mean → uses all observations.</li>
+<li>Median → based on position.</li>
+</ul></div></section>
 
-    <section class="card c-green s3">
-      <h2><span class="n">1</span>The idea · types of averages</h2>
-      <div class="body">
-        <p class="lead">A measure of central tendency is a <span class="hl">single value that represents the centre or typical value</span> of a dataset.</p>
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Simple averages</b><br><span class="small muted">this chapter</span></td><td>Mean · Median · Mode</td></tr>
-            <tr><td><b>Special averages</b></td><td>Geometric mean · Harmonic mean</td></tr>
-            <tr><td><b>Positional averages</b></td><td>Quartiles · Deciles · Percentiles</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small"><b>Objectives:</b> condense data into a single value; make comparisons easy.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Mode → based on frequency.</li>
+<li>Mean is affected by extreme values.</li>
+<li>Median is less affected by extreme values.</li>
+<li>Mode is useful for identifying the most common category or
+value.</li>
+<li>Mean + constant → mean increases by the same constant.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>A good average should be…</h2>
-      <div class="body">
-        <ul class="ticks">
-          <li>Rigidly defined</li>
-          <li>Simple to understand and easy to calculate</li>
-          <li>Based on <b>all</b> values of the data</li>
-          <li>Capable of further mathematical treatment</li>
-          <li>Stable from sample to sample (sampling stability)</li>
-          <li>Not unduly affected by extreme values</li>
-        </ul>
-        <p class="small muted">These are desirable properties, not a universal checklist. The appropriate average depends on the data and the purpose.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Mean × constant → mean is multiplied by the same constant.</li>
+<li>Adding a constant to every observation does not change the standard
+deviation.</li>
+<li>Multiplying every observation by a constant multiplies the standard
+deviation by the absolute value of that constant.</li>
+<li>Sum of deviations from the arithmetic mean = 0.</li>
+<li>Standard deviation = 0 → all observations are identical.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>Arithmetic mean</h2>
-      <div class="body">
-        <p>The sum of the observations divided by their number. It is what people usually mean by "average".</p>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Raw data</span>$$\bar{x} = \frac{\sum x_i}{n}$$</div>
-          <div class="fx"><span class="lbl">Frequency distribution</span>$$\bar{x} = \frac{\sum f_i x_i}{\sum f_i}$$</div>
-          <div class="fx"><span class="lbl">Assumed mean, $d_i = x_i - A$</span>$$\bar{x} = A + \frac{\sum f_i d_i}{\sum f_i}$$</div>
-          <div class="fx"><span class="lbl">Coding, $u_i = (x_i - A)/C$</span>$$\bar{x} = A + C\,\frac{\sum f_i u_i}{\sum f_i}$$</div>
-          <div class="fx"><span class="lbl">Weighted mean</span>$$\bar{x}_w = \frac{\sum w_i x_i}{\sum w_i}$$</div>
-          <div class="fx"><span class="lbl">Combined mean of groups</span>$$\bar{x} = \frac{\sum n_j \bar{x}_j}{\sum n_j}$$</div>
-        </div>
-        <p class="where">For grouped data, $x_i$ is the class mark, so the mean is an approximation. With equal weights, the weighted mean is the simple mean.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>For positive observations, <span class="math inline">\(AM\geq GM\geq
+HM\)</span>.</li>
+<li>Symmetric unimodal distribution with a finite mean and a central
+mode → mean = median = mode.</li>
+<li>In many familiar positively skewed unimodal distributions, mean &gt;
+median &gt; mode; this is not a universal theorem.</li>
+<li>In many familiar negatively skewed unimodal distributions, mean &lt;
+median &lt; mode; this is not a universal theorem.</li>
+</ul></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>Properties of the mean</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Deviations sum to zero</span>$$\sum (x_i - \bar{x}) = 0$$</div>
-        <div class="fx"><span class="lbl">Least squares</span>$$\sum (x_i - a)^2 \text{ is least at } a = \bar{x}$$</div>
-        <div class="fx"><span class="lbl">Change of origin &amp; scale</span>$$y_i = a + b x_i \Rightarrow \bar{y} = a + b\bar{x}$$</div>
-        <p class="small">Combine group means by weighting with group sizes, not by averaging the means.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Arithmetic mean:</p>
+<p><span class="math display">\[
+\bar{x}=\frac{\sum x_i}{n}
+\]</span></p>
+<p>Arithmetic mean for a frequency distribution:</p>
+<p><span class="math display">\[
+\bar{x}=\frac{\sum f_ix_i}{\sum f_i}
+\]</span></p>
+<p>Assumed mean method:</p>
+<p><span class="math display">\[
+\bar{x}=A+\frac{\sum f_id_i}{\sum f_i}
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+d_i=x_i-A
+\]</span></p></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Median</h2>
-      <div class="body">
-        <p>The <b>middle value</b> after arranging the data in ascending order. It is a <b>positional</b> average.</p>
-        <div class="pair">
-          <div><h3>Odd $n$</h3>$\left(\frac{n+1}{2}\right)^{\text{th}}$ observation</div>
-          <div><h3>Even $n$</h3>mean of the $\left(\frac{n}{2}\right)^{\text{th}}$ and $\left(\frac{n}{2}+1\right)^{\text{th}}$ observations</div>
-        </div>
-        <div class="fx"><span class="lbl">Grouped data (linear interpolation)</span>$$Md = L + \left(\frac{\frac{N}{2} - F}{f_m}\right) C$$</div>
-        <p class="where">Median class holds the $(N/2)^{\text{th}}$ value · $L$ its lower boundary · $F$ cumulative frequency below $L$ · $f_m$ its frequency · $C$ its width. Graphically, read it off the less-than ogive at $N/2$.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Coding method:</p>
+<p><span class="math display">\[
+\bar{x}=A+C\frac{\sum f_iu_i}{\sum f_i}
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+u_i=\frac{x_i-A}{C}
+\]</span></p>
+<p>Weighted mean:</p>
+<p><span class="math display">\[
+\bar{x}_w=\frac{\sum w_ix_i}{\sum w_i}
+\]</span></p>
+<p>Median for odd <span class="math inline">\(n\)</span>:</p>
+<p><span class="math display">\[
+Md=\left(\frac{n+1}{2}\right)^{\text{th}}\text{ observation}
+\]</span></p></div></section>
 
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Mode</h2>
-      <div class="body">
-        <p>The value that <b>occurs most often</b>. Found by inspection for raw data. It is the right average for <b>qualitative</b> (nominal) data.</p>
-        <div class="fx"><span class="lbl">Grouped data (equal class widths)</span>$$Mo = L + \left(\frac{f_m - f_p}{2f_m - f_p - f_s}\right) C$$</div>
-        <p class="where">Modal class has the highest frequency · $L$ its lower boundary · $f_p$, $f_s$ frequencies of the preceding and succeeding classes · $C$ class width. Graphically, use the histogram.</p>
-        <p class="small">With <b>unequal widths</b>, compare frequency densities rather than raw frequencies. Data can be <b>bimodal</b> or have no mode.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Median for even <span class="math inline">\(n\)</span>:</p>
+<p><span class="math display">\[
+Md=\frac{1}{2}
+\left[
+\left(\frac{n}{2}\right)^{\text{th}}\text{ observation}
++
+\left(\frac{n}{2}+1\right)^{\text{th}}\text{ observation}
+\right]
+\]</span></p>
+<p>Median for grouped data:</p>
+<p><span class="math display">\[
+Md=L+\left(\frac{\frac{N}{2}-F}{f}\right)C
+\]</span></p>
+<p>Mode for grouped data:</p>
+<p><span class="math display">\[
+Mo=L+\left(\frac{f_m-f_p}{2f_m-f_p-f_s}\right)C
+\]</span></p></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Mean vs median vs mode</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th></th><th>Mean</th><th>Median</th><th>Mode</th></tr></thead>
-          <tbody>
-            <tr><td><b>Based on</b></td><td>All values (calculated)</td><td>Position</td><td>Frequency</td></tr>
-            <tr><td><b>Uses every observation</b></td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
-            <tr><td><b>Extreme values</b></td><td class="no">Affected very much</td><td class="yes">Resistant</td><td class="yes">Usually less sensitive</td></tr>
-            <tr><td><b>Open-end classes</b></td><td class="no">Cannot compute</td><td>If median class is known</td><td>Modal category, yes</td></tr>
-            <tr><td><b>From a graph</b></td><td class="no">No</td><td class="yes">Ogive</td><td class="yes">Histogram</td></tr>
-            <tr><td><b>Qualitative data</b></td><td class="no">No</td><td>Ordinal only</td><td class="yes">Yes</td></tr>
-            <tr><td><b>Always unique</b></td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">May be several or none</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Relationship among arithmetic mean, geometric mean, and harmonic
+mean:</p>
+<p><span class="math display">\[
+AM\geq GM\geq HM
+\]</span></p></div></section>
 
-    <section class="card c-olive s2">
-      <h2><span class="n">8</span>Shape &amp; order</h2>
-      <div class="body">
-        <ul>
-          <li><b>Symmetric</b>, unimodal: mean = median = mode</li>
-          <li>Many <b>positively skewed</b> distributions: mean &gt; median &gt; mode</li>
-          <li>Many <b>negatively skewed</b> distributions: mean &lt; median &lt; mode</li>
-        </ul>
-        <p class="small muted">The skewed orderings are typical, <b>not</b> a universal theorem.</p>
-        <div class="fx"><span class="lbl">Positive observations (preview)</span>$$AM \ge GM \ge HM$$</div>
-      </div>
-    </section>
+<section class="card c-ochre "><h2>Worked example from the chapter</h2><div class="body"><p>Find the mean of the numbers 2, 4, 7, 8, 11, 12</p>
+<p><strong>Solution</strong></p>
+<p><span class="math display">\[\overline{x} = \frac{2 + 4 + 7 + 8 + 11
++ 12}{6} = \frac{44}{6} = 7.33\]</span></p></div></section>
 
-    <section class="card c-clay s4">
-      <h2><span class="n">9</span>Worked results from the chapter</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Problem</th><th>Working</th><th class="c">Answer</th></tr></thead>
-          <tbody>
-            <tr><td>Mean of 2, 4, 7, 8, 11, 12</td><td>$44/6$</td><td class="c"><b>7.33</b></td></tr>
-            <tr><td>Weighted mean, $x$ = 10, 20, 30; $w$ = 1, 2, 3</td><td>$(10+40+90)/6$</td><td class="c"><b>23.33</b></td></tr>
-            <tr><td>Median height, N = 60, median class 160–165</td><td>$160 + \frac{30-28}{18}\times 5$</td><td class="c"><b>160.56 cm</b></td></tr>
-            <tr><td>Mode of sorghum ear-head weight, modal class 100–120</td><td>$100 + \frac{45-38}{90-38-35}\times 20$</td><td class="c"><b>108.24 g</b></td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
-
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Averaging group means without weighting by group size.</li>
-          <li>Using class <b>limits</b> instead of <b>boundaries</b> for $L$.</li>
-          <li>Forgetting to sort the data before finding the median.</li>
-          <li>Applying the mode formula to unequal class widths.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>The mean yield of 5 plots is 12 q, so their total yield is <span class="blank"></span> q.<span class="ans">60</span></li>
-          <li>If 3 cm is added to every plant height, the mean height increases by <span class="blank"></span> cm.<span class="ans">3</span></li>
-          <li>The deviations of 4, 6 and 8 from their mean add up to <span class="blank"></span>.<span class="ans">0</span></li>
-          <li>For 7 observations arranged in order, the median is the <span class="blank"></span> observation.<span class="ans">4th</span></li>
-          <li>For grain colour recorded as red, white or brown, the only meaningful average is the <span class="blank"></span>.<span class="ans">mode</span></li>
-          <li>Group A (10 plots, mean 20 q) and group B (30 plots, mean 40 q) have a combined mean of <span class="blank"></span> q.<span class="ans">35</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The sum of observations divided by their number is called the
+arithmetic __________.</p><span class="ans">Mean</span></li><li><p>The sum of deviations from the arithmetic mean is __________.</p><span class="ans">Zero</span></li><li><p>The average calculated using assigned weights is called the
+__________ mean.</p><span class="ans">Weighted</span></li><li><p>The middle value of an ordered dataset is called the __________.</p><span class="ans">Median</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>

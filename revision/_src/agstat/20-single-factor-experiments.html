@@ -1,112 +1,95 @@
 <!--
 num: 20
 title: Single Factor Experiments
-sub: Completely Randomized Design, Randomized Complete Block Design and Latin Square Design: layout, ANOVA and CD.
+sub: From the chapter’s own revision points, formulae and questions.
 chapter: singleFactor.html
-motto: Match the design to the field: no gradient, one gradient, or two.
+motto:
+source_revision: f5faa19097fc
 -->
-    <section class="card c-green s2">
-      <h2><span class="n">1</span>Single factor</h2>
-      <div class="body">
-        <p class="small">Only <b>one factor</b> (the treatments) is varied; all other conditions are kept uniform.</p>
-        <p class="small">CRD ↔ one-way ANOVA · RCBD ↔ two-way · Latin square ↔ three-way (rows, columns, treatments).</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>A single factor experiment varies only one factor, the treatments,
+while all other conditions are kept uniform.</li>
+<li>CRD uses randomization and replication without blocking. It is most
+useful when units are relatively homogeneous.</li>
+<li>CRD is best suited to laboratory and greenhouse experiments; it is
+rarely used for field experiments because field plots are usually not
+homogeneous.</li>
+<li>RCBD adds local control (blocking) to randomization and replication,
+grouping heterogeneous experimental material into homogeneous blocks
+along a single known source of variation, most often a fertility
+gradient.</li>
+<li>In RCBD, number of blocks = number of replications, and number of
+plots per block = number of treatments.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">2</span>The three designs at a glance</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th></th><th>CRD</th><th>RCBD</th><th>Latin square (LSD)</th></tr></thead>
-          <tbody>
-            <tr><td><b>Principles</b></td><td>Randomization, replication</td><td>+ local control (1 direction)</td><td>+ local control (2 directions)</td></tr>
-            <tr><td><b>Best for</b></td><td>Homogeneous units: lab, greenhouse</td><td>One known gradient, e.g. fertility</td><td>Two perpendicular gradients</td></tr>
-            <tr><td><b>Layout</b></td><td>Fully random</td><td>Blocks = replications; every treatment once per block</td><td>Each treatment once per row and column; $v^2$ plots</td></tr>
-            <tr><td><b>Error df</b></td><td>$v(r-1)$ = $n - v$</td><td>$(v-1)(r-1)$</td><td>$(v-1)(v-2)$</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">For the same $v$ and $r$, CRD has the <b>largest</b> error df, because nothing is set aside for blocking.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>LSD controls variation in two perpendicular directions at once,
+using rows and columns as two separate blocking factors, so the number
+of rows, columns, and treatments are all equal.</li>
+<li>The statistical model of CRD matches one-way ANOVA; the model of
+RCBD matches two-way ANOVA; LSD requires a three-way classification
+(rows, columns, treatments).</li>
+<li>An error-df target such as 12 is a practical planning guide, not a
+universal requirement. Replication should also reflect the desired
+power, precision, anticipated variability, and available resources.</li>
+<li>When the overall F test for treatments is significant, Fisher’s
+least significant difference test is used to compare treatment
+pairs.</li>
+<li>Treatment means that share a common letter or symbol in a grouping
+table are not significantly different from each other.</li>
+</ul></div></section>
 
-    <section class="card c-blue s3">
-      <h2><span class="n">3</span>CRD</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Model</span>$$y_{ij} = \mu + \tau_i + e_{ij}$$</div>
-        <div class="tbl"><table>
-          <thead><tr><th>Source</th><th class="c">df</th></tr></thead>
-          <tbody><tr><td>Treatments</td><td class="c">$v-1$</td></tr><tr><td>Error</td><td class="c">$n-v$</td></tr><tr><td>Total</td><td class="c">$n-1$, with $n = rv$</td></tr></tbody>
-        </table></div>
-        <p class="small">Allows unequal replication. Rarely used in the field, where plots are seldom homogeneous.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Among CRD, RCBD, and LSD (for the same number of treatments and
+replications), CRD gives the largest error degrees of freedom, since
+none of the variation is set aside for blocking.</li>
+<li>Latin squares are often used for a modest number of treatments, for
+practical reasons rather than a mathematical restriction: too few
+treatments leave almost no error degrees of freedom, and too many
+require an impractically large number of homogeneous plots.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">4</span>RCBD</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Model</span>$$y_{ij} = \mu + \tau_i + \beta_j + e_{ij}$$</div>
-        <div class="tbl"><table>
-          <thead><tr><th>Source</th><th class="c">df</th></tr></thead>
-          <tbody><tr><td>Blocks</td><td class="c">$r-1$</td></tr><tr><td>Treatments</td><td class="c">$v-1$</td></tr><tr><td>Error</td><td class="c">$(v-1)(r-1)$</td></tr></tbody>
-        </table></div>
-        <p class="small">Blocks run <b>across</b> the gradient so that each block is uniform. Randomize independently within each block.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Total number of experimental units in an equally replicated CRD:</p>
+<p><span class="math display">\[
+n=rv
+\]</span></p>
+<p>Error degrees of freedom in an equally replicated CRD:</p>
+<p><span class="math display">\[
+edf=n-v=v(r-1)
+\]</span></p>
+<p>Error degrees of freedom in RCBD:</p>
+<p><span class="math display">\[
+edf=(v-1)(r-1)
+\]</span></p></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Latin Square Design</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Model</span>$$y_{ijk} = \mu + \rho_i + \gamma_j + \tau_k + e_{ijk}$$</div>
-        <div class="tbl"><table>
-          <thead><tr><th>Source</th><th class="c">df</th></tr></thead>
-          <tbody><tr><td>Rows / Columns / Treatments</td><td class="c">$v-1$ each</td></tr><tr><td>Error</td><td class="c">$(v-1)(v-2)$</td></tr><tr><td>Total</td><td class="c">$v^2-1$</td></tr></tbody>
-        </table></div>
-        <p class="small">CF $= G^2/v^2$. Suited to a modest number of treatments: too few leave little error df, too many need many homogeneous plots.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Error degrees of freedom in LSD:</p>
+<p><span class="math display">\[
+edf=(v-1)(v-2)
+\]</span></p>
+<p>Critical difference for CRD with equal replication:</p>
+<p><span class="math display">\[
+C.D.=t_{\left(\frac{\alpha}{2},\,error\,df\right)}\sqrt{\frac{2\,MSE}{r}}
+\]</span></p>
+<p>Critical difference for CRD with unequal replication:</p>
+<p><span class="math display">\[
+C.D.=t_{\left(\frac{\alpha}{2},\,error\,df\right)}\sqrt{MSE\left(\frac{1}{r_i}+\frac{1}{r_j}\right)}
+\]</span></p></div></section>
 
-    <section class="card c-plum s3">
-      <h2><span class="n">6</span>Critical difference (CD)</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">CRD (equal) &amp; RCBD</span>$$t_{\alpha/2,\,edf}\sqrt{\frac{2\,MSE}{r}}$$</div>
-          <div class="fx"><span class="lbl">Latin square</span>$$t_{\alpha/2,\,edf}\sqrt{\frac{2\,MSE}{v}}$$</div>
-        </div>
-        <div class="fx"><span class="lbl">CRD (unequal $r_i$, $r_j$)</span>$$t_{\alpha/2,\,edf}\sqrt{MSE\left(\frac{1}{r_i} + \frac{1}{r_j}\right)}$$</div>
-        <p class="where">Used only after a significant treatment $F$. Means sharing a letter are not significantly different.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Critical difference for RCBD:</p>
+<p><span class="math display">\[
+CD=t_{\frac{\alpha}{2},edf}\sqrt{\frac{2\,MSE}{r}}
+\]</span></p>
+<p>Critical difference for LSD:</p>
+<p><span class="math display">\[
+C.D.=t_{\left(\frac{\alpha}{2},\,error\,df\right)}\sqrt{\frac{2\,MSE}{v}}
+\]</span></p>
+<p>Correction factor for LSD:</p>
+<p><span class="math display">\[
+C.F.=\frac{\left(\sum y_{ijk}\right)^2}{v^2}
+\]</span></p></div></section>
 
-    <section class="card c-rose s4">
-      <h2><span class="n">7</span>How many replications?</h2>
-      <div class="body">
-        <p class="small">A target of about <b>12 error df</b> is a practical planning guide, not a rule. Replication should also reflect the power and precision wanted, the expected variability and the available resources.</p>
-        <p class="small"><b>Correction factor</b> = (grand total)² ÷ total number of observations. Treatment comparisons always use the <b>error mean square</b>.</p>
-      </div>
-    </section>
-
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Blocks laid <b>along</b> the gradient instead of across it.</li>
-          <li>Using RCBD error df for a CRD.</li>
-          <li>Applying CD when $F$ is not significant.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>A Latin square for 5 treatments needs <span class="blank"></span> plots.<span class="ans">25</span></li>
-          <li>A 5 × 5 Latin square has <span class="blank"></span> error df.<span class="ans">12</span></li>
-          <li>In an RCBD with 6 treatments and 4 blocks, each block has <span class="blank"></span> plots.<span class="ans">6</span></li>
-          <li>A pot trial in a uniform greenhouse is best laid out as a <span class="blank"></span>.<span class="ans">CRD</span></li>
-          <li>If fertility falls from north to south, blocks should run <span class="blank"></span>.<span class="ans">east–west (across the gradient)</span></li>
-          <li>For the same treatments and replications, <span class="blank"></span> has the largest error df.<span class="ans">CRD</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The full form of CRD is Completely Randomized __________.</p><span class="ans">Design</span></li><li><p>CRD is most suitable when experimental units are relatively
+__________.</p><span class="ans">Homogeneous</span></li><li><p>The error degrees of freedom in a CRD with <span
+class="math inline">\(N\)</span> observations and <span
+class="math inline">\(v\)</span> treatments are __________.</p><span class="ans"><span class="math inline">\(N-v\)</span></span></li><li><p>In an RCBD, each block contains every treatment exactly
+__________.</p><span class="ans">Once</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>

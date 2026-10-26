@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMathInElement(document.body, {
       delimiters: [
         { left: '$$', right: '$$', display: true },
+        { left: '\\[', right: '\\]', display: true },
         { left: '\\(', right: '\\)', display: false },
         { left: '$', right: '$', display: false }
       ],
@@ -33,3 +34,16 @@ window.addEventListener('beforeprint', () => {
   });
 });
 window.addEventListener('afterprint', () => document.querySelectorAll('.fx.wide').forEach(box => box.classList.remove('wide')));
+
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('.katex-display').forEach(display => {
+    const math = display.querySelector('.katex');
+    if (!math) return;
+    const available = display.clientWidth, natural = Math.max(math.scrollWidth, math.getBoundingClientRect().width);
+    if (natural > available && available > 0) {
+      math.dataset.printFit = 'true';
+      math.style.fontSize = (parseFloat(getComputedStyle(math).fontSize) * (available - 4) / natural) + 'px';
+    }
+  });
+});
+window.addEventListener('afterprint', () => document.querySelectorAll('[data-print-fit]').forEach(math => { math.style.removeProperty('font-size'); delete math.dataset.printFit; }));

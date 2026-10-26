@@ -1,116 +1,170 @@
 <!--
 num: 19
 title: Multiple Comparison Tests
-sub: Why post-hoc tests are needed, and Fisher's LSD (CD), Duncan's DMRT and Tukey's HSD with letter grouping.
+sub: From the chapter’s own revision points, formulae and questions.
 chapter: multipleComparison.html
-motto: ANOVA says that something differs; multiple comparisons say what.
+motto:
+source_revision: f5faa19097fc
 -->
-    <section class="card c-green s3">
-      <h2><span class="n">1</span>Why a post-hoc test?</h2>
-      <div class="body">
-        <p class="small">A significant ANOVA ($F$) shows that <b>not all means are equal</b>, but not <b>which pairs</b> differ.</p>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Number of pairs</span>$$N = \binom{v}{2} = \frac{v(v-1)}{2}$$</div>
-          <div class="fx"><span class="lbl">Inflated Type I error</span>$$1 - (1 - \alpha)^N$$</div>
-        </div>
-        <p class="where"><b>FWER</b> (family-wise error rate): probability of at least one Type I error across the whole family of comparisons.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>ANOVA → omnibus test for detecting an overall treatment effect.</li>
+<li>Significant ANOVA → indicates that at least one pair of treatment
+means differs.</li>
+<li>ANOVA alone → does not identify which specific treatment pairs
+differ.</li>
+<li>Multiple comparison tests → used to identify specific differences
+among treatment means.</li>
+<li>Protected Fisher’s LSD requires a significant ANOVA; Tukey’s HSD
+does not require this preliminary test.</li>
+</ul></div></section>
 
-    <section class="card c-blue s3">
-      <h2><span class="n">2</span>Fisher's LSD = Critical Difference (CD)</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Equal replications</span>$$\text{LSD} = t_{\alpha/2,\,edf}\sqrt{\frac{2\,MSE}{r}}$$</div>
-        <div class="fx"><span class="lbl">Unequal: $SE(d)$</span>$$\sqrt{MSE\left(\frac{1}{r_i} + \frac{1}{r_j}\right)}$$</div>
-        <p class="small">Two steps: significant ANOVA first (<b>protected LSD</b>), then pairs. Means differ if $\lvert \bar{T}_i - \bar{T}_j \rvert &gt; \text{LSD}$. Relatively <b>liberal</b>.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Type I error → rejecting a true null hypothesis.</li>
+<li>Type II error → failing to reject a false null hypothesis.</li>
+<li>Family → complete set of pairwise comparisons in an experiment.</li>
+<li>FWER → probability of making at least one Type I error within the
+family of comparisons.</li>
+<li>Number of pairwise comparisons → <span
+class="math inline">\(v(v-1)/2\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">3</span>Duncan's Multiple Range Test (DMRT)</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">SE of a mean</span>$$SE(\bar{Y}) = \sqrt{\frac{MSE}{r}}$$</div>
-          <div class="fx"><span class="lbl">Shortest significant range</span>$$R_p = r_p \cdot SE(\bar{Y})$$</div>
-        </div>
-        <ol class="steps"><li>Rank the means</li><li>Get $SE(\bar Y)$ and table $r_p$</li><li>Compare each difference with its $R_p$</li></ol>
-        <p class="where">$p$ = number of ordered means spanned, including both ends (adjacent: $p = 2$). $R_p$ grows with $p$. Popular in plant sciences.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Fisher’s LSD → two-step procedure involving significant ANOVA
+followed by pairwise comparisons.</li>
+<li>LSD → Least Significant Difference.</li>
+<li>CD → Critical Difference; commonly used term for LSD in Indian
+agricultural research.</li>
+<li>Protected LSD → pairwise comparisons are performed only after a
+significant ANOVA.</li>
+<li>Decision under LSD → if <span
+class="math inline">\(|\overline{T_i}-\overline{T_j}|&gt;\text{LSD}\)</span>,
+the means differ significantly.</li>
+</ul></div></section>
 
-    <section class="card c-plum s3">
-      <h2><span class="n">4</span>Tukey's HSD</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Honestly significant difference</span>$$\text{HSD} = q_{\alpha,(v,\,edf)}\sqrt{\frac{MSE}{r}}$$</div>
-        <p class="small">Uses the <b>studentised range</b> $q$. Compares all pairs while <b>controlling the FWER</b>. One critical value for equal replication. Most <b>conservative</b> of the three; needs no preliminary ANOVA.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Equal replications → <span
+class="math inline">\(\text{LSD}=t_{\alpha/2,edf}\sqrt{2\text{MSE}/r}\)</span>.</li>
+<li>LSD is relatively liberal compared with Tukey’s test.</li>
+<li>Fisher’s LSD controls experiment-wise Type I error effectively for
+two or three treatments under the usual model, but not generally for
+more than three, as discussed in the chapter.</li>
+<li>DMRT → Duncan’s Multiple Range Test.</li>
+<li>DMRT → useful when comparing many treatment means and widely used in
+plant sciences.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">5</span>Compare the tests</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th></th><th>LSD / CD</th><th>DMRT</th><th>Tukey HSD</th></tr></thead>
-          <tbody>
-            <tr><td><b>Critical value</b></td><td>One ($t$)</td><td>Varies with $p$ ($r_p$)</td><td>One ($q$)</td></tr>
-            <tr><td><b>Error control</b></td><td>Good only for 2–3 treatments</td><td>Between the two</td><td>Controls FWER</td></tr>
-            <tr><td><b>Nature</b></td><td>Most liberal</td><td>More powerful than Tukey</td><td>Most conservative</td></tr>
-            <tr><td><b>Worked example</b></td><td>1.10</td><td>1.10 – 1.21</td><td>1.59</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">In the example, LSD and DMRT found every pair significant; Tukey did not declare differences of 1.5.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>DMRT procedure → rank means, calculate standard error, obtain <span
+class="math inline">\(r_p\)</span>, calculate <span
+class="math inline">\(R_p\)</span>, and compare differences with the
+appropriate <span class="math inline">\(R_p\)</span>.</li>
+<li>In DMRT, <span class="math inline">\(p\)</span> → number of ordered
+treatment means spanned by the comparison, including the two means being
+compared.</li>
+<li>Adjacent means → <span class="math inline">\(p=2\)</span>.</li>
+<li>One mean between the two means → <span
+class="math inline">\(p=3\)</span>.</li>
+<li>Two means between the two means → <span
+class="math inline">\(p=4\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-rose s2">
-      <h2><span class="n">6</span>Other procedures</h2>
-      <div class="body">
-        <ul>
-          <li><b>Dunnett:</b> every treatment vs one control</li>
-          <li><b>Bonferroni:</b> adjusts $\alpha$ for the number of tests</li>
-          <li><b>Scheffé:</b> all linear contrasts</li>
-          <li><b>SNK:</b> Student–Newman–Keuls</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>DMRT critical range → increases as <span
+class="math inline">\(p\)</span> increases.</li>
+<li>DMRT → generally more powerful and more liberal than Tukey’s
+test.</li>
+<li>Tukey’s HSD → compares all possible pairs while controlling the
+family-wise error rate.</li>
+<li>Tukey’s test → based on the studentised range statistic <span
+class="math inline">\(q\)</span>.</li>
+<li>HSD → single critical difference for equal replications.</li>
+</ul></div></section>
 
-    <section class="card c-teal s4">
-      <h2><span class="n">7</span>Presenting results: letter grouping</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Treatment</th><th class="c">Mean</th><th class="c">Group</th></tr></thead>
-          <tbody>
-            <tr><td>T3</td><td class="c">24.6</td><td class="c"><b>a</b></td></tr>
-            <tr><td>T1</td><td class="c">23.9</td><td class="c"><b>ab</b></td></tr>
-            <tr><td>T2</td><td class="c">22.8</td><td class="c"><b>b</b></td></tr>
-          </tbody>
-        </table></div>
-        <p class="small"><b>Same letter</b> = not significantly different; <b>no common letter</b> = significantly different. A mean can carry two letters (overlapping groups). Line/underscore notation conveys the same information. <span class="muted">(Illustrative values.)</span></p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Decision under Tukey → if <span
+class="math inline">\(|\overline{T_i}-\overline{T_j}|&gt;\text{HSD}\)</span>,
+the means differ significantly.</li>
+<li>Tukey’s test → more conservative than LSD and DMRT.</li>
+<li>More conservative test → less likely to declare a difference
+significant.</li>
+<li>In the worked example → LSD = 1.10.</li>
+<li>In the worked example → DMRT <span
+class="math inline">\(R_p\)</span> values range from 1.10 to 1.21.</li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Running many $t$ tests without adjustment.</li>
-          <li>Unprotected LSD after a non-significant $F$.</li>
-          <li>Misreading "ab" as different from "a".</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 8</h2><div class="body"><ul>
+<li>In the worked example → Tukey HSD = 1.59.</li>
+<li>Under LSD and DMRT → all treatment pairs are significant.</li>
+<li>Under Tukey → differences of 1.5 are not significant.</li>
+<li>Tukey therefore identifies fewer significant differences than LSD
+and DMRT in the example.</li>
+<li>Compact letter grouping → convenient presentation of multiple
+comparison results.</li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>With 6 treatments there are <span class="blank"></span> pairwise comparisons.<span class="ans">15</span></li>
-          <li>At α = 0.05, the chance of at least one false positive in 3 independent comparisons is about <span class="blank"></span>.<span class="ans">0.14</span></li>
-          <li>MSE = 8, r = 4 and t = 2.12 give an LSD of <span class="blank"></span>.<span class="ans">4.24</span></li>
-          <li>Means marked “a” and “ab” are <span class="blank"></span> different.<span class="ans">not significantly</span></li>
-          <li>Comparing every new variety with one check variety uses <span class="blank"></span> test.<span class="ans">Dunnett&#x27;s</span></li>
-          <li>Of LSD, DMRT and Tukey&#x27;s HSD, the most conservative is <span class="blank"></span>.<span class="ans">Tukey&#x27;s HSD</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 9</h2><div class="body"><ul>
+<li>Same letter → treatments are not significantly different.</li>
+<li>No common letter → treatments are significantly different.</li>
+<li>A treatment can have more than one letter when it belongs to
+overlapping non-significant groups.</li>
+<li>Letter grouping is also called alphabet notation.</li>
+<li>Line or underscore notation → older method of presenting groups of
+means.</li>
+</ul></div></section>
+
+<section class="card c-green "><h2>Quick revision · 10</h2><div class="body"><ul>
+<li>Letter and line notation → convey the same statistical
+information.</li>
+<li>Dunnett’s test → useful when every treatment is compared with a
+single control.</li>
+<li>Bonferroni method → adjusts significance for multiple
+comparisons.</li>
+<li>Scheffé’s test → useful for general contrasts among means.</li>
+<li>SNK → Student-Newman-Keuls multiple comparison procedure.</li>
+</ul></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Number of pairwise comparisons among <span
+class="math inline">\(v\)</span> treatments:</p>
+<p><span class="math display">\[
+N=\binom{v}{2}=\frac{v(v-1)}{2}
+\]</span></p>
+<p>Inflated Type I error rate:</p>
+<p><span class="math display">\[
+\text{Inflated }\alpha=1-(1-\alpha)^N
+\]</span></p>
+<p>Standard error of the difference between two treatment means:</p>
+<p><span class="math display">\[
+SE(d)=\sqrt{\text{MSE}\left(\frac{1}{r_i}+\frac{1}{r_j}\right)}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Fisher’s LSD:</p>
+<p><span class="math display">\[
+\text{LSD}=t_{\frac{\alpha}{2},\,edf}\cdot SE(d)
+\]</span></p>
+<p>LSD for equal replications:</p>
+<p><span class="math display">\[
+\text{LSD}=t_{\frac{\alpha}{2},\,edf}\cdot\sqrt{\frac{2\text{MSE}}{r}}
+\]</span></p>
+<p>Test statistic for pairwise comparison:</p>
+<p><span class="math display">\[
+t=\frac{\overline{T_i}-\overline{T_j}}{SE(d)}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Standard error of a treatment mean in DMRT:</p>
+<p><span class="math display">\[
+SE(\overline{Y})=\sqrt{\frac{\text{MSE}}{r}}
+\]</span></p>
+<p>Shortest significant range in DMRT:</p>
+<p><span class="math display">\[
+R_p=r_p\cdot SE(\overline{Y})
+\]</span></p>
+<p>Tukey’s honestly significant difference:</p>
+<p><span class="math display">\[
+\text{HSD}=q_{\alpha,(v,edf)}\cdot\sqrt{\frac{\text{MSE}}{r}}
+\]</span></p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>A test of the overall equality of several treatment means is called
+an __________ test.</p><span class="ans">Omnibus</span></li><li><p>A significant treatment F-test indicates that not all treatment means
+are __________.</p><span class="ans">Equal</span></li><li><p>The probability of at least one Type I error in a family of tests is
+called the __________ error rate.</p><span class="ans">Family-wise</span></li><li><p>The number of pairwise comparisons among <span
+class="math inline">\(v\)</span> treatment means is __________.</p><span class="ans"><span class="math inline">\(v(v-1)/2\)</span></span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>

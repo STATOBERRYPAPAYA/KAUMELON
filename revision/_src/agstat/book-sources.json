@@ -1,0 +1,787 @@
+{
+  "repository": "https://github.com/STATOBERRYPAPAYA/TextbookofAgstat",
+  "revision": "f5faa19097fc8d1cf9435ad511723cfa49b7f805",
+  "policy": "All educational text, formulae, examples, questions and answers below are selected from the corresponding textbook chapter. Only presentation markup and navigation are added.",
+  "chapters": [
+    {
+      "num": 1,
+      "file": "intro.qmd",
+      "sha256": "fd8b8390d1a5e63ff53a43094efb2d04fa19689e59f97b2651906ede65b66c95",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "* A population is the complete group of interest; a sample is a part selected for study.\n* A parameter describes a population, while a statistic is calculated from sample observations.\n* The measurement scale determines which numerical comparisons are meaningful.\n* Class intervals must cover the data without overlap; boundaries depend on the recording precision.\n* Frequencies sum to the number of observations, and relative frequencies sum to one.\n* The source, selection method and reference period must be checked before interpreting data.",
+          "start_line": 565,
+          "end_line": 573
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Number of classes using Sturges' formula:\n\n$$\nk = 1 + 3.322\\log_{10}N\n$$\n\nApproximate class width:\n\n$$\nC = \\frac{|\\max-\\min|}{k}\n$$\n\nA possible centring rule for a preliminary lower endpoint:\n\n$$\nL = \\min - \\frac{C'k'-(\\max-\\min)}{2}\n$$\n\nThis is an optional starting value, not a necessary rule. Final limits and boundaries must respect the measurement precision, cover the data and avoid overlapping classes.\n\nLower class boundary of the $i$th class:\n\n$$\nL_i = \\frac{\\text{Lower class limit of }i+\\text{Upper class limit of }(i-1)}{2},\\quad i=2,3,4,\\ldots\n$$\n\nUpper class boundary of the $i$th class:\n\n$$\nU_i = \\frac{\\text{Upper class limit of }i+\\text{Lower class limit of }(i+1)}{2},\\quad i=1,2,3,\\ldots\n$$\n\nClass mark:\n\n$$\n\\text{Class mark} = \\frac{\\text{Lower class limit}+\\text{Upper class limit}}{2}\n$$\n\nClass width:\n\n$$\nC = \\text{Upper class boundary}-\\text{Lower class boundary}\n$$\n\nRelative frequency:\n\n$$\n\\text{Relative frequency} = \\frac{f}{N}\n$$\n\nSum of frequencies:\n\n$$\n\\sum f = N\n$$\n\nSum of relative frequencies:\n\n$$\n\\sum\\frac{f}{N}=1\n$$",
+          "start_line": 500,
+          "end_line": 564
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The branch of statistics concerned with summarizing data is called __________ statistics.\n\n2. The branch of statistics concerned with drawing conclusions about a population from a sample is called __________ statistics.\n\n3. A numerical constant describing a population is termed a __________.\n\n4. A subset of a population selected for study is called a __________.\n\n5. A characteristic that can take different values is called a __________.\n\n6. A quantitative variable with a finite or countable set of possible values is called __________.\n\n7. A measurement scale with ordered categories is called an __________ scale.\n\n8. A measurement scale with unordered categories is called a __________ scale.\n\n9. A measurement scale with a meaningful absolute zero is called a __________ scale.\n\n10. Data collected first-hand for a specific study are called __________ data.\n\n11. Data obtained from existing sources are called __________ data.\n\n12. The number of times a value occurs is called its __________.\n\n13. The midpoint of a class interval is called the class __________.\n\n14. The running total of frequencies is called __________ frequency.\n\n15. The proportion of observations in a class is called its __________ frequency.",
+          "start_line": 410,
+          "end_line": 443
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Descriptive `2.` Inferential `3.` Parameter `4.` Sample `5.` Variable `6.` Discrete `7.` Ordinal `8.` Nominal `9.` Ratio `10.` Primary `11.` Secondary `12.` Frequency `13.` Mark `14.` Cumulative `15.` Relative\n:::",
+          "start_line": 574,
+          "end_line": 580
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "file": "agstatindia.qmd",
+      "sha256": "23fb98aa9bd359bc605a0d49e1d24a5f6d180068e88394978a65633c8f10a512",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "* Crop production combines an area estimate and a corresponding yield estimate.\n* CCE plots must be selected by the prescribed sampling procedure, not by convenience.\n* Plot yield requires the net produce weight and the actual harvested area.\n* Villages, fields and experimental plots can form successive sampling stages.\n* Official estimates should be quoted with their reference year and release status.\n* The Agricultural Census describes operational holdings.",
+          "start_line": 188,
+          "end_line": 196
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Diagonal of a square CCE plot:\n\n$$\nAC=BD=\\sqrt{5^2+5^2}=7.07\\text{ m}\n$$\n\nDiagonal of a square of side $a$:\n\n$$\nd=a\\sqrt{2}\n$$",
+          "start_line": 174,
+          "end_line": 187
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. Crop production is estimated by multiplying crop area by average crop __________.\n\n2. The field procedure used to estimate crop yield is called a crop __________ experiment.\n\n3. The full form of CCE is __________.\n\n4. The full form of GCES is __________.\n\n5. Crop yield per hectare is obtained by dividing crop production by crop __________.\n\n6. The Agricultural Census provides information on the number and area of operational __________.\n\n7. In land-record states, the number and area of operational holdings are collected by complete __________.\n\n8. The Agricultural Census in India is normally conducted at intervals of __________ years.",
+          "start_line": 100,
+          "end_line": 119
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Yield `2.` Cutting `3.` Crop Cutting Experiment `4.` General Crop Estimation Survey `5.` Area `6.` Holdings `7.` Enumeration `8.` Five\n:::",
+          "start_line": 197,
+          "end_line": 203
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "file": "3graph.qmd",
+      "sha256": "b25eca5834dd5a6175b872b8e9a4e256ed8aabcab8ab0dd793c1c4a212f6de95",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Histogram → continuous quantitative data; adjacent bars.\n- Bar chart → categorical data; bars separated by gaps.\n- Equal class width → height represents frequency.\n- Unequal class width → height represents frequency density.\n- Less than ogive → upper class boundaries + LCF.\n- Greater than ogive → lower class boundaries + GCF.\n- Intersection of two ogives → median.\n- Frequency polygon → class midpoints + frequencies.\n- Stem-and-leaf plot → retains individual observations.\n- Simple bar chart → one value for each category.\n- Component bar chart → shows components of each category.\n- Grouped bar chart → compares multiple values within categories.\n- Pie chart → sectors represent parts of a whole.\n- Boxplot → five-number summary and spread of data.\n- IQR → $Q_3-Q_1$.\n- Outliers in Boxplot → observations below $Q_1-1.5IQR$ or above $Q_3+1.5IQR$.",
+          "start_line": 379,
+          "end_line": 398
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Frequency density:\n\n$$\n\\text{Frequency Density}=\\frac{\\text{Class Frequency}}{\\text{Class Width}}\n$$\n\nAngle of a sector in a pie chart:\n\n$$\n\\text{Sector angle}=\n\\frac{\\text{Value of category}}{\\text{Sum of category values}}\\times360^\\circ\n$$\n\nInterquartile range:\n\n$$\nIQR=Q_3-Q_1\n$$\n\nLower limit for identifying outliers in a boxplot:\n\n$$\nQ_1-1.5\\times IQR\n$$\n\nUpper limit for identifying outliers in a boxplot:\n\n$$\nQ_3+1.5\\times IQR\n$$",
+          "start_line": 346,
+          "end_line": 378
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. A graph representing a continuous frequency distribution by adjoining rectangles is called a __________.\n\n2. For unequal class widths, histogram heights should represent frequency __________.\n\n3. A graph of cumulative frequencies is called an __________.\n\n4. The intersection of the less-than and greater-than ogives provides an estimate of the __________.\n\n5. A frequency polygon joins points plotted at class __________.\n\n6. A display that separates each observation into leading and trailing digits is called a __________ plot.\n\n7. A diagram used to compare frequencies of categories is called a __________ chart.\n\n8. A circular diagram showing category proportions is called a __________ chart.\n\n9. The total angle represented by a pie chart is __________ degrees.\n\n10. The difference between the third and first quartiles is called the __________ range.\n\n11. In a boxplot, the line inside the box represents the __________.\n\n12. Observations beyond the boxplot fences are flagged as potential __________.",
+          "start_line": 266,
+          "end_line": 293
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Histogram `2.` Density `3.` Ogive `4.` Median `5.` Midpoints `6.` Stem-and-leaf `7.` Bar `8.` Pie `9.` 360 `10.` Interquartile `11.` Median `12.` Outliers\n:::",
+          "start_line": 399,
+          "end_line": 405
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "file": "central1.qmd",
+      "sha256": "cfba806235c6fbecdc70163bf7389c45e357da55bf7dea8cfc222249a3b687e2",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Mean → arithmetic average of observations.\n- Median → middle value after arranging observations.\n- Mode → most frequently occurring value.\n- Mean → uses all observations.\n- Median → based on position.\n- Mode → based on frequency.\n- Mean is affected by extreme values.\n- Median is less affected by extreme values.\n- Mode is useful for identifying the most common category or value.\n- Mean + constant → mean increases by the same constant.\n- Mean × constant → mean is multiplied by the same constant.\n- Adding a constant to every observation does not change the standard deviation.\n- Multiplying every observation by a constant multiplies the standard deviation by the absolute value of that constant.\n- Sum of deviations from the arithmetic mean = 0.\n- Standard deviation = 0 → all observations are identical.\n- For positive observations, $AM\\geq GM\\geq HM$.\n- Symmetric unimodal distribution with a finite mean and a central mode → mean = median = mode.\n- In many familiar positively skewed unimodal distributions, mean > median > mode; this is not a universal theorem.\n- In many familiar negatively skewed unimodal distributions, mean < median < mode; this is not a universal theorem.",
+          "start_line": 717,
+          "end_line": 738
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Arithmetic mean:\n\n$$\n\\bar{x}=\\frac{\\sum x_i}{n}\n$$\n\nArithmetic mean for a frequency distribution:\n\n$$\n\\bar{x}=\\frac{\\sum f_ix_i}{\\sum f_i}\n$$\n\nAssumed mean method:\n\n$$\n\\bar{x}=A+\\frac{\\sum f_id_i}{\\sum f_i}\n$$\n\nwhere\n\n$$\nd_i=x_i-A\n$$\n\nCoding method:\n\n$$\n\\bar{x}=A+C\\frac{\\sum f_iu_i}{\\sum f_i}\n$$\n\nwhere\n\n$$\nu_i=\\frac{x_i-A}{C}\n$$\n\nWeighted mean:\n\n$$\n\\bar{x}_w=\\frac{\\sum w_ix_i}{\\sum w_i}\n$$\n\nMedian for odd $n$:\n\n$$\nMd=\\left(\\frac{n+1}{2}\\right)^{\\text{th}}\\text{ observation}\n$$\n\nMedian for even $n$:\n\n$$\nMd=\\frac{1}{2}\n\\left[\n\\left(\\frac{n}{2}\\right)^{\\text{th}}\\text{ observation}\n+\n\\left(\\frac{n}{2}+1\\right)^{\\text{th}}\\text{ observation}\n\\right]\n$$\n\nMedian for grouped data:\n\n$$\nMd=L+\\left(\\frac{\\frac{N}{2}-F}{f}\\right)C\n$$\n\nMode for grouped data:\n\n$$\nMo=L+\\left(\\frac{f_m-f_p}{2f_m-f_p-f_s}\\right)C\n$$\n\nRelationship among arithmetic mean, geometric mean, and harmonic mean:\n\n$$\nAM\\geq GM\\geq HM\n$$",
+          "start_line": 638,
+          "end_line": 716
+        },
+        {
+          "heading": "exm-ct1",
+          "markdown": "Find the mean of the numbers 2, 4, 7, 8, 11, 12\n\n**Solution**\n\n$$\\overline{x} = \\frac{2 + 4 + 7 + 8 + 11 + 12}{6} = \\frac{44}{6} = 7.33$$",
+          "start_line": 42,
+          "end_line": 47
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The sum of observations divided by their number is called the arithmetic __________.\n\n2. The sum of deviations from the arithmetic mean is __________.\n\n3. The average calculated using assigned weights is called the __________ mean.\n\n4. The middle value of an ordered dataset is called the __________.\n\n5. The value occurring most frequently is called the __________.\n\n6. A distribution with exactly two modes is called __________.\n\n7. The class containing the median position is called the __________ class.\n\n8. For equal class widths, the class with the highest frequency is called the __________ class.\n\n9. Among the mean and median, the measure less affected by extreme values is the __________.\n\n10. The sum of squared deviations is least when deviations are taken from the arithmetic __________.\n\n11. The measure of central tendency suitable for nominal data is the __________.\n\n12. Adding a constant to every observation increases the mean by the same __________.",
+          "start_line": 544,
+          "end_line": 571
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Mean `2.` Zero `3.` Weighted `4.` Median `5.` Mode `6.` Bimodal `7.` Median `8.` Modal `9.` Median `10.` Mean `11.` Mode `12.` Constant\n:::",
+          "start_line": 739,
+          "end_line": 746
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "file": "central2.qmd",
+      "sha256": "6cfb4a1e2b60caeea019badf66aa42e6bf3a7ce474bb167985fc76622602e0e6",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Geometric mean → suitable for growth rates, ratios, percentages, and multiplicative changes.\n- Harmonic mean → suitable for rates, ratios, and reciprocal relationships.\n- Geometric mean → $n$th root of the product of $n$ observations.\n- Harmonic mean → reciprocal of the arithmetic mean of reciprocals.\n- Geometric mean gives greater weight to smaller values and less weight to larger values.\n- Harmonic mean gives greater weight to smaller values.\n- The logarithmic GM requires positive observations; the product GM of non-negative values is zero if any value is zero.\n- The standard statistical GM is generally unsuitable for negative observations.\n- Arithmetic mean, geometric mean, and harmonic mean are called Pythagorean means.\n- Mathematical averages → arithmetic mean, geometric mean, and harmonic mean.\n- Positional measures → median, quartiles, percentiles, and deciles; mode is based on frequency.\n- Quartiles → divide data into 4 equal parts.\n- $Q_1$ → 25th percentile.\n- $Q_2$ → 50th percentile → Median.\n- $Q_3$ → 75th percentile.\n- Percentiles → divide data into 100 equal parts.\n- $P_{25}=Q_1$.\n- $P_{50}=Q_2=\\text{Median}$.\n- $P_{75}=Q_3$.\n- Deciles → divide data into 10 equal parts.\n- $D_5=Q_2=P_{50}=\\text{Median}$.\n- For raw data, arrange observations in ascending order before finding positional measures.\n- For discrete frequency data, use cumulative frequencies to locate the required position.\n- For grouped frequency data, first identify the relevant quartile, percentile, or decile class.\n- In grouped data, interpolation is then used to calculate the required value.",
+          "start_line": 914,
+          "end_line": 941
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Geometric mean:\n\n$$\nGM=\\sqrt[n]{\\prod_{i=1}^{n}x_i}\n$$\n\nGeometric mean using logarithms:\n\n$$\n\\log GM=\\frac{\\sum_{i=1}^{n}\\log x_i}{n}\n$$\n\nGeometric mean using antilogarithms:\n\n$$\nGM=\\operatorname{Antilog}\\left(\\frac{\\sum_{i=1}^{n}\\log x_i}{n}\\right)\n$$\n\nGeometric mean for a frequency distribution:\n\n$$\nGM=\\operatorname{Antilog}\\left(\\frac{\\sum_{i=1}^{k}f_i\\log x_i}{n}\\right)\n$$\n\nHarmonic mean:\n\n$$\nHM=\\frac{n}{\\sum_{i=1}^{n}\\frac{1}{x_i}}\n$$\n\nHarmonic mean for a frequency distribution:\n\n$$\nHM=\\frac{n}{\\sum_{i=1}^{k}f_i\\frac{1}{x_i}}\n$$\n\nFirst quartile for raw data:\n\n$$\nQ_1=\\left(\\frac{n+1}{4}\\right)^{\\text{th}}\\text{ item}\n$$\n\nThird quartile for raw data:\n\n$$\nQ_3=\\left(\\frac{3(n+1)}{4}\\right)^{\\text{th}}\\text{ item}\n$$\n\nFirst quartile for grouped data:\n\n$$\nQ_1=l_1+\\frac{\\frac{n}{4}-m_1}{f_1}\\times c_1\n$$\n\nThird quartile for grouped data:\n\n$$\nQ_3=l_3+\\frac{\\frac{3n}{4}-m_3}{f_3}\\times c_3\n$$\n\nPercentile for raw data:\n\n$$\nP_p=\\left(\\frac{p(n+1)}{100}\\right)^{\\text{th}}\\text{ item}\n$$\n\nPercentile for grouped data:\n\n$$\nP_p=l+\\frac{\\left(\\frac{pn}{100}\\right)-cf}{f}\\times c\n$$\n\nDecile for raw data:\n\n$$\nD_d=\\left(\\frac{d(n+1)}{10}\\right)^{\\text{th}}\\text{ item}\n$$\n\nDecile for grouped data:\n\n$$\nD_d=l+\\frac{\\left(\\frac{dn}{10}\\right)-cf}{f}\\times c\n$$\n\nRelationship among Pythagorean means (the first equality is for two positive observations):\n\n$$\nAM\\times HM=GM^2\n$$\n\n$$\nAM\\geq GM\\geq HM\n$$",
+          "start_line": 818,
+          "end_line": 913
+        },
+        {
+          "heading": "exm-ct19",
+          "markdown": "A car travels a certain distance from City A to City B at a speed of 60 km/h, and returns the same distance from City B to City A at a speed of 90 km/h. What is the average speed for the entire trip?\n\n**Solution**\n\nTo find the average speed when traveling the same distance at two different speeds, we use the harmonic mean. The harmonic mean for the speed is $\\frac{2 \\cdot S_1 \\cdot S_2}{S_1 + S_2}$, where $S_1 = 60 \\, \\text{km/h}$ is the speed from City A to City B, $S_2 = 90 \\, \\text{km/h}$ is the speed from City B to City A.\n\nIn this case, we are calculating the average speed over the entire round trip. The harmonic mean is used because it accounts for the fact that traveling at different speeds over the same distance results in an overall average speed that is closer to the lower of the two speeds, rather than simply averaging the two speeds.\n\nNow, applying the harmonic mean formula:\n\n$S_{\\text{avg}} = \\frac{2 \\cdot 60 \\cdot 90}{60 + 90} = \\frac{10800}{150} = 72 \\, \\text{km/h}$\n\nSo, the average speed for the entire trip is 72 km/h.",
+          "start_line": 237,
+          "end_line": 250
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. For positive observations, the nth root of their product is the __________ mean.\n\n2. The reciprocal of the arithmetic mean of reciprocals is the __________ mean.\n\n3. The mean suitable for averaging positive growth factors is the __________ mean.\n\n4. The mean suitable for averaging speeds over equal distances is the __________ mean.\n\n5. For positive observations, AM is greater than or equal to GM, and GM is greater than or equal to __________.\n\n6. AM, GM, and HM are equal when all observations are __________.\n\n7. Quartiles divide an ordered distribution into __________ equal parts.\n\n8. The second quartile is equal to the __________.\n\n9. Deciles divide an ordered distribution into __________ equal parts.\n\n10. Percentiles divide an ordered distribution into __________ equal parts.\n\n11. The 25th percentile is the __________ quartile.\n\n12. The fifth decile is equal to the __________.",
+          "start_line": 685,
+          "end_line": 712
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Geometric `2.` Harmonic `3.` Geometric `4.` Harmonic `5.` HM `6.` Equal `7.` Four `8.` Median `9.` Ten `10.` One hundred `11.` First `12.` Median\n:::",
+          "start_line": 942,
+          "end_line": 948
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "file": "dispersion.qmd",
+      "sha256": "0bdd12340299f8649b4f7be7e077026a4fa1144a45264827b27fed399888852d",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Dispersion → extent to which observations deviate from a central value.\n- Range → difference between largest and smallest observations.\n- Range → simplest measure of dispersion.\n- IQR → spread of the middle 50% of observations.\n- IQR → $Q_3-Q_1$.\n- IQR is less affected by extreme values than range.\n- MAD → average absolute deviation from a central value.\n- MAD about the median is the least.\n- Variance → average squared deviation, using $n-1$ for sample variance.\n- Standard deviation → non-negative square root of sample variance.\n- Variance is expressed in squared units.\n- Standard deviation is expressed in the original units.\n- Standard deviation is always non-negative.\n- Standard deviation = 0 → all observations are identical.\n- Larger standard deviation → greater dispersion, when datasets are measured on the same scale.\n- Standard deviation is an absolute measure of dispersion.\n- Coefficient of variation is a relative measure of dispersion.\n- Higher CV → greater relative variability.\n- Lower CV → lower relative variability.\n- CV is useful for comparing datasets measured in different units or scales.\n- Range uses only the two extreme observations.\n- IQR uses the middle 50% of the observations.\n- MAD uses all observations but ignores the signs of deviations.\n- Standard deviation uses all observations and gives greater weight to extreme deviations because deviations are squared.",
+          "start_line": 739,
+          "end_line": 765
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Range:\n\n$$\nR=L-S\n$$\n\nwhere $L$ is the largest observation and $S$ is the smallest observation.\n\nInterquartile range:\n\n$$\nIQR=Q_3-Q_1\n$$\n\nMean absolute deviation:\n\n$$\nMAD=\\frac{\\sum_{i=1}^{n}|x_i-\\bar{x}|}{n}\n$$\n\nSample variance:\n\n$$\ns^2=\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n$$\n\nSample standard deviation:\n\n$$\ns=\\sqrt{\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}}\n$$\n\nAlternative formula for sample variance:\n\n$$\ns^2=\\frac{1}{n-1}\\left\\{\\sum_{i=1}^{n}x_i^2-\\frac{1}{n}\\left(\\sum_{i=1}^{n}x_i\\right)^2\\right\\}\n$$\n\nVariance for a discrete frequency distribution:\n\n$$\ns^2=\\frac{1}{n-1}\\left\\{\\sum_{i=1}^{k}f_ix_i^2-\\frac{1}{n}\\left(\\sum_{i=1}^{k}f_ix_i\\right)^2\\right\\}\n$$\n\nStandard deviation for a discrete frequency distribution:\n\n$$\ns=\\sqrt{\\frac{1}{n-1}\\left\\{\\sum_{i=1}^{k}f_ix_i^2-\\frac{1}{n}\\left(\\sum_{i=1}^{k}f_ix_i\\right)^2\\right\\}}\n$$\n\nFor grouped frequency data:\n\n$$\nd_i=\\frac{x_i-A}{c}\n$$\n\nwhere $x_i$ is the class mark, $A$ is the class mark with the highest frequency, and $c$ is the class interval.\n\nSample variance for grouped frequency data:\n\n$$\ns^2=\\frac{1}{n-1}\\left\\{\\sum_{i=1}^{k}f_id_i^2-\\frac{1}{n}\\left(\\sum_{i=1}^{k}f_id_i\\right)^2\\right\\}c^2\n$$\n\nSample standard deviation for grouped frequency data:\n\n$$\ns=c\\sqrt{\\frac{1}{n-1}\\left\\{\\sum_{i=1}^{k}f_id_i^2-\\frac{1}{n}\\left(\\sum_{i=1}^{k}f_id_i\\right)^2\\right\\}}\n$$\n\nCoefficient of variation:\n\n$$\nCV=\\frac{s}{\\bar{x}}\\times100\n$$",
+          "start_line": 661,
+          "end_line": 738
+        },
+        {
+          "heading": "exm-ct32",
+          "markdown": "Consider the measurement on yield and plant height of a paddy variety. The mean and standard deviation for yield are 50 kg and 10 kg respectively. The mean and standard deviation for plant height are 55 cm and 5 cm respectively. Compare the variability.\n\n**Solution**\n\nHere, the measurements for yield and plant height are in different units. Hence the variability can be compared only by using coefficient of variation.\n\nFor yield, CV = $\\ \\frac{10}{50} \\times 100 =$ 20%\n\nFor plant height, CV = $\\frac{5}{55} \\times 100 =$ 9.1%\n\nThe yield is subject to more variation than the plant height.",
+          "start_line": 480,
+          "end_line": 491
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The spread of observations is called __________.\n\n2. The difference between the largest and smallest observations is the __________.\n\n3. The difference between the third and first quartiles is the __________ range.\n\n4. Half the interquartile range is called the quartile __________.\n\n5. The average of absolute deviations from a specified central value is the mean __________ deviation.\n\n6. The mean absolute deviation is minimized when deviations are taken from the __________.\n\n7. The non-negative square root of variance is the standard __________.\n\n8. Variance is expressed in the __________ of the original measurement units.\n\n9. Standard deviation is expressed in the __________ units as the observations.\n\n10. The standard deviation of identical observations is __________.\n\n11. The usual unbiased sample variance uses the divisor __________.\n\n12. The standard deviation expressed as a percentage of a positive mean is the coefficient of __________.",
+          "start_line": 529,
+          "end_line": 556
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Dispersion `2.` Range `3.` Interquartile `4.` Deviation `5.` Absolute `6.` Median `7.` Deviation `8.` Square `9.` Same `10.` Zero `11.` $n-1$ `12.` Variation\n:::",
+          "start_line": 766,
+          "end_line": 772
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "file": "skewness.qmd",
+      "sha256": "b0a917e017aeedfa2a05c89f8a1c999eef06e18666d8a0cb5ec63c5e5ba0e626",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Skewness → degree of asymmetry of a distribution.\n- Kurtosis → fourth standardised central moment, associated with tail behaviour and extreme observations.\n- For a symmetric unimodal distribution with an existing mean and a unique central mode, mean = median = mode.\n- Symmetric distribution → skewness = 0.\n- Negatively skewed → longer left tail.\n- Many unimodal left-skewed distributions have mean < median < mode; this is not universal.\n- Positively skewed → longer right tail.\n- Many unimodal right-skewed distributions have mean > median > mode; this is not universal.\n- Karl Pearson’s measure → based on mean, mode or median, and standard deviation.\n- Bowley’s measure → based on quartiles.\n- Kelley’s measure → based on percentiles, particularly $P_{10}$, $P_{50}$, and $P_{90}$.\n- Moment-based skewness → based on the third central moment.\n- $\\beta_1$ → indicates the extent of skewness but not its direction.\n- $\\gamma_1$ → indicates both magnitude and direction of skewness.\n- $\\gamma_1=0$ → zero third-moment skewness; symmetry is not established.\n- $\\gamma_1>0$ → positively skewed.\n- $\\gamma_1<0$ → negatively skewed.\n- $\\beta_2=3$ → mesokurtic.\n- $\\beta_2>3$ → leptokurtic.\n- $\\beta_2<3$ → platykurtic.\n- $\\gamma_2=0$ → mesokurtic.\n- $\\gamma_2>0$ → leptokurtic.\n- $\\gamma_2<0$ → platykurtic.\n- $\\mu_1=0$ for every distribution.\n- $\\mu_2$ is the population variance.\n- $\\mu_3$ is used for measuring skewness.\n- $\\mu_4$ is used for measuring kurtosis.",
+          "start_line": 574,
+          "end_line": 603
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Karl Pearson’s coefficient of skewness:\n\n$$\nS_k=\\frac{\\text{Mean}-\\text{Mode}}{\\text{Standard deviation}}\n$$\n\nAlternative Karl Pearson’s coefficient of skewness:\n\n$$\nS_k=\\frac{3(\\text{Mean}-\\text{Median})}{\\text{Standard deviation}}\n$$\n\nBowley’s coefficient of skewness:\n\n$$\nS_Q=\\frac{(Q_3-Q_2)-(Q_2-Q_1)}{(Q_3-Q_2)+(Q_2-Q_1)}\n$$\n\nAlternative form of Bowley’s coefficient:\n\n$$\nS_Q=\\frac{Q_3-2Q_2+Q_1}{Q_3-Q_1}\n$$\n\nKelley’s coefficient of skewness:\n\n$$\nS_P=\\frac{(P_{90}-P_{50})-(P_{50}-P_{10})}{(P_{90}-P_{50})+(P_{50}-P_{10})}\n$$\n\n$r$th central moment:\n\n$$\n\\mu_r=\\frac{\\sum_{i=1}^{k}f_i(x_i-\\bar{x})^r}{N}\n$$\n\nZeroth central moment:\n\n$$\n\\mu_0=1\n$$\n\nFirst central moment:\n\n$$\n\\mu_1=0\n$$\n\nSecond central moment:\n\n$$\n\\mu_2=\\sigma^2\n$$\n\nThird central moment:\n\n$$\n\\mu_3=\\frac{\\sum_{i=1}^{k}f_i(x_i-\\bar{x})^3}{N}\n$$\n\nMeasure of skewness based on moments:\n\n$$\n\\beta_1=\\frac{\\mu_3^2}{\\mu_2^3}\n$$\n\nKarl Pearson’s $\\gamma_1$:\n\n$$\n\\gamma_1=\\frac{\\mu_3}{\\mu_2^{3/2}}=\\operatorname{sgn}(\\mu_3)\\sqrt{\\beta_1}\n$$\n\nMeasure of kurtosis:\n\n$$\n\\beta_2=\\frac{\\mu_4}{\\mu_2^2}\n$$\n\nKurtosis of excess:\n\n$$\n\\gamma_2=\\beta_2-3\n$$",
+          "start_line": 488,
+          "end_line": 573
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The asymmetry of a distribution is measured by __________.\n\n2. A distribution with a longer right tail is __________ skewed.\n\n3. A distribution with a longer left tail is __________ skewed.\n\n4. Bowley's coefficient of skewness is based on __________.\n\n5. Kelley's coefficient of skewness can be calculated using the 10th, 50th, and 90th __________.\n\n6. A moment calculated about the mean is called a __________ moment.\n\n7. The first central moment is __________.\n\n8. The second central moment is the population __________.\n\n9. The sign of the third standardised central moment indicates the direction of __________.\n\n10. Kurtosis is based on the __________ standardised central moment.\n\n11. The kurtosis coefficient $\\beta_2$ of a normal distribution is __________.\n\n12. The excess kurtosis of a normal distribution is __________.\n\n13. A distribution with $\\beta_2>3$ is called __________.\n\n14. A distribution with $\\beta_2<3$ is called __________.",
+          "start_line": 358,
+          "end_line": 389
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Skewness `2.` Positively `3.` Negatively `4.` Quartiles `5.` Percentiles `6.` Central `7.` Zero `8.` Variance `9.` Skewness `10.` Fourth `11.` 3 `12.` Zero `13.` Leptokurtic `14.` Platykurtic\n:::",
+          "start_line": 604,
+          "end_line": 610
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "file": "association.qmd",
+      "sha256": "8c19529935a0a3f49fe210e34297d5b7d85b71ae991d55b0a8e8b4f302ec753a",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Measures of association → describe relationships between variables.\n- Linear relationship → relationship that can be represented by a straight line.\n- Monotonic relationship → one variable consistently increases or consistently decreases as the other increases, but not necessarily at a constant rate.\n- Scatter diagram → graphical method for examining association between two variables.\n- Positive correlation → both variables tend to move in the same direction.\n- Negative correlation → variables tend to move in opposite directions.\n- No correlation → no systematic linear association.\n- Simple correlation → relationship between two variables.\n- Multiple correlation → relationship involving more than two variables.\n- Linear correlation → relationship represented by a straight line.\n- Non-linear correlation → relationship represented by a curved pattern.\n- Partial correlation → relationship between two variables after controlling other variables.\n- Perfect correlation → all points lie on a straight line.\n- Pearson's correlation → measures linear association.\n- Pearson's $r$ ranges from $-1$ to $+1$.\n- $r=+1$ → perfect positive correlation.\n- $r=-1$ → perfect negative correlation.\n- $r=0$ → no linear correlation.\n- Covariance → measures joint linear variability.\n- Covariance depends on the units of measurement.\n- Pearson's correlation is unit-free.\n- Pearson's correlation is sensitive to outliers.\n- Pearson's correlation summarises linear association; a nonlinear pattern can make it misleading as a general measure of association.\n- Spearman's $\\rho$ → rank-based measure of monotonic association.\n- Spearman's correlation is useful for ordinal data and non-linear monotonic relationships.\n- Spearman's correlation ranges from $-1$ to $+1$.\n- No tied ranks → use the basic Spearman formula.\n- Tied ranks → use average ranks and correction terms.\n- Kendall's coefficient of concordance → measures agreement among multiple rankings.\n- Correlation matrix → table of pairwise correlation coefficients.\n- Diagonal elements of a correlation matrix → 1.\n- Correlation matrix → symmetrical about the diagonal.\n- Correlogram → graphical representation of a correlation matrix.\n- Strong positive correlation → coefficient close to $+1$.\n- Strong negative correlation → coefficient close to $-1$.\n- Correlation measures association, not necessarily causation.",
+          "start_line": 868,
+          "end_line": 906
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Covariance:\n\n$$\ncov(x,y)=\\frac{1}{n}\\sum_{i=1}^{n}(x_i-\\bar{x})(y_i-\\bar{y})\n$$\n\nPearson's correlation coefficient:\n\n$$\nr=\\frac{cov(x,y)}{sd(x)sd(y)}\n$$\n\nPearson's correlation coefficient using deviations:\n\n$$\nr=\n\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})(y_i-\\bar{y})}\n{\\sqrt{\\sum_{i=1}^{n}(x_i-\\bar{x})^2\\sum_{i=1}^{n}(y_i-\\bar{y})^2}}\n$$\n\nSpearman's rank correlation coefficient without tied ranks:\n\n$$\n\\rho=1-\\frac{6\\sum_{i=1}^{n}d_i^2}{n(n^2-1)}\n$$\n\nwhere $d_i$ is the difference between the ranks of the $i$th pair of observations.\n\nSpearman's rank correlation coefficient with tied ranks:\n\n$$\n\\rho=\\frac{2S_0-T_x-T_y-\\sum d_i^2}{2\\sqrt{(S_0-T_x)(S_0-T_y)}},\\quad S_0=\\frac{n(n^2-1)}{12}\n$$\n\nCorrection for tied ranks in $X$:\n\n$$\nT_x=\\frac{1}{12}\\sum_{i=1}^{s}m_i(m_i^2-1)\n$$\n\nCorrection for tied ranks in $Y$:\n\n$$\nT_y=\\frac{1}{12}\\sum_{i=1}^{s'}w_i(w_i^2-1)\n$$\n\nKendall's coefficient of concordance:\n\n$$\nW=\n\\frac{12\\left[\\sum_{i=1}^{n}R_i^2-\\frac{\\left(\\sum_{i=1}^{n}R_i\\right)^2}{n}\\right]}\n{k^2n(n^2-1)}\n$$\n\nwhere $R_i$ is the sum of ranks obtained by the $i$th object and $k$ is the number of judges.",
+          "start_line": 810,
+          "end_line": 867
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The strength and direction of linear association are measured by Pearson's __________ coefficient.\n\n2. A plot of paired observations used to examine association is called a __________ diagram.\n\n3. Variables that tend to increase together have __________ correlation.\n\n4. Variables that tend to move in opposite directions have __________ correlation.\n\n5. The lowest possible value of Pearson's correlation coefficient is __________.\n\n6. The highest possible value of Pearson's correlation coefficient is __________.\n\n7. A zero Pearson correlation indicates the absence of __________ association.\n\n8. Spearman's correlation is calculated from the __________ of observations.\n\n9. Spearman's correlation measures the strength of a __________ relationship.\n\n10. Tied observations are usually assigned their __________ rank.\n\n11. Correlation between two variables after controlling for other variables is called __________ correlation.\n\n12. The association of one variable with a set of other variables is measured by __________ correlation.\n\n13. Agreement among several sets of rankings can be measured by Kendall's coefficient of __________.\n\n14. A table of correlations among several variables is called a correlation __________.\n\n15. Correlation alone does not establish __________.",
+          "start_line": 642,
+          "end_line": 675
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Correlation `2.` Scatter `3.` Positive `4.` Negative `5.` $-1$ `6.` $+1$ `7.` Linear `8.` Ranks `9.` Monotonic `10.` Average `11.` Partial `12.` Multiple `13.` Concordance `14.` Matrix `15.` Causation\n:::",
+          "start_line": 907,
+          "end_line": 913
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "file": "regression.qmd",
+      "sha256": "99d494bf8a8ccd836e86a5e88d9cd078182451aa835bca764df2423a77db9afe",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Regression → models the relationship between a dependent variable and one or more independent variables.\n- Dependent variable → response or outcome to be predicted or explained.\n- Independent variable → predictor or explanatory variable.\n- Simple linear regression → one dependent variable and one independent variable.\n- Multiple linear regression → one dependent variable and two or more independent variables.\n- Nonlinear regression → mean function nonlinear in its unknown parameters; polynomial regression can be linear in its coefficients.\n- Logistic regression → categorical dependent variable.\n- Line of best fit → fitted line obtained using least squares.\n- Error → theoretical difference from the true regression relationship.\n- Residual → observed value minus fitted value.\n- Least squares → minimizes the sum of squared residuals.\n- Slope $\\beta$ → expected change in $y$ for a one-unit increase in $x$.\n- Intercept $\\alpha$ → value of $y$ when $x=0$.\n- Regression coefficient can range from $-\\infty$ to $+\\infty$.\n- Positive regression coefficient → direct relationship.\n- Negative regression coefficient → inverse relationship.\n- Regression of $y$ on $x$ → predict $y$ from $x$.\n- Regression of $x$ on $y$ → predict $x$ from $y$.\n- The regression line passes through $(\\bar{x},\\bar{y})$.\n- Both regression coefficients have the same sign.\n- $\\beta_{yx}\\beta_{xy}=r^2$.\n- If $r=0$, both regression coefficients are zero.\n- If $r=\\pm1$, the two regression lines coincide.\n- If one regression coefficient exceeds 1, the other must be less than 1.\n- Both regression coefficients cannot exceed 1 simultaneously.\n- Regression coefficients are independent of change of origin but not of change of scale.\n- Regression coefficients depend on the correlation and the relative standard deviations of the variables.\n- Linearity, independence, homoscedasticity, normality of errors for exact inference, absence of exact multicollinearity, absence of error autocorrelation, and correct model specification are important assumptions.\n- Regression lines are unique for a given dataset.\n- Correlation measures association; regression models the relationship and allows prediction.\n- Correlation is symmetric; regression is asymmetric.\n- Correlation coefficient is unit-free and lies between $-1$ and $+1$.\n- Regression coefficients have units and are not bounded.\n- Regression does not establish causation by itself.",
+          "start_line": 930,
+          "end_line": 966
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Straight-line equation:\n\n$$\nY=\\alpha+\\beta X\n$$\n\nSimple linear regression model:\n\n$$\ny_i=\\alpha+\\beta x_i+e_i\n$$\n\nResidual after fitting:\n\n$$\n\\hat e_i=y_i-(\\hat\\alpha+\\hat\\beta x_i)\n$$\n\nSum of squared errors:\n\n$$\nE=\\sum_{i=1}^{n}e_i^2\n$$\n\nSum of squared errors in terms of the regression model:\n\n$$\nE=\\sum_{i=1}^{n}[y_i-(\\alpha+\\beta x_i)]^2\n$$\n\nFirst normal equation:\n\n$$\n\\sum_{i=1}^{n}y_i=n\\alpha+\\beta\\sum_{i=1}^{n}x_i\n$$\n\nSecond normal equation:\n\n$$\n\\sum_{i=1}^{n}x_iy_i=\\alpha\\sum_{i=1}^{n}x_i+\\beta\\sum_{i=1}^{n}x_i^2\n$$\n\nMean relationship:\n\n$$\n\\bar{y}=\\alpha+\\beta\\bar{x}\n$$\n\nIntercept:\n\n$$\n\\hat{\\alpha}=\\bar{y}-\\hat{\\beta}\\bar{x}\n$$\n\nRegression coefficient of $y$ on $x$:\n\n$$\n\\hat{\\beta}_{yx}=\n\\frac{\\sum x_iy_i-\\frac{\\sum x_i\\sum y_i}{n}}\n{\\sum x_i^2-\\frac{(\\sum x_i)^2}{n}}\n$$\n\nRegression coefficient using covariance and variance:\n\n$$\n\\hat{\\beta}_{yx}=\\frac{cov(x,y)}{var(x)}\n$$\n\nRegression equation of $y$ on $x$:\n\n$$\n\\hat{y}=\\hat{\\alpha}+\\hat{\\beta}_{yx}x\n$$\n\nRegression coefficient of $x$ on $y$:\n\n$$\n\\hat{\\beta}_{xy}=\\frac{cov(x,y)}{var(y)}\n$$\n\nRegression equation of $x$ on $y$:\n\n$$\n\\hat{x}=\\hat{\\alpha}_1+\\hat{\\beta}_{xy}y\n$$\n\nRelationship between regression coefficients and correlation:\n\n$$\n\\beta_{yx}\\beta_{xy}=r_{xy}^2\n$$\n\nCorrelation coefficient from regression coefficients:\n\n$$\n|r_{xy}|=\\sqrt{\\beta_{yx}\\beta_{xy}}\n$$\n\nIf both regression coefficients are positive:\n\n$$\nr_{xy}=\\sqrt{\\beta_{yx}\\beta_{xy}}\n$$\n\nIf both regression coefficients are negative:\n\n$$\nr_{xy}=-\\sqrt{\\beta_{yx}\\beta_{xy}}\n$$\n\nRegression coefficient in terms of correlation and standard deviations:\n\n$$\n\\beta_{yx}=r\\frac{\\sigma_y}{\\sigma_x}\n$$\n\n$$\n\\beta_{xy}=r\\frac{\\sigma_x}{\\sigma_y}\n$$\n\nChange of origin and scale:\n\n$$\nX=\\frac{x-a}{h},\\qquad Y=\\frac{y-b}{k}\n$$\n\nTransformed regression coefficients:\n\n$$\n\\beta_{YX}=\\frac{h}{k}\\beta_{yx}\n$$\n\n$$\n\\beta_{XY}=\\frac{k}{h}\\beta_{xy}\n$$\n\nMultiple linear regression model:\n\n$$\ny=\\alpha+\\beta_1x_1+\\beta_2x_2+\\cdots+\\beta_kx_k+e\n$$",
+          "start_line": 786,
+          "end_line": 929
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The variable predicted by a regression model is called the __________ variable.\n\n2. A regression model with one predictor and a straight-line mean response is called __________ linear regression.\n\n3. The coefficient representing change in mean response per unit increase in the predictor is the __________.\n\n4. The predicted response when the predictor is zero is the __________.\n\n5. The difference between an observed response and its fitted value is called a __________.\n\n6. The method that minimizes the sum of squared residuals is called __________ squares.\n\n7. An ordinary least-squares line with an intercept passes through the point __________.\n\n8. Constant error variance is called __________.\n\n9. Correlation between successive errors is called __________.\n\n10. Strong linear dependence among predictors is called __________.\n\n11. The product of the two simple regression coefficients equals the __________ of Pearson's correlation coefficient.\n\n12. The two simple regression coefficients have the same __________.\n\n13. Regression coefficients are unaffected by a change of origin but are affected by a change of __________.\n\n14. When $r=\\pm1$, the two regression lines __________.\n\n15. Regression alone does not establish __________.",
+          "start_line": 612,
+          "end_line": 645
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Dependent `2.` Simple `3.` Slope `4.` Intercept `5.` Residual `6.` Least `7.` $(\\bar{x},\\bar{y})$ `8.` Homoscedasticity `9.` Autocorrelation `10.` Multicollinearity `11.` Square `12.` Sign `13.` Scale `14.` Coincide `15.` Causation\n:::",
+          "start_line": 967,
+          "end_line": 973
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "file": "probability.qmd",
+      "sha256": "561b0eb16d1b5b6fa6ee3ac021f5f7efee654b81e3cd5287a7097b4c090951aa",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Random experiment → experiment whose outcome cannot be predicted with certainty.\n- Sample space → set of all possible outcomes.\n- Sample point → one possible outcome.\n- Random variable → numerical value assigned to outcomes.\n- Discrete random variable → takes countable values.\n- Continuous random variable → takes values within a range.\n- Probability → measure of the likelihood of an event.\n- Probability always lies between $0$ and $1$.\n- Impossible event → probability $0$.\n- Certain event → probability $1$.\n- Event → one or more outcomes of a random experiment.\n- Independent events → occurrence of one does not influence the other.\n- Dependent events → occurrence of one influences the other.\n- Mutually exclusive events → cannot occur together.\n- Exhaustive events → together cover the entire sample space.\n- Equally likely events → have equal probability.\n- Classical probability → based on exhaustive, mutually exclusive, and equally likely outcomes.\n- Statistical probability → based on repeated observations.\n- Axiomatic probability → based on the three axioms of probability.\n- A.N. Kolmogorov → associated with the axiomatic approach.\n- Complement → event not occurring.\n- $A\\cup B$ → $A$ or $B$ or both.\n- $A\\cap B$ → both $A$ and $B$.\n- $A^c$ → complement of $A$.\n- Conditional probability → probability of an event given that another event has occurred.\n- Multiplication law → used for probability of joint occurrence.\n- With replacement and independent random selection → successive draws have the same probabilities and are independent.\n- Without replacement → successive selections from a finite set are generally dependent.\n- Combination → selection without considering order.\n- Bayes’ theorem → obtains the probability of a cause or hypothesis given observed evidence.\n- Prior probability → probability before considering the evidence.\n- Posterior probability → updated probability after considering the evidence.\n- Gambler’s fallacy → belief that previous independent outcomes influence future outcomes.\n- In independent trials, past outcomes do not change the probability of the next outcome.",
+          "start_line": 720,
+          "end_line": 756
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Probability of an event under equally likely outcomes:\n\n$$\nP(A)=\\frac{\\text{Number of favourable outcomes}}{\\text{Total number of possible outcomes}}\n$$\n\nClassical probability:\n\n$$\nP(E)=\\frac{m}{n}\n$$\n\nwhere $m$ is the number of favourable outcomes and $n$ is the total number of exhaustive, mutually exclusive, and equally likely outcomes.\n\nStatistical probability:\n\n$$\nP(E)=\\lim_{n\\rightarrow\\infty}\\frac{m}{n}\n$$\n\nProbability range:\n\n$$\n0\\leq P(E)\\leq1\n$$\n\nProbability of sample space:\n\n$$\nP(S)=1\n$$\n\nComplement rule:\n\n$$\nP(A^c)=1-P(A)\n$$\n\nProbability of an event and its complement:\n\n$$\nP(A)+P(A^c)=1\n$$\n\nAdditive law of probability:\n\n$$\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B)\n$$\n\nAdditive law for mutually exclusive events:\n\n$$\nP(A\\cup B)=P(A)+P(B)\n$$\n\nConditional probability:\n\n$$\nP(A\\mid B)=\\frac{P(A\\cap B)}{P(B)},\\quad P(B)>0\n$$\n\nMultiplication law:\n\n$$\nP(A\\cap B)=P(A)P(B\\mid A)\n$$\n\nMultiplication law for independent events:\n\n$$\nP(A\\cap B)=P(A)P(B)\n$$\n\nCombination:\n\n$$\n{}^nC_r=\\frac{n!}{r!(n-r)!}\n$$\n\nBayes’ theorem for two events:\n\n$$\nP(A\\mid B)=\\frac{P(B\\mid A)P(A)}{P(B)},\\quad P(B)\\neq0\n$$\n\nBayes’ theorem for a partition of the sample space:\n\n$$\nP(E_i\\mid A)=\n\\frac{P(E_i)P(A\\mid E_i)}\n{\\sum_{k=1}^{n}P(E_k)P(A\\mid E_k)}\n$$",
+          "start_line": 624,
+          "end_line": 719
+        },
+        {
+          "heading": "exm-prob4",
+          "markdown": "A fair coin has been tossed 99 times, with heads on every toss. Assuming independent tosses, what is the probability of heads on the $100^{th}$ toss?\n\n**Solution**\n\nAnswer is $\\frac{1}{2}$ as each toss is independent of previous toss.",
+          "start_line": 143,
+          "end_line": 148
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The set of all possible outcomes of a random experiment is called the __________ space.\n\n2. A subset of the sample space is called an __________.\n\n3. A real-valued function of the outcomes of a random experiment is called a random __________.\n\n4. Events that cannot occur together are called mutually __________ events.\n\n5. Events whose union is the sample space are called __________ events.\n\n6. Events satisfying $P(A\\cap B)=P(A)P(B)$ are called __________ events.\n\n7. The probability of the sample space is __________.\n\n8. The probability of the empty event is __________.\n\n9. The event containing all outcomes outside an event is its __________.\n\n10. The probability of an event conditional on another event is called __________ probability.\n\n11. For mutually exclusive events, the probability of their union is the __________ of their probabilities.\n\n12. Selecting objects without regard to order is called a __________.\n\n13. In Bayes' theorem, the probability before incorporating new evidence is called the __________ probability.\n\n14. In Bayes' theorem, the probability after incorporating new evidence is called the __________ probability.",
+          "start_line": 488,
+          "end_line": 519
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Sample `2.` Event `3.` Variable `4.` Exclusive `5.` Exhaustive `6.` Independent `7.` One `8.` Zero `9.` Complement `10.` Conditional `11.` Sum `12.` Combination `13.` Prior `14.` Posterior\n:::",
+          "start_line": 757,
+          "end_line": 763
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "file": "probabilitydist.qmd",
+      "sha256": "176849fc172655a05f488506c29438e6e29ab9659aa850e3e440db7c24cb3898",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Probability distribution → gives possible values of a random variable and their probabilities.\n- Discrete probability distribution → random variable takes countable values.\n- Continuous probability distribution → random variable takes continuous values.\n- Expected value → long-run average value of a random variable.\n- Probability mass function → used for discrete random variables.\n- Probability density function → used for continuous random variables.\n- For a p.m.f., $p(x)\\geq0$.\n- For a p.m.f., $\\sum p(x)=1$.\n- Bernoulli distribution → exactly two possible outcomes, success and failure.\n- Bernoulli parameter → $p$, the probability of success.\n- Bernoulli mean → $p$.\n- Bernoulli variance → $p(1-p)$.\n- Binomial distribution → repeated Bernoulli trials.\n- Binomial requirements → fixed number of trials, independent trials, and constant probability of success.\n- Binomial parameters → $n$ and $p$.\n- Binomial failure probability → $q=1-p$.\n- Binomial mean → $np$.\n- Binomial variance → $npq$.\n- In fitting a binomial distribution, $p=\\frac{\\bar{x}}{n}$.\n- Expected frequency → $N\\times p(x)$.\n- Poisson distribution → models counts under appropriate rate and independence assumptions; it also approximates rare binomial successes.\n- Poisson parameter → $\\lambda$.\n- Poisson mean → $\\lambda$.\n- Poisson variance → $\\lambda$.\n- In fitting a Poisson distribution, $\\lambda=\\bar{x}$.\n- Normal distribution → continuous, bell-shaped and symmetric.\n- Normal distribution parameters → $\\mu$ and $\\sigma$.\n- Mean = median = mode in a normal distribution.\n- Normal distribution is symmetric about its mean.\n- Total area under the normal curve → 1.\n- Standard normal distribution → mean 0 and standard deviation 1.\n- Z-score → number of standard deviations an observation is from the mean.\n- Standardization → subtract the mean and divide by the standard deviation.\n- About 68.26% of observations lie within $\\mu\\pm\\sigma$.\n- About 95% of observations lie within $\\mu\\pm1.96\\sigma$.\n- About 95.44% of observations lie within $\\mu\\pm2\\sigma$.\n- About 99% of observations lie within $\\mu\\pm2.58\\sigma$.\n- About 99.73% of observations lie within $\\mu\\pm3\\sigma$.\n- Normal distribution has skewness 0.\n- Normal distribution has kurtosis 3.\n- All odd-order central moments are zero for the normal distribution.\n- The total area under the normal curve represents total probability.\n- The tails of the normal distribution are asymptotic to the horizontal axis.\n- A linear combination of independent normal variables is also normally distributed.\n- The Central Limit Theorem is closely associated with the normal distribution.\n- Z-table gives cumulative probability to the left of a specified Z-score.\n- Probability above a Z-score is obtained by subtracting the cumulative probability from 1.\n- Probability between two Z-scores is obtained by subtracting the smaller cumulative probability from the larger one.",
+          "start_line": 955,
+          "end_line": 1005
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Probability mass function for equally likely elementary outcomes:\n\n$$\nP(X=x)=\\frac{\\text{Number of outcomes giving }X=x}{\\text{Total number of elementary outcomes}}\n$$\n\nExpected value of a discrete random variable:\n\n$$\nE(X)=\\sum_x xp(x)\n$$\n\nExpected value of a continuous random variable:\n\n$$\nE(X)=\\int_{-\\infty}^{\\infty}xf(x)\\,dx\n$$\n\nProbability mass function:\n\n$$\np(x)=P(X=x)\n$$\n\nBernoulli probability mass function:\n\n$$\np(x)=p^x(1-p)^{1-x},\\quad x=0,1\n$$\n\nBernoulli mean:\n\n$$\nE(X)=p\n$$\n\nBernoulli variance:\n\n$$\nVar(X)=p(1-p)\n$$\n\nBinomial probability mass function:\n\n$$\np(x)=\\binom{n}{x}p^xq^{n-x},\\quad x=0,1,2,\\ldots,n\n$$\n\nCombination form of binomial probability:\n\n$$\np(x)=\\frac{n!}{x!(n-x)!}p^xq^{n-x}\n$$\n\nProbability of failure in binomial distribution:\n\n$$\nq=1-p\n$$\n\nBinomial mean:\n\n$$\nE(X)=np\n$$\n\nBinomial variance:\n\n$$\nVar(X)=npq\n$$\n\nEstimation of binomial probability of success:\n\n$$\np=\\frac{\\bar{x}}{n}\n$$\n\nExpected frequency in fitting a binomial distribution:\n\n$$\n\\text{Expected frequency}=N\\times p(x)\n$$\n\nPoisson probability mass function:\n\n$$\np(x)=\\frac{e^{-\\lambda}\\lambda^x}{x!},\\quad x=0,1,2,\\ldots\n$$\n\nPoisson mean:\n\n$$\nE(X)=\\lambda\n$$\n\nPoisson variance:\n\n$$\nVar(X)=\\lambda\n$$\n\nEstimation of Poisson parameter:\n\n$$\n\\lambda=\\bar{x}\n$$\n\nExpected frequency in fitting a Poisson distribution:\n\n$$\n\\text{Expected frequency}=N\\times p(x)\n$$\n\nNormal probability density function:\n\n$$\nf(x)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}},\\quad -\\infty<x<+\\infty\n$$\n\nStandard normal transformation:\n\n$$\nz=\\frac{X-\\mu}{\\sigma}\n$$\n\nNormal distribution notation:\n\n$$\nX\\sim N(\\mu,\\sigma^2)\n$$\n\nStandard normal distribution notation:\n\n$$\nX\\sim N(0,1)\n$$\n\nQuartile deviation for a normal distribution:\n\n$$\nQ.D.\\approx0.67449\\sigma\n$$\n\nMean deviation for a normal distribution:\n\n$$\nM.D.=\\sigma\\sqrt{2/\\pi}\\approx0.79788\\sigma\n$$",
+          "start_line": 803,
+          "end_line": 954
+        },
+        {
+          "heading": "exm-zscore2",
+          "markdown": "What is the z-score of a value of 27, given a set mean of 24, and a standard deviation of 2?\n\n**Solution**\n\nTo find the z-score we need to divide the difference between the value, 27, and the mean, 24, by the standard deviation of the set, 2. $z = \\frac{27 - 24}{2} = \\frac{3}{2} = 1.5$. This indicates that 27 is +1.5 standard deviations above the mean.",
+          "start_line": 590,
+          "end_line": 595
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The probability function of a discrete random variable is called a probability __________ function.\n\n2. The sum of all probabilities in a discrete distribution is __________.\n\n3. The long-run average value of a random variable is its __________ value.\n\n4. A single trial with outcomes coded 0 and 1 follows a __________ distribution.\n\n5. The number of successes in a fixed number of independent Bernoulli trials with constant success probability follows a __________ distribution.\n\n6. The mean of a binomial distribution with parameters $n$ and $p$ is __________.\n\n7. The variance of a binomial distribution is __________.\n\n8. In a Poisson distribution, the mean is equal to the __________.\n\n9. A Poisson random variable takes non-negative __________ values.\n\n10. A continuous distribution is described by a probability __________ function.\n\n11. For a continuous random variable, probability over an interval is the __________ under its density curve.\n\n12. The total area under a probability density curve is __________.\n\n13. The normal distribution is symmetric about its __________.\n\n14. The mean of the standard normal distribution is __________.\n\n15. The variance of the standard normal distribution is __________.",
+          "start_line": 643,
+          "end_line": 676
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Mass `2.` One `3.` Expected `4.` Bernoulli `5.` Binomial `6.` $np$ `7.` $np(1-p)$ `8.` Variance `9.` Integer `10.` Density `11.` Area `12.` One `13.` Mean `14.` Zero `15.` One\n:::",
+          "start_line": 1006,
+          "end_line": 1012
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "file": "sampleSurvey.qmd",
+      "sha256": "cca364bbf1ead1c016a922ebfe2daef2a3e689a027afa307c17ef200e4803990",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Sample survey → systematic collection of information from a sample.\n- Population → complete collection of units under study.\n- Population size → $N$.\n- Sample → subset of the population selected for study.\n- Sample size → $n$.\n- Sampling fraction → $\\frac{n}{N}$.\n- Sampling unit → basic unit selected from the population.\n- Census → complete enumeration of every population unit.\n- Sampling design → procedure used to select the sample.\n- Sampling frame → complete list or source identifying the sampling units.\n- Parameter → numerical characteristic of the population.\n- Statistic → numerical measure calculated from sample data.\n- Estimator → statistic used to estimate a population parameter.\n- Estimate → particular value obtained from an estimator.\n- Unbiased estimator → estimator whose expected value equals the true parameter.\n- Sampling error → difference caused by observing a sample rather than the entire population.\n- Sampling error is absent in a census.\n- Increasing sample size generally decreases standard error for a fixed design and population.\n- Non-sampling error → errors other than sampling error.\n- Census data can still contain non-sampling errors.\n- Confidence interval → interval estimate of a population parameter.\n- Confidence level → $100(1-\\alpha)\\%$.\n- $\\alpha=0.05$ → 95% confidence level.\n- $\\alpha=0.01$ → 99% confidence level.\n- A 95% confidence interval describes the long-run performance of the interval construction method.\n- Probability sampling → selection based on probability laws.\n- Simple random sampling → equal inclusion probabilities; successive draws are independent only with replacement.\n- SRSWR → selected unit is returned before the next selection.\n- SRSWOR → selected unit is not returned.\n- SRS requires a complete sampling frame.\n- Stratified sampling → population divided into non-overlapping strata and samples selected independently from each stratum.\n- Stratification generally improves precision when strata are internally homogeneous.\n- Systematic sampling → select a random start and then every $k$th unit.\n- Systematic sampling interval → $k=\\frac{N}{n}$.\n- Cluster sampling → select clusters randomly and enumerate all units within selected clusters.\n- Cluster sampling is useful when individual-unit frames are unavailable and the population is geographically dispersed.\n- Probability sampling permits probability-based inference.\n- Non-probability sampling → selection based on convenience, judgement, quota, or other non-random criteria.\n- Convenience sampling → select easily accessible units.\n- Consecutive sampling → collect every accessible eligible unit sequentially until the required number or study period is reached.\n- Quota sampling → fill predetermined subgroup quotas using non-random selection.\n- Purposive sampling → researcher deliberately selects informative or suitable units.\n- Snowball sampling → existing participants refer additional participants.\n- Non-probability sampling can be useful when a sampling frame is unavailable or the population is difficult to reach.\n- Non-probability sampling generally does not allow sampling error to be measured using probability theory.\n- Kiaer → Representative Method, 1895.\n- Bowley → introduced random sampling and probability-based inference into survey work.\n- P.C. Mahalanobis → pioneered large-scale sample surveys in India.\n- Good survey design, representative sampling, trained data collectors, and careful execution are essential for reliable results.",
+          "start_line": 514,
+          "end_line": 565
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Sampling fraction:\n\n$$f=\\frac{n}{N}$$ {#eq-sampfrac}\n\nSystematic sampling interval:\n\n$$k=\\frac{N}{n}$$ {#eq-sampinterval}\n\nConfidence level:\n\n$$\\text{Confidence level}=100(1-\\alpha)\\%$$ {#eq-conflevel}\n\nExpected value of an estimator:\n\n$$\nE(t)\n$$\n\nUnbiased estimator:\n\n$$E(t)=\\theta$$ {#eq-unbiased}\n\nExpected value of the sample mean:\n\n$$\nE(\\bar{X})=\\mu\n$$",
+          "start_line": 484,
+          "end_line": 513
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. A numerical constant describing a population is termed a __________.\n\n2. A numerical measure calculated from sample observations is termed a __________.\n\n3. Complete enumeration of a population is called a __________.\n\n4. The list of sampling units used for sample selection is called the sampling __________.\n\n5. A statistic used to estimate a population parameter is called an __________.\n\n6. An estimator whose expected value equals the population parameter is said to be __________.\n\n7. The ratio of sample size to population size is called the sampling __________.\n\n8. In stratified random sampling, the population is divided into non-overlapping groups called __________.\n\n9. In one-stage cluster sampling, all units in each selected cluster are __________.\n\n10. Sampling with a random start followed by selection at regular intervals is called __________ sampling.\n\n11. Errors due to non-response are classified as __________ errors.\n\n12. The error absent in a complete census is __________ error.",
+          "start_line": 308,
+          "end_line": 335
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Parameter `2.` Statistic `3.` Census `4.` Frame `5.` Estimator `6.` Unbiased `7.` Fraction `8.` Strata `9.` Enumerated `10.` Systematic `11.` Non-sampling `12.` Sampling\n:::",
+          "start_line": 566,
+          "end_line": 572
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "file": "hypothesisTest.qmd",
+      "sha256": "659aebe3323ec5fd071dc60de6bec7049f3ef6f85d50b6818f19a97692fe9d17",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Inferential statistics → uses sample data to draw conclusions about a population.\n- Hypothesis → tentative and testable statement.\n- Statistical hypothesis → testable statement about a population parameter.\n- $H_0$ → null hypothesis; generally represents no effect, no difference, or no relationship.\n- $H_1$ or $H_a$ → alternative hypothesis; represents an effect, difference, or relationship.\n- Falsification principle → a scientific hypothesis should be capable of being tested and potentially falsified.\n- Karl Popper → associated with the falsification principle.\n- Always use \"fail to reject $H_0$\"; do not say \"accept $H_0$\".\n- Test statistic → numerical function of sample observations used to make a statistical decision.\n- Common test statistics → $Z$, $t$, $\\chi^2$, and $F$.\n- Type I error → reject $H_0$ when $H_0$ is true.\n- Type II error → fail to reject $H_0$ when $H_0$ is false.\n- $\\alpha$ → chosen upper bound on the Type I error probability.\n- $\\beta$ → probability of Type II error.\n- Power → probability of correctly rejecting a false $H_0$.\n- Power → $1-\\beta$.\n- Larger sample sizes generally increase power.\n- Sampling distribution → probability distribution of possible values of a test statistic under repeated sampling, assuming $H_0$ is true.\n- Rejection region → values of the test statistic for which $H_0$ is rejected.\n- Critical region → another name for rejection region.\n- Acceptance region → complementary region where $H_0$ is not rejected.\n- Critical value → value separating the rejection and non-rejection regions.\n- Under $H_0$, the rejection probability is controlled at $\\alpha$; a discrete test can be conservative.\n- Under $H_0$, the non-rejection probability is at least $1-\\alpha$ for a level-$\\alpha$ test.\n- $H_1:\\mu<\\mu_0$ → left-tailed test.\n- $H_1:\\mu>\\mu_0$ → right-tailed test.\n- $H_1:\\mu\\neq\\mu_0$ → two-tailed test.\n- An equal-tail two-sided test allocates $\\alpha/2$ to each tail; a discrete test may not attain these probabilities exactly.\n- Right-tailed test → reject $H_0$ when the calculated statistic is greater than the critical value.\n- Left-tailed test → reject $H_0$ when the calculated statistic is less than the critical value.\n- Two-tailed test → reject $H_0$ when the statistic falls below the lower critical value or above the upper critical value.\n- p-value → probability of obtaining a test statistic as extreme as or more extreme than the observed value, assuming $H_0$ is true.\n- Small p-value → strong evidence against $H_0$.\n- Large p-value → insufficient evidence to reject $H_0$.\n- p-value $\\leq\\alpha$ → reject $H_0$.\n- p-value $>\\alpha$ → do not reject $H_0$.\n- Failing to reject $H_0$ does not prove that $H_0$ is true.\n- The alternative hypothesis determines whether the test is one-tailed or two-tailed.\n- The level of significance is selected before conducting the test.\n- Common significance levels in the chapter → $\\alpha=0.05$ and $\\alpha=0.01$.\n- The eight basic steps are: state $H_0$, state $H_1$, set $\\alpha$, collect data, calculate the test statistic, identify the critical value or region, compare, and make the decision.\n- A statistical decision can be incorrect because it is based on sample data.\n- Type I and Type II errors have different consequences depending on the context.\n- Fisher's tea-tasting experiment is a historical illustration of hypothesis testing and significance testing.",
+          "start_line": 658,
+          "end_line": 704
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Level of significance:\n\n$$\nP(\\text{Reject }H_0\\mid H_0\\text{ is true})\\leq\\alpha\n$$\n\nProbability of Type II error:\n\n$$\n\\beta=P(\\text{Fail to reject }H_0\\mid H_0\\text{ is false})\n$$\n\nPower of a test:\n\n$$\n\\text{Power}=1-\\beta\n$$\n\nSize of rejection region:\n\n$$\nP_{H_0}(\\text{Rejection region})\\leq\\alpha\n$$\n\nSize of acceptance region:\n\n$$\nP_{H_0}(\\text{Non-rejection region})\\geq1-\\alpha\n$$\n\nBinomial test statistic used in the worked coin example:\n\n$$\n\\hat p=\\frac{x}{n}\n$$\n\nBinomial probability:\n\n$$\nP(X=x)=\\binom{n}{x}p^xq^{n-x}\n$$\n\nEquivalent binomial probability formula:\n\n$$\nP(X=x)=\\frac{n!}{(n-x)!x!}p^xq^{n-x}\n$$\n\nDecision rule based on p-value:\n\n$$\n\\text{Reject }H_0\\quad\\text{if}\\quad p\\text{-value}\\leq\\alpha\n$$\n\nNon-rejection rule based on p-value:\n\n$$\n\\text{Do not reject }H_0\\quad\\text{if}\\quad p\\text{-value}>\\alpha\n$$",
+          "start_line": 596,
+          "end_line": 657
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. A testable statement about a population distribution or its parameters is called a statistical __________.\n\n2. The hypothesis tested for possible rejection is called the __________ hypothesis.\n\n3. The hypothesis specifying a departure from the null hypothesis is called the __________ hypothesis.\n\n4. Rejecting a true null hypothesis is a Type __________ error.\n\n5. Failing to reject a false null hypothesis is a Type __________ error.\n\n6. The probability of a Type II error is denoted by __________.\n\n7. The probability of rejecting a false null hypothesis is called the __________ of a test.\n\n8. The power of a test is equal to __________.\n\n9. The set of test-statistic values leading to rejection is called the __________ region.\n\n10. A value separating rejection and non-rejection regions is called a __________ value.\n\n11. An alternative hypothesis specifying departures in either direction requires a __________-tailed test.\n\n12. An alternative hypothesis specifying departures in one direction requires a __________-tailed test.\n\n13. The probability, under the null model, of a result at least as extreme as the observed result is called the __________.\n\n14. When the p-value exceeds the chosen significance level, we __________ the null hypothesis.",
+          "start_line": 418,
+          "end_line": 449
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Hypothesis `2.` Null `3.` Alternative `4.` I `5.` II `6.` $\\beta$ `7.` Power `8.` $1-\\beta$ `9.` Critical `10.` Critical `11.` Two `12.` One `13.` p-value `14.` Fail to reject\n:::",
+          "start_line": 705,
+          "end_line": 711
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "file": "largeSampletest.qmd",
+      "sha256": "e9dbc4dacf4e97964f01fec1d8c8f683c65d75b84b11e7c2f15ea3acfc43237a",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Large sample → generally $n\\geq30$.\n- Large-sample tests are based on the Central Limit Theorem.\n- Central Limit Theorem → sampling distribution of $\\bar{X}$ approaches a normal distribution as $n$ increases.\n- The observations should be independent.\n- The population should have finite variance.\n- Large-sample Z-test → based on $N(0,1)$.\n- Tests in this chapter → single proportion, equality of two proportions, single mean, equality of two means, and an approximate comparison of two standard deviations under the stated normal-population assumptions.\n- Single proportion → compare $P$ with a specified value $P_0$.\n- For a single proportion, $H_0:P=P_0$.\n- For a single proportion, the alternative may be $P<P_0$, $P>P_0$, or $P\\neq P_0$.\n- Single-proportion standard error uses $P_0$ and $Q_0$ under the null hypothesis.\n- Two proportions → compare $P_1$ and $P_2$.\n- For two proportions, $H_0:P_1=P_2$.\n- The two-proportion test uses the pooled proportion $\\widehat{P}$.\n- Single mean → compare $\\mu$ with $\\mu_0$.\n- When $\\sigma$ is known, use $\\sigma/\\sqrt{n}$.\n- When $\\sigma$ is unknown, use $s/\\sqrt{n}$.\n- Equality of two means → compare $\\mu_1$ and $\\mu_2$.\n- Equal population standard deviations → use the common $\\sigma$.\n- Equal but unknown standard deviations → use the pooled estimate.\n- Unequal population standard deviations → use separate variance terms.\n- Two-tailed test → reject if $|Z|>Z_{\\alpha/2}$.\n- Right-tailed test → reject if $Z>Z_\\alpha$.\n- Left-tailed test → reject if $Z<-Z_\\alpha$.\n- At $\\alpha=0.05$, two-tailed critical value → $1.960$.\n- At $\\alpha=0.01$, two-tailed critical value → $2.576$.\n- At $\\alpha=0.05$, right-tailed critical value → $1.645$.\n- At $\\alpha=0.05$, left-tailed critical value → $-1.645$.\n- The null hypothesis is always stated in terms of the population parameter.\n- The test statistic is calculated from sample statistics.\n- If the calculated statistic falls in the critical region, reject $H_0$.\n- Otherwise, do not reject $H_0$.\n- For a two-tailed test, $\\alpha$ is divided equally between the two tails.\n- The sign of $Z$ is important in one-tailed tests; $|Z|$ is used for the two-tailed decision.\n- A large absolute value of $Z$ indicates greater departure from the null hypothesis.",
+          "start_line": 760,
+          "end_line": 797
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Central Limit Theorem:\n\n$$\n\\frac{\\bar{X}-\\mu}{\\sigma/\\sqrt{n}}\\xrightarrow{d}N(0,1)\n$$\n\nSingle population proportion:\n\n$$\nZ=\\frac{p-P_0}{\\sqrt{P_0Q_0/n}}\n$$\n\nComplementary proportion:\n\n$$\nQ_0=1-P_0\n$$\n\nPooled proportion for two proportions:\n\n$$\n\\widehat{P}=\\frac{n_1p_1+n_2p_2}{n_1+n_2}\n$$\n\nPooled complementary proportion:\n\n$$\n\\widehat{Q}=1-\\widehat{P}\n$$\n\nEquality of two proportions:\n\n$$\nZ=\\frac{p_1-p_2}{\\sqrt{\\widehat{P}\\widehat{Q}\\left(\\frac{1}{n_1}+\\frac{1}{n_2}\\right)}}\n$$\n\nSingle population mean when $\\sigma$ is known:\n\n$$\nZ=\\frac{\\bar{x}-\\mu_0}{\\sigma/\\sqrt{n}}\n$$\n\nSingle population mean when $\\sigma$ is unknown:\n\n$$\nZ=\\frac{\\bar{x}-\\mu_0}{s/\\sqrt{n}}\n$$\n\nEquality of two means when population standard deviations are equal:\n\n$$\nZ=\\frac{\\bar{x}_1-\\bar{x}_2}{\\sigma\\sqrt{\\frac{1}{n_1}+\\frac{1}{n_2}}}\n$$\n\nPooled estimate of common standard deviation:\n\n$$\n\\sigma=\\sqrt{\\frac{n_1s_1^2+n_2s_2^2}{n_1+n_2}}\n$$\n\nEquality of two means when population standard deviations are unequal:\n\n$$\nZ=\\frac{\\bar{x}_1-\\bar{x}_2}{\\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}}\n$$\n\nDifference of two standard deviations (population standard deviations unknown):\n\n$$\nZ=\\frac{s_1-s_2}{\\sqrt{\\frac{s_1^2}{2n_1}+\\frac{s_2^2}{2n_2}}}\n$$",
+          "start_line": 664,
+          "end_line": 737
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The theorem supporting the normal approximation to the sample mean under suitable conditions is the __________ Limit Theorem.\n\n2. The standard deviation of a sampling distribution is called the standard __________.\n\n3. The reference distribution used in a Z-test is the standard __________ distribution.\n\n4. For independent observations with population standard deviation $\\sigma$, the standard error of the sample mean is __________.\n\n5. In the one-proportion Z-test, the null standard error uses the __________ proportion.\n\n6. In a test of equality of two proportions, the common proportion estimated by combining both samples is called the __________ proportion.\n\n7. For two independent sample means, the variance of their difference equals the __________ of their variances.\n\n8. For a two-tailed Z-test at the 5% level, the positive critical value is approximately __________.\n\n9. For a right-tailed Z-test at the 5% level, the critical value is approximately __________.\n\n10. For a left-tailed Z-test at the 5% level, the critical value is approximately __________.\n\n11. Increasing sample size generally __________ the standard error of the mean.\n\n12. The normal approximation for a sample proportion requires sufficiently large expected counts of successes and __________.",
+          "start_line": 528,
+          "end_line": 555
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Central `2.` Error `3.` Normal `4.` $\\sigma/\\sqrt{n}$ `5.` Hypothesised `6.` Pooled `7.` Sum `8.` 1.96 `9.` 1.645 `10.` $-1.645$ `11.` Decreases `12.` Failures\n:::",
+          "start_line": 798,
+          "end_line": 804
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "file": "smallsampleTest.qmd",
+      "sha256": "0acc3d12480e56d93cbbcc4db3404cb115c6f202fecf898ceaecec24cba54bc0",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Small sample → often described as $n<30$, but this is not a universal boundary.\n- Small sample theory → study of sampling distributions for small samples.\n- Important small-sample distributions → $t$, $\\chi^2$, and $F$.\n- Student's $t$-test → used mainly for small samples when $\\sigma$ is unknown.\n- Exact one-sample $t$-test → independent random observations from a normal population with unknown standard deviation.\n- One-sample $t$-test → tests a population mean against a specified value.\n- One-sample $t$ degrees of freedom → $n-1$.\n- Two-sample $t$-test → compares two population means.\n- Equal variances → use pooled variance.\n- Equal-variance two-sample $t$ degrees of freedom → $n_1+n_2-2$.\n- Unequal variances → use Welch's $t$-test.\n- Welch's $t$-test uses separate sample variance terms.\n- Welch's degrees of freedom are generally not an integer and are calculated using the Welch-Satterthwaite formula.\n- Paired $t$-test → compares two related observations.\n- Examples of paired data → before and after measurements on the same experimental unit.\n- Paired $t$-test is performed on the differences within pairs.\n- Paired $t$ degrees of freedom → $n-1$.\n- Correlation test → tests whether the population correlation coefficient is zero.\n- For the correlation test, $H_0:\\rho=0$.\n- Correlation test degrees of freedom → $n-2$.\n- Chi-square tests → based on the chi-square distribution.\n- Chi-square tests for categorical counts differ from the parametric variance test for a normal population.\n- Important chi-square tests → goodness of fit, independence of attributes, and population variance.\n- Goodness-of-fit test → compares observed and expected frequencies.\n- Goodness-of-fit null hypothesis → category probabilities follow the specified distribution.\n- Goodness-of-fit test is right-tailed.\n- Goodness-of-fit degrees of freedom → $n-1$ when no parameter is estimated.\n- Independence test → determines whether two attributes are independent.\n- Contingency table → arrangement of frequencies for combinations of categorical attributes.\n- Expected frequency → row total × column total ÷ grand total.\n- $r\\times s$ contingency table degrees of freedom → $(r-1)(s-1)$.\n- 2×2 contingency table degrees of freedom → 1.\n- Yates' correction → optional continuity adjustment for a 2×2 chi-square approximation; assess expected frequencies and consider an exact test for sparse data.\n- Population variance test → tests a specified value of $\\sigma^2$.\n- Chi-square variance statistic → $\\frac{(n-1)s^2}{\\sigma_0^2}$.\n- $F$-test → tests equality of two population variances.\n- Placing the larger sample variance first is a convenience for a two-sided F-test with upper-tail area $\\alpha/2$.\n- With the larger variance in the numerator, $F\\geq1$; with fixed labels, $F$ may be less than 1.\n- $F$ degrees of freedom → $n_1-1$ and $n_2-1$.\n- In hypothesis testing, compare the calculated statistic with the appropriate table value.\n- For a two-tailed $t$-test → reject $H_0$ when $|t|$ exceeds the critical value.\n- For a right-tailed $t$-test → reject $H_0$ when $t$ exceeds the critical value.\n- For a left-tailed $t$-test → reject $H_0$ when $t$ is less than the negative critical value.\n- Goodness-of-fit and independence tests use the upper chi-square tail; a variance test may be one-sided or two-sided.\n- For a two-sided F-test → use both $\\alpha/2$ tails, or the equivalent larger-variance ratio with an upper $\\alpha/2$ cutoff.\n- William Sealy Gosset developed the $t$ distribution and published under the name \"Student\".\n- Student's $t$ distribution has heavier tails than the normal distribution.",
+          "start_line": 1182,
+          "end_line": 1231
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Sample variance:\n\n$$\ns^2=\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n$$\n\nOne-sample $t$ statistic:\n\n$$\nt=\\frac{\\bar{x}-\\mu_0}{s/\\sqrt{n}}\n$$\n\nDegrees of freedom for one-sample $t$-test:\n\n$$\ndf=n-1\n$$\n\nPooled variance:\n\n$$\ns^2=\\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}\n$$\n\nTwo-sample $t$ statistic for equal variances:\n\n$$\nt=\\frac{\\bar{x}_1-\\bar{x}_2}{s\\sqrt{\\frac{1}{n_1}+\\frac{1}{n_2}}}\n$$\n\nDegrees of freedom for equal-variance two-sample $t$-test:\n\n$$\ndf=n_1+n_2-2\n$$\n\nWelch $t$ statistic:\n\n$$\nt=\\frac{\\bar{x}_1-\\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}}}\n$$\n\nWelch degrees of freedom:\n\n$$\ndf=\\frac{\\left(\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}\\right)^2}{\\frac{s_1^4}{n_1^2(n_1-1)}+\\frac{s_2^4}{n_2^2(n_2-1)}}\n$$\n\nPaired difference:\n\n$$\nd_i=x_i-y_i\n$$\n\nMean paired difference:\n\n$$\n\\bar{d}=\\frac{\\sum_{i=1}^{n}d_i}{n}\n$$\n\nVariance of paired differences:\n\n$$\ns^2=\\frac{\\sum_{i=1}^{n}(d_i-\\bar{d})^2}{n-1}\n$$\n\nPaired $t$ statistic:\n\n$$\nt=\\frac{\\bar{d}}{s/\\sqrt{n}}\n$$\n\nDegrees of freedom for paired $t$-test:\n\n$$\ndf=n-1\n$$\n\nTest statistic for significance of correlation coefficient:\n\n$$\nt=\\frac{r\\sqrt{n-2}}{\\sqrt{1-r^2}}\n$$\n\nDegrees of freedom for correlation test:\n\n$$\ndf=n-2\n$$\n\nChi-square goodness-of-fit statistic:\n\n$$\n\\chi^2=\\sum_{i=1}^{n}\\frac{(O_i-E_i)^2}{E_i}\n$$\n\nDegrees of freedom for goodness-of-fit test:\n\n$$\ndf=n-1-m\n$$\n\nHere $n$ is the number of categories and $m$ is the number of parameters estimated from the data; use $m=0$ when all probabilities are specified.\n\nExpected frequency in an $r\\times s$ contingency table:\n\n$$\nE_{ij}=\\frac{(A_i)(B_j)}{N}\n$$\n\nChi-square test of independence:\n\n$$\n\\chi^2=\\sum_{i=1}^{r}\\sum_{j=1}^{s}\\frac{(O_{ij}-E_{ij})^2}{E_{ij}}\n$$\n\nDegrees of freedom for an $r\\times s$ contingency table:\n\n$$\ndf=(r-1)(s-1)\n$$\n\nChi-square statistic for a 2×2 contingency table:\n\n$$\n\\chi^2=\\frac{n(ad-bc)^2}{C_1C_2R_1R_2}\n$$\n\nYates' corrected chi-square statistic:\n\n$$\n\\chi^2=\\frac{n[\\max(0,|ad-bc|-n/2)]^2}{C_1C_2R_1R_2}\n$$\n\nChi-square test statistic for population variance:\n\n$$\n\\chi^2=\\frac{(n-1)s^2}{\\sigma_0^2}\n$$\n\nDegrees of freedom for chi-square variance test:\n\n$$\ndf=n-1\n$$\n\n$F$ statistic:\n\n$$\nF=\\frac{s_1^2}{s_2^2}\n$$\n\nDegrees of freedom for $F$ test:\n\n$$\ndf_1=n_1-1,\\qquad df_2=n_2-1\n$$",
+          "start_line": 1022,
+          "end_line": 1181
+        },
+        {
+          "heading": "exm-corr1",
+          "markdown": "A plant breeder studied the relationship between plant height and grain yield in a sample of 18 rice genotypes and obtained a correlation coefficient of 0.6. Test whether the population correlation coefficient is significant.\n\n**Solution**\n\nNull hypothesis, $H_0$: $\\rho$ = 0 (population correlation coefficient is zero)\n\nAlternative hypothesis, $H_1$: $\\rho$ $\\mathbf{\\neq}$ 0 (population correlation coefficient is not zero)\n\nSample correlation coefficient ($r$) = 0.6\n\nNumber of pairs ($n$) = 18\n\nUnder the bivariate normal model, the following $t$ statistic is used to test zero correlation:\n\n$$t = \\frac{r \\sqrt{n - 2}}{\\sqrt{1 - r^2}} = \\frac{0.6 \\sqrt{18 - 2}}{\\sqrt{1 - 0.36}} = \\frac{0.6 \\times 4}{\\sqrt{0.64}} = \\frac{2.4}{0.8} = 3.00$$\n\n$t_{\\text{cal}}$ = 3.00. The table value of $t$ for $n - 2 = 16$ degrees of freedom at the 5% level of significance (two-tailed) is 2.120. Since the calculated value is greater than the table value, we reject the null hypothesis and conclude that there is a significant correlation between plant height and grain yield.",
+          "start_line": 418,
+          "end_line": 435
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. For a normal population with unknown variance, the standardised sample mean follows Student's __________ distribution.\n\n2. The degrees of freedom of a one-sample t-test are __________.\n\n3. The two-sample t-test assuming equal population variances uses a __________ variance estimate.\n\n4. The two-sample t-test that does not assume equal population variances is called __________ t-test.\n\n5. The t-test based on within-pair differences is called the __________ t-test.\n\n6. For $n$ independent pairs, the paired t-test has __________ degrees of freedom.\n\n7. For testing zero Pearson correlation under a bivariate normal model, the t-test has __________ degrees of freedom.\n\n8. A test comparing observed and expected category frequencies is called a chi-square __________-of-fit test.\n\n9. The expected cell frequency under independence equals the row total multiplied by the column total and divided by the __________ total.\n\n10. The degrees of freedom for independence in an $r\\times s$ table are __________.\n\n11. For a normal population, the variance test uses the __________ distribution.\n\n12. The ratio of two independent sample variances from normal populations is tested using the __________ distribution.\n\n13. Student was the pen name of William Sealy __________.",
+          "start_line": 852,
+          "end_line": 881
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` $t$ `2.` $n-1$ `3.` Pooled `4.` Welch's `5.` Paired `6.` $n-1$ `7.` $n-2$ `8.` Goodness `9.` Grand `10.` $(r-1)(s-1)$ `11.` Chi-square `12.` $F$ `13.` Gosset\n:::",
+          "start_line": 1232,
+          "end_line": 1238
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "file": "designofexperiments.qmd",
+      "sha256": "7576532fef255695933a820719d6058e5a91fd5a54a423185c874f62e6b9f0e8",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "* A well-designed experiment separates the effect of the treatments from other sources of variation, so that observed differences can be attributed to the treatments with confidence.\n\n* Experimental error is the variation among experimental units that receive the same treatment; every design must provide a way of estimating it.\n\n* The three basic principles of design, randomization, replication, and local control, work together: randomization protects against systematic allocation bias, replication permits estimation of experimental error and improves precision, and local control reduces experimental error by accounting for known sources of variation.\n\n* An experimental unit is the smallest unit to which a treatment is independently applied; an observational unit is the unit on which the response is actually measured. Confusing the two leads to pseudo-replication.\n\n* In a Randomized Block Design, similar experimental units are grouped into blocks, and all treatments are randomly assigned within each block, so that treatments are compared under similar conditions.\n\n* Precision can be further improved through good plot technique (keeping everything except the treatment uniform), excluding border plants from data collection (using only the net plot), and appropriate statistical analysis such as ANCOVA, which adjusts for covariates.\n\n* R. A. Fisher developed the statistical foundations of experimental design at Rothamsted Experimental Station in the 1920s and 1930s, introducing ANOVA and, together with Frank Yates, the methodologies that remain central to agricultural research today.",
+          "start_line": 541,
+          "end_line": 556
+        },
+        {
+          "heading": "Important concepts",
+          "markdown": "* Experiment → systematic procedure conducted under controlled conditions to discover an effect, test a hypothesis, or illustrate a known effect.\n\n* Design of Experiments → statistical methodology for planning experiments so that treatment effects can be estimated accurately, efficiently, and without bias.\n\n* Main objectives of DoE → validity, reliability, replicability, and optimality.\n\n* Treatment → any object of comparison in an experiment.\n\n* Control → standard treatment used for comparison.\n\n* Experimental unit → smallest unit to which a treatment is independently applied.\n\n* Observation unit → unit on which the response is measured.\n\n* Response → measurable outcome observed after treatment application.\n\n* Factor → variable whose influence on a response is being studied.\n\n* Factor level → value or setting taken by a factor.\n\n* Experimental error → variation in response caused by extraneous factors among experimental units receiving the same treatment.\n\n* Extraneous factors → factors other than the treatments that cause variation in the response.\n\n* Randomization → assignment of treatments to experimental units purely by chance.\n\n* Complete randomization → treatments are assigned without blocking restrictions, subject to the pre-specified treatment counts; allocation may be equal or unequal.\n\n* Replication → application of the same treatment to more than one experimental unit.\n\n* Local control → grouping similar experimental units into blocks before assigning treatments.\n\n* Blocking → another term for local control.\n\n* Basic principles of design → randomization, replication, and local control.\n\n* Randomization → protects against allocation bias and balances unknown sources of variation in expectation; a particular allocation can remain unbalanced.\n\n* Replication → improves reliability and precision and permits estimation of experimental error.\n\n* Local control → reduces experimental error by accounting for known sources of variation.\n\n* Randomized Block Design → design in which similar experimental units are grouped into blocks and all treatments are randomly assigned within each block.\n\n* Border effect → influence of neighbouring plots on plants located near plot borders.\n\n* Net plot → inner portion of a plot from which observations are recorded after excluding border plants.\n\n* Proper plot technique → keeping all management practices other than the treatments as uniform as possible.\n\n* ANCOVA → statistical method that adjusts the response using one or more covariates to improve precision.\n\n* Good experimental design → supports unbiased, precise and interpretable comparisons, uses resources efficiently, and defines the conditions to which conclusions apply.",
+          "start_line": 471,
+          "end_line": 526
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The condition or combination of conditions applied to an experimental unit is called a __________.\n\n2. A standard treatment used for comparison is called a __________.\n\n3. The smallest unit to which a treatment is independently assigned is the __________ unit.\n\n4. A variable whose levels are investigated in an experiment is called a __________.\n\n5. The values or settings of a factor are called its __________.\n\n6. Assignment of treatments by chance is called __________.\n\n7. Independent application of a treatment to several experimental units is called __________.\n\n8. Grouping similar experimental units before randomization is called __________.\n\n9. Blocking is an application of the principle of local __________.\n\n10. Replication permits estimation of experimental __________.\n\n11. The unit on which a measurement is recorded is called the __________ unit.\n\n12. The inner part of a plot used for recording yield is called the __________ plot.",
+          "start_line": 307,
+          "end_line": 334
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Treatment `2.` Control `3.` Experimental `4.` Factor `5.` Levels `6.` Randomization `7.` Replication `8.` Blocking `9.` Control `10.` Error `11.` Observational `12.` Net\n:::",
+          "start_line": 557,
+          "end_line": 563
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "file": "uniformityTrials.qmd",
+      "sha256": "a18770b4dc3ebae8d98678b1d0cca2d2ccdd16d80424ede3aefd096e454d1d45",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Uniformity trial → used to study the nature and extent of fertility variation in a field.\n\n- A single crop variety is grown over the entire field.\n\n- All management inputs, including fertilizer if used, are applied uniformly.\n\n- A substantial border is removed before dividing the field into basic units.\n\n- Basic unit → smallest unit from which yield is separately recorded.\n\n- Yield differences among basic units → measure of soil heterogeneity.\n\n- Smaller basic units → finer spatial detail, balanced against harvesting accuracy and cost.\n\n- Uniformity trials can help determine → fertility variation, plot size, plot shape, and block size.\n\n- Fertility contour map → graphical representation of soil heterogeneity.\n\n- Moving averages → used to reduce random variation and identify areas of similar fertility.\n\n- Similar fertility areas → grouped together in the contour map.\n\n- Serial correlation → measures the relationship between neighbouring observations.\n\n- Horizontal and vertical serial correlations → used to identify the direction of fertility variation.\n\n- Low serial correlation → little linear association at the chosen lag; this alone does not establish patches.\n\n- High serial correlation → neighbouring yields are associated; use the field map to assess gradients and patches.\n\n- Mean square between strips → simpler method having the same objective as serial correlation.\n\n- Between vertical strips → measures variation across columns, in the horizontal direction.\n\n- Between horizontal strips → measures variation across rows, in the vertical direction.\n\n- Larger strip mean square → indicates greater variation in that direction.\n\n- Fairfield Smith's variance law → relates plot size to the variance of yield per basic unit area.\n\n- Smith's law → $V_x=V_1/x^b$.\n\n- Smith's index of soil heterogeneity → $b$.\n\n- $b$ → quantitative measure of soil heterogeneity.\n\n- Lower $b$ → slower fitted variance reduction, often associated with positive nearby correlation; a gradient is not established.\n\n- Higher $b$ → a faster fitted reduction in variance as plot size increases; it does not establish a patch pattern.\n\n- Values from 0 to 1 describe the usual idealised range of Smith's index; empirical fitted values can fall outside this range.\n\n- Simulated plots → formed by combining basic units into different sizes and shapes.\n\n- Only plot arrangements that fit exactly within the whole field are used.\n\n- Between-plot sum of squares → calculated for each simulated plot size and shape.\n\n- Variance per basic unit area $V_x$ → sample variance of plot means, equal to $Q_x/(rc-x)$.\n\n- Alternative shapes partition the same field → their variance estimates are dependent.\n\n- Retain shapes separately or state a descriptive averaging rule; an ordinary F test does not justify pooling dependent partitions.\n\n- Smith's index → estimated by regression of $Y=\\log V_x-\\log V_1$ on $X=\\log x$.\n\n- In $Y=cX$, $c=-b$.\n\n- Adjusted $b$ → obtained using interpolation from the adjusted $b$ table.\n\n- Maximum curvature method → used to determine optimum plot size.\n\n- In maximum curvature method → plot size is plotted on the X-axis and CV on the Y-axis.\n\n- As plot size increases → CV generally decreases.\n\n- Apparent bend → a traditional plot-size guide sensitive to axis scales and the available arrangements.\n\n- In the rice example → the field was 12 m × 17 m.\n\n- After removing a 1 m border from all sides → effective area was 10 m × 15 m.\n\n- With 1 m × 1 m basic units → there were 150 basic units.\n\n- In the example, vertical serial correlation → 0.438627.\n\n- In the example, horizontal serial correlation → 0.54317.\n\n- Positive sequence correlations describe nearby similarity; they do not by themselves establish patches or gradients.\n\n- The higher horizontal sequence correlation alone does not establish a horizontal fertility gradient.\n\n- In the example, the larger horizontal-strip mean square indicates greater yield variation across rows; a monotonic gradient is not established.\n\n- For plot size 25 m² in the example → $V_{25}=1750.14$.\n\n- The calculated Smith's index in the example was $b=0.3607$ before adjustment.\n\n- The adjusted Smith's index in the example was approximately $0.41156$.\n\n- The index summarises variance reduction with plot size; identifying gradients or patches also requires spatial information.\n\n- Uniformity trials are important because field variability exists even when all management practices are kept uniform.",
+          "start_line": 663,
+          "end_line": 768
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Serial correlation:\n\n$$\nr_s=\\frac{\\sum_{i=1}^{n}X_iX_{i+1}-\\frac{\\left(\\sum_{i=1}^{n}X_i\\right)^2}{n}}{\\sum_{i=1}^{n}X_i^2-\\frac{\\left(\\sum_{i=1}^{n}X_i\\right)^2}{n}}\n$$\n\nTotal number of basic units:\n\n$$\nn=r\\times c\n$$\n\nVertical sum of squares:\n\n$$\nSS_V=\\frac{\\sum_{i=1}^{c}V_i^2}{r}-\\frac{G^2}{n}\n$$\n\nHorizontal sum of squares:\n\n$$\nSS_H=\\frac{\\sum_{i=1}^{r}H_i^2}{c}-\\frac{G^2}{n}\n$$\n\nVertical mean square:\n\n$$\nMS_V=\\frac{SS_V}{c-1}\n$$\n\nHorizontal mean square:\n\n$$\nMS_H=\\frac{SS_H}{r-1}\n$$\n\nFairfield Smith's variance law:\n\n$$\nV_x=\\frac{V_1}{x^b}\n$$\n\nLogarithmic form of Smith's variance law:\n\n$$\n\\log V_x=\\log V_1-b\\log x\n$$\n\nDifference form:\n\n$$\n\\log V_x-\\log V_1=-b\\log x\n$$\n\nRegression form:\n\n$$\nY=cX\n$$\n\nwhere\n\n$$\nY=\\log V_x-\\log V_1\n$$\n\nand\n\n$$\nX=\\log x\n$$\n\nRelationship between regression coefficient and Smith's index:\n\n$$\nc=-b\n$$\n\nNumber of simulated plots:\n\n$$\nw=\\frac{rc}{x}\n$$\n\nBetween-plot sum of squares:\n\n$$\nQ_x=\\sum_{i=1}^{w}\\frac{T_i^2}{x}-\\frac{G^2}{rc}\n$$\n\nVariance per unit area:\n\n$$\nV_x=\\frac{Q_x}{rc-x}\n$$\n\nCoefficient of variation:\n\n$$\nCV=\\frac{\\text{Standard deviation}}{\\text{Mean}}\\times100\n$$\n\nStandard deviation from variance:\n\n$$\nSD=\\sqrt{V_x}\n$$\n\nAdjusted Smith's index:\n\n$$\n\\text{Adjusted }b=y_1+(b_{\\text{cal}}-L_1)\\frac{y_2-y_1}{L_2-L_1}\n$$\n\nDescriptive ratio for two plot shapes (not an F test for dependent partitions):\n\n$$\nR=\\frac{\\text{Larger between-plot sum of squares}}{\\text{Smaller between-plot sum of squares}}\n$$",
+          "start_line": 541,
+          "end_line": 662
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. A field trial conducted under uniform treatment to study field variability is called a __________ trial.\n\n2. The smallest harvested subdivision in a uniformity trial is called a __________ unit.\n\n3. A map showing spatial patterns in yield is called a fertility __________ map.\n\n4. The correlation between yields of neighbouring units is a form of __________ correlation.\n\n5. The relationship $V_x=V_1/x^b$ is known as Smith's __________ law.\n\n6. The parameter $b$ in Smith's law is an index of soil __________.\n\n7. Taking logarithms of Smith's variance law produces a __________ relationship.\n\n8. The slope of the regression of $\\log V_x$ on $\\log x$ is __________.\n\n9. The yield of a simulated plot is the __________ of the yields of its constituent basic units.\n\n10. To convert the variance of plot totals to the variance of yield per basic unit, divide by the __________ of the number of basic units per plot.\n\n11. In the maximum curvature method, plot size is plotted against the coefficient of __________.\n\n12. For a fixed total experimental area, increasing plot size reduces the number of available __________.",
+          "start_line": 393,
+          "end_line": 420
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Uniformity `2.` Basic `3.` Contour `4.` Serial `5.` Variance `6.` Heterogeneity `7.` Linear `8.` $-b$ `9.` Sum `10.` Square `11.` Variation `12.` Plots\n:::",
+          "start_line": 769,
+          "end_line": 775
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "file": "anova.qmd",
+      "sha256": "e59acac1f965c8880b7d3a2e9f1d07d9bb0b7c778281096d09602418839a3f79",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- ANOVA compares population means by partitioning the total variation.\n- The one-way null hypothesis is $H_0:\\mu_1=\\cdots=\\mu_v$.\n- A mean square is a sum of squares divided by its degrees of freedom.\n- The treatment F-ratio compares treatment mean square with error mean square.\n- The usual exact F test assumes independent normal errors with a common variance under the specified model.\n- A significant overall F indicates that at least one pair of means differs; it does not identify the pairs.\n- The additive two-way model separates treatment and block variation.\n- With one observation per combination, interaction cannot be estimated separately from error.\n- Check the design and residuals before interpreting the F tests.",
+          "start_line": 709,
+          "end_line": 720
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "For a one-way classification with $v$ treatments and $n$ observations, let $T_i$ be the total and $n_i$ the number of observations in treatment $i$, and $G$ the grand total.\n\n$$CF=\\frac{G^2}{n},\\qquad SS_{Total}=\\sum_{i,j}y_{ij}^2-CF$$\n\n$$SS_{Treatment}=\\sum_{i=1}^{v}\\frac{T_i^2}{n_i}-CF,\\qquad\nSS_E=SS_{Total}-SS_{Treatment}$$\n\n$$MS_{Treatment}=\\frac{SS_{Treatment}}{v-1},\\qquad\nMSE=\\frac{SS_E}{n-v},\\qquad F=\\frac{MS_{Treatment}}{MSE}$$\n\nFor a balanced additive two-way classification with $v$ treatments and $r$ blocks, one observation per combination, and block totals $B_j$:\n\n$$SS_{Blocks}=\\sum_{j=1}^{r}\\frac{B_j^2}{v}-CF$$\n\n$$SS_E=SS_{Total}-SS_{Treatment}-SS_{Blocks},\n\\qquad edf=(v-1)(r-1)$$",
+          "start_line": 690,
+          "end_line": 708
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. ANOVA stands for Analysis of __________.\n\n2. The null hypothesis in a one-way fixed-effects ANOVA states that all population means are __________.\n\n3. A sum of squares divided by its degrees of freedom is called a mean __________.\n\n4. The denominator of the usual treatment F-ratio is the __________ mean square.\n\n5. The total degrees of freedom for $N$ observations are __________.\n\n6. The treatment degrees of freedom for $v$ groups are __________.\n\n7. The error degrees of freedom in a one-way ANOVA are __________.\n\n8. The usual exact ANOVA F-test assumes normally distributed __________.\n\n9. A model containing both fixed and random effects is called a __________ model.\n\n10. An F-test of the overall equality of treatment means is called an __________ test.",
+          "start_line": 721,
+          "end_line": 744
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Variance `2.` Equal `3.` Square `4.` Error `5.` $N-1$ `6.` $v-1$ `7.` $N-v$ `8.` Errors `9.` Mixed `10.` Omnibus\n:::",
+          "start_line": 763,
+          "end_line": 769
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "file": "multipleComparison.qmd",
+      "sha256": "eb70806f8bfe93391dcc646d4da69a1ac3ea58094a6928bd45c97d8f7d11872c",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- ANOVA → omnibus test for detecting an overall treatment effect.\n\n- Significant ANOVA → indicates that at least one pair of treatment means differs.\n\n- ANOVA alone → does not identify which specific treatment pairs differ.\n\n- Multiple comparison tests → used to identify specific differences among treatment means.\n\n- Protected Fisher's LSD requires a significant ANOVA; Tukey's HSD does not require this preliminary test.\n\n- Type I error → rejecting a true null hypothesis.\n\n- Type II error → failing to reject a false null hypothesis.\n\n- Family → complete set of pairwise comparisons in an experiment.\n\n- FWER → probability of making at least one Type I error within the family of comparisons.\n\n- Number of pairwise comparisons → $v(v-1)/2$.\n\n- Fisher's LSD → two-step procedure involving significant ANOVA followed by pairwise comparisons.\n\n- LSD → Least Significant Difference.\n\n- CD → Critical Difference; commonly used term for LSD in Indian agricultural research.\n\n- Protected LSD → pairwise comparisons are performed only after a significant ANOVA.\n\n- Decision under LSD → if $|\\overline{T_i}-\\overline{T_j}|>\\text{LSD}$, the means differ significantly.\n\n- Equal replications → $\\text{LSD}=t_{\\alpha/2,edf}\\sqrt{2\\text{MSE}/r}$.\n\n- LSD is relatively liberal compared with Tukey's test.\n\n- Fisher's LSD controls experiment-wise Type I error effectively for two or three treatments under the usual model, but not generally for more than three, as discussed in the chapter.\n\n- DMRT → Duncan's Multiple Range Test.\n\n- DMRT → useful when comparing many treatment means and widely used in plant sciences.\n\n- DMRT procedure → rank means, calculate standard error, obtain $r_p$, calculate $R_p$, and compare differences with the appropriate $R_p$.\n\n- In DMRT, $p$ → number of ordered treatment means spanned by the comparison, including the two means being compared.\n\n- Adjacent means → $p=2$.\n\n- One mean between the two means → $p=3$.\n\n- Two means between the two means → $p=4$.\n\n- DMRT critical range → increases as $p$ increases.\n\n- DMRT → generally more powerful and more liberal than Tukey's test.\n\n- Tukey's HSD → compares all possible pairs while controlling the family-wise error rate.\n\n- Tukey's test → based on the studentised range statistic $q$.\n\n- HSD → single critical difference for equal replications.\n\n- Decision under Tukey → if $|\\overline{T_i}-\\overline{T_j}|>\\text{HSD}$, the means differ significantly.\n\n- Tukey's test → more conservative than LSD and DMRT.\n\n- More conservative test → less likely to declare a difference significant.\n\n- In the worked example → LSD = 1.10.\n\n- In the worked example → DMRT $R_p$ values range from 1.10 to 1.21.\n\n- In the worked example → Tukey HSD = 1.59.\n\n- Under LSD and DMRT → all treatment pairs are significant.\n\n- Under Tukey → differences of 1.5 are not significant.\n\n- Tukey therefore identifies fewer significant differences than LSD and DMRT in the example.\n\n- Compact letter grouping → convenient presentation of multiple comparison results.\n\n- Same letter → treatments are not significantly different.\n\n- No common letter → treatments are significantly different.\n\n- A treatment can have more than one letter when it belongs to overlapping non-significant groups.\n\n- Letter grouping is also called alphabet notation.\n\n- Line or underscore notation → older method of presenting groups of means.\n\n- Letter and line notation → convey the same statistical information.\n\n- Dunnett's test → useful when every treatment is compared with a single control.\n\n- Bonferroni method → adjusts significance for multiple comparisons.\n\n- Scheffé's test → useful for general contrasts among means.\n\n- SNK → Student-Newman-Keuls multiple comparison procedure.",
+          "start_line": 492,
+          "end_line": 593
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Number of pairwise comparisons among $v$ treatments:\n\n$$\nN=\\binom{v}{2}=\\frac{v(v-1)}{2}\n$$\n\nInflated Type I error rate:\n\n$$\n\\text{Inflated }\\alpha=1-(1-\\alpha)^N\n$$\n\nStandard error of the difference between two treatment means:\n\n$$\nSE(d)=\\sqrt{\\text{MSE}\\left(\\frac{1}{r_i}+\\frac{1}{r_j}\\right)}\n$$\n\nFisher's LSD:\n\n$$\n\\text{LSD}=t_{\\frac{\\alpha}{2},\\,edf}\\cdot SE(d)\n$$\n\nLSD for equal replications:\n\n$$\n\\text{LSD}=t_{\\frac{\\alpha}{2},\\,edf}\\cdot\\sqrt{\\frac{2\\text{MSE}}{r}}\n$$\n\nTest statistic for pairwise comparison:\n\n$$\nt=\\frac{\\overline{T_i}-\\overline{T_j}}{SE(d)}\n$$\n\nStandard error of a treatment mean in DMRT:\n\n$$\nSE(\\overline{Y})=\\sqrt{\\frac{\\text{MSE}}{r}}\n$$\n\nShortest significant range in DMRT:\n\n$$\nR_p=r_p\\cdot SE(\\overline{Y})\n$$\n\nTukey's honestly significant difference:\n\n$$\n\\text{HSD}=q_{\\alpha,(v,edf)}\\cdot\\sqrt{\\frac{\\text{MSE}}{r}}\n$$",
+          "start_line": 436,
+          "end_line": 491
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. A test of the overall equality of several treatment means is called an __________ test.\n\n2. A significant treatment F-test indicates that not all treatment means are __________.\n\n3. The probability of at least one Type I error in a family of tests is called the __________ error rate.\n\n4. The number of pairwise comparisons among $v$ treatment means is __________.\n\n5. The full form of LSD in mean comparison is Least Significant __________.\n\n6. Fisher's LSD is also called the Critical __________ in agricultural experiments.\n\n7. Fisher's LSD applied after a significant omnibus F-test is called __________ LSD.\n\n8. The error variance used in mean-comparison procedures is estimated by the error mean __________.\n\n9. The full form of DMRT is Duncan's Multiple __________ Test.\n\n10. Tukey's test uses the studentised __________ distribution.\n\n11. Tukey's HSD controls the family-wise error rate for all __________ comparisons.\n\n12. The procedure designed for comparing several treatments with one control is __________ test.\n\n13. Scheffe's procedure can be used to test all linear __________ among means.\n\n14. In a compact letter display, means with no letter in common are significantly __________.",
+          "start_line": 268,
+          "end_line": 299
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Omnibus `2.` Equal `3.` Family-wise `4.` $v(v-1)/2$ `5.` Difference `6.` Difference `7.` Protected `8.` Square `9.` Range `10.` Range `11.` Pairwise `12.` Dunnett's `13.` Contrasts `14.` Different\n:::",
+          "start_line": 594,
+          "end_line": 600
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "file": "singleFactor.qmd",
+      "sha256": "c2cc7d10e43220ffb02cf9cb0d2ef39452fe95b26a76273ba66db615566c5cf3",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "* A single factor experiment varies only one factor, the treatments, while all other conditions are kept uniform.\n\n* CRD uses randomization and replication without blocking. It is most useful when units are relatively homogeneous.\n\n* CRD is best suited to laboratory and greenhouse experiments; it is rarely used for field experiments because field plots are usually not homogeneous.\n\n* RCBD adds local control (blocking) to randomization and replication, grouping heterogeneous experimental material into homogeneous blocks along a single known source of variation, most often a fertility gradient.\n\n* In RCBD, number of blocks = number of replications, and number of plots per block = number of treatments.\n\n* LSD controls variation in two perpendicular directions at once, using rows and columns as two separate blocking factors, so the number of rows, columns, and treatments are all equal.\n\n* The statistical model of CRD matches one-way ANOVA; the model of RCBD matches two-way ANOVA; LSD requires a three-way classification (rows, columns, treatments).\n\n* An error-df target such as 12 is a practical planning guide, not a universal requirement. Replication should also reflect the desired power, precision, anticipated variability, and available resources.\n\n* When the overall F test for treatments is significant, Fisher's least significant difference test is used to compare treatment pairs.\n\n* Treatment means that share a common letter or symbol in a grouping table are not significantly different from each other.\n\n* Among CRD, RCBD, and LSD (for the same number of treatments and replications), CRD gives the largest error degrees of freedom, since none of the variation is set aside for blocking.\n\n* Latin squares are often used for a modest number of treatments, for practical reasons rather than a mathematical restriction: too few treatments leave almost no error degrees of freedom, and too many require an impractically large number of homogeneous plots.",
+          "start_line": 1219,
+          "end_line": 1245
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Total number of experimental units in an equally replicated CRD:\n\n$$\nn=rv\n$$\n\nError degrees of freedom in an equally replicated CRD:\n\n$$\nedf=n-v=v(r-1)\n$$\n\nError degrees of freedom in RCBD:\n\n$$\nedf=(v-1)(r-1)\n$$\n\nError degrees of freedom in LSD:\n\n$$\nedf=(v-1)(v-2)\n$$\n\nCritical difference for CRD with equal replication:\n\n$$\nC.D.=t_{\\left(\\frac{\\alpha}{2},\\,error\\,df\\right)}\\sqrt{\\frac{2\\,MSE}{r}}\n$$\n\nCritical difference for CRD with unequal replication:\n\n$$\nC.D.=t_{\\left(\\frac{\\alpha}{2},\\,error\\,df\\right)}\\sqrt{MSE\\left(\\frac{1}{r_i}+\\frac{1}{r_j}\\right)}\n$$\n\nCritical difference for RCBD:\n\n$$\nCD=t_{\\frac{\\alpha}{2},edf}\\sqrt{\\frac{2\\,MSE}{r}}\n$$\n\nCritical difference for LSD:\n\n$$\nC.D.=t_{\\left(\\frac{\\alpha}{2},\\,error\\,df\\right)}\\sqrt{\\frac{2\\,MSE}{v}}\n$$\n\nCorrection factor for LSD:\n\n$$\nC.F.=\\frac{\\left(\\sum y_{ijk}\\right)^2}{v^2}\n$$",
+          "start_line": 1163,
+          "end_line": 1218
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The full form of CRD is Completely Randomized __________.\n\n2. CRD is most suitable when experimental units are relatively __________.\n\n3. The error degrees of freedom in a CRD with $N$ observations and $v$ treatments are __________.\n\n4. In an RCBD, each block contains every treatment exactly __________.\n\n5. In an RCBD, treatments are randomized independently within each __________.\n\n6. In an RCBD, the number of complete blocks equals the number of __________ per treatment.\n\n7. The error degrees of freedom in an RCBD with $v$ treatments and $r$ blocks are __________.\n\n8. A Latin square controls variation in two blocking directions called rows and __________.\n\n9. In a Latin square, each treatment occurs once in every row and every __________.\n\n10. A Latin square with $v$ treatments requires __________ experimental units.\n\n11. The error degrees of freedom in a Latin square are __________.\n\n12. The correction factor is the square of the grand total divided by the total number of __________.\n\n13. Treatment comparisons use the experimental error mean __________.",
+          "start_line": 1037,
+          "end_line": 1066
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Design `2.` Homogeneous `3.` $N-v$ `4.` Once `5.` Block `6.` Replications `7.` $(v-1)(r-1)$ `8.` Columns `9.` Column `10.` $v^2$ `11.` $(v-1)(v-2)$ `12.` Observations `13.` Square\n:::",
+          "start_line": 1246,
+          "end_line": 1252
+        }
+      ]
+    },
+    {
+      "num": 21,
+      "file": "factorial.qmd",
+      "sha256": "a6691a39c81848af1fab50a767e47b215750d01ff5e64379737786338a1cbeaf",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "* Factorial experiment → studies two or more factors simultaneously.\n\n* Treatment combinations → all possible combinations of factor levels.\n\n* Number of treatments → product of the number of levels of all factors.\n\n* Main effect → average change in response due to a change in the level of one factor.\n\n* Simple effect → effect of one factor at a particular level of another factor.\n\n* Interaction → effect of one factor changes according to the level of another factor.\n\n* Parallel population mean profiles → no interaction on the response scale used.\n\n* Non-parallel sample mean profiles → an interaction pattern; an appropriate test is needed to assess statistical significance.\n\n* Symmetrical factorial → all factors have the same number of levels.\n\n* Asymmetrical factorial → factors have unequal numbers of levels.\n\n* Complete factorial → all possible treatment combinations are included.\n\n* Incomplete or fractional factorial → only part of the possible combinations are included.\n\n* $2^n$ factorial → $n$ factors, each at two levels.\n\n* $3^n$ factorial → $n$ factors, each at three levels.\n\n* $2^2$ → 4 treatment combinations.\n\n* $2^3$ → 8 treatment combinations.\n\n* $2^4$ → 16 treatment combinations.\n\n* $3^2$ → 9 treatment combinations.\n\n* $3^3$ → 27 treatment combinations.\n\n* In a $2^n$ factorial, the treatment degrees of freedom are $2^n-1$.\n\n* In a $3^n$ factorial, the treatment degrees of freedom are $3^n-1$.\n\n* In a $2^2$ factorial → A, B, and $A\\times B$ each have 1 degree of freedom.\n\n* In a $2^3$ factorial → A, B, C, $A\\times B$, $A\\times C$, $B\\times C$, and $A\\times B\\times C$ each have 1 degree of freedom.\n\n* In a $3^2$ factorial → A has 2 df, B has 2 df, and $A\\times B$ has 4 df.\n\n* For a three-level factor → 2 df can be divided into linear and quadratic components.\n\n* Yates’s method → tabular method for calculating effects and sums of squares in $2^n$ factorial experiments.\n\n* Fisher’s algebraic method → expresses factorial effects and interactions algebraically.\n\n* Confounding → deliberately making an interaction inseparable from block effects to reduce block size.\n\n* Complete confounding → the same interaction is confounded in all replications.\n\n* Partial confounding → different interactions are confounded in different replications.\n\n* Higher-order interactions are generally preferred for confounding because main effects and lower-order interactions are usually more important.\n\n* Major advantage of confounding → smaller and more homogeneous blocks, resulting in improved precision.\n\n* Major disadvantage of confounding → loss of information about the confounded interactions.",
+          "start_line": 912,
+          "end_line": 979
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Number of treatment combinations in a factorial experiment:\n\n$$\nN=\\prod_{i=1}^{n}s_i\n$$ {#eq-ntreat}\n\nNumber of treatment combinations in a $2^n$ factorial experiment:\n\n$$\nN=2^n\n$$ {#eq-n2n}\n\nNumber of treatment combinations in a $3^n$ factorial experiment:\n\n$$\nN=3^n\n$$ {#eq-n3n}\n\nMain effect of A in a $2^2$ factorial experiment:\n\n$$\n\\text{Main effect of A}=\\frac{(A)_{i=1}-(A)_{i=0}}{2r}\n$$ {#eq-maineffA22}\n\nSum of squares due to A in a $2^2$ factorial experiment:\n\n$$\nSS_A=\\frac{[(A)_{i=1}-(A)_{i=0}]^2}{4r}\n$$ {#eq-ssA22}\n\nMain effect of B in a $2^2$ factorial experiment:\n\n$$\n\\text{Main effect of B}=\\frac{(B)_{j=1}-(B)_{j=0}}{2r}\n$$ {#eq-maineffB22}\n\nSum of squares due to B in a $2^2$ factorial experiment:\n\n$$\nSS_B=\\frac{[(B)_{j=1}-(B)_{j=0}]^2}{4r}\n$$ {#eq-ssB22}\n\nInteraction effect of $A \\times B$ in a $2^2$ factorial experiment:\n\n$$\n\\text{Interaction effect of }A\\times B=\\frac{(AB)_{i+j=0}-(AB)_{i+j=1}}{2r}\n$$ {#eq-intAB22}\n\nSum of squares due to $A \\times B$:\n\n$$\nSS_{AB}=\\frac{[(AB)_{i+j=0}-(AB)_{i+j=1}]^2}{4r}\n$$ {#eq-ssAB22}\n\nCritical difference for a significant interaction in a $2^2$ factorial experiment:\n\n$$\nCD=t_{\\alpha/2,edf}\\sqrt{\\frac{2MSE}{r}}\n$$ {#eq-cd22int}\n\nMain effect of A in a $2^3$ factorial experiment:\n\n$$\n\\text{Main effect of A}=\\frac{(A)_{i=1}-(A)_{i=0}}{4r}\n$$ {#eq-maineffA23}\n\nSum of squares due to A in a $2^3$ factorial experiment:\n\n$$\nSS_A=\\frac{[(A)_{i=1}-(A)_{i=0}]^2}{8r}\n$$ {#eq-ssA23}\n\nInteraction effect of $B\\times C$ in a $2^3$ factorial experiment:\n\n$$\n\\text{Interaction effect of }B\\times C=\\frac{(BC)_{j+k=0}-(BC)_{j+k=1}}{4r}\n$$ {#eq-intBC23}\n\nSum of squares due to $B\\times C$:\n\n$$\nSS_{BC}=\\frac{[(BC)_{j+k=0}-(BC)_{j+k=1}]^2}{8r}\n$$ {#eq-ssBC23}\n\nInteraction effect of $A\\times B\\times C$:\n\n$$\n\\begin{gathered}\n\\text{Interaction effect of }A\\times B\\times C\\\\\n=\\frac{(ABC)_{i+j+k=1}-(ABC)_{i+j+k=0}}{4r}\n\\end{gathered}\n$$ {#eq-intABC}\n\nSum of squares due to $A\\times B\\times C$:\n\n$$\nSS_{ABC}=\\frac{[(ABC)_{i+j+k=1}-(ABC)_{i+j+k=0}]^2}{8r}\n$$ {#eq-ssABC}\n\nCritical difference for comparing means of a two-factor interaction in a $2^3$ factorial:\n\n$$\nCD=t_{\\alpha/2,edf}\\sqrt{\\frac{MSE}{r}}\n$$ {#eq-cd23twofactor}\n\nCritical difference for comparing means when the three-factor interaction is significant:\n\n$$\nCD=t_{\\alpha/2,edf}\\sqrt{\\frac{2MSE}{r}}\n$$ {#eq-cd23threefactor}\n\nLinear comparison for a factor at three levels:\n\n$$\nA_L=(A)_{i=2}-(A)_{i=0}\n$$ {#eq-linearcomp}\n\nQuadratic comparison for a factor at three levels:\n\n$$\nA_Q=(A)_{i=2}+(A)_{i=0}-2(A)_{i=1}\n$$ {#eq-quadcomp}\n\nSum of squares due to A in a $3^2$ factorial:\n\n$$\nSS_A=\\frac{(A)_{i=0}^2+(A)_{i=1}^2+(A)_{i=2}^2}{3r}-CF\n$$ {#eq-ssA32}\n\nSum of squares due to B in a $3^2$ factorial:\n\n$$\nSS_B=\\frac{(B)_{j=0}^2+(B)_{j=1}^2+(B)_{j=2}^2}{3r}-CF\n$$ {#eq-ssB32}\n\nSum of squares due to $A\\times B$ in a $3^2$ factorial:\n\n$$\nSS_{AB}=SS_{\\text{two-way table}}-(SS_A+SS_B)\n$$ {#eq-ssAB32}\n\nCritical difference for comparing levels of A in a $3^2$ factorial:\n\n$$\nCD=t_{\\alpha/2,edf}\\sqrt{\\frac{2MSE}{3r}}\n$$ {#eq-cdA32}\n\nCritical difference for comparing levels of A in a $2\\times3$ factorial:\n\n$$\nCD_A=t_{\\alpha/2,edf}\\sqrt{\\frac{2MSE}{3r}}\n$$ {#eq-cdA23asym}\n\nCritical difference for comparing levels of B in a $2\\times3$ factorial:\n\n$$\nCD_B=t_{\\alpha/2,edf}\\sqrt{\\frac{2MSE}{2r}}\n$$ {#eq-cdB23asym}\n\nCritical difference for comparing means when $A\\times B$ is significant:\n\n$$\nCD=t_{\\alpha/2,edf}\\sqrt{\\frac{2MSE}{r}}\n$$ {#eq-cdAB23asym}",
+          "start_line": 745,
+          "end_line": 911
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. An experiment containing all combinations of the levels of its factors is called a __________ factorial experiment.\n\n2. The number of treatment combinations is the __________ of the numbers of levels of the factors.\n\n3. The effect of a factor averaged over the levels of the other factors is called its __________ effect.\n\n4. The effect of one factor at a specified level of another is called a __________ effect.\n\n5. Dependence of one factor's effect on the level of another factor is called __________.\n\n6. A $2^3$ factorial experiment contains __________ treatment combinations.\n\n7. The degrees of freedom for a factor with $a$ levels are __________.\n\n8. The interaction degrees of freedom for factors with $a$ and $b$ levels are __________.\n\n9. Each main effect in a two-level factorial has __________ degree of freedom.\n\n10. The tabular algorithm used to calculate contrasts in two-level factorials is called __________ method.\n\n11. Deliberate association of a factorial effect with block effects is called __________.\n\n12. Confounding the same interaction in every replication is called __________ confounding.\n\n13. Confounding different interactions in different replications is called __________ confounding.\n\n14. An experiment using only a selected fraction of all treatment combinations is called a __________ factorial.",
+          "start_line": 568,
+          "end_line": 599
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Full `2.` Product `3.` Main `4.` Simple `5.` Interaction `6.` Eight `7.` $a-1$ `8.` $(a-1)(b-1)$ `9.` One `10.` Yates' `11.` Confounding `12.` Complete `13.` Partial `14.` Fractional\n:::",
+          "start_line": 980,
+          "end_line": 986
+        }
+      ]
+    },
+    {
+      "num": 22,
+      "file": "ancova.qmd",
+      "sha256": "268052e82f311cbc3af329ba8f55afbd423cbea187242d9b5a443d9c24b6a0f7",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- ANCOVA combines treatment comparison with regression adjustment.\n- A covariate should be relevant to the response and should not be caused by the treatment being compared.\n- The common-slope model assumes the same regression slope across treatments; examine treatment-by-covariate interaction.\n- Independent errors, appropriate linearity and common residual variance are required for the stated model; normal errors support the usual exact tests.\n- Adjustment compares treatment means at a common covariate value.\n- Estimating one covariate slope uses one additional error degree of freedom.\n- A useful covariate can improve precision, but improvement is not guaranteed.\n- Adjustment does not turn an observational comparison into a randomized experiment.\n- Use pair-specific standard errors when covariate means differ.",
+          "start_line": 526,
+          "end_line": 537
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "For the CRD with one covariate and a common within-treatment slope:\n\n$$Y_{ij}=\\mu+\\tau_i+\\beta(X_{ij}-\\bar X)+e_{ij},\n\\qquad \\hat\\beta=\\frac{E_{xy}}{E_{xx}}$$\n\nHere $E_{xx}$, $E_{xy}$ and $E_{yy}$ are the within-treatment corrected sums of squares and products defined in the chapter, with $E_{xx}>0$.\n\n$$E=E_{yy}-\\frac{E_{xy}^2}{E_{xx}},\\qquad\nMSE_{adj}=\\frac{E}{n-v-1}$$\n\nWith $n$ observed responses, $v$ treatments and one fitted covariate slope, the CRD error degrees of freedom are $n-v-1$. For the complete RBD with $r$ blocks, use the within-block-and-treatment quantities and error degrees of freedom $(r-1)(v-1)-1$.\n\n$$\\bar Y_{i,adj}=\\bar Y_i-\\hat\\beta(\\bar X_i-\\bar X)$$\n\n$$F_{Treatment}=\\frac{(E_1-E)/(v-1)}{MSE_{adj}}$$\n\nHere $E_1$ is the residual sum of squares from the reduced model without treatment effects, retaining the covariate and, in RBD, the blocks. $E$ is from the full model. The treatment comparison is therefore adjusted for the covariate.",
+          "start_line": 506,
+          "end_line": 525
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. ANCOVA combines analysis of variance with __________.\n\n2. A measured explanatory variable used for statistical adjustment is called a __________.\n\n3. The common-slope ANCOVA model assumes equal regression __________ across treatments.\n\n4. A covariate measured before treatment application is called a __________ covariate.\n\n5. With one fitted covariate, the error degrees of freedom are reduced by __________.\n\n6. The regression coefficient estimated from error sums is $b=$ __________.\n\n7. Adjusted treatment means are compared at a common covariate __________.\n\n8. Under the ANCOVA model, the mean of the errors is __________.",
+          "start_line": 538,
+          "end_line": 557
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Regression `2.` Covariate `3.` Slopes `4.` Pre-treatment `5.` One `6.` $E_{xy}/E_{xx}$ `7.` Value `8.` Zero\n:::",
+          "start_line": 576,
+          "end_line": 582
+        }
+      ]
+    },
+    {
+      "num": 23,
+      "file": "missingPlot.qmd",
+      "sha256": "9ff847a1f0aecbdd33990638db1b349250ab2ddd80b588d735e1d0b3822aae18",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "- Record why an observation is missing or unusable.\n- A poor response caused by a treatment must not automatically be discarded.\n- A substituted value is an estimate, not a recovered observation.\n- The CRD can usually be fitted directly with unequal treatment sample sizes.\n- A missing plot destroys the complete balance of an RCBD or Latin square.\n- With one missing plot, the usual complete-design error degrees of freedom decrease by one, provided the model remains estimable.\n- Substitution minimizes error SS; treatment SS and comparison standard errors require the stated adjustments.\n- Fitting the model to observed responses is an alternative to substitution.\n- Missingness related to an unobserved response can bias the analysis; a calculation alone does not resolve this problem.",
+          "start_line": 254,
+          "end_line": 265
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "For a CRD, analyse the observed responses using their actual treatment sample sizes. If all $v$ treatments remain represented:\n\n$$edf=n_{obs}-v,\\qquad\nSE(\\bar Y_i-\\bar Y_j)=\\sqrt{MSE\\left(\\frac{1}{n_i}+\\frac{1}{n_j}\\right)}$$\n\nFor one missing observation in an RCBD with $v$ treatments and $r$ blocks:\n\n$$\\hat x=\\frac{rB+vT-G}{(r-1)(v-1)},\n\\qquad edf=(r-1)(v-1)-1$$\n\nHere $B$ and $T$ are the observed totals of the affected block and treatment, and $G$ is the observed grand total.\n\nFor one missing observation in a Latin square of order $v$:\n\n$$\\hat x=\\frac{v(R+C+T)-2G}{(v-1)(v-2)},\n\\qquad edf=(v-1)(v-2)-1$$\n\nHere $R$, $C$ and $T$ are the observed totals of the affected row, column and treatment. In both substitution formulae, all totals exclude the missing value. Use the bias corrections and comparison formulae in the chapter; do not treat the substituted value as an independent observation.",
+          "start_line": 233,
+          "end_line": 253
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. The classical substitution estimate of a missing plot minimizes the error sum of __________.\n\n2. Estimating one missing observation reduces the error degrees of freedom by __________.\n\n3. An estimated missing value is not an additional independent __________.\n\n4. In the RBD missing-value formula, totals exclude the missing __________.\n\n5. The classical substitution procedure may inflate the treatment sum of __________.\n\n6. Repeated updating of several missing-value estimates is called __________.\n\n7. The two blocking factors in a Latin square are rows and __________.\n\n8. The error mean square is used to calculate the standard error of a treatment __________.",
+          "start_line": 266,
+          "end_line": 285
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Squares `2.` One `3.` Observation `4.` Value `5.` Squares `6.` Iteration `7.` Columns `8.` Difference\n:::",
+          "start_line": 304,
+          "end_line": 310
+        }
+      ]
+    },
+    {
+      "num": 24,
+      "file": "transformation.qmd",
+      "sha256": "06a8212e322695da7557785d896ab0dba4860a51058f27026c6c2e95a47dddbd",
+      "sections": [
+        {
+          "heading": "Quick revision",
+          "markdown": "* Data transformation → used when the assumptions required for valid statistical analysis are not satisfied.\n\n* Main purpose → improve validity, precision, and accuracy of statistical analysis.\n\n* Transformation should not be chosen merely to obtain a desired conclusion.\n\n* ANOVA and mean separation → performed on the transformed data.\n\n* Final means → retransformed to the original scale for interpretation.\n\n* Normality → assess model errors using residual diagnostics after transformation.\n\n* Transformations covered → logarithmic, square root, angular, and the Box-Cox family.\n\n* Logarithmic transformation → suitable when standard deviation is proportional to the mean.\n\n* Log transformation → also useful for multiplicative rather than additive effects.\n\n* Logarithms require positive inputs; shifts need justification, and an alternative model may be preferable.\n\n* Common transformation for zero values → $\\log(Y+1)$.\n\n* Positive observations below one can be logged directly; their logarithms are negative.\n\n* Square root transformation → appropriate for Poisson-type count data.\n\n* Examples → insect counts, number of defectives, and counts of seeds affected by disease.\n\n* Poisson distribution → $\\sigma^2=\\mu$.\n\n* Empirical square root case → $\\sigma^2=c^2\\mu$.\n\n* Zero counts → $\\sqrt Y$ is defined; the worked example uses $\\sqrt{Y+1}$ consistently.\n\n* Retransformation of square root mean → square the value and subtract 1.\n\n* Retransformed square root mean → no greater than the original arithmetic mean; the difference may be substantial.\n\n* Back-transformed means are not generally arithmetic means; any bias correction must match the fitted model.\n\n* Angular transformation → appropriate for percentage data derived from binomial counts.\n\n* Binomial variance → $\\sigma^2=p(1-p)/n$.\n\n* The 30%–70% guideline is approximate; use the binomial model and residual diagnostics to assess the analysis.\n\n* A single proportion outside 30%–70% does not automatically require transformation. If used, apply one transformation consistently.\n\n* Angular transformation → $sin^{-1}\\sqrt p$.\n\n* For 0% → replace with $1/(4n)$.\n\n* For 100% → replace with $1-1/(4n)$.\n\n* Retransformation of angular mean → $100\\times sin^2X$, using the same angular unit as in the forward transformation.\n\n* Percentage of protein, carbohydrate, etc. → need not necessarily be transformed because such percentages are not necessarily binomial proportions.\n\n* Distribution and transformation:\n\n  * Poisson → $\\sqrt{x}$.\n  * Empirical $\\sigma^2=c^2\\mu$ → $\\sqrt{x}$.\n  * Binomial → $sin^{-1}\\sqrt p$.\n  * Empirical $\\sigma^2=c^2\\mu^2$ → $\\log(x)$.\n\n* Logarithmic example → weed counts were transformed using $X=\\log Y$.\n\n* Square root example → larval counts containing zero values were transformed using $X=\\sqrt{Y+1}$.\n\n* Angular example → insect mortality percentages were transformed using $X=sin^{-1}\\sqrt p$.\n\n* In all three examples → ANOVA was performed on transformed values.\n\n* Treatment means → compared using the appropriate critical difference after significant treatment F test.\n\n* Final interpretation → based on retransformed means expressed in the original units.",
+          "start_line": 546,
+          "end_line": 624
+        },
+        {
+          "heading": "Important formulae",
+          "markdown": "Logarithmic transformation:\n\n$$\nX=\\log Y\n$$\n\nLogarithmic transformation with a constant:\n\n$$\nX=\\log(Y+k),\\quad k>0\n$$\n\nSquare root transformation:\n\n$$\nX=\\sqrt{Y}\n$$\n\nSquare root transformation when zero values occur:\n\n$$\nX=\\sqrt{Y+1}\n$$\n\nAlternative transformation for very small counts:\n\n$$\nX=\\sqrt{Y}+\\sqrt{Y+1}\n$$\n\nAngular transformation:\n\n$$\nX=sin^{-1}\\sqrt p\n$$\n\nwhere\n\n$$\np=\\frac{Y}{100}\n$$\n\nReplacement for 0%:\n\n$$\np=\\frac{1}{4n}\n$$\n\nReplacement for 100%:\n\n$$\np=1-\\frac{1}{4n}\n$$\n\nRetransformation after logarithmic transformation:\n\n$$\nY=antilogX\n$$\n\nRetransformation after $X=\\sqrt{Y+1}$:\n\n$$\nY=X^2-1\n$$\n\nRetransformation after angular transformation:\n\n$$\nY=100\\times sin^2X\n$$\n\nBinomial variance:\n\n$$\n\\sigma^2=\\frac{p(1-p)}{n}\n$$\n\nPoisson variance:\n\n$$\n\\sigma^2=\\mu\n$$\n\nEmpirical variance relationship for square root transformation:\n\n$$\n\\sigma^2=c^2\\mu\n$$\n\nEmpirical variance relationship for logarithmic transformation:\n\n$$\n\\sigma^2=c^2\\mu^2\n$$\n\nCoefficient of variation:\n\n$$\nCV=\\frac{SD}{Mean}\\times100\n$$\n\nCritical difference for transformed means in an RBD:\n\n$$\nCD=t_{\\alpha/2,edf}\\sqrt{\\frac{2MSE}{r}}\n$$",
+          "start_line": 436,
+          "end_line": 545
+        },
+        {
+          "heading": "Fill in the blanks",
+          "markdown": "Answers are given at the end of the chapter.\n\n1. A change of measurement scale used before analysis is called a data __________.\n\n2. Unequal error variances are described as __________.\n\n3. A transformation commonly used for positive data with multiplicative effects is the __________ transformation.\n\n4. A traditional variance-stabilising transformation for Poisson counts is the __________ root transformation.\n\n5. A traditional variance-stabilising transformation for binomial proportions is the __________ square root transformation.\n\n6. In the angular transformation $\\sin^{-1}\\sqrt{p}$, $p$ denotes a __________.\n\n7. After a transformation is chosen, significance tests are performed on the __________ scale.\n\n8. Converting a transformed result to the original scale is called __________ transformation.\n\n9. The inverse of the square root transformation is __________.\n\n10. The inverse of a logarithmic transformation is __________.\n\n11. For a Poisson distribution, the variance equals the __________.\n\n12. After fitting an ANOVA model, its assumptions should be assessed using the __________.",
+          "start_line": 292,
+          "end_line": 319
+        },
+        {
+          "heading": "Answers to fill in the blanks",
+          "markdown": "::: {.answer-key}\n\n`1.` Transformation `2.` Heteroscedasticity `3.` Logarithmic `4.` Square `5.` Arcsine `6.` Proportion `7.` Transformed `8.` Back `9.` Squaring `10.` Exponentiation `11.` Mean `12.` Residuals\n:::",
+          "start_line": 625,
+          "end_line": 631
+        }
+      ]
+    }
+  ]
+}

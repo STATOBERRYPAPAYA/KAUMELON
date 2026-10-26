@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,135 +29,133 @@
     <div class="num" aria-hidden="true">16</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 16</div>
     <h1>Design of Experiments</h1>
-    <div class="sub">Treatments, units and factors, experimental error, Fisher's three principles and ways to improve precision.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/designofexperiments.html#chapter-summary">Chapter 16 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Randomise, replicate and control local variation.</p>
-    <div class="focus-pair"><p><b>Remember</b>Replication estimates experimental error; randomisation protects against systematic allocation bias; blocking reduces nuisance variation.</p><p><b>Apply it</b>Ten leaves measured on one treated plant are subsamples, not ten independently treated experimental units.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>Why design experiments?</h2>
-      <div class="body">
-        <p class="small"><b>Design of Experiments (DoE)</b>: planning experiments so treatment effects are estimated <b>accurately, efficiently and without bias</b>.</p>
-        <p class="small"><b>Objectives:</b> validity · reliability · replicability · optimality.</p>
-        <p class="small"><b>A good design</b> gives unbiased estimates with their uncertainty, detects important differences, includes the analysis plan, is easy to interpret, has wide validity, uses minimal resources and is as simple as possible.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>A well-designed experiment separates the effect of the treatments
+from other sources of variation, so that observed differences can be
+attributed to the treatments with confidence.</li>
+<li>Experimental error is the variation among experimental units that
+receive the same treatment; every design must provide a way of
+estimating it.</li>
+<li>The three basic principles of design, randomization, replication,
+and local control, work together: randomization protects against
+systematic allocation bias, replication permits estimation of
+experimental error and improves precision, and local control reduces
+experimental error by accounting for known sources of variation.</li>
+<li>An experimental unit is the smallest unit to which a treatment is
+independently applied; an observational unit is the unit on which the
+response is actually measured. Confusing the two leads to
+pseudo-replication.</li>
+<li>In a Randomized Block Design, similar experimental units are grouped
+into blocks, and all treatments are randomly assigned within each block,
+so that treatments are compared under similar conditions.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Key terms</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Treatment</b></td><td>Any object of comparison</td></tr>
-            <tr><td><b>Control</b></td><td>Standard treatment for comparison</td></tr>
-            <tr><td><b>Experimental unit</b></td><td>Smallest unit to which a treatment is <b>independently</b> applied</td></tr>
-            <tr><td><b>Observational unit</b></td><td>Unit on which the response is measured</td></tr>
-            <tr><td><b>Response</b></td><td>Measured outcome</td></tr>
-            <tr><td><b>Factor / levels</b></td><td>Variable studied / its settings</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Precision can be further improved through good plot technique
+(keeping everything except the treatment uniform), excluding border
+plants from data collection (using only the net plot), and appropriate
+statistical analysis such as ANCOVA, which adjusts for covariates.</li>
+<li>R. A. Fisher developed the statistical foundations of experimental
+design at Rothamsted Experimental Station in the 1920s and 1930s,
+introducing ANOVA and, together with Frank Yates, the methodologies that
+remain central to agricultural research today.</li>
+</ul></div></section>
 
-    <section class="card c-rose s2">
-      <h2><span class="n">3</span>Experimental error</h2>
-      <div class="body">
-        <p class="small">Variation among experimental units <b>receiving the same treatment</b>, caused by <b>extraneous factors</b>.</p>
-        <p class="small">Every design must provide a way to <b>estimate</b> it.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important concepts · 1</h2><div class="body"><ul>
+<li><p>Experiment → systematic procedure conducted under controlled
+conditions to discover an effect, test a hypothesis, or illustrate a
+known effect.</p></li>
+<li><p>Design of Experiments → statistical methodology for planning
+experiments so that treatment effects can be estimated accurately,
+efficiently, and without bias.</p></li>
+<li><p>Main objectives of DoE → validity, reliability, replicability,
+and optimality.</p></li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">4</span>Fisher's three basic principles</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Principle</th><th>What it means</th><th>Why</th></tr></thead>
-          <tbody>
-            <tr><td><b>Randomization</b></td><td>Treatments assigned to units purely by chance</td><td>Protects against allocation bias; balances unknown sources of variation on average</td></tr>
-            <tr><td><b>Replication</b></td><td>Same treatment on more than one unit</td><td><b>Estimates experimental error</b>; improves precision and reliability</td></tr>
-            <tr><td><b>Local control</b> (blocking)</td><td>Group similar units into blocks before randomising</td><td><b>Reduces</b> experimental error from known variation</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">In a <b>Randomized Block Design</b>, all treatments are randomly assigned within each block of similar units.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important concepts · 2</h2><div class="body"><ul>
+<li><p>Treatment → any object of comparison in an experiment.</p></li>
+<li><p>Control → standard treatment used for comparison.</p></li>
+<li><p>Experimental unit → smallest unit to which a treatment is
+independently applied.</p></li>
+</ul></div></section>
 
-    <section class="card c-blue s3">
-      <h2><span class="n">5</span>Improving precision</h2>
-      <div class="body">
-        <ul class="ticks">
-          <li><b>Border effect:</b> neighbouring plots affect border plants, so record only the inner <b>net plot</b>.</li>
-          <li><b>Proper plot technique:</b> keep everything except the treatment uniform.</li>
-          <li><b>Appropriate analysis:</b> e.g. ANCOVA adjusts for covariates.</li>
-          <li><b>Planning and recording:</b> block for time or batches; keep original records.</li>
-          <li><b>Matching the design</b> to the experimental units.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important concepts · 3</h2><div class="body"><ul>
+<li><p>Observation unit → unit on which the response is
+measured.</p></li>
+<li><p>Response → measurable outcome observed after treatment
+application.</p></li>
+<li><p>Factor → variable whose influence on a response is being
+studied.</p></li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">6</span>History</h2>
-      <div class="body">
-        <ul>
-          <li><b>R.A. Fisher</b> founded the statistical principles of DoE at <b>Rothamsted Experimental Station</b> in the 1920s–30s.</li>
-          <li>He introduced <b>ANOVA</b> to partition variation into factors and chance.</li>
-          <li>With <b>Frank Yates</b>, he built methods still central to agricultural research.</li>
-          <li>Fisher's <b>tea-tasting</b> experiment shows why randomization matters.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important concepts · 4</h2><div class="body"><ul>
+<li><p>Factor level → value or setting taken by a factor.</p></li>
+<li><p>Experimental error → variation in response caused by extraneous
+factors among experimental units receiving the same treatment.</p></li>
+<li><p>Extraneous factors → factors other than the treatments that cause
+variation in the response.</p></li>
+</ul></div></section>
 
-    <section class="card c-plum s4">
-      <h2><span class="n">7</span>Example: pot experiment with manures</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Treatments</b></td><td>Poultry manure, cow dung, coir-pith compost</td></tr>
-            <tr><td><b>Experimental unit</b></td><td>One pot receiving one manure</td></tr>
-            <tr><td><b>Replication</b></td><td>Several pots per manure</td></tr>
-            <tr><td><b>Response</b></td><td>Yield per plant</td></tr>
-            <tr><td><b>Error</b></td><td>Yield differences among pots given the same manure</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important concepts · 5</h2><div class="body"><ul>
+<li><p>Randomization → assignment of treatments to experimental units
+purely by chance.</p></li>
+<li><p>Complete randomization → treatments are assigned without blocking
+restrictions, subject to the pre-specified treatment counts; allocation
+may be equal or unequal.</p></li>
+<li><p>Replication → application of the same treatment to more than one
+experimental unit.</p></li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li><b>Pseudo-replication:</b> counting several plants in one pot as replicates.</li>
-          <li>Randomizing the field but always applying treatments in the same order.</li>
-          <li>Recording border plants.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important concepts · 6</h2><div class="body"><ul>
+<li><p>Local control → grouping similar experimental units into blocks
+before assigning treatments.</p></li>
+<li><p>Blocking → another term for local control.</p></li>
+<li><p>Basic principles of design → randomization, replication, and
+local control.</p></li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>Applying each fertiliser dose to four plots uses the principle of <span class="blank"></span>.<span class="ans">replication</span></li>
-          <li>Assigning treatments to plots by drawing lots is <span class="blank"></span>.<span class="ans">randomization</span></li>
-          <li>Grouping plots of similar fertility into blocks applies <span class="blank"></span>.<span class="ans">local control</span></li>
-          <li>Yield differences between plots that received the same treatment measure experimental <span class="blank"></span>.<span class="ans">error</span></li>
-          <li>Counting three plants in one pot as three replicates is the mistake called <span class="blank"></span>.<span class="ans">pseudo-replication</span></li>
-          <li>Border rows are left out and yield is recorded from the <span class="blank"></span> plot.<span class="ans">net</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-blue book-formulas"><h2>Important concepts · 7</h2><div class="body"><ul>
+<li><p>Randomization → protects against allocation bias and balances
+unknown sources of variation in expectation; a particular allocation can
+remain unbalanced.</p></li>
+<li><p>Replication → improves reliability and precision and permits
+estimation of experimental error.</p></li>
+<li><p>Local control → reduces experimental error by accounting for
+known sources of variation.</p></li>
+</ul></div></section>
 
-  <div class="strip">
-    <div class="motto">“Randomise to stay honest, replicate to measure error, block to reduce it.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-blue book-formulas"><h2>Important concepts · 8</h2><div class="body"><ul>
+<li><p>Randomized Block Design → design in which similar experimental
+units are grouped into blocks and all treatments are randomly assigned
+within each block.</p></li>
+<li><p>Border effect → influence of neighbouring plots on plants located
+near plot borders.</p></li>
+<li><p>Net plot → inner portion of a plot from which observations are
+recorded after excluding border plants.</p></li>
+</ul></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important concepts · 9</h2><div class="body"><ul>
+<li><p>Proper plot technique → keeping all management practices other
+than the treatments as uniform as possible.</p></li>
+<li><p>ANCOVA → statistical method that adjusts the response using one
+or more covariates to improve precision.</p></li>
+<li><p>Good experimental design → supports unbiased, precise and
+interpretable comparisons, uses resources efficiently, and defines the
+conditions to which conclusions apply.</p></li>
+</ul></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The condition or combination of conditions applied to an experimental
+unit is called a __________.</p><span class="ans">Treatment</span></li><li><p>A standard treatment used for comparison is called a __________.</p><span class="ans">Control</span></li><li><p>The smallest unit to which a treatment is independently assigned is
+the __________ unit.</p><span class="ans">Experimental</span></li><li><p>A variable whose levels are investigated in an experiment is called a
+__________.</p><span class="ans">Factor</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

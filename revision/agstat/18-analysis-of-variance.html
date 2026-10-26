@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,137 +29,67 @@
     <div class="num" aria-hidden="true">18</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 18</div>
     <h1>Analysis of Variance</h1>
-    <div class="sub">Partitioning total variation, degrees of freedom, mean squares, the F test, assumptions and ANOVA models.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/anova.html#chapter-summary">Chapter 18 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">ANOVA compares means through a variance ratio.</p>
-    <div class="focus-pair"><p><b>Remember</b>A significant treatment F test indicates that not all treatment means are equal. It does not identify the differing pairs.</p><p><b>Apply it</b>For three treatments and 12 observations in a one-way CRD, treatment df = 2, error df = 9 and total df = 11.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>The idea</h2>
-      <div class="body">
-        <p class="lead"><b>ANOVA</b> (Analysis of Variance) compares population means by <span class="hl">partitioning the total variation</span> into parts due to known sources and to error.</p>
-        <div class="fx"><span class="lbl">Null hypothesis (one-way)</span>$$H_0: \mu_1 = \mu_2 = \cdots = \mu_v$$</div>
-        <p class="small">A significant $F$ means <b>at least one pair</b> of means differs. It is an <b>omnibus</b> test and doesn't say which pairs.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>ANOVA compares population means by partitioning the total
+variation.</li>
+<li>The one-way null hypothesis is <span
+class="math inline">\(H_0:\mu_1=\cdots=\mu_v\)</span>.</li>
+<li>A mean square is a sum of squares divided by its degrees of
+freedom.</li>
+<li>The treatment F-ratio compares treatment mean square with error mean
+square.</li>
+<li>The usual exact F test assumes independent normal errors with a
+common variance under the specified model.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Assumptions</h2>
-      <div class="body">
-        <ul class="ticks">
-          <li>Observations from <b>normal</b> populations</li>
-          <li>Common variance: <b>homogeneity of variance</b></li>
-          <li>Samples drawn <b>independently</b></li>
-          <li>Treatment effects are <b>additive</b></li>
-        </ul>
-        <p class="small">So errors are iid $N(0, \sigma^2)$. Check with residual plots: residuals vs fitted values, and a normal Q-Q plot.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>A significant overall F indicates that at least one pair of means
+differs; it does not identify the pairs.</li>
+<li>The additive two-way model separates treatment and block
+variation.</li>
+<li>With one observation per combination, interaction cannot be
+estimated separately from error.</li>
+<li>Check the design and residuals before interpreting the F tests.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>One-way ANOVA (CRD)</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Correction factor</span>$$CF = \frac{G^2}{n}$$</div>
-          <div class="fx"><span class="lbl">Total SS</span>$$SS_T = \sum y_{ij}^2 - CF$$</div>
-          <div class="fx"><span class="lbl">Treatment SS</span>$$SS_{Tr} = \sum \frac{T_i^2}{n_i} - CF$$</div>
-          <div class="fx"><span class="lbl">Error SS</span>$$SS_E = SS_T - SS_{Tr}$$</div>
-          <div class="fx"><span class="lbl">Mean squares</span>$$MS = \frac{SS}{df}$$</div>
-          <div class="fx"><span class="lbl">F ratio</span>$$F = \frac{MS_{Tr}}{MSE}$$</div>
-        </div>
-        <p class="where">$v$ treatments, $n$ observations, $T_i$ treatment totals, $G$ grand total.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae</h2><div class="body"><p>For a one-way classification with <span
+class="math inline">\(v\)</span> treatments and <span
+class="math inline">\(n\)</span> observations, let <span
+class="math inline">\(T_i\)</span> be the total and <span
+class="math inline">\(n_i\)</span> the number of observations in
+treatment <span class="math inline">\(i\)</span>, and <span
+class="math inline">\(G\)</span> the grand total.</p>
+<p><span class="math display">\[CF=\frac{G^2}{n},\qquad
+SS_{Total}=\sum_{i,j}y_{ij}^2-CF\]</span></p>
+<p><span
+class="math display">\[SS_{Treatment}=\sum_{i=1}^{v}\frac{T_i^2}{n_i}-CF,\qquad
+SS_E=SS_{Total}-SS_{Treatment}\]</span></p>
+<p><span
+class="math display">\[MS_{Treatment}=\frac{SS_{Treatment}}{v-1},\qquad
+MSE=\frac{SS_E}{n-v},\qquad F=\frac{MS_{Treatment}}{MSE}\]</span></p>
+<p>For a balanced additive two-way classification with <span
+class="math inline">\(v\)</span> treatments and <span
+class="math inline">\(r\)</span> blocks, one observation per
+combination, and block totals <span
+class="math inline">\(B_j\)</span>:</p>
+<p><span
+class="math display">\[SS_{Blocks}=\sum_{j=1}^{r}\frac{B_j^2}{v}-CF\]</span></p>
+<p><span
+class="math display">\[SS_E=SS_{Total}-SS_{Treatment}-SS_{Blocks},
+\qquad edf=(v-1)(r-1)\]</span></p></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>Degrees of freedom</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Source</th><th class="c">One-way</th><th class="c">Two-way</th></tr></thead>
-          <tbody>
-            <tr><td>Treatments</td><td class="c">$v-1$</td><td class="c">$v-1$</td></tr>
-            <tr><td>Blocks</td><td class="c">–</td><td class="c">$r-1$</td></tr>
-            <tr><td>Error</td><td class="c">$n-v$</td><td class="c">$(v-1)(r-1)$</td></tr>
-            <tr><td><b>Total</b></td><td class="c">$n-1$</td><td class="c">$vr-1$</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
-
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Two-way ANOVA (RBD)</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Block SS ($B_j$ block totals)</span>$$SS_B = \sum \frac{B_j^2}{v} - CF$$</div>
-        <div class="fx"><span class="lbl">Error SS</span>$$SS_E = SS_T - SS_{Tr} - SS_B$$</div>
-        <p class="small">Separates treatment and block variation. With one observation per cell, interaction cannot be separated from error.</p>
-      </div>
-    </section>
-
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>ANOVA models</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Linear model</span>$$Y_{ij} = \mu + \tau_i + e_{ij},\quad e_{ij} \sim N(0, \sigma^2)$$</div>
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Fixed</b></td><td>$\tau_i$ unknown constants (specific varieties of interest)</td></tr>
-            <tr><td><b>Random</b></td><td>$\tau_i \sim N(0, \sigma^2_\tau)$; variance components (randomly chosen fields)</td></tr>
-            <tr><td><b>Mixed</b></td><td>Both fixed and random effects</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
-
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>The ANOVA table</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Source</th><th class="c">df</th><th class="c">SS</th><th class="c">MS</th><th class="c">F</th></tr></thead>
-          <tbody>
-            <tr><td>Treatments</td><td class="c">$v-1$</td><td class="c">$SS_{Tr}$</td><td class="c">$SS_{Tr}/(v-1)$</td><td class="c">$MS_{Tr}/MSE$</td></tr>
-            <tr><td>Error</td><td class="c">$n-v$</td><td class="c">$SS_E$</td><td class="c">$MSE$</td><td class="c"></td></tr>
-            <tr><td><b>Total</b></td><td class="c">$n-1$</td><td class="c">$SS_T$</td><td class="c"></td><td class="c"></td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">Reject $H_0$ if calculated $F$ &gt; table $F$ at ($v-1$, error df). Then use multiple comparisons to find which means differ.</p>
-      </div>
-    </section>
-
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Concluding <b>all</b> means differ from a significant $F$.</li>
-          <li>Forgetting to subtract the correction factor.</li>
-          <li>Deleting outliers just to change significance.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>A CRD with 5 treatments and 4 replications has <span class="blank"></span> error df.<span class="ans">15</span></li>
-          <li>An RBD with 5 treatments in 4 blocks has <span class="blank"></span> error df.<span class="ans">12</span></li>
-          <li>MS(treatment) = 40 and MSE = 8 give F = <span class="blank"></span>.<span class="ans">5</span></li>
-          <li>A grand total of 120 from 12 observations gives a correction factor of <span class="blank"></span>.<span class="ans">1200</span></li>
-          <li>A treatment SS of 60 with 4 treatments gives a treatment mean square of <span class="blank"></span>.<span class="ans">20</span></li>
-          <li>A significant F shows that at least <span class="blank"></span> pair of means differs.<span class="ans">one</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
-
-  <div class="strip">
-    <div class="motto">“ANOVA splits the total variation and asks whether treatments explain more than chance.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>ANOVA stands for Analysis of __________.</p><span class="ans">Variance</span></li><li><p>The null hypothesis in a one-way fixed-effects ANOVA states that all
+population means are __________.</p><span class="ans">Equal</span></li><li><p>A sum of squares divided by its degrees of freedom is called a mean
+__________.</p><span class="ans">Square</span></li><li><p>The denominator of the usual treatment F-ratio is the __________ mean
+square.</p><span class="ans">Error</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

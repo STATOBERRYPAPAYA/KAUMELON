@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,138 +29,135 @@
     <div class="num" aria-hidden="true">06</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 6</div>
     <h1>Measures of Dispersion</h1>
-    <div class="sub">Range, interquartile range, mean absolute deviation, variance, standard deviation and the coefficient of variation.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/dispersion.html#chapter-summary">Chapter 6 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Report spread alongside the average.</p>
-    <div class="focus-pair"><p><b>Remember</b>Variance has squared units; standard deviation has the original units. CV is useful only when a meaningful positive mean exists.</p><p><b>Apply it</b>Two crops can have the same mean yield and different variability. A smaller SD indicates more consistent yields on the same scale.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>What is dispersion?</h2>
-      <div class="body">
-        <p class="lead">The <span class="hl">extent to which observations deviate from a central value</span>: the spread of the data.</p>
-        <div class="pair">
-          <div><h3>Absolute measures</h3>In the data's units: range, IQR, MAD, SD</div>
-          <div><h3>Relative measures</h3>Unit-free: coefficient of variation (CV)</div>
-        </div>
-        <p class="small muted" style="margin-top:.4rem">A good measure is rigidly defined, easy to compute, based on all values, suitable for further algebra and not unduly affected by extremes.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Dispersion → extent to which observations deviate from a central
+value.</li>
+<li>Range → difference between largest and smallest observations.</li>
+<li>Range → simplest measure of dispersion.</li>
+<li>IQR → spread of the middle 50% of observations.</li>
+<li>IQR → <span class="math inline">\(Q_3-Q_1\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Range &amp; IQR</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Range</span>$$R = L - S$$</div>
-          <div class="fx"><span class="lbl">Interquartile range</span>$$IQR = Q_3 - Q_1$$</div>
-        </div>
-        <ul>
-          <li><b>Range</b>: simplest; uses only the two extremes.</li>
-          <li><b>IQR</b>: spread of the <b>middle 50%</b>; less affected by extremes.</li>
-          <li><b>Quartile deviation</b> = IQR ÷ 2.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>IQR is less affected by extreme values than range.</li>
+<li>MAD → average absolute deviation from a central value.</li>
+<li>MAD about the median is the least.</li>
+<li>Variance → average squared deviation, using <span
+class="math inline">\(n-1\)</span> for sample variance.</li>
+<li>Standard deviation → non-negative square root of sample
+variance.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s2">
-      <h2><span class="n">3</span>Mean absolute deviation</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">MAD about the mean</span>$$MAD = \frac{\sum \lvert x_i - \bar{x} \rvert}{n}$$</div>
-        <p class="small">Uses all observations but ignores signs. MAD is <b>least about the median</b>.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Variance is expressed in squared units.</li>
+<li>Standard deviation is expressed in the original units.</li>
+<li>Standard deviation is always non-negative.</li>
+<li>Standard deviation = 0 → all observations are identical.</li>
+<li>Larger standard deviation → greater dispersion, when datasets are
+measured on the same scale.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">4</span>Variance &amp; standard deviation</h2>
-      <div class="body">
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Sample variance</span>$$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$</div>
-          <div class="fx"><span class="lbl">Shortcut</span>$$s^2 = \frac{1}{n-1}\left\{\sum x_i^2 - \frac{(\sum x_i)^2}{n}\right\}$$</div>
-          <div class="fx"><span class="lbl">Discrete frequency</span>$$s^2 = \frac{1}{n-1}\left\{\sum f_i x_i^2 - \frac{(\sum f_i x_i)^2}{n}\right\}$$</div>
-          <div class="fx"><span class="lbl">Grouped, $d_i = (x_i - A)/c$</span>$$s = c\sqrt{\frac{1}{n-1}\left\{\sum f_i d_i^2 - \frac{(\sum f_i d_i)^2}{n}\right\}}$$</div>
-        </div>
-        <p class="where">SD $s$ = non-negative square root of $s^2$. Grouped data: $x_i$ = class mark, $A$ = class mark with the highest frequency, $c$ = class interval.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Standard deviation is an absolute measure of dispersion.</li>
+<li>Coefficient of variation is a relative measure of dispersion.</li>
+<li>Higher CV → greater relative variability.</li>
+<li>Lower CV → lower relative variability.</li>
+<li>CV is useful for comparing datasets measured in different units or
+scales.</li>
+</ul></div></section>
 
-    <section class="card c-plum s3">
-      <h2><span class="n">5</span>Properties to remember</h2>
-      <div class="body">
-        <ul class="ticks">
-          <li>Variance is in <b>squared</b> units; SD is in the <b>original</b> units.</li>
-          <li>SD is always ≥ 0; SD = 0 means all observations are identical.</li>
-          <li>Sample variance uses divisor $n-1$ (unbiased).</li>
-          <li>Adding a constant to every value does <b>not</b> change SD.</li>
-          <li>Multiplying by $b$ multiplies SD by $\lvert b\rvert$.</li>
-          <li>Squaring gives extreme deviations more weight.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Range uses only the two extreme observations.</li>
+<li>IQR uses the middle 50% of the observations.</li>
+<li>MAD uses all observations but ignores the signs of deviations.</li>
+<li>Standard deviation uses all observations and gives greater weight to
+extreme deviations because deviations are squared.</li>
+</ul></div></section>
 
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Coefficient of variation</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">CV (%)</span>$$CV = \frac{s}{\bar{x}} \times 100$$</div>
-        <p>A <b>relative</b> measure, used to compare variability of datasets in <b>different units or with different means</b>.</p>
-        <div class="pair">
-          <div><h3>Higher CV</h3>More relative variability: less consistent</div>
-          <div><h3>Lower CV</h3>Less relative variability: more consistent</div>
-        </div>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Range:</p>
+<p><span class="math display">\[
+R=L-S
+\]</span></p>
+<p>where <span class="math inline">\(L\)</span> is the largest
+observation and <span class="math inline">\(S\)</span> is the smallest
+observation.</p>
+<p>Interquartile range:</p>
+<p><span class="math display">\[
+IQR=Q_3-Q_1
+\]</span></p>
+<p>Mean absolute deviation:</p>
+<p><span class="math display">\[
+MAD=\frac{\sum_{i=1}^{n}|x_i-\bar{x}|}{n}
+\]</span></p></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Comparing the measures</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Measure</th><th>Uses</th><th>Extreme values</th><th>Note</th></tr></thead>
-          <tbody>
-            <tr><td><b>Range</b></td><td>2 extremes only</td><td class="no">Strongly affected</td><td>Quick, rough</td></tr>
-            <tr><td><b>IQR</b></td><td>Middle 50%</td><td class="yes">Resistant</td><td>Pairs with the median</td></tr>
-            <tr><td><b>MAD</b></td><td>All values</td><td>Moderate</td><td>Ignores signs</td></tr>
-            <tr><td><b>SD</b></td><td>All values</td><td class="no">Sensitive (squared)</td><td>Best for algebra</td></tr>
-            <tr><td><b>CV</b></td><td>SD and mean</td><td class="no">Sensitive</td><td>Unit-free; needs a positive mean</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Sample variance:</p>
+<p><span class="math display">\[
+s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}
+\]</span></p>
+<p>Sample standard deviation:</p>
+<p><span class="math display">\[
+s=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}
+\]</span></p>
+<p>Alternative formula for sample variance:</p>
+<p><span class="math display">\[
+s^2=\frac{1}{n-1}\left\{\sum_{i=1}^{n}x_i^2-\frac{1}{n}\left(\sum_{i=1}^{n}x_i\right)^2\right\}
+\]</span></p></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Dividing by $n$ for a sample variance.</li>
-          <li>Reporting variance in the original units.</li>
-          <li>Comparing SDs of data in different units (use CV).</li>
-          <li>Forgetting to multiply by $c$ in the grouped shortcut.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Variance for a discrete frequency distribution:</p>
+<p><span class="math display">\[
+s^2=\frac{1}{n-1}\left\{\sum_{i=1}^{k}f_ix_i^2-\frac{1}{n}\left(\sum_{i=1}^{k}f_ix_i\right)^2\right\}
+\]</span></p>
+<p>Standard deviation for a discrete frequency distribution:</p>
+<p><span class="math display">\[
+s=\sqrt{\frac{1}{n-1}\left\{\sum_{i=1}^{k}f_ix_i^2-\frac{1}{n}\left(\sum_{i=1}^{k}f_ix_i\right)^2\right\}}
+\]</span></p>
+<p>For grouped frequency data:</p>
+<p><span class="math display">\[
+d_i=\frac{x_i-A}{c}
+\]</span></p>
+<p>where <span class="math inline">\(x_i\)</span> is the class mark,
+<span class="math inline">\(A\)</span> is the class mark with the
+highest frequency, and <span class="math inline">\(c\)</span> is the
+class interval.</p>
+<p>Sample variance for grouped frequency data:</p>
+<p><span class="math display">\[
+s^2=\frac{1}{n-1}\left\{\sum_{i=1}^{k}f_id_i^2-\frac{1}{n}\left(\sum_{i=1}^{k}f_id_i\right)^2\right\}c^2
+\]</span></p></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>Variety A has SD 4 q and mean 40 q; variety B has SD 3 q and mean 20 q. The more consistent variety has CV = <span class="blank"></span>%.<span class="ans">10 (variety A)</span></li>
-          <li>If every observation is doubled, the SD is multiplied by <span class="blank"></span> and the variance by <span class="blank"></span>.<span class="ans">2; 4</span></li>
-          <li>If yield is recorded in kg, its variance is expressed in <span class="blank"></span>.<span class="ans">kg²</span></li>
-          <li>The observations 5, 5, 5, 5 have a standard deviation of <span class="blank"></span>.<span class="ans">0</span></li>
-          <li>With Q₁ = 18 and Q₃ = 30, the quartile deviation is <span class="blank"></span>.<span class="ans">6</span></li>
-          <li>Adding 10 kg to every observation changes the SD by <span class="blank"></span>.<span class="ans">nothing (0)</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Sample standard deviation for grouped frequency data:</p>
+<p><span class="math display">\[
+s=c\sqrt{\frac{1}{n-1}\left\{\sum_{i=1}^{k}f_id_i^2-\frac{1}{n}\left(\sum_{i=1}^{k}f_id_i\right)^2\right\}}
+\]</span></p>
+<p>Coefficient of variation:</p>
+<p><span class="math display">\[
+CV=\frac{s}{\bar{x}}\times100
+\]</span></p></div></section>
 
-  <div class="strip">
-    <div class="motto">“An average tells you where the data sit; dispersion tells you how far you can trust it.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-ochre "><h2>Worked example from the chapter</h2><div class="body"><p>Consider the measurement on yield and plant height of a paddy
+variety. The mean and standard deviation for yield are 50 kg and 10 kg
+respectively. The mean and standard deviation for plant height are 55 cm
+and 5 cm respectively. Compare the variability.</p>
+<p><strong>Solution</strong></p>
+<p>Here, the measurements for yield and plant height are in different
+units. Hence the variability can be compared only by using coefficient
+of variation.</p>
+<p>For yield, CV = <span class="math inline">\(\ \frac{10}{50} \times
+100 =\)</span> 20%</p>
+<p>For plant height, CV = <span class="math inline">\(\frac{5}{55}
+\times 100 =\)</span> 9.1%</p>
+<p>The yield is subject to more variation than the plant height.</p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>The spread of observations is called __________.</p><span class="ans">Dispersion</span></li><li><p>The difference between the largest and smallest observations is the
+__________.</p><span class="ans">Range</span></li><li><p>The difference between the third and first quartiles is the
+__________ range.</p><span class="ans">Interquartile</span></li><li><p>Half the interquartile range is called the quartile __________.</p><span class="ans">Deviation</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

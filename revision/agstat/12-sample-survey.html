@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,127 +29,147 @@
     <div class="num" aria-hidden="true">12</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 12</div>
     <h1>Sample Survey</h1>
-    <div class="sub">Survey terminology, sampling and non-sampling errors, confidence intervals, and probability and non-probability sampling methods.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/sampleSurvey.html#chapter-summary">Chapter 12 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Sampling design determines how far results can be generalised.</p>
-    <div class="focus-pair"><p><b>Remember</b>Random sampling controls selection; stratification samples within groups; clustering samples groups of units.</p><p><b>Apply it</b>To represent both irrigated and rainfed farms, stratify by irrigation status and randomly sample within each stratum.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>Key terms</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>Census</b></td><td>Complete enumeration of every unit</td></tr>
-            <tr><td><b>Sampling unit</b></td><td>Basic unit selected</td></tr>
-            <tr><td><b>Sampling frame</b></td><td>Complete list identifying the units</td></tr>
-            <tr><td><b>Sampling design</b></td><td>Procedure used to select the sample</td></tr>
-            <tr><td><b>Estimator / estimate</b></td><td>Statistic used for a parameter / its particular value</td></tr>
-            <tr><td><b>Unbiased</b></td><td>$E(t) = \theta$; e.g. $E(\bar{X}) = \mu$</td></tr>
-          </tbody>
-        </table></div>
-        <div class="fx"><span class="lbl">Sampling fraction</span>$$f = \frac{n}{N}$$</div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Sample survey → systematic collection of information from a
+sample.</li>
+<li>Population → complete collection of units under study.</li>
+<li>Population size → <span class="math inline">\(N\)</span>.</li>
+<li>Sample → subset of the population selected for study.</li>
+<li>Sample size → <span class="math inline">\(n\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Errors in surveys</h2>
-      <div class="body">
-        <div class="pair">
-          <div><h3>Sampling error</h3>Arises from observing a sample, not the whole population. <b>Absent in a census</b>. Larger $n$ generally reduces standard error.</div>
-          <div><h3>Non-sampling error</h3>Everything else: non-response, measurement, recording, processing. Present even in a <b>census</b>.</div>
-        </div>
-        <p class="small" style="margin-top:.4rem">Reliable results need good design, representative sampling, trained enumerators and careful execution.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Sampling fraction → <span
+class="math inline">\(\frac{n}{N}\)</span>.</li>
+<li>Sampling unit → basic unit selected from the population.</li>
+<li>Census → complete enumeration of every population unit.</li>
+<li>Sampling design → procedure used to select the sample.</li>
+<li>Sampling frame → complete list or source identifying the sampling
+units.</li>
+</ul></div></section>
 
-    <section class="card c-blue s2">
-      <h2><span class="n">3</span>Confidence interval</h2>
-      <div class="body">
-        <p class="small">An <b>interval estimate</b> of a parameter.</p>
-        <div class="fx"><span class="lbl">Confidence level</span>$$100(1 - \alpha)\%$$</div>
-        <p class="small">$\alpha = 0.05$ → 95%; $\alpha = 0.01$ → 99%. "95%" describes the long-run performance of the method.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Parameter → numerical characteristic of the population.</li>
+<li>Statistic → numerical measure calculated from sample data.</li>
+<li>Estimator → statistic used to estimate a population parameter.</li>
+<li>Estimate → particular value obtained from an estimator.</li>
+<li>Unbiased estimator → estimator whose expected value equals the true
+parameter.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">4</span>Probability sampling methods</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Method</th><th>How</th><th>Best when</th></tr></thead>
-          <tbody>
-            <tr><td><b>Simple random</b> (SRSWR / SRSWOR)</td><td>Equal inclusion probabilities, with or without replacement</td><td>Complete frame, fairly homogeneous population</td></tr>
-            <tr><td><b>Stratified</b></td><td>Split into non-overlapping <b>strata</b>; sample each independently</td><td>Strata internally homogeneous: better precision</td></tr>
-            <tr><td><b>Systematic</b></td><td>Random start, then every $k$th unit; $k = N/n$</td><td>Ordered lists, field rows</td></tr>
-            <tr><td><b>Cluster</b></td><td>Select clusters at random; <b>enumerate all</b> units in them</td><td>No unit-level frame; dispersed population</td></tr>
-            <tr><td><b>Multistage</b></td><td>Sample in stages (e.g. village → field → plot)</td><td>Large-scale surveys such as GCES</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">Probability sampling allows probability-based inference and measurable sampling error.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Sampling error → difference caused by observing a sample rather than
+the entire population.</li>
+<li>Sampling error is absent in a census.</li>
+<li>Increasing sample size generally decreases standard error for a
+fixed design and population.</li>
+<li>Non-sampling error → errors other than sampling error.</li>
+<li>Census data can still contain non-sampling errors.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Non-probability sampling</h2>
-      <div class="body">
-        <ul>
-          <li><b>Convenience:</b> easily accessible units</li>
-          <li><b>Consecutive:</b> every accessible eligible unit in turn</li>
-          <li><b>Quota:</b> fill subgroup quotas non-randomly</li>
-          <li><b>Purposive (judgement):</b> deliberately chosen informative units</li>
-          <li><b>Snowball:</b> participants refer others</li>
-        </ul>
-        <p class="small muted">Useful without a frame or for hard-to-reach groups, but sampling error cannot be measured by probability theory.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Confidence interval → interval estimate of a population
+parameter.</li>
+<li>Confidence level → <span
+class="math inline">\(100(1-\alpha)\%\)</span>.</li>
+<li><span class="math inline">\(\alpha=0.05\)</span> → 95% confidence
+level.</li>
+<li><span class="math inline">\(\alpha=0.01\)</span> → 99% confidence
+level.</li>
+<li>A 95% confidence interval describes the long-run performance of the
+interval construction method.</li>
+</ul></div></section>
 
-    <section class="card c-plum s3">
-      <h2><span class="n">6</span>Survey steps &amp; pioneers</h2>
-      <div class="body">
-        <p class="small"><b>Principal steps:</b> objectives → target population → frame and units → data needed → questionnaire → collection method → <b>pilot survey</b> → design and sample size → fieldwork (handle non-response) → edit, tabulate, analyse → report → document.</p>
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>A.N. Kiaer</b></td><td>Representative Method, 1895</td></tr>
-            <tr><td><b>A.L. Bowley</b></td><td>Random sampling and probability-based inference in surveys</td></tr>
-            <tr><td><b>P.C. Mahalanobis</b></td><td>Pioneered large-scale sample surveys in India</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>Probability sampling → selection based on probability laws.</li>
+<li>Simple random sampling → equal inclusion probabilities; successive
+draws are independent only with replacement.</li>
+<li>SRSWR → selected unit is returned before the next selection.</li>
+<li>SRSWOR → selected unit is not returned.</li>
+<li>SRS requires a complete sampling frame.</li>
+</ul></div></section>
 
-    <section class="card c-clay s6">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Calling a convenience sample "random" · A census still has non-sampling errors · SRS draws are independent only <b>with</b> replacement · Stratified (sample within every group) ≠ cluster (take whole groups).</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Stratified sampling → population divided into non-overlapping strata
+and samples selected independently from each stratum.</li>
+<li>Stratification generally improves precision when strata are
+internally homogeneous.</li>
+<li>Systematic sampling → select a random start and then every <span
+class="math inline">\(k\)</span>th unit.</li>
+<li>Systematic sampling interval → <span
+class="math inline">\(k=\frac{N}{n}\)</span>.</li>
+<li>Cluster sampling → select clusters randomly and enumerate all units
+within selected clusters.</li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>Selecting 50 farms out of 1000 gives a sampling fraction of <span class="blank"></span>.<span class="ans">0.05</span></li>
-          <li>To choose 20 plots systematically from 400, the sampling interval k = <span class="blank"></span>.<span class="ans">20</span></li>
-          <li>Splitting a district into irrigated and rainfed areas and sampling from each is <span class="blank"></span> sampling.<span class="ans">stratified</span></li>
-          <li>Choosing some villages at random and surveying every farmer in them is <span class="blank"></span> sampling.<span class="ans">cluster</span></li>
-          <li>Wrongly recorded answers can occur even in a census; they are <span class="blank"></span> errors.<span class="ans">non-sampling</span></li>
-          <li>Interviewing only the farmers who came to a field day is <span class="blank"></span> sampling.<span class="ans">convenience</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-green "><h2>Quick revision · 8</h2><div class="body"><ul>
+<li>Cluster sampling is useful when individual-unit frames are
+unavailable and the population is geographically dispersed.</li>
+<li>Probability sampling permits probability-based inference.</li>
+<li>Non-probability sampling → selection based on convenience,
+judgement, quota, or other non-random criteria.</li>
+<li>Convenience sampling → select easily accessible units.</li>
+<li>Consecutive sampling → collect every accessible eligible unit
+sequentially until the required number or study period is reached.</li>
+</ul></div></section>
 
-  <div class="strip">
-    <div class="motto">“A good sample is chosen by chance, not by convenience.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-green "><h2>Quick revision · 9</h2><div class="body"><ul>
+<li>Quota sampling → fill predetermined subgroup quotas using non-random
+selection.</li>
+<li>Purposive sampling → researcher deliberately selects informative or
+suitable units.</li>
+<li>Snowball sampling → existing participants refer additional
+participants.</li>
+<li>Non-probability sampling can be useful when a sampling frame is
+unavailable or the population is difficult to reach.</li>
+<li>Non-probability sampling generally does not allow sampling error to
+be measured using probability theory.</li>
+</ul></div></section>
+
+<section class="card c-green "><h2>Quick revision · 10</h2><div class="body"><ul>
+<li>Kiaer → Representative Method, 1895.</li>
+<li>Bowley → introduced random sampling and probability-based inference
+into survey work.</li>
+<li>P.C. Mahalanobis → pioneered large-scale sample surveys in
+India.</li>
+<li>Good survey design, representative sampling, trained data
+collectors, and careful execution are essential for reliable
+results.</li>
+</ul></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Sampling fraction:</p>
+<p><span class="math display">\[f=\frac{n}{N}\]</span>
+{#eq-sampfrac}</p>
+<p>Systematic sampling interval:</p>
+<p><span class="math display">\[k=\frac{N}{n}\]</span>
+{#eq-sampinterval}</p>
+<p>Confidence level:</p>
+<p><span class="math display">\[\text{Confidence
+level}=100(1-\alpha)\%\]</span> {#eq-conflevel}</p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Expected value of an estimator:</p>
+<p><span class="math display">\[
+E(t)
+\]</span></p>
+<p>Unbiased estimator:</p>
+<p><span class="math display">\[E(t)=\theta\]</span> {#eq-unbiased}</p>
+<p>Expected value of the sample mean:</p>
+<p><span class="math display">\[
+E(\bar{X})=\mu
+\]</span></p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>A numerical constant describing a population is termed a
+__________.</p><span class="ans">Parameter</span></li><li><p>A numerical measure calculated from sample observations is termed a
+__________.</p><span class="ans">Statistic</span></li><li><p>Complete enumeration of a population is called a __________.</p><span class="ans">Census</span></li><li><p>The list of sampling units used for sample selection is called the
+sampling __________.</p><span class="ans">Frame</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

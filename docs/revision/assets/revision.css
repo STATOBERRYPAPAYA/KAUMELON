@@ -237,3 +237,8 @@ td.c,th.c{text-align:center}
 }
 @media print{.pair{grid-template-columns:1fr 1fr}.fxgrid{grid-template-columns:1fr 1fr}.fxgrid .wide{grid-column:1/-1}.pair>div{padding:1.3mm}.fxgrid .fx{margin:.5mm 0 1mm}.card .body{padding:2mm}.card>h2{padding:1.8mm 2mm}.mast .meta .chip:nth-child(2){display:none}}
 @media print{.sheet-foot{display:none}}
+.source-note{font-size:.72rem;line-height:1.5;color:#dfebdc;margin:8px 0 0}.source-note a{color:#e2edc2}.book-formulas .math.display{display:block;overflow-x:auto;margin:6px 0}.book-formulas p{overflow-wrap:anywhere}.fib-list li>p{display:inline}.fib-list .ans p{display:inline}
+@media print{.source-note,.source-note a{font-size:6.5pt;color:#e3eed7}.book-formulas .math.display{overflow:visible}.fib-list li>p{font-size:8.1pt}.fib-list .ans p{font-size:7.3pt}}
+.book-formulas .katex-display{margin:.3rem 0;overflow-x:auto;overflow-y:hidden}.book-formulas .body>p:has(.math.display){margin:4px 0}.book-formulas .body>p:has(+p .math.display){font-size:.77rem;font-weight:600;color:#345c65}.book-formulas .math.display{margin:2px 0}
+@media print{.book-formulas .katex-display{margin:1mm 0;overflow:visible}.book-formulas .body>p:has(.math.display){margin:.5mm 0}.book-formulas .body>p:has(+p .math.display){font-size:7.2pt}.book-formulas .math.display{margin:.5mm 0}.book-formulas .body{padding:1.5mm 2mm}.book-formulas .katex{font-size:1.05em}}
+@media print{body{width:190mm}.sheet{width:190mm}}

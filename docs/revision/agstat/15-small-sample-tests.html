@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,128 +29,309 @@
     <div class="num" aria-hidden="true">15</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 15</div>
     <h1>Small Sample Tests</h1>
-    <div class="sub">Student's t tests, the correlation test, chi-square tests and the F test for variances.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/smallsampleTest.html#chapter-summary">Chapter 15 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Choose the test from the study structure.</p>
-    <div class="focus-pair"><p><b>Remember</b>Paired data require analysis of within-pair differences. Independent groups require an independent-samples method.</p><p><b>Apply it</b>Before-and-after measurements on the same plants are paired; they are not two independent samples.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s2">
-      <h2><span class="n">1</span>Small samples</h2>
-      <div class="body">
-        <p class="small">Often $n &lt; 30$ (not a strict boundary). Uses the exact $t$, $\chi^2$ and $F$ distributions.</p>
-        <p class="small"><b>W.S. Gosset</b> published the $t$ distribution as "<b>Student</b>". It has heavier tails than the normal.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Small sample → often described as <span
+class="math inline">\(n&lt;30\)</span>, but this is not a universal
+boundary.</li>
+<li>Small sample theory → study of sampling distributions for small
+samples.</li>
+<li>Important small-sample distributions → <span
+class="math inline">\(t\)</span>, <span
+class="math inline">\(\chi^2\)</span>, and <span
+class="math inline">\(F\)</span>.</li>
+<li>Student’s <span class="math inline">\(t\)</span>-test → used mainly
+for small samples when <span class="math inline">\(\sigma\)</span> is
+unknown.</li>
+<li>Exact one-sample <span class="math inline">\(t\)</span>-test →
+independent random observations from a normal population with unknown
+standard deviation.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">2</span>Student's $t$ tests for means</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Test</th><th>Statistic</th><th class="c">df</th></tr></thead>
-          <tbody>
-            <tr><td><b>One sample</b>, $H_0: \mu = \mu_0$</td><td>$t = \dfrac{\bar{x} - \mu_0}{s/\sqrt{n}}$</td><td class="c">$n - 1$</td></tr>
-            <tr><td><b>Two samples, equal variances</b></td><td>$t = \dfrac{\bar{x}_1 - \bar{x}_2}{s\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$, pooled $s^2 = \dfrac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}$</td><td class="c">$n_1 + n_2 - 2$</td></tr>
-            <tr><td><b>Welch</b> (unequal variances)</td><td>$t = \dfrac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}$</td><td class="c">Welch–Satterthwaite (not an integer)</td></tr>
-            <tr><td><b>Paired</b>: before/after on the same unit</td><td>$t = \dfrac{\bar{d}}{s_d/\sqrt{n}}$, $d_i = x_i - y_i$</td><td class="c">$n - 1$</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>One-sample <span class="math inline">\(t\)</span>-test → tests a
+population mean against a specified value.</li>
+<li>One-sample <span class="math inline">\(t\)</span> degrees of freedom
+→ <span class="math inline">\(n-1\)</span>.</li>
+<li>Two-sample <span class="math inline">\(t\)</span>-test → compares
+two population means.</li>
+<li>Equal variances → use pooled variance.</li>
+<li>Equal-variance two-sample <span class="math inline">\(t\)</span>
+degrees of freedom → <span
+class="math inline">\(n_1+n_2-2\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">3</span>Testing a correlation</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">$H_0: \rho = 0$, df $= n - 2$</span>$$t = \frac{r\sqrt{n - 2}}{\sqrt{1 - r^2}}$$</div>
-        <p class="small">Assumes a bivariate normal model.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Unequal variances → use Welch’s <span
+class="math inline">\(t\)</span>-test.</li>
+<li>Welch’s <span class="math inline">\(t\)</span>-test uses separate
+sample variance terms.</li>
+<li>Welch’s degrees of freedom are generally not an integer and are
+calculated using the Welch-Satterthwaite formula.</li>
+<li>Paired <span class="math inline">\(t\)</span>-test → compares two
+related observations.</li>
+<li>Examples of paired data → before and after measurements on the same
+experimental unit.</li>
+</ul></div></section>
 
-    <section class="card c-plum s3">
-      <h2><span class="n">4</span>$F$ test: two variances</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">$H_0: \sigma_1^2 = \sigma_2^2$</span>$$F = \frac{s_1^2}{s_2^2},\quad df = (n_1 - 1,\ n_2 - 1)$$</div>
-        <p class="small">Put the larger variance on top ($F \ge 1$) and use the upper $\alpha/2$ cut-off for a two-sided test.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Paired <span class="math inline">\(t\)</span>-test is performed on
+the differences within pairs.</li>
+<li>Paired <span class="math inline">\(t\)</span> degrees of freedom →
+<span class="math inline">\(n-1\)</span>.</li>
+<li>Correlation test → tests whether the population correlation
+coefficient is zero.</li>
+<li>For the correlation test, <span
+class="math inline">\(H_0:\rho=0\)</span>.</li>
+<li>Correlation test degrees of freedom → <span
+class="math inline">\(n-2\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s4">
-      <h2><span class="n">5</span>Chi-square tests</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Test</th><th>Statistic</th><th class="c">df</th></tr></thead>
-          <tbody>
-            <tr><td><b>Goodness of fit</b></td><td>$\chi^2 = \sum \dfrac{(O_i - E_i)^2}{E_i}$</td><td class="c">$n - 1 - m$</td></tr>
-            <tr><td><b>Independence</b> ($r \times s$ table)</td><td>$\chi^2 = \sum\sum \dfrac{(O_{ij} - E_{ij})^2}{E_{ij}}$, $E_{ij} = \dfrac{A_i B_j}{N}$</td><td class="c">$(r-1)(s-1)$</td></tr>
-            <tr><td><b>2 × 2 table</b></td><td>$\chi^2 = \dfrac{n(ad - bc)^2}{C_1 C_2 R_1 R_2}$</td><td class="c">1</td></tr>
-            <tr><td><b>Population variance</b></td><td>$\chi^2 = \dfrac{(n-1)s^2}{\sigma_0^2}$</td><td class="c">$n - 1$</td></tr>
-          </tbody>
-        </table></div>
-        <p class="where">$n$ categories, $m$ parameters estimated from the data. Expected = row total × column total ÷ grand total. Goodness-of-fit and independence use the <b>upper</b> tail.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Chi-square tests → based on the chi-square distribution.</li>
+<li>Chi-square tests for categorical counts differ from the parametric
+variance test for a normal population.</li>
+<li>Important chi-square tests → goodness of fit, independence of
+attributes, and population variance.</li>
+<li>Goodness-of-fit test → compares observed and expected
+frequencies.</li>
+<li>Goodness-of-fit null hypothesis → category probabilities follow the
+specified distribution.</li>
+</ul></div></section>
 
-    <section class="card c-rose s2">
-      <h2><span class="n">6</span>Yates' correction</h2>
-      <div class="body">
-        <p class="small">Optional continuity adjustment for 2 × 2 tables:</p>
-        <div class="fx"><span class="lbl">Corrected</span>$$\frac{n[\max(0, \lvert ad - bc\rvert - \frac{n}{2})]^2}{C_1C_2R_1R_2}$$</div>
-        <p class="small">With small expected counts, consider an exact test.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li>Goodness-of-fit test is right-tailed.</li>
+<li>Goodness-of-fit degrees of freedom → <span
+class="math inline">\(n-1\)</span> when no parameter is estimated.</li>
+<li>Independence test → determines whether two attributes are
+independent.</li>
+<li>Contingency table → arrangement of frequencies for combinations of
+categorical attributes.</li>
+<li>Expected frequency → row total × column total ÷ grand total.</li>
+</ul></div></section>
 
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Which test?</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Question</th><th>Test</th></tr></thead>
-          <tbody>
-            <tr><td>Does mean plant height equal 90 cm?</td><td>One-sample $t$</td></tr>
-            <tr><td>Do two independent varieties differ in yield?</td><td>Two-sample $t$ (pooled or Welch)</td></tr>
-            <tr><td>Did yield change on the same plots before and after a treatment?</td><td>Paired $t$</td></tr>
-            <tr><td>Do segregation counts fit a 9:3:3:1 ratio?</td><td>$\chi^2$ goodness of fit</td></tr>
-            <tr><td>Is adoption independent of education level?</td><td>$\chi^2$ independence</td></tr>
-            <tr><td>Are two varieties equally variable?</td><td>$F$ test</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li><span class="math inline">\(r\times s\)</span> contingency table
+degrees of freedom → <span
+class="math inline">\((r-1)(s-1)\)</span>.</li>
+<li>2×2 contingency table degrees of freedom → 1.</li>
+<li>Yates’ correction → optional continuity adjustment for a 2×2
+chi-square approximation; assess expected frequencies and consider an
+exact test for sparse data.</li>
+<li>Population variance test → tests a specified value of <span
+class="math inline">\(\sigma^2\)</span>.</li>
+<li>Chi-square variance statistic → <span
+class="math inline">\(\frac{(n-1)s^2}{\sigma_0^2}\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Two-sample $t$ on paired data.</li>
-          <li>Wrong df: $n-1$ vs $n_1+n_2-2$ vs $(r-1)(s-1)$.</li>
-          <li>Running $\chi^2$ on percentages instead of counts.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 8</h2><div class="body"><ul>
+<li><span class="math inline">\(F\)</span>-test → tests equality of two
+population variances.</li>
+<li>Placing the larger sample variance first is a convenience for a
+two-sided F-test with upper-tail area <span
+class="math inline">\(\alpha/2\)</span>.</li>
+<li>With the larger variance in the numerator, <span
+class="math inline">\(F\geq1\)</span>; with fixed labels, <span
+class="math inline">\(F\)</span> may be less than 1.</li>
+<li><span class="math inline">\(F\)</span> degrees of freedom → <span
+class="math inline">\(n_1-1\)</span> and <span
+class="math inline">\(n_2-1\)</span>.</li>
+<li>In hypothesis testing, compare the calculated statistic with the
+appropriate table value.</li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>A one-sample t test on 12 plots has <span class="blank"></span> degrees of freedom.<span class="ans">11</span></li>
-          <li>Two independent groups of 8 and 10 plots (equal variances) give <span class="blank"></span> degrees of freedom.<span class="ans">16</span></li>
-          <li>Yields of the same 15 plots before and after mulching are compared with the <span class="blank"></span> t test.<span class="ans">paired</span></li>
-          <li>A 3 × 4 contingency table has <span class="blank"></span> degrees of freedom.<span class="ans">6</span></li>
-          <li>Row total 40, column total 30 and grand total 100 give an expected frequency of <span class="blank"></span>.<span class="ans">12</span></li>
-          <li>Sample variances 18 and 6 give F = <span class="blank"></span>.<span class="ans">3</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-green "><h2>Quick revision · 9</h2><div class="body"><ul>
+<li>For a two-tailed <span class="math inline">\(t\)</span>-test →
+reject <span class="math inline">\(H_0\)</span> when <span
+class="math inline">\(|t|\)</span> exceeds the critical value.</li>
+<li>For a right-tailed <span class="math inline">\(t\)</span>-test →
+reject <span class="math inline">\(H_0\)</span> when <span
+class="math inline">\(t\)</span> exceeds the critical value.</li>
+<li>For a left-tailed <span class="math inline">\(t\)</span>-test →
+reject <span class="math inline">\(H_0\)</span> when <span
+class="math inline">\(t\)</span> is less than the negative critical
+value.</li>
+<li>Goodness-of-fit and independence tests use the upper chi-square
+tail; a variance test may be one-sided or two-sided.</li>
+<li>For a two-sided F-test → use both <span
+class="math inline">\(\alpha/2\)</span> tails, or the equivalent
+larger-variance ratio with an upper <span
+class="math inline">\(\alpha/2\)</span> cutoff.</li>
+</ul></div></section>
 
-  <div class="strip">
-    <div class="motto">“t compares means, chi-square compares counts, F compares variances.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-green "><h2>Quick revision · 10</h2><div class="body"><ul>
+<li>William Sealy Gosset developed the <span
+class="math inline">\(t\)</span> distribution and published under the
+name “Student”.</li>
+<li>Student’s <span class="math inline">\(t\)</span> distribution has
+heavier tails than the normal distribution.</li>
+</ul></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Sample variance:</p>
+<p><span class="math display">\[
+s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}
+\]</span></p>
+<p>One-sample <span class="math inline">\(t\)</span> statistic:</p>
+<p><span class="math display">\[
+t=\frac{\bar{x}-\mu_0}{s/\sqrt{n}}
+\]</span></p>
+<p>Degrees of freedom for one-sample <span
+class="math inline">\(t\)</span>-test:</p>
+<p><span class="math display">\[
+df=n-1
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Pooled variance:</p>
+<p><span class="math display">\[
+s^2=\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}
+\]</span></p>
+<p>Two-sample <span class="math inline">\(t\)</span> statistic for equal
+variances:</p>
+<p><span class="math display">\[
+t=\frac{\bar{x}_1-\bar{x}_2}{s\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}
+\]</span></p>
+<p>Degrees of freedom for equal-variance two-sample <span
+class="math inline">\(t\)</span>-test:</p>
+<p><span class="math display">\[
+df=n_1+n_2-2
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Welch <span class="math inline">\(t\)</span> statistic:</p>
+<p><span class="math display">\[
+t=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}
+\]</span></p>
+<p>Welch degrees of freedom:</p>
+<p><span class="math display">\[
+df=\frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2}{\frac{s_1^4}{n_1^2(n_1-1)}+\frac{s_2^4}{n_2^2(n_2-1)}}
+\]</span></p>
+<p>Paired difference:</p>
+<p><span class="math display">\[
+d_i=x_i-y_i
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Mean paired difference:</p>
+<p><span class="math display">\[
+\bar{d}=\frac{\sum_{i=1}^{n}d_i}{n}
+\]</span></p>
+<p>Variance of paired differences:</p>
+<p><span class="math display">\[
+s^2=\frac{\sum_{i=1}^{n}(d_i-\bar{d})^2}{n-1}
+\]</span></p>
+<p>Paired <span class="math inline">\(t\)</span> statistic:</p>
+<p><span class="math display">\[
+t=\frac{\bar{d}}{s/\sqrt{n}}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 5</h2><div class="body"><p>Degrees of freedom for paired <span
+class="math inline">\(t\)</span>-test:</p>
+<p><span class="math display">\[
+df=n-1
+\]</span></p>
+<p>Test statistic for significance of correlation coefficient:</p>
+<p><span class="math display">\[
+t=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}
+\]</span></p>
+<p>Degrees of freedom for correlation test:</p>
+<p><span class="math display">\[
+df=n-2
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 6</h2><div class="body"><p>Chi-square goodness-of-fit statistic:</p>
+<p><span class="math display">\[
+\chi^2=\sum_{i=1}^{n}\frac{(O_i-E_i)^2}{E_i}
+\]</span></p>
+<p>Degrees of freedom for goodness-of-fit test:</p>
+<p><span class="math display">\[
+df=n-1-m
+\]</span></p>
+<p>Here <span class="math inline">\(n\)</span> is the number of
+categories and <span class="math inline">\(m\)</span> is the number of
+parameters estimated from the data; use <span
+class="math inline">\(m=0\)</span> when all probabilities are
+specified.</p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 7</h2><div class="body"><p>Expected frequency in an <span class="math inline">\(r\times
+s\)</span> contingency table:</p>
+<p><span class="math display">\[
+E_{ij}=\frac{(A_i)(B_j)}{N}
+\]</span></p>
+<p>Chi-square test of independence:</p>
+<p><span class="math display">\[
+\chi^2=\sum_{i=1}^{r}\sum_{j=1}^{s}\frac{(O_{ij}-E_{ij})^2}{E_{ij}}
+\]</span></p>
+<p>Degrees of freedom for an <span class="math inline">\(r\times
+s\)</span> contingency table:</p>
+<p><span class="math display">\[
+df=(r-1)(s-1)
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 8</h2><div class="body"><p>Chi-square statistic for a 2×2 contingency table:</p>
+<p><span class="math display">\[
+\chi^2=\frac{n(ad-bc)^2}{C_1C_2R_1R_2}
+\]</span></p>
+<p>Yates’ corrected chi-square statistic:</p>
+<p><span class="math display">\[
+\chi^2=\frac{n[\max(0,|ad-bc|-n/2)]^2}{C_1C_2R_1R_2}
+\]</span></p>
+<p>Chi-square test statistic for population variance:</p>
+<p><span class="math display">\[
+\chi^2=\frac{(n-1)s^2}{\sigma_0^2}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 9</h2><div class="body"><p>Degrees of freedom for chi-square variance test:</p>
+<p><span class="math display">\[
+df=n-1
+\]</span></p>
+<p><span class="math inline">\(F\)</span> statistic:</p>
+<p><span class="math display">\[
+F=\frac{s_1^2}{s_2^2}
+\]</span></p>
+<p>Degrees of freedom for <span class="math inline">\(F\)</span>
+test:</p>
+<p><span class="math display">\[
+df_1=n_1-1,\qquad df_2=n_2-1
+\]</span></p></div></section>
+
+<section class="card c-ochre "><h2>Worked example from the chapter</h2><div class="body"><p>A plant breeder studied the relationship between plant height and
+grain yield in a sample of 18 rice genotypes and obtained a correlation
+coefficient of 0.6. Test whether the population correlation coefficient
+is significant.</p>
+<p><strong>Solution</strong></p>
+<p>Null hypothesis, <span class="math inline">\(H_0\)</span>: <span
+class="math inline">\(\rho\)</span> = 0 (population correlation
+coefficient is zero)</p>
+<p>Alternative hypothesis, <span class="math inline">\(H_1\)</span>:
+<span class="math inline">\(\rho\)</span> <span
+class="math inline">\(\mathbf{\neq}\)</span> 0 (population correlation
+coefficient is not zero)</p>
+<p>Sample correlation coefficient (<span
+class="math inline">\(r\)</span>) = 0.6</p>
+<p>Number of pairs (<span class="math inline">\(n\)</span>) = 18</p>
+<p>Under the bivariate normal model, the following <span
+class="math inline">\(t\)</span> statistic is used to test zero
+correlation:</p>
+<p><span class="math display">\[t = \frac{r \sqrt{n - 2}}{\sqrt{1 -
+r^2}} = \frac{0.6 \sqrt{18 - 2}}{\sqrt{1 - 0.36}} = \frac{0.6 \times
+4}{\sqrt{0.64}} = \frac{2.4}{0.8} = 3.00\]</span></p>
+<p><span class="math inline">\(t_{\text{cal}}\)</span> = 3.00. The table
+value of <span class="math inline">\(t\)</span> for <span
+class="math inline">\(n - 2 = 16\)</span> degrees of freedom at the 5%
+level of significance (two-tailed) is 2.120. Since the calculated value
+is greater than the table value, we reject the null hypothesis and
+conclude that there is a significant correlation between plant height
+and grain yield.</p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>For a normal population with unknown variance, the standardised
+sample mean follows Student’s __________ distribution.</p><span class="ans"><span class="math inline">\(t\)</span></span></li><li><p>The degrees of freedom of a one-sample t-test are __________.</p><span class="ans"><span class="math inline">\(n-1\)</span></span></li><li><p>The two-sample t-test assuming equal population variances uses a
+__________ variance estimate.</p><span class="ans">Pooled</span></li><li><p>The two-sample t-test that does not assume equal population variances
+is called __________ t-test.</p><span class="ans">Welch’s</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

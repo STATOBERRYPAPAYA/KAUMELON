@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,127 +29,189 @@
     <div class="num" aria-hidden="true">13</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 13</div>
     <h1>Hypothesis Testing</h1>
-    <div class="sub">Null and alternative hypotheses, Type I and II errors, significance and power, critical regions, tails and p-values.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/hypothesisTest.html#chapter-summary">Chapter 13 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">State the hypotheses before looking at the test result.</p>
-    <div class="focus-pair"><p><b>Remember</b>A p-value is a probability under the null model, not the probability that the null hypothesis is true.</p><p><b>Apply it</b>At α = 0.05, p = 0.03 leads to rejection of H₀. A non-significant result means insufficient evidence, not proof of equality.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>Hypotheses</h2>
-      <div class="body">
-        <p class="small">A <b>statistical hypothesis</b> is a testable statement about a population parameter or distribution.</p>
-        <div class="pair">
-          <div><h3>$H_0$: null</h3>No effect, no difference, no relationship. The one tested for possible rejection.</div>
-          <div><h3>$H_1$ / $H_a$: alternative</h3>An effect, difference or relationship. Decides one- or two-tailed.</div>
-        </div>
-        <p class="small muted" style="margin-top:.35rem">Karl Popper's <b>falsification principle</b>: a scientific hypothesis must be testable and potentially falsifiable.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>Inferential statistics → uses sample data to draw conclusions about
+a population.</li>
+<li>Hypothesis → tentative and testable statement.</li>
+<li>Statistical hypothesis → testable statement about a population
+parameter.</li>
+<li><span class="math inline">\(H_0\)</span> → null hypothesis;
+generally represents no effect, no difference, or no relationship.</li>
+<li><span class="math inline">\(H_1\)</span> or <span
+class="math inline">\(H_a\)</span> → alternative hypothesis; represents
+an effect, difference, or relationship.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Errors in decisions</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th>Decision</th><th>$H_0$ true</th><th>$H_0$ false</th></tr></thead>
-          <tbody>
-            <tr><td><b>Reject $H_0$</b></td><td class="no">Type I error ($\alpha$)</td><td class="yes">Correct: power $1-\beta$</td></tr>
-            <tr><td><b>Fail to reject</b></td><td class="yes">Correct ($1-\alpha$)</td><td class="no">Type II error ($\beta$)</td></tr>
-          </tbody>
-        </table></div>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Level of significance</span>$$P(\text{reject } H_0 \mid H_0 \text{ true}) \le \alpha$$</div>
-          <div class="fx"><span class="lbl">Power</span>$$1 - \beta$$</div>
-        </div>
-        <p class="where">Larger samples generally increase power. $\alpha$ is fixed <b>before</b> the test (usually 0.05 or 0.01).</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Falsification principle → a scientific hypothesis should be capable
+of being tested and potentially falsified.</li>
+<li>Karl Popper → associated with the falsification principle.</li>
+<li>Always use “fail to reject <span
+class="math inline">\(H_0\)</span>”; do not say “accept <span
+class="math inline">\(H_0\)</span>”.</li>
+<li>Test statistic → numerical function of sample observations used to
+make a statistical decision.</li>
+<li>Common test statistics → <span class="math inline">\(Z\)</span>,
+<span class="math inline">\(t\)</span>, <span
+class="math inline">\(\chi^2\)</span>, and <span
+class="math inline">\(F\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>Regions &amp; tails</h2>
-      <div class="body">
-        <p class="small"><b>Test statistic</b> ($Z$, $t$, $\chi^2$, $F$) → compared with its <b>sampling distribution</b> under $H_0$. The <b>critical value</b> separates the <b>rejection (critical) region</b> from the <b>acceptance region</b>.</p>
-        <div class="tbl"><table>
-          <thead><tr><th>$H_1$</th><th>Test</th><th>Reject $H_0$ when</th><th class="c">$\alpha$ in tail</th></tr></thead>
-          <tbody>
-            <tr><td>$\mu \ne \mu_0$</td><td><b>Two-tailed</b></td><td>Statistic below the lower or above the upper critical value</td><td class="c">$\alpha/2$ each</td></tr>
-            <tr><td>$\mu &gt; \mu_0$</td><td><b>Right-tailed</b></td><td>Statistic &gt; critical value</td><td class="c">$\alpha$</td></tr>
-            <tr><td>$\mu &lt; \mu_0$</td><td><b>Left-tailed</b></td><td>Statistic &lt; critical value</td><td class="c">$\alpha$</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 3</h2><div class="body"><ul>
+<li>Type I error → reject <span class="math inline">\(H_0\)</span> when
+<span class="math inline">\(H_0\)</span> is true.</li>
+<li>Type II error → fail to reject <span
+class="math inline">\(H_0\)</span> when <span
+class="math inline">\(H_0\)</span> is false.</li>
+<li><span class="math inline">\(\alpha\)</span> → chosen upper bound on
+the Type I error probability.</li>
+<li><span class="math inline">\(\beta\)</span> → probability of Type II
+error.</li>
+<li>Power → probability of correctly rejecting a false <span
+class="math inline">\(H_0\)</span>.</li>
+</ul></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>The p-value</h2>
-      <div class="body">
-        <p class="small">Probability, assuming $H_0$ true, of a statistic <b>as extreme or more extreme</b> than observed.</p>
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td><b>p ≤ α</b></td><td>Reject $H_0$</td></tr>
-            <tr><td><b>p &gt; α</b></td><td>Fail to reject $H_0$</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">Small p = strong evidence against $H_0$.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 4</h2><div class="body"><ul>
+<li>Power → <span class="math inline">\(1-\beta\)</span>.</li>
+<li>Larger sample sizes generally increase power.</li>
+<li>Sampling distribution → probability distribution of possible values
+of a test statistic under repeated sampling, assuming <span
+class="math inline">\(H_0\)</span> is true.</li>
+<li>Rejection region → values of the test statistic for which <span
+class="math inline">\(H_0\)</span> is rejected.</li>
+<li>Critical region → another name for rejection region.</li>
+</ul></div></section>
 
-    <section class="card c-ochre s4">
-      <h2><span class="n">5</span>The eight steps of a test</h2>
-      <div class="body">
-        <ol class="steps" style="grid-template-columns:1fr 1fr;column-gap:14px">
-          <li>State $H_0$</li>
-          <li>State $H_1$</li>
-          <li>Set the significance level $\alpha$</li>
-          <li>Collect the data</li>
-          <li>Calculate the test statistic</li>
-          <li>Find the critical value or region</li>
-          <li>Compare the statistic with it</li>
-          <li>Make and state the decision</li>
-        </ol>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 5</h2><div class="body"><ul>
+<li>Acceptance region → complementary region where <span
+class="math inline">\(H_0\)</span> is not rejected.</li>
+<li>Critical value → value separating the rejection and non-rejection
+regions.</li>
+<li>Under <span class="math inline">\(H_0\)</span>, the rejection
+probability is controlled at <span
+class="math inline">\(\alpha\)</span>; a discrete test can be
+conservative.</li>
+<li>Under <span class="math inline">\(H_0\)</span>, the non-rejection
+probability is at least <span class="math inline">\(1-\alpha\)</span>
+for a level-<span class="math inline">\(\alpha\)</span> test.</li>
+<li><span class="math inline">\(H_1:\mu&lt;\mu_0\)</span> → left-tailed
+test.</li>
+</ul></div></section>
 
-    <section class="card c-rose s2">
-      <h2><span class="n">6</span>History</h2>
-      <div class="body">
-        <p class="small"><b>Fisher's tea-tasting experiment</b>: a lady claimed she could tell whether milk or tea was poured first. It's the classic illustration of significance testing.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 6</h2><div class="body"><ul>
+<li><span class="math inline">\(H_1:\mu&gt;\mu_0\)</span> → right-tailed
+test.</li>
+<li><span class="math inline">\(H_1:\mu\neq\mu_0\)</span> → two-tailed
+test.</li>
+<li>An equal-tail two-sided test allocates <span
+class="math inline">\(\alpha/2\)</span> to each tail; a discrete test
+may not attain these probabilities exactly.</li>
+<li>Right-tailed test → reject <span class="math inline">\(H_0\)</span>
+when the calculated statistic is greater than the critical value.</li>
+<li>Left-tailed test → reject <span class="math inline">\(H_0\)</span>
+when the calculated statistic is less than the critical value.</li>
+</ul></div></section>
 
-    <section class="card c-clay s6">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Saying "accept $H_0$": say <b>fail to reject</b> · Failing to reject does not prove $H_0$ true · Choosing $\alpha$ after seeing the data · Picking the tail from the result instead of from $H_1$.</li>
-        </ul>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 7</h2><div class="body"><ul>
+<li>Two-tailed test → reject <span class="math inline">\(H_0\)</span>
+when the statistic falls below the lower critical value or above the
+upper critical value.</li>
+<li>p-value → probability of obtaining a test statistic as extreme as or
+more extreme than the observed value, assuming <span
+class="math inline">\(H_0\)</span> is true.</li>
+<li>Small p-value → strong evidence against <span
+class="math inline">\(H_0\)</span>.</li>
+<li>Large p-value → insufficient evidence to reject <span
+class="math inline">\(H_0\)</span>.</li>
+<li>p-value <span class="math inline">\(\leq\alpha\)</span> → reject
+<span class="math inline">\(H_0\)</span>.</li>
+</ul></div></section>
 
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>Declaring a new fertiliser effective when it actually has no effect is a Type <span class="blank"></span> error.<span class="ans">I</span></li>
-          <li>If β = 0.2, the power of the test is <span class="blank"></span>.<span class="ans">0.8</span></li>
-          <li>Testing whether a variety yields more than 40 q/ha needs a <span class="blank"></span>-tailed test.<span class="ans">right</span></li>
-          <li>With p-value 0.03 and α = 0.05, we <span class="blank"></span> H₀.<span class="ans">reject</span></li>
-          <li>With p-value 0.08 and α = 0.05, we <span class="blank"></span> H₀.<span class="ans">fail to reject</span></li>
-          <li>In a two-tailed test at α = 0.05, each tail has area <span class="blank"></span>.<span class="ans">0.025</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
+<section class="card c-green "><h2>Quick revision · 8</h2><div class="body"><ul>
+<li>p-value <span class="math inline">\(&gt;\alpha\)</span> → do not
+reject <span class="math inline">\(H_0\)</span>.</li>
+<li>Failing to reject <span class="math inline">\(H_0\)</span> does not
+prove that <span class="math inline">\(H_0\)</span> is true.</li>
+<li>The alternative hypothesis determines whether the test is one-tailed
+or two-tailed.</li>
+<li>The level of significance is selected before conducting the
+test.</li>
+<li>Common significance levels in the chapter → <span
+class="math inline">\(\alpha=0.05\)</span> and <span
+class="math inline">\(\alpha=0.01\)</span>.</li>
+</ul></div></section>
 
-  <div class="strip">
-    <div class="motto">“We never accept the null hypothesis; we only fail to reject it.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-green "><h2>Quick revision · 9</h2><div class="body"><ul>
+<li>The eight basic steps are: state <span
+class="math inline">\(H_0\)</span>, state <span
+class="math inline">\(H_1\)</span>, set <span
+class="math inline">\(\alpha\)</span>, collect data, calculate the test
+statistic, identify the critical value or region, compare, and make the
+decision.</li>
+<li>A statistical decision can be incorrect because it is based on
+sample data.</li>
+<li>Type I and Type II errors have different consequences depending on
+the context.</li>
+<li>Fisher’s tea-tasting experiment is a historical illustration of
+hypothesis testing and significance testing.</li>
+</ul></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>Level of significance:</p>
+<p><span class="math display">\[
+P(\text{Reject }H_0\mid H_0\text{ is true})\leq\alpha
+\]</span></p>
+<p>Probability of Type II error:</p>
+<p><span class="math display">\[
+\beta=P(\text{Fail to reject }H_0\mid H_0\text{ is false})
+\]</span></p>
+<p>Power of a test:</p>
+<p><span class="math display">\[
+\text{Power}=1-\beta
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Size of rejection region:</p>
+<p><span class="math display">\[
+P_{H_0}(\text{Rejection region})\leq\alpha
+\]</span></p>
+<p>Size of acceptance region:</p>
+<p><span class="math display">\[
+P_{H_0}(\text{Non-rejection region})\geq1-\alpha
+\]</span></p>
+<p>Binomial test statistic used in the worked coin example:</p>
+<p><span class="math display">\[
+\hat p=\frac{x}{n}
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 3</h2><div class="body"><p>Binomial probability:</p>
+<p><span class="math display">\[
+P(X=x)=\binom{n}{x}p^xq^{n-x}
+\]</span></p>
+<p>Equivalent binomial probability formula:</p>
+<p><span class="math display">\[
+P(X=x)=\frac{n!}{(n-x)!x!}p^xq^{n-x}
+\]</span></p>
+<p>Decision rule based on p-value:</p>
+<p><span class="math display">\[
+\text{Reject }H_0\quad\text{if}\quad p\text{-value}\leq\alpha
+\]</span></p></div></section>
+
+<section class="card c-blue book-formulas"><h2>Important formulae · 4</h2><div class="body"><p>Non-rejection rule based on p-value:</p>
+<p><span class="math display">\[
+\text{Do not reject }H_0\quad\text{if}\quad p\text{-value}&gt;\alpha
+\]</span></p></div></section>
+
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>A testable statement about a population distribution or its
+parameters is called a statistical __________.</p><span class="ans">Hypothesis</span></li><li><p>The hypothesis tested for possible rejection is called the __________
+hypothesis.</p><span class="ans">Null</span></li><li><p>The hypothesis specifying a departure from the null hypothesis is
+called the __________ hypothesis.</p><span class="ans">Alternative</span></li><li><p>Rejecting a true null hypothesis is a Type __________ error.</p><span class="ans">I</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">

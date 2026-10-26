@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
+<link rel="stylesheet" href="../assets/revision.css?v=d0fc456e8a73">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
-<script defer src="../assets/revision.js"></script>
+<script defer src="../assets/revision.js?v=d0fc456e8a73"></script>
 <script src="/assets/melon-tracker.js" defer></script>
 </head>
 <body>
@@ -29,135 +29,72 @@
     <div class="num" aria-hidden="true">22</div>
     <div class="kicker">Textbook of Agricultural Statistics · Chapter 22</div>
     <h1>Analysis of Covariance</h1>
-    <div class="sub">Combining ANOVA with regression: covariates, the common-slope model, adjusted means and the adjusted F test.</div>
+    <div class="sub">From the chapter’s own revision points, formulae and questions.</div>
+    <p class="source-note">Selected from <a href="https://statoberrypapaya.github.io/TextbookofAgstat/ancova.html#chapter-summary">Chapter 22 · Chapter Summary</a> in the textbook.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
     <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
-  <aside class="quick-start" aria-label="Revision essentials">
-    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Adjust for a relevant covariate measured before treatment.</p>
-    <div class="focus-pair"><p><b>Remember</b>ANCOVA combines regression and ANOVA. Check linearity, comparable covariate slopes and the role of the covariate in the design.</p><p><b>Apply it</b>Initial plant height may improve precision when comparing final biomass; a measurement caused by the treatment needs different causal reasoning.</p></div>
-    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
-  </aside>
   <div class="grid">
-<section class="card c-green s3">
-      <h2><span class="n">1</span>What is ANCOVA?</h2>
-      <div class="body">
-        <p class="lead">ANCOVA combines <b>analysis of variance</b> with <span class="hl">regression adjustment</span> on a <b>covariate</b>: a measured explanatory variable.</p>
-        <p class="small">Agri examples: initial plant stand, initial weight of animals, pre-treatment pest count, previous-season yield.</p>
-        <p class="small">A covariate must be <b>related to the response</b> and <b>not caused by the treatment</b>. Ideally measured <b>before</b> treatment (pre-treatment covariate).</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 1</h2><div class="body"><ul>
+<li>ANCOVA combines treatment comparison with regression
+adjustment.</li>
+<li>A covariate should be relevant to the response and should not be
+caused by the treatment being compared.</li>
+<li>The common-slope model assumes the same regression slope across
+treatments; examine treatment-by-covariate interaction.</li>
+<li>Independent errors, appropriate linearity and common residual
+variance are required for the stated model; normal errors support the
+usual exact tests.</li>
+<li>Adjustment compares treatment means at a common covariate
+value.</li>
+</ul></div></section>
 
-    <section class="card c-teal s3">
-      <h2><span class="n">2</span>Blocking vs ANCOVA</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th></th><th>Blocking</th><th>ANCOVA</th></tr></thead>
-          <tbody>
-            <tr><td><b>When</b></td><td>Before the experiment (layout)</td><td>During analysis</td></tr>
-            <tr><td><b>Handles</b></td><td>Predictable variation (soil, gradient)</td><td>Variation in a measured covariate</td></tr>
-            <tr><td><b>Aim</b></td><td colspan="2">Both reduce experimental error</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">Precision may improve but is <b>not guaranteed</b>.</p>
-      </div>
-    </section>
+<section class="card c-green "><h2>Quick revision · 2</h2><div class="body"><ul>
+<li>Estimating one covariate slope uses one additional error degree of
+freedom.</li>
+<li>A useful covariate can improve precision, but improvement is not
+guaranteed.</li>
+<li>Adjustment does not turn an observational comparison into a
+randomized experiment.</li>
+<li>Use pair-specific standard errors when covariate means differ.</li>
+</ul></div></section>
 
-    <section class="card c-blue s4">
-      <h2><span class="n">3</span>Model &amp; key quantities (CRD)</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Common-slope model</span>$$Y_{ij} = \mu + \tau_i + \beta(X_{ij} - \bar{X}) + e_{ij}$$</div>
-        <div class="fxgrid">
-          <div class="fx"><span class="lbl">Slope</span>$$\hat\beta = \frac{E_{xy}}{E_{xx}}$$</div>
-          <div class="fx"><span class="lbl">Adjusted error SS</span>$$E = E_{yy} - \frac{E_{xy}^2}{E_{xx}}$$</div>
-          <div class="fx"><span class="lbl">Adjusted MSE</span>$$MSE_{adj} = \frac{E}{n - v - 1}$$</div>
-        </div>
-        <p class="where">$E_{xx}, E_{xy}, E_{yy}$ = within-treatment (error) sums of squares and products. RBD error df: $(r-1)(v-1) - 1$.</p>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 1</h2><div class="body"><p>For the CRD with one covariate and a common within-treatment
+slope:</p>
+<p><span class="math display">\[Y_{ij}=\mu+\tau_i+\beta(X_{ij}-\bar
+X)+e_{ij},
+\qquad \hat\beta=\frac{E_{xy}}{E_{xx}}\]</span></p>
+<p>Here <span class="math inline">\(E_{xx}\)</span>, <span
+class="math inline">\(E_{xy}\)</span> and <span
+class="math inline">\(E_{yy}\)</span> are the within-treatment corrected
+sums of squares and products defined in the chapter, with <span
+class="math inline">\(E_{xx}&gt;0\)</span>.</p>
+<p><span class="math display">\[E=E_{yy}-\frac{E_{xy}^2}{E_{xx}},\qquad
+MSE_{adj}=\frac{E}{n-v-1}\]</span></p>
+<p>With <span class="math inline">\(n\)</span> observed responses, <span
+class="math inline">\(v\)</span> treatments and one fitted covariate
+slope, the CRD error degrees of freedom are <span
+class="math inline">\(n-v-1\)</span>. For the complete RBD with <span
+class="math inline">\(r\)</span> blocks, use the
+within-block-and-treatment quantities and error degrees of freedom <span
+class="math inline">\((r-1)(v-1)-1\)</span>.</p>
+<p><span class="math display">\[\bar Y_{i,adj}=\bar Y_i-\hat\beta(\bar
+X_i-\bar X)\]</span></p>
+<p><span
+class="math display">\[F_{Treatment}=\frac{(E_1-E)/(v-1)}{MSE_{adj}}\]</span></p></div></section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">4</span>Degrees of freedom</h2>
-      <div class="body">
-        <p class="small">Fitting one covariate slope <b>uses one error df</b>.</p>
-        <div class="tbl"><table>
-          <tbody>
-            <tr><td>CRD</td><td>$n - v - 1$</td></tr>
-            <tr><td>RBD</td><td>$(r-1)(v-1) - 1$</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
+<section class="card c-blue book-formulas"><h2>Important formulae · 2</h2><div class="body"><p>Here <span class="math inline">\(E_1\)</span> is the residual sum of
+squares from the reduced model without treatment effects, retaining the
+covariate and, in RBD, the blocks. <span
+class="math inline">\(E\)</span> is from the full model. The treatment
+comparison is therefore adjusted for the covariate.</p></div></section>
 
-    <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Adjusted means &amp; F test</h2>
-      <div class="body">
-        <div class="fx"><span class="lbl">Adjusted treatment mean</span>$$\bar{Y}_{i,adj} = \bar{Y}_i - \hat\beta(\bar{X}_i - \bar{X})$$</div>
-        <div class="fx"><span class="lbl">Adjusted F</span>$$F = \frac{(E_1 - E)/(v - 1)}{MSE_{adj}}$$</div>
-        <p class="where">$E_1$: residual SS of the reduced model (no treatments, covariate kept); $E$: full model. Means are compared at a <b>common covariate value</b>.</p>
-      </div>
-    </section>
-
-    <section class="card c-rose s3">
-      <h2><span class="n">6</span>Assumptions</h2>
-      <div class="body">
-        <ul class="ticks">
-          <li>The usual ANOVA assumptions: independent errors, common variance, normality for exact tests</li>
-          <li><b>Linear</b> relationship between response and covariate</li>
-          <li><b>Equal slopes</b> across treatments (check treatment × covariate interaction)</li>
-          <li>Covariate not affected by the treatments</li>
-          <li>Error mean is zero</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card c-forest s4">
-      <h2><span class="n">7</span>Steps of the analysis</h2>
-      <div class="body">
-        <ol class="steps" style="grid-template-columns:1fr 1fr;column-gap:14px">
-          <li>Compute SS for $X$, $Y$ and SP for $XY$</li>
-          <li>Get error $E_{xx}, E_{xy}, E_{yy}$</li>
-          <li>Estimate $\hat\beta = E_{xy}/E_{xx}$</li>
-          <li>Adjusted error SS and $MSE_{adj}$</li>
-          <li>Adjusted treatment SS: $E_1 - E$</li>
-          <li>Adjusted $F$ test</li>
-          <li>Compute adjusted means</li>
-          <li>Compare with pair-specific SEs</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="card c-clay s2">
-      <h2><span class="n">!</span>Common mistakes</h2>
-      <div class="body">
-        <ul class="cross">
-          <li>Using a covariate the treatment affects.</li>
-          <li>Forgetting the extra df lost.</li>
-          <li>Assuming adjustment turns observational data into an experiment.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card fib s6">
-      <h2><span class="n">?</span>Fill in the blanks</h2>
-      <div class="body">
-        <ol class="fib-list">
-          <li>Initial plant stand counted before applying treatments is a suitable <span class="blank"></span>.<span class="ans">covariate</span></li>
-          <li>With E_xy = 30 and E_xx = 60, the slope b = <span class="blank"></span>.<span class="ans">0.5</span></li>
-          <li>Treatment mean 50, its covariate mean 12, overall covariate mean 10 and b = 0.5 give an adjusted mean of <span class="blank"></span>.<span class="ans">49</span></li>
-          <li>A CRD with 20 observations, 4 treatments and one covariate has <span class="blank"></span> error df.<span class="ans">15</span></li>
-          <li>A covariate must not be <span class="blank"></span> by the treatments.<span class="ans">affected</span></li>
-          <li>The common-slope model assumes the treatment regression lines are <span class="blank"></span>.<span class="ans">parallel</span></li>
-        </ol>
-        <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
-      </div>
-    </section>
-  </div>
-
-  <div class="strip">
-    <div class="motto">“ANCOVA compares treatments as if every plot had started from the same point.”<small>Learn · Understand · Apply. Read the full chapter for worked examples and exercises.</small></div>
+<section class="card c-plum fib"><h2>Self-check from the chapter</h2><div class="body"><ol class="fib-list"><li><p>ANCOVA combines analysis of variance with __________.</p><span class="ans">Regression</span></li><li><p>A measured explanatory variable used for statistical adjustment is
+called a __________.</p><span class="ans">Covariate</span></li><li><p>The common-slope ANCOVA model assumes equal regression __________
+across treatments.</p><span class="ans">Slopes</span></li><li><p>A covariate measured before treatment application is called a
+__________ covariate.</p><span class="ans">Pre-treatment</span></li></ol><button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button></div></section>
   </div>
 
   <footer class="sheet-foot">
