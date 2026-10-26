@@ -24,3 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
   document.documentElement.classList.add('math-ready');
 });
+
+// Keep longer formulae across both subcolumns when printing.
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('.fxgrid .fx').forEach(box => {
+    const math = box.querySelector('.katex-display');
+    if (math && math.scrollWidth > math.clientWidth + 2) box.classList.add('wide');
+  });
+});
+window.addEventListener('afterprint', () => document.querySelectorAll('.fx.wide').forEach(box => box.classList.remove('wide')));

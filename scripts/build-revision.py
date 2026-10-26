@@ -16,6 +16,8 @@ Run:  python scripts/build-revision.py
 Then: node scripts/revision-pdf.cjs   (makes the A4 PDFs)
 """
 import html
+import json
+import hashlib
 import re
 from pathlib import Path
 
@@ -54,7 +56,7 @@ TEMPLATE = """<!doctype html>
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css">
+<link rel="stylesheet" href="../assets/revision.css?v={cssVersion}">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
 <script defer src="../assets/revision.js"></script>
@@ -76,10 +78,15 @@ TEMPLATE = """<!doctype html>
     <h1>{title}</h1>
     <div class="sub">{sub}</div>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
-    <div class="authors">Authors: <b>{authorsFull}</b></div>
-    <div class="meta"><span class="chip">{course}</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+    <div class="authors">Textbook authors: <b>{authorsFull}</b></div>
+    <div class="meta"><span class="chip">{course}</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
+  <aside class="quick-start" aria-label="Revision essentials">
+    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">{key}</p>
+    <div class="focus-pair"><p><b>Remember</b>{remember}</p><p><b>Apply it</b>{apply}</p></div>
+    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
+  </aside>
   <div class="grid">
 {body}
   </div>
@@ -110,7 +117,7 @@ COMBINED = """<!doctype html>
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css">
+<link rel="stylesheet" href="../assets/revision.css?v={cssVersion}">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
 <script defer src="../assets/revision.js"></script>
@@ -132,7 +139,7 @@ COMBINED = """<!doctype html>
 </nav>
 
 <header class="reader-head">
-  <p class="reader-kicker">#KAUMeLON · Official revision sheets</p>
+  <p class="reader-kicker">KAU Me-LON · Chapter revisions</p>
   <h1>{book}</h1>
   <p>All {count} chapters in one window. Scroll through, or jump to a chapter from the menu.</p>
 </header>
@@ -147,7 +154,7 @@ COMBINED = """<!doctype html>
 
 def combined(book, mains):
     options = "\n".join(f'      <option value="ch-{n:02d}">{n:02d} · {html.escape(t)}</option>' for n, t, _ in mains)
-    return COMBINED.format(book=book["name"], short=book["short"], count=len(mains), options=options,
+    return COMBINED.format(cssVersion=hashlib.sha256((ROOT / "revision/assets/revision.css").read_bytes()).hexdigest()[:12], book=book["name"], short=book["short"], count=len(mains), options=options,
                            mains="\n\n".join(m for _, _, m in mains))
 
 
@@ -169,15 +176,20 @@ def build():
         out_dir.mkdir(parents=True, exist_ok=True)
         sheets = sorted(src_dir.glob("*.html"))
         parsed = [(p.stem, *parse(p)) for p in sheets]
+        focus = json.loads((src_dir / "focus.json").read_text(encoding="utf-8"))
         ready = {}
         mains = []
         for i, (slug, meta, body) in enumerate(parsed):
             n = int(meta["num"])
+            section_number = iter(range(1, 100))
+            body = re.sub(r'(<span class="n">)\d+(</span>)', lambda match: match.group(1) + str(next(section_number)) + match.group(2), body)
             prev = (f'<a class="rv-btn ghost nav-step" href="{parsed[i-1][0]}.html" aria-label="Previous chapter">‹</a>'
                     if i > 0 else "")
             nxt = (f'<a class="rv-btn ghost nav-step" href="{parsed[i+1][0]}.html" aria-label="Next chapter">›</a>'
                    if i < len(parsed) - 1 else "")
             page = TEMPLATE.format(
+                cssVersion=hashlib.sha256((ROOT / "revision/assets/revision.css").read_bytes()).hexdigest()[:12],
+                **{k: html.escape(v) for k, v in focus[n-1].items()},
                 title=meta["title"], n=n, num=f"{n:02d}", sub=meta["sub"], motto=meta["motto"],
                 slug=slug, prev=prev, next=nxt, body=body,
                 fileTitle=re.sub(r"[^A-Za-z0-9]+", "-", html.unescape(meta["title"])).strip("-"),

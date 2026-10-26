@@ -1,6 +1,6 @@
 ---
 title: "5-minute revision"
-description: "One-page revision sheets written by the department from the textbook itself. Read them on your phone before class or an exam, or download the A4 PDF to print."
+description: "Focused chapter revision with key ideas, worked examples and self-check questions. Read them on your phone before class or an exam, or download the A4 PDF to print."
 ---
 
 ```{=html}
@@ -37,5 +37,5 @@ description: "One-page revision sheets written by the department from the textbo
     <li class="rv-ch ready"><a href="revision/agstat/24-data-transformation.html"><span class="rv-n">24</span><span class="rv-t">Data transformation</span><span class="rv-go">Read · PDF →</span></a></li>
   </ol>
 </section>
-<p class="rv-note"><b>Why use these instead of AI summaries?</b> These sheets follow the textbook's own definitions, notation and examples. AI-made summaries often mix up chapters or state rules that are wrong for this course. If something here and the book disagree, the book wins. Please tell us.</p>
+<p class="rv-note"><b>A quick route through each chapter:</b> review the key idea, work through the methods, then try the self-check before revealing the answers. Download the watermarked A4 notes for offline study. Use the full textbook for derivations and further practice.</p>
 ```

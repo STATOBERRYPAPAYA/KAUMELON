@@ -1,0 +1,122 @@
+[
+  {
+    "key": "Start with the question, then collect trustworthy data.",
+    "remember": "A population is the full group; a sample is the part observed. A statistic estimates a population parameter.",
+    "apply": "Measuring 30 randomly selected plots estimates yield for the field; measuring only the best plots introduces bias."
+  },
+  {
+    "key": "Check the source, year, unit and geographical coverage.",
+    "remember": "Official figures answer different questions: area, production, yield and prices are not interchangeable.",
+    "apply": "If production is 60 tonnes from 20 hectares, yield is 3 tonnes per hectare. Compare like units and reference years."
+  },
+  {
+    "key": "Match the graph to the variable.",
+    "remember": "Bars compare categories; histograms show continuous distributions; an ogive shows cumulative frequency.",
+    "apply": "With unequal histogram class widths, use frequency density so bar area represents frequency."
+  },
+  {
+    "key": "Choose the average for the question.",
+    "remember": "Mean uses every value; median describes the middle; mode identifies the most frequent value or category.",
+    "apply": "For yields 2, 3, 3, 4, 18, the mean is 6 but the median is 3. The unusually large yield pulls the mean upwards."
+  },
+  {
+    "key": "Additive amounts: AM. Growth factors: GM. Equal-distance speeds: HM.",
+    "remember": "Use positive values for the usual AM ≥ GM ≥ HM relation. Convert growth percentages to factors before using GM.",
+    "apply": "A 20% rise followed by a 20% fall gives factors 1.2 and 0.8: the final value is 0.96 of the start, not unchanged."
+  },
+  {
+    "key": "Report spread alongside the average.",
+    "remember": "Variance has squared units; standard deviation has the original units. CV is useful only when a meaningful positive mean exists.",
+    "apply": "Two crops can have the same mean yield and different variability. A smaller SD indicates more consistent yields on the same scale."
+  },
+  {
+    "key": "Describe asymmetry and tail behaviour separately.",
+    "remember": "Skewness describes asymmetry. Kurtosis concerns tail weight relative to the normal distribution; it is not simply peak height.",
+    "apply": "For a normal distribution, kurtosis β₂ = 3 and excess kurtosis = 0. State which convention you report."
+  },
+  {
+    "key": "Association measures a relationship, not a cause.",
+    "remember": "Pearson correlation describes linear association; rank correlation works with ordered ranks. Always inspect the data plot.",
+    "apply": "A correlation near zero can hide a strong curved relationship. Do not use it alone to conclude there is no relationship."
+  },
+  {
+    "key": "Regression predicts a response from an explanatory variable.",
+    "remember": "The slope gives the change in predicted response for one unit of the predictor. A fitted line does not establish causation.",
+    "apply": "If predicted yield = 2 + 0.04 × nitrogen, adding 10 units of nitrogen changes predicted yield by 0.4 units within the studied range."
+  },
+  {
+    "key": "Decide whether events overlap and whether they are independent.",
+    "remember": "For a union, subtract the overlap. For an intersection, use a conditional probability unless independence is justified.",
+    "apply": "If A and B are independent with probabilities 0.6 and 0.5, P(A and B) = 0.3 and P(A or B) = 0.8."
+  },
+  {
+    "key": "Select the distribution from the experiment.",
+    "remember": "Binomial counts successes in a fixed number of independent trials with constant probability; Poisson models counts under its assumptions.",
+    "apply": "For 10 independent seeds each with germination probability 0.8, the expected number germinating is np = 8."
+  },
+  {
+    "key": "Sampling design determines how far results can be generalised.",
+    "remember": "Random sampling controls selection; stratification samples within groups; clustering samples groups of units.",
+    "apply": "To represent both irrigated and rainfed farms, stratify by irrigation status and randomly sample within each stratum."
+  },
+  {
+    "key": "State the hypotheses before looking at the test result.",
+    "remember": "A p-value is a probability under the null model, not the probability that the null hypothesis is true.",
+    "apply": "At α = 0.05, p = 0.03 leads to rejection of H₀. A non-significant result means insufficient evidence, not proof of equality."
+  },
+  {
+    "key": "Standardise the estimate using its standard error.",
+    "remember": "Check independence and the relevant large-sample approximation before applying a z test.",
+    "apply": "For a population proportion test, check expected success and failure counts using the null proportion."
+  },
+  {
+    "key": "Choose the test from the study structure.",
+    "remember": "Paired data require analysis of within-pair differences. Independent groups require an independent-samples method.",
+    "apply": "Before-and-after measurements on the same plants are paired; they are not two independent samples."
+  },
+  {
+    "key": "Randomise, replicate and control local variation.",
+    "remember": "Replication estimates experimental error; randomisation protects against systematic allocation bias; blocking reduces nuisance variation.",
+    "apply": "Ten leaves measured on one treated plant are subsamples, not ten independently treated experimental units."
+  },
+  {
+    "key": "Use uniformity trials to study field heterogeneity.",
+    "remember": "Grow a uniform crop and measure small basic units before deciding useful plot sizes, shapes and blocks.",
+    "apply": "If fertility changes down the field, orient blocks to contain relatively similar plots rather than mixing the full gradient within each block."
+  },
+  {
+    "key": "ANOVA compares means through a variance ratio.",
+    "remember": "A significant treatment F test indicates that not all treatment means are equal. It does not identify the differing pairs.",
+    "apply": "For three treatments and 12 observations in a one-way CRD, treatment df = 2, error df = 9 and total df = 11."
+  },
+  {
+    "key": "Choose comparisons to match the scientific question.",
+    "remember": "Account for multiplicity when examining many pairs. A significant omnibus test does not make every pair significant.",
+    "apply": "Four treatment means produce six pairwise comparisons. Use a method suitable for the intended family of comparisons."
+  },
+  {
+    "key": "Choose the design to match field variation.",
+    "remember": "CRD has no blocking; RBD controls one blocking factor; a Latin square controls row and column effects.",
+    "apply": "With four treatments and three complete blocks, RBD treatment df = 3, block df = 2 and error df = 6."
+  },
+  {
+    "key": "Check interaction before interpreting main effects.",
+    "remember": "A factorial experiment studies combinations of factor levels. Interaction means the effect of one factor depends on the other.",
+    "apply": "A fertiliser may increase yield under irrigation but show little benefit under drought: report those conditional effects."
+  },
+  {
+    "key": "Adjust for a relevant covariate measured before treatment.",
+    "remember": "ANCOVA combines regression and ANOVA. Check linearity, comparable covariate slopes and the role of the covariate in the design.",
+    "apply": "Initial plant height may improve precision when comparing final biomass; a measurement caused by the treatment needs different causal reasoning."
+  },
+  {
+    "key": "Estimate a missing plot; do not treat it as a new observation.",
+    "remember": "Use the method appropriate to the design and reduce error degrees of freedom for estimated values.",
+    "apply": "An RBD with one missing plot loses one error degree of freedom relative to the corresponding complete-data analysis."
+  },
+  {
+    "key": "Transform to address a model problem, not to force significance.",
+    "remember": "Choose a transformation from the data scale and residual behaviour. Document it and interpret results on the appropriate scale.",
+    "apply": "Log transformation turns multiplicative effects into additive ones, but log(0) is undefined. Any offset must be justified and reported."
+  }
+]

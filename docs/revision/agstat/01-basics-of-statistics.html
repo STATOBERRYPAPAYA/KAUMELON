@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css">
+<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
 <script defer src="../assets/revision.js"></script>
@@ -31,20 +31,21 @@
     <h1>Basics of Statistics</h1>
     <div class="sub">The building blocks: data, variables, scales and frequency distributions.</div>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
-    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
-    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+    <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
+  <aside class="quick-start" aria-label="Revision essentials">
+    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Start with the question, then collect trustworthy data.</p>
+    <div class="focus-pair"><p><b>Remember</b>A population is the full group; a sample is the part observed. A statistic estimates a population parameter.</p><p><b>Apply it</b>Measuring 30 randomly selected plots estimates yield for the field; measuring only the best plots introduces bias.</p></div>
+    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
+  </aside>
   <div class="grid">
 <section class="card c-green s3">
       <h2><span class="n">1</span>What is statistics?</h2>
       <div class="body">
         <p class="lead">Statistics is the science which deals with the <span class="hl">collection, organisation (classification), presentation, analysis and interpretation of data</span>.</p>
-        <ul>
-          <li><b>Origin:</b> Italian <i>statista</i> (statesman), German <i>Statistik</i>, used by <b>Gottfried Achenwall</b> (1749).</li>
-          <li><b>Sir John Sinclair</b> brought the word into English through the <i>Statistical Account of Scotland</i> (1791–99, 21 volumes).</li>
-          <li><b>Sir R.A. Fisher</b> (1890–1962): <b>Father of Modern Statistics</b>. Gave us ANOVA, experimental design and maximum likelihood, and the principles of <b>randomisation, replication and local control</b>.</li>
-        </ul>
+        <p><b>In agriculture:</b> compare treatments, estimate yields and make decisions while accounting for variation and uncertainty.</p>
       </div>
     </section>
 
@@ -62,23 +63,10 @@
       </div>
     </section>
 
-    <section class="card c-plum s2">
-      <h2><span class="n">3</span>Statistics vs maths</h2>
-      <div class="body">
-        <div class="tbl"><table>
-          <thead><tr><th></th><th>Mathematics</th><th>Statistics</th></tr></thead>
-          <tbody>
-            <tr><td><b>Reasoning</b></td><td>Deductive</td><td>Inductive</td></tr>
-            <tr><td><b>Results</b></td><td>Exact, unchanging</td><td>Under uncertainty</td></tr>
-            <tr><td><b>Handles</b></td><td>Axioms, proofs</td><td>Variable real-world data</td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">The <b>error term</b> captures the variability we cannot control: observation − true model mean.</p>
-      </div>
-    </section>
+
 
     <section class="card c-blue s4">
-      <h2><span class="n">4</span>Population, sample, parameter</h2>
+      <h2><span class="n">3</span>Population, sample, parameter</h2>
       <div class="body">
         <div class="pair">
           <div><h3>Population</h3>The entire collection of units with the characteristic under study.<br><span class="muted small">e.g. heights of <b>all</b> students in a college</span></div>
@@ -90,7 +78,7 @@
     </section>
 
     <section class="card c-ochre s3">
-      <h2><span class="n">5</span>Variables &amp; constants</h2>
+      <h2><span class="n">4</span>Variables &amp; constants</h2>
       <div class="body">
         <p><b>Variable:</b> takes different values for different individuals, times or places. <b>Constant:</b> stays fixed (e.g. $\pi = 3.14159\ldots$, $e = 2.71828\ldots$).</p>
         <div class="tbl"><table>
@@ -105,7 +93,7 @@
     </section>
 
     <section class="card c-rose s3">
-      <h2><span class="n">6</span>Measurement scales</h2>
+      <h2><span class="n">5</span>Measurement scales</h2>
       <div class="body">
         <div class="tbl"><table>
           <thead><tr><th>Scale</th><th class="c">Order</th><th class="c">Equal<br>gaps</th><th class="c">True<br>zero</th><th>Example</th></tr></thead>
@@ -121,11 +109,11 @@
     </section>
 
     <section class="card c-clay s3">
-      <h2><span class="n">7</span>Collection of data</h2>
+      <h2><span class="n">6</span>Collection of data</h2>
       <div class="body">
         <div class="pair">
-          <div><h3>Primary data</h3>First-hand, collected for the study's own purpose; no prior statistical treatment.<br><span class="small muted">e.g. population census by the government</span></div>
-          <div><h3>Secondary data</h3>Already collected and processed by others for another purpose.<br><span class="small muted">e.g. Economic Survey, Ministry reports</span></div>
+          <div><h3>Primary data</h3>First-hand, collected for the study's own purpose; collected specifically for the current investigation.<br><span class="small muted">e.g. population census by the government</span></div>
+          <div><h3>Secondary data</h3>Originally collected for another purpose; reused in the current investigation.<br><span class="small muted">e.g. Economic Survey, Ministry reports</span></div>
         </div>
         <p class="small" style="margin-top:.45rem"><span class="tag">Primary methods</span>personal investigation · trained enumerators · correspondents · phone or mailed questionnaire · online forms · mobile apps and social media polls</p>
         <p class="small"><span class="tag">Secondary sources</span>official (RBI, ministries, NSO) · institutional (universities, research institutes). <b>Enumerator</b> collects; <b>respondent</b> provides.</p>
@@ -133,7 +121,7 @@
     </section>
 
     <section class="card c-teal s3">
-      <h2><span class="n">8</span>Frequency distribution terms</h2>
+      <h2><span class="n">7</span>Frequency distribution terms</h2>
       <div class="body">
         <div class="tbl"><table>
           <tbody>
@@ -150,7 +138,7 @@
     </section>
 
     <section class="card c-olive s2">
-      <h2><span class="n">9</span>Building a grouped table</h2>
+      <h2><span class="n">8</span>Building a grouped table</h2>
       <div class="body">
         <ol class="steps">
           <li>Decide the number of classes $k$</li>
@@ -164,7 +152,7 @@
     </section>
 
     <section class="card c-blue s4">
-      <h2><span class="n">10</span>Worked example · leaf length (cm), N = 38</h2>
+      <h2><span class="n">9</span>Worked example · leaf length (cm), N = 38</h2>
       <div class="body">
         <p class="small">Sturges: $k = 1 + 3.322\log_{10}38 \approx 6.25 \Rightarrow$ 6 classes; width $(18-1)/6 \approx 2.83 \Rightarrow 3$ cm.</p>
         <div class="tbl"><table>
@@ -182,7 +170,7 @@
     </section>
 
     <section class="card c-forest s4">
-      <h2><span class="n">11</span>Formulae to remember</h2>
+      <h2><span class="n">10</span>Formulae to remember</h2>
       <div class="body">
         <div class="fxgrid">
           <div class="fx"><span class="lbl">Number of classes (Sturges)</span>$$k = 1 + 3.322\log_{10}N$$</div>

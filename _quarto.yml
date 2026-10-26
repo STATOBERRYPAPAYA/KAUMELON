@@ -4,6 +4,7 @@ project:
   render:
     - index.qmd
     - bookshelfug.qmd
+    - revision.qmd
     - agstat-textbook.qmd
     - r-textbook.qmd
     - extn4101-textbook.qmd
@@ -80,6 +81,7 @@ format:
 editor: source
 execute:
   freeze: auto
+
 
 
 

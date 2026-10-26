@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#173c35">
 <link rel="icon" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/katex/katex.min.css">
-<link rel="stylesheet" href="../assets/revision.css">
+<link rel="stylesheet" href="../assets/revision.css?v=d85fca87fe15">
 <script defer src="../assets/katex/katex.min.js"></script>
 <script defer src="../assets/katex/auto-render.min.js"></script>
 <script defer src="../assets/revision.js"></script>
@@ -31,15 +31,20 @@
     <h1>Central Tendency II</h1>
     <div class="sub">Special averages (geometric and harmonic means) and positional averages (quartiles, deciles, percentiles).</div>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
-    <div class="authors">Authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
-    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">#KAUMeLON</span><span class="chip">Official revision sheet</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
+    <div class="authors">Textbook authors: <b>Dr. Pratheesh P. Gopinath · Dr. Adarsh V.S. · Mohammed Hisham M. · Dr. Manju Mary Paul</b></div>
+    <div class="meta"><span class="chip">STAT 3202</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>
   </header>
 
+  <aside class="quick-start" aria-label="Revision essentials">
+    <p class="focus-label">THE IDEA TO KEEP</p><p class="focus-key">Additive amounts: AM. Growth factors: GM. Equal-distance speeds: HM.</p>
+    <div class="focus-pair"><p><b>Remember</b>Use positive values for the usual AM ≥ GM ≥ HM relation. Convert growth percentages to factors before using GM.</p><p><b>Apply it</b>A 20% rise followed by a 20% fall gives factors 1.2 and 0.8: the final value is 0.96 of the start, not unchanged.</p></div>
+    <p class="study-route">1 minute: key idea · 3 minutes: methods &amp; examples · 1 minute: test yourself</p>
+  </aside>
   <div class="grid">
 <section class="card c-green s3">
       <h2><span class="n">1</span>Geometric mean (GM)</h2>
       <div class="body">
-        <p>The $n$th root of the product of $n$ positive observations. Use it for <b>growth rates, ratios, percentages</b> and multiplicative change.</p>
+        <p>The $n$th root of the product of $n$ positive observations. Use it for <b>positive growth factors</b> and multiplicative change. For a percentage rate $r$, use the factor $1+r/100$.</p>
         <div class="fxgrid">
           <div class="fx"><span class="lbl">Definition</span>$$GM = \sqrt[n]{\textstyle\prod x_i}$$</div>
           <div class="fx"><span class="lbl">Using logs</span>$$GM = \text{Antilog}\!\left(\frac{\sum \log x_i}{n}\right)$$</div>
@@ -57,7 +62,7 @@
           <div class="fx"><span class="lbl">Raw data</span>$$HM = \frac{n}{\sum \frac{1}{x_i}}$$</div>
           <div class="fx"><span class="lbl">Frequency distribution</span>$$HM = \frac{n}{\sum \frac{f_i}{x_i}}$$</div>
         </div>
-        <p class="small">GM and HM both give <b>more weight to smaller values</b>.</p>
+        <p class="small">For positive observations, HM is especially sensitive to small values. Use HM for equal-distance speeds; use AM for equal-time speeds.</p>
       </div>
     </section>
 
@@ -78,7 +83,7 @@
           <thead><tr><th>Mean</th><th>Use for</th><th>Agri example</th></tr></thead>
           <tbody>
             <tr><td><b>AM</b></td><td>Additive quantities, general averages</td><td>Average yield, rainfall</td></tr>
-            <tr><td><b>GM</b></td><td>Growth factors, ratios, percentages</td><td>Compound growth of area or production</td></tr>
+            <tr><td><b>GM</b></td><td>Positive growth factors, multiplicative change</td><td>Compound growth of area or production</td></tr>
             <tr><td><b>HM</b></td><td>Rates and reciprocal relationships</td><td>Average speed of a tractor over equal distances</td></tr>
           </tbody>
         </table></div>
@@ -146,7 +151,7 @@
           <li>Two positive numbers have AM = 10 and HM = 6.4, so their GM is <span class="blank"></span>.<span class="ans">8</span></li>
           <li>The 50th percentile, the 5th decile and the 2nd quartile are all equal to the <span class="blank"></span>.<span class="ans">median</span></li>
           <li>The 75th percentile is the same as the <span class="blank"></span> quartile.<span class="ans">third</span></li>
-          <li>The geometric mean cannot be used if any observation is <span class="blank"></span>.<span class="ans">zero or negative</span></li>
+          <li>The log-based geometric mean requires values that are not <span class="blank"></span>.<span class="ans">zero or negative</span></li>
         </ol>
         <button type="button" class="rv-btn fib-toggle" data-fib-toggle>Show answers</button>
       </div>
