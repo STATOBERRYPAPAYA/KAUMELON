@@ -79,6 +79,7 @@ TEMPLATE = """<!doctype html>
     <div class="sub">{sub}</div>
     <p class="edition-label">BOOK-ONLY EDITION · Verified against the textbook</p>
     <p class="source-note">Source: <a href="{chapterUrl}">Chapter {n} of the textbook</a>.</p>
+    <p class="book-citation"><strong>Book citation:</strong> Pratheesh P. Gopinath, Adarsh V.S., Mohammed Hisham M., &amp; Manju Mary Paul. (2026). <cite>Textbook of Agricultural Statistics</cite>. Statoberry LLP. <a href="{chapterUrl}">Chapter {n}</a>.</p>
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-minute revision</div>
     <div class="authors">Textbook authors: <b>{authorsFull}</b></div>
     <div class="meta"><span class="chip">{course}</span><span class="chip">KAU Me-LON</span><span class="chip">Chapter revision</span><span class="brand"><img src="../assets/logo-128.png" alt="" width="26" height="26"><span><b>KAU Me-LON</b> · www.agrinoteskau.com · Dept. of Agricultural Statistics, College of Agriculture, Vellayani</span></span></div>

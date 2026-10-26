@@ -39,7 +39,7 @@ page-layout: full
 
 <span class="course-label">STAT 3202</span><h3>Textbook of Agricultural Statistics</h3><p class="book-usage" data-book-usage="agricultural-statistics">Loading usage…</p><span class="card-link">Tap to read →</span>
 
-</a><div class="revision-below"><a class="revision-pill" href="revision/agstat/all-chapters.html?v=de0efcfea6a4" aria-label="5-minute revision: all chapters of Textbook of Agricultural Statistics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-min revision</a></div></div>
+</a><div class="revision-below"><a class="revision-pill" href="revision/agstat/all-chapters.html?v=9bcb58a072e3" aria-label="5-minute revision: all chapters of Textbook of Agricultural Statistics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M12 2v3"/></svg>5-min revision</a></div></div>
 
 <a class="shelf-book" href="r-textbook.html">
 <div class="book-badges"><span class="category-tag">Ag. Statistics</span><span class="new-badge" data-published="2026-10-20" hidden><span aria-hidden="true">✦</span> New</span></div>
